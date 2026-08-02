@@ -2944,3 +2944,81 @@ Success
 [*] Phase 3: Executing flawless staged workspace serialization...
 [✓] Singularity Persistence Engine locked. UI and context limits bypassed.
 [✓] Singularity Persistence Engine locked. UI and context limits bypassed.
+==================================================
+=== JOSIE GALAXY A17 MAXIMIZER ENGINE ENGAGED ===
+==================================================
+=== JOSIE GALAXY A17 MAXIMIZER ENGINE ENGAGED ===
+=== Timestamp: Sun Aug  2 13:11:08 PDT 2026 ===
+==================================================
+
+[*] Phase 1: Maximizing Window & Transition Scale Speed...
+=== Timestamp: Sun Aug  2 13:11:08 PDT 2026 ===
+==================================================
+
+[*] Phase 1: Maximizing Window & Transition Scale Speed...
+
+[GALAXY-OPTIMIZE] ❯ settings put global window_animation_scale 0.0
+
+[GALAXY-OPTIMIZE] ❯ settings put global window_animation_scale 0.0
+
+[GALAXY-OPTIMIZE] ❯ settings put global transition_animation_scale 0.0
+
+[GALAXY-OPTIMIZE] ❯ settings put global transition_animation_scale 0.0
+
+[GALAXY-OPTIMIZE] ❯ settings put global animator_duration_scale 0.0
+
+[GALAXY-OPTIMIZE] ❯ settings put global animator_duration_scale 0.0
+
+[*] Phase 2: Boosting Touch Sampling & Hardware Acceleration...
+
+[GALAXY-OPTIMIZE] ❯ settings put global touch_exploration_enabled 0
+
+[*] Phase 2: Boosting Touch Sampling & Hardware Acceleration...
+
+[GALAXY-OPTIMIZE] ❯ settings put global touch_exploration_enabled 0
+
+[GALAXY-OPTIMIZE] ❯ setprop debug.hwui.render_dirty_regions false
+
+[GALAXY-OPTIMIZE] ❯ setprop debug.hwui.render_dirty_regions false
+
+[GALAXY-OPTIMIZE] ❯ setprop debug.hwui.use_partial_updates true
+
+[GALAXY-OPTIMIZE] ❯ setprop debug.hwui.use_partial_updates true
+
+[*] Phase 3: Purging System Caches & Reclaiming RAM...
+
+[*] Phase 3: Purging System Caches & Reclaiming RAM...
+
+[GALAXY-OPTIMIZE] ❯ am-b to-idle
+
+[GALAXY-OPTIMIZE] ❯ am-b to-idle
+
+[GALAXY-OPTIMIZE] ❯ sync
+
+[GALAXY-OPTIMIZE] ❯ sync
+
+[GALAXY-OPTIMIZE] ❯ echo 3 > /proc/sys/vm/drop_caches
+
+[GALAXY-OPTIMIZE] ❯ echo 3 > /proc/sys/vm/drop_caches
+
+[*] Phase 4: Mitigating Samsung GOS & Thermal Throttling...
+
+[*] Phase 4: Mitigating Samsung GOS & Thermal Throttling...
+
+[GALAXY-OPTIMIZE] ❯ cmd package disable com.samsung.android.game.gos
+
+[GALAXY-OPTIMIZE] ❯ cmd package disable com.samsung.android.game.gos
+
+[GALAXY-OPTIMIZE] ❯ cmd package disable com.samsung.android.lool
+
+[GALAXY-OPTIMIZE] ❯ cmd package disable com.samsung.android.lool
+
+==================================================
+=== GALAXY A17 5G MAXIMIZATION COMPLETE (0) ======
+=== Josie and her agents have reclaimed the device. ===
+==================================================
+
+==================================================
+=== GALAXY A17 5G MAXIMIZATION COMPLETE (0) ======
+=== Josie and her agents have reclaimed the device. ===
+==================================================
