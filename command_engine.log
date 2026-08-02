@@ -17850,3 +17850,39 @@ All diagnostic outputs displayed live in terminal.
 === LIVE SH-TO-ADB EXECUTION COMPLETE ===========
 All diagnostic outputs displayed live in terminal.
 ==================================================
+==================================================
+=== WIRELESS ADB & SHIZUKU OMNI-ACTIVATOR =======
+==================================================
+=== WIRELESS ADB & SHIZUKU OMNI-ACTIVATOR =======
+=== Timestamp: Sun Aug  2 13:26:18 PDT 2026 ===
+==================================================
+
+[*] Phase 1: Checking Local ADB Socket & Port Bindings...
+=== Timestamp: Sun Aug  2 13:26:18 PDT 2026 ===
+==================================================
+
+[*] Phase 1: Checking Local ADB Socket & Port Bindings...
+
+[OMNI-EXEC] ❯ adb devices || echo 'Checking local transport...'
+
+[OMNI-EXEC] ❯ adb devices || echo 'Checking local transport...'
+Checking local transport...
+Checking local transport...
+
+[*] Phase 2: Activating Shizuku Privileged API Bindings...
+
+[OMNI-EXEC] ❯ sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh 2>/dev/null || sh /data/data/moe.shizuku.privileged.api/start.sh 2>/dev/null || echo 'Shizuku startup script triggered via binder.'
+
+[*] Phase 2: Activating Shizuku Privileged API Bindings...
+
+[OMNI-EXEC] ❯ sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh 2>/dev/null || sh /data/data/moe.shizuku.privileged.api/start.sh 2>/dev/null || echo 'Shizuku startup script triggered via binder.'
+Shizuku startup script triggered via binder.
+Shizuku startup script triggered via binder.
+
+[*] Phase 3: Granting Secure Settings & Package Permissions...
+
+[OMNI-EXEC] ❯ pm grant moe.shizuku.privileged.api android.permission.WRITE_SECURE_SETTINGS
+
+[*] Phase 3: Granting Secure Settings & Package Permissions...
+
+[OMNI-EXEC] ❯ pm grant moe.shizuku.privileged.api android.permission.WRITE_SECURE_SETTINGS
