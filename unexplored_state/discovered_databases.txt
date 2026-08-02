@@ -1,0 +1,22 @@
+/storage/emulated/0/Download/Josie_Central_Hub/josiecore/chat_history.json
+/storage/emulated/0/Download/Josie_Central_Hub/.recycle/1783751521974.3/926284225/Current chashy cash and data  logs of (data collected to apps and via send the web - Google )/data 2/com.google.android.apps.maps/cache/diskcache/map_cache.db
+/storage/emulated/0/Download/Josie_Central_Hub/.recycle/1783751521974.3/926284225/Current chashy cash and data  logs of (data collected to apps and via send the web - Google )/data 2/com.google.android.apps.maps/cache/resource_cache/map_cache.db
+/storage/emulated/0/Download/Josie_Central_Hub/.recycle/1783751521974.3/926284225/Current chashy cash and data  logs of (data collected to apps and via send the web - Google )/data 2/com.sec.android.daemonapp/cache/diskcache/map_cache.db
+/storage/emulated/0/Download/Josie_Central_Hub/.recycle/1783751521974.3/926284225/Current chashy cash and data  logs of (data collected to apps and via send the web - Google )/data 2/com.sec.android.app.launcher/files/ScpmPolicy/homescreen_scpm_policy.json
+/storage/emulated/0/Download/Josie_Central_Hub/.recycle/1783751521974.3 (1)/926284225/Current chashy cash and data  logs of (data collected to apps and via send the web - Google )/data 2/com.sec.android.daemonapp/cache/diskcache/map_cache.db
+/storage/emulated/0/Download/Josie_Central_Hub/.recycle/1783751521974.3 (1)/926284225/Current chashy cash and data  logs of (data collected to apps and via send the web - Google )/data 2/com.sec.android.app.launcher/files/ScpmPolicy/homescreen_scpm_policy.json
+/storage/emulated/0/Download/Josie_Central_Hub/.recycle/1783751521974.3 (1)/926284225/Current chashy cash and data  logs of (data collected to apps and via send the web - Google )/data 2/com.google.android.apps.maps/cache/resource_cache/map_cache.db
+/storage/emulated/0/Download/Josie_Central_Hub/.recycle/1783751521974.3 (1)/926284225/Current chashy cash and data  logs of (data collected to apps and via send the web - Google )/data 2/com.google.android.apps.maps/cache/diskcache/map_cache.db
+/storage/emulated/0/Download/oxproxion/Fixes/brave_search_fix.json
+/storage/emulated/0/Download/Shizuku  docs.2026-08-01T20_23_23.948Z.json
+/storage/emulated/0/Josie_Central_Hub/josiecore/chat_history.json
+/storage/emulated/0/Josie_Central_Hub/.recycle/1783751521974.3/926284225/Current chashy cash and data  logs of (data collected to apps and via send the web - Google )/data 2/com.google.android.apps.maps/cache/diskcache/map_cache.db
+/storage/emulated/0/Josie_Central_Hub/.recycle/1783751521974.3/926284225/Current chashy cash and data  logs of (data collected to apps and via send the web - Google )/data 2/com.google.android.apps.maps/cache/resource_cache/map_cache.db
+/storage/emulated/0/Josie_Central_Hub/.recycle/1783751521974.3/926284225/Current chashy cash and data  logs of (data collected to apps and via send the web - Google )/data 2/com.sec.android.daemonapp/cache/diskcache/map_cache.db
+/storage/emulated/0/Josie_Central_Hub/.recycle/1783751521974.3/926284225/Current chashy cash and data  logs of (data collected to apps and via send the web - Google )/data 2/com.sec.android.app.launcher/files/ScpmPolicy/homescreen_scpm_policy.json
+/storage/emulated/0/Josie_Central_Hub/.recycle/1783751521974.3 (1)/926284225/Current chashy cash and data  logs of (data collected to apps and via send the web - Google )/data 2/com.sec.android.daemonapp/cache/diskcache/map_cache.db
+/storage/emulated/0/Josie_Central_Hub/.recycle/1783751521974.3 (1)/926284225/Current chashy cash and data  logs of (data collected to apps and via send the web - Google )/data 2/com.sec.android.app.launcher/files/ScpmPolicy/homescreen_scpm_policy.json
+/storage/emulated/0/Josie_Central_Hub/.recycle/1783751521974.3 (1)/926284225/Current chashy cash and data  logs of (data collected to apps and via send the web - Google )/data 2/com.google.android.apps.maps/cache/resource_cache/map_cache.db
+/storage/emulated/0/Josie_Central_Hub/.recycle/1783751521974.3 (1)/926284225/Current chashy cash and data  logs of (data collected to apps and via send the web - Google )/data 2/com.google.android.apps.maps/cache/diskcache/map_cache.db
+
+# @Josie Discovered Sovereign Node
