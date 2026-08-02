@@ -4,7 +4,7 @@
   "epoch": 1785703123,
   "target_hub": "",
   "assets_found": 0,
-  "generation": 21,
+  "generation": 22,
   "daemon_cycles": {
     "76c602cab34d": {
       "timestamp": "2026-08-02 13:38:59",
@@ -199,6 +199,16 @@
     "876390d964e6": {
       "timestamp": "2026-08-02 13:58:40",
       "generation": 21,
+      "telemetry": {
+        "device_model": "SM-A176U",
+        "termux_pkgs": 461,
+        "storage_free_mb": 68254
+      },
+      "status": "Autonomous Sync Complete"
+    },
+    "390a227a1439": {
+      "timestamp": "2026-08-02 13:59:42",
+      "generation": 22,
       "telemetry": {
         "device_model": "SM-A176U",
         "termux_pkgs": 461,
