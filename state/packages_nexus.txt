@@ -153,8 +153,7 @@ package:/system/priv-app/IntentResolver/IntentResolver.apk=com.android.intentres
 package:/system/app/BluetoothMidiService/BluetoothMidiService.apk=com.android.bluetoothmidiservice
 package:/data/app/~~ahL7NELZpfocMzRt3CjFqA==/com.samsung.android.mcfds-6biaVCBHBmRQgASKvEAMuQ==/base.apk=com.samsung.android.mcfds
 package:/system/priv-app/BlueLightFilter/BlueLightFilter.apk=com.samsung.android.bluelightfilter
-package:/system/priv-app/CIDManager/CIDManager.apk=com.samsung.androisIntelligence/SecSettingsIntelligence.apk=com.android.settings.intelligence
-package:/system/app/MdecService/MdecService.apk=com.samsung.android.mdecservice
+package:/system/priv-app/CIDManager/CIDManager.apk=com.samsung.androip/MdecService/MdecService.apk=com.samsung.android.mdecservice
 package:/system/app/MDMApp/MDMApp.apk=com.samsung.android.mdm
 package:/system/app/EasyOneHand3/EasyOneHand3.apk=com.sec.android.easyonehand
 package:/product/overlay/CompanionDeviceManager__phone__auto_generated_characteristics_rro.apk=com.android.companiondevicemanager.auto_generated_characteristics_rro
