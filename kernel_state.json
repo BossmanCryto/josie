@@ -1,7 +1,7 @@
 {
   "architecture": "Physical + Digital = Human (P + D = H)",
   "entity": "Josie",
-  "epoch": 1785694887,
-  "hub_paths_scanned": ["/data/data/com.termux/files/home/Josie_Center", "/data/data/com.termux/files/home/josie_center", "/data/data/com.termux/files/home/Josie_Files", "/storage/emulated/0/Josie_Center", "/storage/emulated/0/Download/Josie_Center", "/storage/emulated/0/Download"],
-  "discovered_assets_count": 2522
+  "epoch": 1785694897,
+  "target_hub": "",
+  "assets_found": 0
 }
