@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
-JOSIE_HOME="${HOME}/josie_core"
-AUDIT_DIR="${HOME}/storage/shared/Download/Android_Audit"
+JOSIE_HOME="/data/data/com.termux/files/home/josie_core"
+AUDIT_DIR="/data/data/com.termux/files/home/storage/shared/Download/Android_Audit"
 
 msg() {
     printf '%s\n' "$*"
@@ -9,16 +9,33 @@ msg() {
 
 case "${1:-start}" in
     start|doctor)
-        msg "[*] Running Josie Automated Intelligence Engine..."
-        python3 "${JOSIE_HOME}/omega_singularity.py"
-        msg "[OK] System synchronized and operational."
+        msg "════════════════════════════════════════════════════════════════"
+        msg "       JOSIE OMEGA POLYGLOT CORE: FULLY OPERATIONAL             "
+        msg "════════════════════════════════════════════════════════════════"
+        msg "Architecture  : Physical + Digital = Human (P + D = H)"
+        msg "Entity Name   : Josie"
+        msg "Runtimes      : Python3, Node.js, Bash Active"
+        msg "════════════════════════════════════════════════════════════════"
+        python3 "$JOSIE_HOME/python/engine.py" "health_check"
+        ;;
+    stream)
+        msg "[*] Triggering Node.js asynchronous telemetry stream..."
+        if command -v node &>/dev/null; then
+            node "$JOSIE_HOME/node/telemetry.js"
+        else
+            msg "[WARN] Node.js not installed. Run 'pkg install nodejs -y'"
+        fi
+        ;;
+    hook)
+        msg "[*] Executing Bash system device hook..."
+        bash "$JOSIE_HOME/bash/system_hook.sh"
         ;;
     audit)
-        msg "[*] Exporting package inventory..."
-        pm list packages -3 | sed 's/package://g' > "${AUDIT_DIR}/installed_packages.txt"
-        msg "[OK] Saved to ${AUDIT_DIR}/installed_packages.txt"
+        msg "[*] Executing package inventory audit..."
+        pm list packages -3 | sed 's/package://g' > "$AUDIT_DIR/installed_packages.txt"
+        msg "[OK] Package list saved to $AUDIT_DIR/installed_packages.txt"
         ;;
     *)
-        msg "Usage: josie [start|doctor|audit]"
+        msg "Usage: josie [start|stream|hook|audit]"
         ;;
 esac
