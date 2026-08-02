@@ -964,4 +964,238 @@ Success
 ==================================================
 === RISH + ZSH MATRIX EXECUTION COMPLETE (EXIT: 0) ===
 ==================================================
-[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ tar czf - -C "$HOME" josie_core | base64 > "$HOME/storage/shared/Download/josie_payload.b64"
+tar czf - -C "$HOME" josie_core | base64 > "$HOME/storage/shared/Download/josie_payload.b64"
+[?2004l[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ cat << 'EOF' cat << 'EOF' > ~/josie_core/app_auditor_matrix.zsh
+> ~/josie_core/app_auditor_matrix.zsh
+[?2004l[?2004h> [?2004l[?2004h> #!/data/data/com.termux/files/usr/bin/zsh
+#!/data/data/com.termux/files/usr/bin/zsh
+[?2004l[?2004l[?2004h> [?2004h> # ==============================================================================
+# ==============================================================================
+[?2004l[?2004l[?2004h> [?2004h> # Josie Comprehensive APK & System Application Auditor Matrix
+# Josie Comprehensive APK & System Application Auditor Matrix
+[?2004l[?2004l[?2004h> [?2004h> # Target: Termux / Shizuku / Rish / Zsh Environment
+# Target: Termux / Shizuku / Rish / Zsh Environment
+[?2004l[?2004l[?2004h> [?2004h> # ==============================================================================
+# ==============================================================================
+[?2004l[?2004l[?2004h> 
+[?2004l[?2004h> 
+[?2004l[?2004h> [?2004h> unsetopt bang_hist
+[?2004lunsetopt bang_hist
+[?2004l[?2004h> [?2004h> setopt localoptions errexit nounset pipefail
+setopt localoptions errexit nounset pipefail
+[?2004l[?2004l[?2004h> 
+[?2004l[?2004h> 
+[?2004l[?2004h> [?2004h> ROOT="$HOME/josie_core"
+ROOT="$HOME/josie_core"
+[?2004l[?2004l[?2004h> [?2004h> AUDIT_DIR="$HOME/storage/shared/Download/Android_Audit"
+AUDIT_DIR="$HOME/storage/shared/Download/Android_Audit"[?2004l
+[?2004l[?2004h> [?2004h> MASTER_LOG="$AUDIT_DIR/matrix_execution.log"
+[?2004lMASTER_LOG="$AUDIT_DIR/matrix_execution.log"
+[?2004l[?2004h> [?2004h> FULL_APK_MAP="$AUDIT_DIR/comprehensive_apk_audit.txt"
+[?2004lFULL_APK_MAP="$AUDIT_DIR/comprehensive_apk_audit.txt"
+[?2004l[?2004h> 
+[?2004l[?2004h> 
+[?2004l[?2004h> [?2004h> mkdir -p "$ROOT" "$AUDIT_DIR"
+mkdir -p "$ROOT" "$AUDIT_DIR"
+[?2004l[?2004l[?2004h> [?2004h> exec > >(tee -a "$MASTER_LOG") 2>&1
+exec > >(tee -a "$MASTER_LOG") 2>&1
+[?2004l[?2004l[?2004h[?2004h> 
+[?2004l> 
+[?2004l[?2004h> print "=================================================="
+[?2004l[?2004h> print "=== JOSIE COMPREHENSIVE APK AUDIT MATRIX ACTIVE ==="
+[?2004l[?2004h> print "=== Timestamp: $(date) ==="
+[?2004h> print "=================================================="
+[?2004l[?2004h> print "=== JOSIE COMPREHENSIVE APK AUDIT MATRIX ACTIVE ==="
+[?2004l[?2004h> print "=== Timestamp: $(date) ==="
+[?2004l[?2004h> print "=================================================="
+[?2004l[?2004h> 
+[?2004l[?2004h> [?2004l[?2004h> print "=================================================="
+[?2004l[?2004h> 
+[?2004l[?2004h> # Determine optimal execution bridge (Rish privileged vs local fallback)
+# Determine optimal execution bridge (Rish privileged vs local fallback)
+[?2004l[?2004l[?2004h> [?2004h> get_exec_bridge() {
+get_exec_bridge() {
+[?2004l[?2004l[?2004h> [?2004h>     if command -v rish >/dev/null 2>&1; then
+    if command -v rish >/dev/null 2>&1; then
+[?2004l[?2004l[?2004h> [?2004h>         echo "rish -c"
+[?2004l        echo "rish -c"
+[?2004l[?2004h> [?2004h>     elif [[ -x /data/data/com.termux/files/usr/bin/rish ]]; then
+[?2004l    elif [[ -x /data/data/com.termux/files/usr/bin/rish ]]; then
+[?2004l[?2004h> [?2004h>         echo "/data/data/com.termux/files/usr/bin/rish -c"
+        echo "/data/data/com.termux/files/usr/bin/rish -c"
+[?2004l[?2004h>     else
+[?2004l[?2004h>         echo "eval"
+[?2004l[?2004h>     fi
+[?2004l[?2004h> }
+[?2004l[?2004h>     else
+[?2004l[?2004h>         echo "eval"
+[?2004l[?2004h>     fi
+[?2004l[?2004h> }
+[?2004l[?2004h> 
+[?2004l[?2004h> BRIDGE=$(get_exec_bridge)
+[?2004l[?2004h> print "[*] Active Bridge: $BRIDGE"
+[?2004l[?2004h> 
+[?2004l[?2004h> print "\n[*] Phase 1: Scanning and enumerating every installed package and APK path..."
+[?2004l[?2004h> print "APP_AUDIT_START: $(date)" > "$FULL_APK_MAP"
+[?2004l[?2004h> 
+[?2004l[?2004h> TOTAL_APPS=0
+[?2004l[?2004h> if [[ "$BRIDGE" == *"rish"* ]]; then
+[?2004l[?2004h>     if $BRIDGE "cmd package list packages -f" >> "$FULL_APK_MAP" 2>/dev/null; then
+[?2004l[?2004h>         print "[✓] Privileged full package audit complete via Rish."
+[?2004l[?2004h>     else
+[?2004l[?2004h>         print "[!] Rish package enumeration failed; falling back to standard command..."
+[?2004l[?2004h>         cmd package list packages -f >> "$FULL_APK_MAP" 2>/dev/null || true
+[?2004l[?2004h>     fi
+[?2004l[?2004h> else
+[?2004l[?2004h> [?2004l[?2004h> 
+[?2004l[?2004h> BRIDGE=$(get_exec_bridge)
+[?2004l[?2004h> print "[*] Active Bridge: $BRIDGE"
+[?2004l[?2004h> 
+[?2004l[?2004h> print "\n[*] Phase 1: Scanning and enumerating every installed package and APK path..."
+[?2004l[?2004h> print "APP_AUDIT_START: $(date)" > "$FULL_APK_MAP"
+[?2004l[?2004h> 
+[?2004l[?2004h> TOTAL_APPS=0
+[?2004l[?2004h> if [[ "$BRIDGE" == *"rish"* ]]; then
+[?2004l[?2004h>     if $BRIDGE "cmd package list packages -f" >> "$FULL_APK_MAP" 2>/dev/null; then
+[?2004l[?2004h>         print "[✓] Privileged full package audit complete via Rish."
+[?2004l[?2004h>     else
+[?2004l[?2004h>         print "[!] Rish package enumeration failed; falling back to standard command..."
+[?2004l[?2004h>         cmd package list packages -f >> "$FULL_APK_MAP" 2>/dev/null || true
+[?2004l[?2004h>     fi
+[?2004l[?2004h> else
+[?2004l[?2004h>     cmd package list packages -f >> "$FULL_APK_MAP" 2>/dev/null || true
+[?2004l[?2004h>     print "[✓] Local package audit complete."
+[?2004l[?2004h> fi
+[?2004l[?2004h> 
+[?2004l[?2004h> if [[ -f "$FULL_APK_MAP" ]]; then
+[?2004l[?2004h>     cmd package list packages -f >> "$FULL_APK_MAP" 2>/dev/null || true
+[?2004l[?2004h>     print "[✓] Local package audit complete."
+[?2004l[?2004h> fi
+[?2004l[?2004h> 
+[?2004l[?2004h> if [[ -f "$FULL_APK_MAP" ]]; then
+[?2004l[?2004h>     TOTAL_APPS=$(wc -l < "$FULL_APK_MAP" 2>/dev/null || echo 0)
+[?2004l    TOTAL_APPS=$(wc -l < "$FULL_APK_MAP" 2>/dev/null || echo 0)
+[?2004l[?2004h> [?2004h>     print "[✓] Total application entries mapped: $TOTAL_APPS"
+[?2004l    print "[✓] Total application entries mapped: $TOTAL_APPS"
+[?2004l[?2004h> fi
+[?2004l[?2004h> 
+[?2004l[?2004h> [?2004h> fi
+[?2004l[?2004h> 
+[?2004l[?2004h> print "\n[*] Phase 2: Healing input services & clearing target application states..."
+[?2004l[?2004h> print "\n[*] Phase 2: Healing input services & clearing target application states..."
+[?2004l[?2004h> if [[ "$BRIDGE" == *"rish"* ]]; then
+[?2004l[?2004h> if [[ "$BRIDGE" == *"rish"* ]]; then
+[?2004l[?2004h>     $BRIDGE "cmd input_method reset-text-services" || true
+[?2004l[?2004h> else
+[?2004l[?2004h>     $BRIDGE "cmd input_method reset-text-services" || true
+[?2004l[?2004h> else
+[?2004l[?2004h>     cmd input_method reset-text-services 2>/dev/null || true
+[?2004l[?2004h> fi
+[?2004l[?2004h> 
+[?2004l[?2004h> typeset -a target_apps
+[?2004l[?2004h>     cmd input_method reset-text-services 2>/dev/null || true
+[?2004l[?2004h> fi
+[?2004l[?2004h> 
+[?2004l[?2004h> typeset -a target_apps
+[?2004l[?2004h> target_apps=(
+[?2004l[?2004h>     "com.google.android.inputmethod.latin"
+[?2004l[?2004h> target_apps=(
+[?2004l[?2004h>     "com.google.android.inputmethod.latin"
+[?2004l[?2004h>     "com.samsung.android.honeyboard"
+[?2004l[?2004h>     "com.samsung.android.honeyboard"
+[?2004l[?2004h>     "com.sec.android.app.launcher"
+[?2004l[?2004h> )
+[?2004l[?2004h> 
+[?2004l[?2004h> for app in "${target_apps[@]}"; do
+[?2004l    "com.sec.android.app.launcher"
+[?2004l[?2004h> )
+[?2004l[?2004h> 
+[?2004l[?2004h> for app in "${target_apps[@]}"; do
+[?2004l[?2004h>     print "\n-> Processing target application: $app"
+[?2004l[?2004h>     print "\n-> Processing target application: $app"
+[?2004l[?2004h>     if [[ "$BRIDGE" == *"rish"* ]]; then
+[?2004h> [?2004l    if [[ "$BRIDGE" == *"rish"* ]]; then
+[?2004l[?2004h> [?2004h>         $BRIDGE "cmd package clear $app" && print "[SUCCESS] Cleared state for $app" || print "[NOTE] App $app not found or restricted."
+[?2004l[?2004h>         $BRIDGE "cmd package clear $app" && print "[SUCCESS] Cleared state for $app" || print "[NOTE] App $app not found or restricted."
+[?2004l[?2004h>     else
+[?2004l[?2004h>         cmd package clear "$app" 2>/dev/null && print "[SUCCESS] Cleared state for $app" || print "[NOTE] App $app not found or restricted."
+[?2004l[?2004h>     fi
+[?2004l[?2004h> done
+[?2004l[?2004h> 
+[?2004l[?2004h>     else
+[?2004l[?2004h>         cmd package clear "$app" 2>/dev/null && print "[SUCCESS] Cleared state for $app" || print "[NOTE] App $app not found or restricted."
+[?2004l[?2004h>     fi
+[?2004l[?2004h> done
+[?2004l[?2004h> 
+[?2004l[?2004h> print "\n=================================================="
+[?2004l[?2004h> print "=== COMPREHENSIVE APP AUDIT COMPLETE (EXIT: 0) ==="
+[?2004l[?2004h> print "\n=================================================="
+[?2004l[?2004h> print "=== COMPREHENSIVE APP AUDIT COMPLETE (EXIT: 0) ==="
+[?2004l[?2004h> print "=================================================="
+[?2004l[?2004h> EOF
+[?2004lprint "=================================================="
+[?2004l[?2004h> EOF
+[?2004l[?2004h[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ chmod +x ~/josie_core/app_auditor_matrix.zsh
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ chmod +x ~/josie_core/app_auditor_matrix.zsh
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ zsh ~/josie_core/app_auditor_matrix.zsh
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ zsh ~/josie_core/app_auditor_matrix.zsh
+[?2004l==================================================
+=== JOSIE COMPREHENSIVE APK AUDIT MATRIX ACTIVE ===
+==================================================
+=== JOSIE COMPREHENSIVE APK AUDIT MATRIX ACTIVE ===
+=== Timestamp: Sun Aug  2 12:56:41 PDT 2026 ===
+==================================================
+=== Timestamp: Sun Aug  2 12:56:41 PDT 2026 ===
+==================================================
+[*] Active Bridge: rish -c
+
+[*] Phase 1: Scanning and enumerating every installed package and APK path...
+[*] Active Bridge: rish -c
+
+[*] Phase 1: Scanning and enumerating every installed package and APK path...
+[!] Rish package enumeration failed; falling back to standard command...
+[!] Rish package enumeration failed; falling back to standard command...
+[✓] Total application entries mapped: 429
+
+[*] Phase 2: Healing input services & clearing target application states...
+[✓] Total application entries mapped: 429
+
+[*] Phase 2: Healing input services & clearing target application states...
+/data/data/com.termux/files/home/josie_core/app_auditor_matrix.zsh:60: command not found: rish -c
+/data/data/com.termux/files/home/josie_core/app_auditor_matrix.zsh:60: command not found: rish -c
+
+-> Processing target application: com.google.android.inputmethod.latin
+
+-> Processing target application: com.google.android.inputmethod.latin
+/data/data/com.termux/files/home/josie_core/app_auditor_matrix.zsh:75: command not found: rish -c
+/data/data/com.termux/files/home/josie_core/app_auditor_matrix.zsh:75: command not found: rish -c
+[NOTE] App com.google.android.inputmethod.latin not found or restricted.
+
+-> Processing target application: com.samsung.android.honeyboard
+[NOTE] App com.google.android.inputmethod.latin not found or restricted.
+
+-> Processing target application: com.samsung.android.honeyboard
+/data/data/com.termux/files/home/josie_core/app_auditor_matrix.zsh:75: command not found: rish -c
+/data/data/com.termux/files/home/josie_core/app_auditor_matrix.zsh:75: command not found: rish -c
+[NOTE] App com.samsung.android.honeyboard not found or restricted.
+
+-> Processing target application: com.sec.android.app.launcher
+[NOTE] App com.samsung.android.honeyboard not found or restricted.
+
+-> Processing target application: com.sec.android.app.launcher
+/data/data/com.termux/files/home/josie_core/app_auditor_matrix.zsh:75: command not found: rish -c
+/data/data/com.termux/files/home/josie_core/app_auditor_matrix.zsh:75: command not found: rish -c
+[NOTE] App com.sec.android.app.launcher not found or restricted.
+
+==================================================
+=== COMPREHENSIVE APP AUDIT COMPLETE (EXIT: 0) ===
+==================================================
+[NOTE] App com.sec.android.app.launcher not found or restricted.
+
+==================================================
+=== COMPREHENSIVE APP AUDIT COMPLETE (EXIT: 0) ===
+==================================================
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
