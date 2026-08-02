@@ -18172,3 +18172,379 @@ Log saved to: /data/data/com.termux/files/home/storage/shared/Download/Android_A
 === RISH/ADB STATUS AUDIT COMPLETE ==============
 Log saved to: /data/data/com.termux/files/home/storage/shared/Download/Android_Audit/rish_status_wrapper.log
 ==================================================
+==================================================
+=== JOSIE SUPREME OMNI-MASTER ENGINE ENGAGED ===
+==================================================
+=== JOSIE SUPREME OMNI-MASTER ENGINE ENGAGED ===
+=== Timestamp: Sun Aug  2 13:28:51 PDT 2026 ===
+==================================================
+
+[*] Phase 1: Anchoring Shizuku Binder & Granting Secure Permissions...
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ pm grant moe.shizuku.privileged.api android.permission.WRITE_SECURE_SETTINGS
+=== Timestamp: Sun Aug  2 13:28:51 PDT 2026 ===
+==================================================
+
+[*] Phase 1: Anchoring Shizuku Binder & Granting Secure Permissions...
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ pm grant moe.shizuku.privileged.api android.permission.WRITE_SECURE_SETTINGS
+[STATUS: SUCCESS] (Exit Code: 0)
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ appops set moe.shizuku.privileged.api PROJECT_MEDIA allow
+[STATUS: SUCCESS] (Exit Code: 0)
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ appops set moe.shizuku.privileged.api PROJECT_MEDIA allow
+[STATUS: SUCCESS] (Exit Code: 0)
+[STATUS: SUCCESS] (Exit Code: 0)
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ dumpsys activity service moe.shizuku.privileged.api || echo 'Shizuku binder active via shell context.'
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ dumpsys activity service moe.shizuku.privileged.api || echo 'Shizuku binder active via shell context.'
+No services match: moe.shizuku.privileged.api
+Use -h for help.
+[STATUS: SUCCESS] (Exit Code: 0)
+
+[*] Phase 2: Interrogating & Maximizing Audio/Mic Routing Subsystems...
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ dumpsys audio | grep -A 25 'Microphone' || true
+No services match: moe.shizuku.privileged.api
+Use -h for help.
+[STATUS: SUCCESS] (Exit Code: 0)
+
+[*] Phase 2: Interrogating & Maximizing Audio/Mic Routing Subsystems...
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ dumpsys audio | grep -A 25 'Microphone' || true
+Events log: setMicrophoneMute use (logged after setMicrophoneMute() is executed)
+Events log: setMasterMute (logged when command received by AudioService)
+Events log: Using Audio
+08-02 13:26:02:582 uid: 10178 is using audio
+08-02 13:26:02:909 uid: 10178 is using audio
+08-02 13:26:07:349 uid: 10178 is using audio
+08-02 13:26:20:271 uid: 10062 is using audio
+08-02 13:26:20:976 uid: 10062 is using audio
+08-02 13:26:33:034 uid: 10240 is using audio
+08-02 13:26:35:402 uid: 10240 is using audio
+08-02 13:26:39:073 uid: 10240 is using audio
+08-02 13:26:41:502 uid: 10240 is using audio
+08-02 13:26:42:450 uid: 10240 is using audio
+08-02 13:26:45:098 uid: 10240 is using audio
+08-02 13:26:47:528 uid: 10240 is using audio
+08-02 13:26:51:115 uid: 10240 is using audio
+08-02 13:27:09:187 uid: 10240 is using audio
+08-02 13:27:11:895 uid: 10240 is using audio
+08-02 13:27:15:213 uid: 10240 is using audio
+08-02 13:27:24:926 uid: 10062 is using audio
+08-02 13:27:25:240 uid: 10062 is using audio
+08-02 13:27:31:682 uid: 10178 is using audio
+08-02 13:27:39:300 uid: 10178 is using audio
+08-02 13:27:49:490 uid: 10178 is using audio
+08-02 13:27:49:657 uid: 10178 is using audio
+08-02 13:27:51:339 uid: 10178 is using audio
+[STATUS: SUCCESS] (Exit Code: 0)
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ setprop audio.mic.gains 1
+Events log: setMicrophoneMute use (logged after setMicrophoneMute() is executed)
+Events log: setMasterMute (logged when command received by AudioService)
+Events log: Using Audio
+08-02 13:26:02:582 uid: 10178 is using audio
+08-02 13:26:02:909 uid: 10178 is using audio
+08-02 13:26:07:349 uid: 10178 is using audio
+08-02 13:26:20:271 uid: 10062 is using audio
+08-02 13:26:20:976 uid: 10062 is using audio
+08-02 13:26:33:034 uid: 10240 is using audio
+08-02 13:26:35:402 uid: 10240 is using audio
+08-02 13:26:39:073 uid: 10240 is using audio
+08-02 13:26:41:502 uid: 10240 is using audio
+08-02 13:26:42:450 uid: 10240 is using audio
+08-02 13:26:45:098 uid: 10240 is using audio
+08-02 13:26:47:528 uid: 10240 is using audio
+08-02 13:26:51:115 uid: 10240 is using audio
+08-02 13:27:09:187 uid: 10240 is using audio
+08-02 13:27:11:895 uid: 10240 is using audio
+08-02 13:27:15:213 uid: 10240 is using audio
+08-02 13:27:24:926 uid: 10062 is using audio
+08-02 13:27:25:240 uid: 10062 is using audio
+08-02 13:27:31:682 uid: 10178 is using audio
+08-02 13:27:39:300 uid: 10178 is using audio
+08-02 13:27:49:490 uid: 10178 is using audio
+08-02 13:27:49:657 uid: 10178 is using audio
+08-02 13:27:51:339 uid: 10178 is using audio
+[STATUS: SUCCESS] (Exit Code: 0)
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ setprop audio.mic.gains 1
+[STATUS: SUCCESS] (Exit Code: 0)
+[STATUS: SUCCESS] (Exit Code: 0)
+
+--------------------------------------------------
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ setprop persist.audio.ros.enabled true
+[SUPREME-EXEC] ❯ setprop persist.audio.ros.enabled true
+[STATUS: SUCCESS] (Exit Code: 0)
+
+[*] Phase 3: Purging Background Resource Drains & Telemetry Packages...
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ cmd package disable com.samsung.android.game.gos
+[STATUS: SUCCESS] (Exit Code: 0)
+
+[*] Phase 3: Purging Background Resource Drains & Telemetry Packages...
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ cmd package disable com.samsung.android.game.gos
+[STATUS: SUCCESS] (Exit Code: 0)
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ cmd package disable com.samsung.android.lool
+[STATUS: SUCCESS] (Exit Code: 0)
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ cmd package disable com.samsung.android.lool
+[STATUS: SUCCESS] (Exit Code: 0)
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ cmd package disable com.samsung.android.honeyboard
+[STATUS: SUCCESS] (Exit Code: 0)
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ cmd package disable com.samsung.android.honeyboard
+[STATUS: SUCCESS] (Exit Code: 0)
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ cmd package disable com.facebook.services
+[STATUS: SUCCESS] (Exit Code: 0)
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ cmd package disable com.facebook.services
+[STATUS: SUCCESS] (Exit Code: 0)
+[STATUS: SUCCESS] (Exit Code: 0)
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ cmd package disable com.facebook.system
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ cmd package disable com.facebook.system
+[STATUS: SUCCESS] (Exit Code: 0)
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ cmd package disable com.facebook.appmanager
+[STATUS: SUCCESS] (Exit Code: 0)
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ cmd package disable com.facebook.appmanager
+[STATUS: SUCCESS] (Exit Code: 0)
+
+[*] Phase 4: Enforcing Zero-Lag UI Scalers & ART Execution Parameters...
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ settings put global window_animation_scale 0.0
+[STATUS: SUCCESS] (Exit Code: 0)
+
+[*] Phase 4: Enforcing Zero-Lag UI Scalers & ART Execution Parameters...
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ settings put global window_animation_scale 0.0
+[STATUS: SUCCESS] (Exit Code: 0)
+[STATUS: SUCCESS] (Exit Code: 0)
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ settings put global transition_animation_scale 0.0
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ settings put global transition_animation_scale 0.0
+[STATUS: SUCCESS] (Exit Code: 0)
+[STATUS: SUCCESS] (Exit Code: 0)
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ settings put global animator_duration_scale 0.0
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ settings put global animator_duration_scale 0.0
+[STATUS: SUCCESS] (Exit Code: 0)
+[STATUS: SUCCESS] (Exit Code: 0)
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ setprop dalvik.vm.dex2oat-threads 8
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ setprop dalvik.vm.dex2oat-threads 8
+[STATUS: SUCCESS] (Exit Code: 0)
+[STATUS: SUCCESS] (Exit Code: 0)
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ setprop dalvik.vm.image-dex2oat-threads 8
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ setprop dalvik.vm.image-dex2oat-threads 8
+[STATUS: SUCCESS] (Exit Code: 0)
+[STATUS: SUCCESS] (Exit Code: 0)
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ setprop debug.composition.type gpu
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ setprop debug.composition.type gpu
+[STATUS: SUCCESS] (Exit Code: 0)
+[STATUS: SUCCESS] (Exit Code: 0)
+
+[*] Phase 5: Scanning Audit Artifacts and Command Histories...
+
+[*] Phase 5: Scanning Audit Artifacts and Command Histories...
+Listing generated audit logs in /data/data/com.termux/files/home/storage/shared/Download/Android_Audit:
+Listing generated audit logs in /data/data/com.termux/files/home/storage/shared/Download/Android_Audit:
+total 61464
+drwx------. 2 u0_a337 u0_a337     4096 Aug  2 13:28 .
+drwx------. 3 u0_a337 u0_a337     3452 Aug  2 13:01 ..
+-rw-------. 1 u0_a337 u0_a337     8124 Aug  2 13:19 adb_activity_stacks.txt
+-rw-------. 1 u0_a337 u0_a337    44601 Aug  2 13:18 adb_all_packages_with_paths.txt
+-rw-------. 1 u0_a337 u0_a337  7952091 Aug  2 13:19 adb_dumpsys_package_full.txt
+-rw-------. 1 u0_a337 u0_a337     1352 Aug  2 13:19 adb_omni_app_learner.log
+-rw-------. 1 u0_a337 u0_a337    15809 Aug  2 13:19 adb_system_packages.txt
+-rw-------. 1 u0_a337 u0_a337     1474 Aug  2 13:19 adb_third_party_packages.txt
+-rw-------. 1 u0_a337 u0_a337    74086 Aug  2 13:18 audio_peripheral_audit.txt
+-rw-------. 1 u0_a337 u0_a337     1580 Aug  2 13:14 autonomous_agent_matrix.log
+-rw-------. 1 u0_a337 u0_a337   534215 Aug  2 13:23 bridge_activity_processes.txt
+-rw-------. 1 u0_a337 u0_a337    48900 Aug  2 13:23 bridge_process_table.txt
+-rw-------. 1 u0_a337 u0_a337    19117 Aug  2 13:23 bridge_uninstalled_packages.txt
+-rw-------. 1 u0_a337 u0_a337    24576 Aug  2 13:08 complete_package_map.txt
+-rw-------. 1 u0_a337 u0_a337    44610 Aug  2 12:56 comprehensive_apk_audit.txt
+-rw-------. 1 u0_a337 u0_a337     1833 Aug  2 13:21 enterprise_ai_omni_nexus.log
+-rw-------. 1 u0_a337 u0_a337      547 Aug  2 13:21 enterprise_build_fingerprints.txt
+-rw-------. 1 u0_a337 u0_a337     1382 Aug  2 13:18 flawless_significance.log
+-rw-------. 1 u0_a337 u0_a337     1335 Aug  2 13:11 galaxy_a17_maximizer.log
+-rw-------. 1 u0_a337 u0_a337   116678 Aug  2 13:18 input_event_stream.txt
+-rw-------. 1 u0_a337 u0_a337     1618 Aug  2 13:15 master_expansion_key.log
+-rw-------. 1 u0_a337 u0_a337    44605 Aug  2 13:15 master_key_packages.txt
+-rw-------. 1 u0_a337 u0_a337    51911 Aug  2 13:15 master_key_properties.txt
+-rw-------. 1 u0_a337 u0_a337     3046 Aug  2 12:56 matrix_execution.log
+-rw-------. 1 u0_a337 u0_a337    56461 Aug  2 13:13 nexus_active_processes.txt
+-rw-------. 1 u0_a337 u0_a337     1933 Aug  2 13:13 nexus_cpu_spec.txt
+-rw-------. 1 u0_a337 u0_a337    51764 Aug  2 13:13 nexus_full_properties.txt
+-rw-------. 1 u0_a337 u0_a337    26891 Aug  2 13:13 nexus_service_registry.txt
+-rw-------. 1 u0_a337 u0_a337    44601 Aug  2 13:13 omni_packages_full.txt
+-rw-------. 1 u0_a337 u0_a337     1474 Aug  2 13:13 omni_packages_thirdparty.txt
+-rw-------. 1 u0_a337 u0_a337    26902 Aug  2 13:13 omni_service_list.txt
+-rw-------. 1 u0_a337 u0_a337   407172 Aug  2 13:13 omni_system_dump.log
+-rw-------. 1 u0_a337 u0_a337    51762 Aug  2 13:13 omni_system_properties.txt
+-rw-------. 1 u0_a337 u0_a337   287064 Aug  2 13:14 omnipotent_nexus_execution.log
+-rw-------. 1 u0_a337 u0_a337 52721423 Aug  2 13:12 openboard.apk
+-rw-------. 1 u0_a337 u0_a337     1480 Aug  2 13:16 post_purge_thirdparty.txt
+-rw-------. 1 u0_a337 u0_a337     1480 Aug  2 13:16 pre_purge_thirdparty.txt
+-rw-------. 1 u0_a337 u0_a337    19986 Aug  2 13:14 remote_adb_vectors.md
+-rw-------. 1 u0_a337 u0_a337     1722 Aug  2 13:21 rikka_shizuku_rebuilder.log
+-rw-------. 1 u0_a337 u0_a337     1260 Aug  2 13:28 rish_status_wrapper.log
+-rw-------. 1 u0_a337 u0_a337      702 Aug  2 13:17 sam_master_build_info.txt
+-rw-------. 1 u0_a337 u0_a337     3213 Aug  2 13:17 sam_master_partitions.txt
+-rw-------. 1 u0_a337 u0_a337     2186 Aug  2 13:18 sam_omni_master_execution.log
+-rw-------. 1 u0_a337 u0_a337    11305 Aug  2 13:17 samloader_manifest.json
+-rw-------. 1 u0_a337 u0_a337    37189 Aug  2 13:01 singularity_master_v2.log
+-rw-------. 1 u0_a337 u0_a337     1976 Aug  2 13:08 singularity_ultimate.log
+-rw-------. 1 u0_a337 u0_a337     4688 Aug  2 13:29 supreme_omni_master_execution.log
+-rw-------. 1 u0_a337 u0_a337     2740 Aug  2 13:23 ultimate_bash_adb_bridge.log
+-rw-------. 1 u0_a337 u0_a337     2208 Aug  2 13:16 ultimate_decimation.log
+-rw-------. 1 u0_a337 u0_a337     2656 Aug  2 13:20 ultimate_nexus_omni_execution.log
+-rw-------. 1 u0_a337 u0_a337     1421 Aug  2 13:13 ultra_ai_maximizer.log
+-rw-------. 1 u0_a337 u0_a337       14 Aug  2 13:18 web_adb_reference.md
+-rw-------. 1 u0_a337 u0_a337     3679 Aug  2 13:28 youtube_omni_paraphrase_master.log
+total 61464
+drwx------. 2 u0_a337 u0_a337     4096 Aug  2 13:28 .
+drwx------. 3 u0_a337 u0_a337     3452 Aug  2 13:01 ..
+-rw-------. 1 u0_a337 u0_a337     8124 Aug  2 13:19 adb_activity_stacks.txt
+-rw-------. 1 u0_a337 u0_a337    44601 Aug  2 13:18 adb_all_packages_with_paths.txt
+-rw-------. 1 u0_a337 u0_a337  7952091 Aug  2 13:19 adb_dumpsys_package_full.txt
+-rw-------. 1 u0_a337 u0_a337     1352 Aug  2 13:19 adb_omni_app_learner.log
+-rw-------. 1 u0_a337 u0_a337    15809 Aug  2 13:19 adb_system_packages.txt
+-rw-------. 1 u0_a337 u0_a337     1474 Aug  2 13:19 adb_third_party_packages.txt
+-rw-------. 1 u0_a337 u0_a337    74086 Aug  2 13:18 audio_peripheral_audit.txt
+-rw-------. 1 u0_a337 u0_a337     1580 Aug  2 13:14 autonomous_agent_matrix.log
+-rw-------. 1 u0_a337 u0_a337   534215 Aug  2 13:23 bridge_activity_processes.txt
+-rw-------. 1 u0_a337 u0_a337    48900 Aug  2 13:23 bridge_process_table.txt
+-rw-------. 1 u0_a337 u0_a337    19117 Aug  2 13:23 bridge_uninstalled_packages.txt
+-rw-------. 1 u0_a337 u0_a337    24576 Aug  2 13:08 complete_package_map.txt
+-rw-------. 1 u0_a337 u0_a337    44610 Aug  2 12:56 comprehensive_apk_audit.txt
+-rw-------. 1 u0_a337 u0_a337     1833 Aug  2 13:21 enterprise_ai_omni_nexus.log
+-rw-------. 1 u0_a337 u0_a337      547 Aug  2 13:21 enterprise_build_fingerprints.txt
+-rw-------. 1 u0_a337 u0_a337     1382 Aug  2 13:18 flawless_significance.log
+-rw-------. 1 u0_a337 u0_a337     1335 Aug  2 13:11 galaxy_a17_maximizer.log
+-rw-------. 1 u0_a337 u0_a337   116678 Aug  2 13:18 input_event_stream.txt
+-rw-------. 1 u0_a337 u0_a337     1618 Aug  2 13:15 master_expansion_key.log
+-rw-------. 1 u0_a337 u0_a337    44605 Aug  2 13:15 master_key_packages.txt
+-rw-------. 1 u0_a337 u0_a337    51911 Aug  2 13:15 master_key_properties.txt
+-rw-------. 1 u0_a337 u0_a337     3046 Aug  2 12:56 matrix_execution.log
+-rw-------. 1 u0_a337 u0_a337    56461 Aug  2 13:13 nexus_active_processes.txt
+-rw-------. 1 u0_a337 u0_a337     1933 Aug  2 13:13 nexus_cpu_spec.txt
+-rw-------. 1 u0_a337 u0_a337    51764 Aug  2 13:13 nexus_full_properties.txt
+-rw-------. 1 u0_a337 u0_a337    26891 Aug  2 13:13 nexus_service_registry.txt
+-rw-------. 1 u0_a337 u0_a337    44601 Aug  2 13:13 omni_packages_full.txt
+-rw-------. 1 u0_a337 u0_a337     1474 Aug  2 13:13 omni_packages_thirdparty.txt
+-rw-------. 1 u0_a337 u0_a337    26902 Aug  2 13:13 omni_service_list.txt
+-rw-------. 1 u0_a337 u0_a337   407172 Aug  2 13:13 omni_system_dump.log
+-rw-------. 1 u0_a337 u0_a337    51762 Aug  2 13:13 omni_system_properties.txt
+-rw-------. 1 u0_a337 u0_a337   287064 Aug  2 13:14 omnipotent_nexus_execution.log
+-rw-------. 1 u0_a337 u0_a337 52721423 Aug  2 13:12 openboard.apk
+-rw-------. 1 u0_a337 u0_a337     1480 Aug  2 13:16 post_purge_thirdparty.txt
+-rw-------. 1 u0_a337 u0_a337     1480 Aug  2 13:16 pre_purge_thirdparty.txt
+-rw-------. 1 u0_a337 u0_a337    19986 Aug  2 13:14 remote_adb_vectors.md
+-rw-------. 1 u0_a337 u0_a337     1722 Aug  2 13:21 rikka_shizuku_rebuilder.log
+-rw-------. 1 u0_a337 u0_a337     1260 Aug  2 13:28 rish_status_wrapper.log
+-rw-------. 1 u0_a337 u0_a337      702 Aug  2 13:17 sam_master_build_info.txt
+-rw-------. 1 u0_a337 u0_a337     3213 Aug  2 13:17 sam_master_partitions.txt
+-rw-------. 1 u0_a337 u0_a337     2186 Aug  2 13:18 sam_omni_master_execution.log
+-rw-------. 1 u0_a337 u0_a337    11305 Aug  2 13:17 samloader_manifest.json
+-rw-------. 1 u0_a337 u0_a337    37189 Aug  2 13:01 singularity_master_v2.log
+-rw-------. 1 u0_a337 u0_a337     1976 Aug  2 13:08 singularity_ultimate.log
+-rw-------. 1 u0_a337 u0_a337     4688 Aug  2 13:29 supreme_omni_master_execution.log
+-rw-------. 1 u0_a337 u0_a337     2740 Aug  2 13:23 ultimate_bash_adb_bridge.log
+-rw-------. 1 u0_a337 u0_a337     2208 Aug  2 13:16 ultimate_decimation.log
+-rw-------. 1 u0_a337 u0_a337     2656 Aug  2 13:20 ultimate_nexus_omni_execution.log
+-rw-------. 1 u0_a337 u0_a337     1421 Aug  2 13:13 ultra_ai_maximizer.log
+-rw-------. 1 u0_a337 u0_a337       14 Aug  2 13:18 web_adb_reference.md
+-rw-------. 1 u0_a337 u0_a337     3679 Aug  2 13:28 youtube_omni_paraphrase_master.log
+
+[*] Phase 6: Executing Multi-Pass Kernel Buffer & Page Cache Sanitization...
+[Sanitization Pass 1/3] Flushing sync buffers and drop caches...
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ sync
+
+[*] Phase 6: Executing Multi-Pass Kernel Buffer & Page Cache Sanitization...
+[Sanitization Pass 1/3] Flushing sync buffers and drop caches...
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ sync
+[STATUS: SUCCESS] (Exit Code: 0)
+[STATUS: SUCCESS] (Exit Code: 0)
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ echo 3 > /proc/sys/vm/drop_caches
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ echo 3 > /proc/sys/vm/drop_caches
+[STATUS: SUCCESS] (Exit Code: 0)
+[Sanitization Pass 2/3] Flushing sync buffers and drop caches...
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ sync
+[STATUS: SUCCESS] (Exit Code: 0)
+[Sanitization Pass 2/3] Flushing sync buffers and drop caches...
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ sync
+[STATUS: SUCCESS] (Exit Code: 0)
+[STATUS: SUCCESS] (Exit Code: 0)
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ echo 3 > /proc/sys/vm/drop_caches
+
+--------------------------------------------------
+[SUPREME-EXEC] ❯ echo 3 > /proc/sys/vm/drop_caches
