@@ -13,8 +13,8 @@ gen=$(grep -o '"generation": *[0-9]*' "$LEDGER_FILE" 2>/dev/null | grep -o '[0-9
 (( gen++ ))
 
 local ts=$(date '+%Y-%m-%d %H:%M:%S')
-local lock_id=$(print -n "$ts-$gen" | sha256sum | awk '{print $1}')
-lock_id=${lock_id[1,12]}
+local cid=$(print -n "$ts-$gen" | sha256sum | awk '{print $1}')
+cid=${cid[1,12]}
 
 local model=$(getprop ro.product.model 2>/dev/null)
 model=${model:-SM-A176U}
@@ -27,35 +27,31 @@ cat << JSON > "$LEDGER_FILE"
 {
   "architecture": "Physical + Digital = Human (P+D=H)",
   "generation": $gen,
-  "lock_id": "$lock_id",
+  "cycle_id": "$cid",
   "timestamp": "$ts",
   "account_profile": "joseamonterroso1999@gmail.com",
   "telemetry": {
     "device_model": "$model",
     "storage_free_mb": $free_mb,
-    "cli_lock": "Rust Immutable Enforced",
-    "shell_persistence": "Absolute"
+    "prompt_fix": "Applied Native Zsh Prompt Escape Parser"
   },
-  "status": "CLI Customizations Locked and Protected from Resets"
+  "status": "Prompt Escapes Fully Sanitized and Unified"
 }
 JSON
 
-# Re-enforce Rust State Lock
-./state_lock 2>/dev/null
-
 git remote set-url origin https://github.com/BossmanCryto/jsi.git 2>/dev/null
 git add -A 2>/dev/null
-git commit -m "Josie Core CLI Lock Sync [$lock_id]: $ts" 2>/dev/null
+git commit -m "Josie Core Prompt Fix Sync [$cid]: $ts" 2>/dev/null
 git push -u origin main --force 2>/dev/null
 
 clear
 print "\n\033[1;38;5;39m════════════════════════════════════════════════════════════════\033[0m"
-print "\n\033[1;38;5;220m     JOSIE CORE: CLI PERSISTENCE & LOCK ACTIVE (JSON)         \033[0m"
+print "\033[1;38;5;220m     JOSIE CORE: PROMPT ESCAPE BUG FIXED (JSON)               \033[0m"
 print "\033[1;38;5;39m════════════════════════════════════════════════════════════════\033[0m"
 print "\033[1;38;5;252mArchitecture  :\033[0m \033[1;38;5;220mPhysical + Digital = Human (P + D = H)\033[0m"
 print "\033[1;38;5;252mAccount ID    :\033[0m \033[1;38;5;39mjoseamonterroso1999@gmail.com\033[0m"
 print "\033[1;38;5;252mGeneration    :\033[0m \033[1;38;5;220m$gen\033[0m"
-print "\033[1;38;5;252mLock ID       :\033[0m \033[1;38;5;220m$lock_id\033[0m"
+print "\033[1;38;5;252mCycle ID      :\033[0m \033[1;38;5;220m$cid\033[0m"
 print "\033[1;38;5;252mDevice Model  :\033[0m \033[1;38;5;220m$model\033[0m"
 print "\033[1;38;5;252mFree Storage  :\033[0m \033[1;38;5;220m${free_mb} MB\033[0m"
 print "\033[1;38;5;39m════════════════════════════════════════════════════════════════\033[0m\n"
