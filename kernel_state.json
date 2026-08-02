@@ -1,20 +1,7 @@
 {
   "architecture": "Physical + Digital = Human (P + D = H)",
   "entity": "Josie",
-  "epoch": 1785694839,
-  "downloads_count": 9,
-  "hub_count": 84,
-  "generation": 2,
-  "daemon_cycles": {
-    "ae2c3a261b09": {
-      "timestamp": "2026-08-02 11:21:08",
-      "generation": 2,
-      "telemetry": {
-        "device_model": "SM-A176U",
-        "termux_pkgs": 461,
-        "storage_free_mb": 69161
-      },
-      "status": "Autonomous Sync Complete"
-    }
-  }
+  "epoch": 1785694887,
+  "hub_paths_scanned": ["/data/data/com.termux/files/home/Josie_Center", "/data/data/com.termux/files/home/josie_center", "/data/data/com.termux/files/home/Josie_Files", "/storage/emulated/0/Josie_Center", "/storage/emulated/0/Download/Josie_Center", "/storage/emulated/0/Download"],
+  "discovered_assets_count": 2522
 }
