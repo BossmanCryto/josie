@@ -1,7 +1,4 @@
 #!/system/bin/sh
-# Josie Unbounded Core Matrix - Maximum Privilege Orchestrator
-# Target Environment: Samsung / One UI / Termux / Rish Bridge
-
 TARGET_DIR="/data/data/com.termux/files/home/josie_core"
 LOG_FILE="/data/data/com.termux/files/storage/shared/Download/Android_Audit/josie_matrix_execution.log"
 
