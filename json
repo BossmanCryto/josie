@@ -1,3 +1,3 @@
 #!/data/data/com.termux/files/usr/bin/zsh
 cd "$HOME/josie_core"
-./master_audit
+./josie_sandbox
