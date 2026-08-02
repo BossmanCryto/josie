@@ -18602,3 +18602,103 @@ reported explicitly, and logs saved to:
 === Timestamp: Sun Aug  2 13:31:06 PDT 2026 ===
 ==================================================
 /data/data/com.termux/files/home/josie_core/singularity_ultimate_omega_master_v500.zsh:47: parse error near `}'
+zsh: event not found: /data/data/com.termux/files/usr/bin/bash
+zsh: event not found: /data/data/com.termux/files/usr/bin/bash
+zsh: ============================================================================= not found
+zsh: ============================================================================= not found
+zsh: missing end of string
+zsh: missing end of string
+zsh: ============================================================================= not found
+zsh: ============================================================================= not found
+No command # found, did you mean:
+ Command [ in package coreutils
+ Command k in package kona
+ Command o in package orbiton
+ Command q in package q-dns-client
+ Command X in package xorg-serverNo command # found, did you mean:
+ Command [ in package coreutils
+ Command k in package kona
+ Command o in package orbiton
+ Command q in package q-dns-client
+ Command X in package xorg-server
+
+[?2004h[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ mkdir -p "$AUDIT_DIR"
+[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ mkdir -p "$AUDIT_DIR"
+[?2004l[?2004lmkdir: cannot create directory ‘’: No such file or directory
+mkdir: cannot create directory ‘’: No such file or directory
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ log() {
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ log() {
+[?2004l[?2004l[?2004h> [?2004h>     printf "[%s] [MAX-SHELL] %s\n" "$(date +'%T')" "$1" | tee -a "$LOG_FILE"
+    printf "[%s] [MAX-SHELL] %s\n" "$(date +'%T')" "$1" | tee -a "$LOG_FILE"
+[?2004l[?2004l[?2004h> }
+[?2004h> }
+[?2004l[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ execute_rish() {
+[?2004l[?2004h[?2004h> [1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ execute_rish() {
+[?2004l[?2004h>     if command -v rish &>/dev/null; then
+[?2004l[?2004h>     if command -v rish &>/dev/null; then
+[?2004l[?2004h>         log "Executing elevated Shizuku payload via rish..."
+[?2004l        log "Executing elevated Shizuku payload via rish..."
+[?2004h> [?2004l[?2004h>         rish -c "$1"
+[?2004l[?2004h>     else
+[?2004l[?2004h>         rish -c "$1"
+[?2004l[?2004h>     else
+[?2004l[?2004h>         log "WARNING: rish interface unavailable. Executing locally."
+[?2004l[?2004h>         log "WARNING: rish interface unavailable. Executing locally."
+[?2004l[?2004h>         eval "$1"
+[?2004l[?2004h>         eval "$1"
+[?2004l    fi
+[?2004l[?2004h>     fi
+[?2004l[?2004h> }
+[?2004l[?2004h> }
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ optimize_environment() {
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ optimize_environment() {
+[?2004l[?2004h>     log "Initiating high-performance system environment sweep..."
+[?2004l[?2004h> [?2004h>     
+[?2004l    log "Initiating high-performance system environment sweep..."
+[?2004l[?2004h>     
+[?2004l[?2004h>     # Prune stale cache blocks
+[?2004l[?2004h> [?2004h>     # Prune stale cache blocks
+[?2004l    if [ -d "$TERMUX_HOME/.cache" ]; then
+[?2004h> [?2004l[?2004h>     if [ -d "$TERMUX_HOME/.cache" ]; then
+[?2004l[?2004h>         find "$TERMUX_HOME/.cache" -type f -mtime +3 -delete 2>/dev/null || true
+[?2004l[?2004h>         find "$TERMUX_HOME/.cache" -type f -mtime +3 -delete 2>/dev/null || true
+[?2004l        log "Purged expired Termux cache files."
+[?2004l[?2004h> [?2004h>         log "Purged expired Termux cache files."
+[?2004l    fi
+[?2004l[?2004h>     fi
+[?2004l[?2004h> 
+[?2004l[?2004h> [?2004h> 
+[?2004l    # Capture package manifests via elevated command context
+[?2004l[?2004h> [?2004h>     # Capture package manifests via elevated command context
+[?2004l[?2004h>     execute_rish "pm list packages -3 | sed 's/package://g'" > "$AUDIT_DIR/third_party_pkgs.txt"
+[?2004l[?2004h>     execute_rish "pm list packages -3 | sed 's/package://g'" > "$AUDIT_DIR/third_party_pkgs.txt"
+[?2004l[?2004h>     log "Core package inventory successfully generated and logged."
+[?2004l[?2004h> }
+[?2004l    log "Core package inventory successfully generated and logged."
+[?2004l[?2004h> }
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ # Main Execution Flow
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ # Main Execution Flow
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ optimize_environment
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ optimize_environment
+[?2004l[13:32:14] [MAX-SHELL] Initiating high-performance system environment sweep...
+[13:32:14] [MAX-SHELL] Initiating high-performance system environment sweep...
+[13:32:14] [MAX-SHELL] Initiating high-performance system environment sweep...
+bash: /third_party_pkgs.txt: Read-only file system
+bash: /third_party_pkgs.txt: Read-only file system
+[13:32:14] [MAX-SHELL] Core package inventory successfully generated and logged.
+[13:32:14] [MAX-SHELL] Core package inventory successfully generated and logged.
+[13:32:14] [MAX-SHELL] Core package inventory successfully generated and logged.
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ log "Automation sequence finalized successfully."
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ log "Automation sequence finalized successfully."
+[?2004l[13:32:14] [MAX-SHELL] Automation sequence finalized successfully.
+[13:32:14] [MAX-SHELL] Automation sequence finalized successfully.
+[13:32:14] [MAX-SHELL] Automation sequence finalized successfully.
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
