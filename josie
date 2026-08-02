@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -euo pipefail
+JOSIE_HOME="${HOME}/josie_core"
+AUDIT_DIR="${HOME}/storage/shared/Download/Android_Audit"
+
+msg() {
+    printf '%s\n' "$*"
+}
+
+case "${1:-start}" in
+    start|doctor)
+        msg "[*] Running Josie Automated Intelligence Engine..."
+        python3 "${JOSIE_HOME}/omega_singularity.py"
+        msg "[OK] System synchronized and operational."
+        ;;
+    audit)
+        msg "[*] Exporting package inventory..."
+        pm list packages -3 | sed 's/package://g' > "${AUDIT_DIR}/installed_packages.txt"
+        msg "[OK] Saved to ${AUDIT_DIR}/installed_packages.txt"
+        ;;
+    *)
+        msg "Usage: josie [start|doctor|audit]"
+        ;;
+esac
