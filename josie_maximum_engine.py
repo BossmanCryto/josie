@@ -84,7 +84,6 @@ class MaximumEngine:
         ]
         
         purged = []
-        restored = []
         for pkg in safe_to_trim:
             try:
                 res = subprocess.run(["pm", "uninstall", "-k", "--user", "0", pkg], capture_output=True, text=True, check=False)
