@@ -7,3 +7,139 @@ No command # found, did you mean:
  Command o in package orbiton
  Command q in package q-dns-client
  Command X in package xorg-server
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ print "=================================================="
+[?2004l==================================================
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ print "=== JOSIE ZSH MATRIX ENGINE ACTIVE ==="
+[?2004l=== JOSIE ZSH MATRIX ENGINE ACTIVE ===
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ print "=================================================="
+[?2004l==================================================
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ # Function defined properly in Zsh for safe command execution
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ josie_exec() {
+[?2004l[?2004h>     local target_cmd="$1"
+[?2004l[?2004h>     print "\n[EXEC] ❯ $target_cmd"
+[?2004l[?2004h>     
+[?2004l[?2004h>     if [[ "$target_cmd" == cmd* ]] && ! command -v cmd >/dev/null 2>&1; then
+[?2004l[?2004h>         if [[ -x /system/bin/cmd ]]; then
+[?2004l[?2004h>             target_cmd="/system/bin/cmd ${target_cmd#cmd }"
+[?2004l[?2004h>         fi
+[?2004l[?2004h>     fi
+[?2004l[?2004h> 
+[?2004l[?2004h>     if eval "$target_cmd"; then
+[?2004l[?2004h>         print "[SUCCESS] Command executed with exit code 0."
+[?2004l[?2004h>     else
+[?2004l[?2004h>         local exit_code=$?
+[?2004l[?2004h>         print "[ERROR] Command failed with exit code $exit_code."
+[?2004l[?2004h>         return $exit_code
+[?2004l[?2004h>     fi
+[?2004l[?2004h> }
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ print "\n[1/3] Validating and cleansing input service subsystem..."
+[?2004l\n[1/3] Validating and cleansing input service subsystem...
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ josie_exec "cmd input_method reset-text-services"
+[?2004l\n[EXEC] ❯ cmd input_method reset-text-services
+[ERROR] Command failed with exit code 255.
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ zsg[Kh
+[?2004lzsh: event not found: /data/data/com.termux/files/usr/bin/zsh
+zsh: event not found: /data/data/com.termux/files/usr/bin/zsh
+zsh: ============================================================================= not found
+zsh: parse error near `)'
+No command # found, did you mean:
+ Command [ in package coreutils
+ Command k in package kona
+ Command o in package orbiton
+ Command q in package q-dns-client
+ Command X in package xorg-server
+zsh: ============================================================================= not found
+No command # found, did you mean:
+ Command [ in package coreutils
+ Command k in package kona
+ Command o in package orbiton
+ Command q in package q-dns-client
+ Command X in package xorg-server
+No command # found, did you mean:
+ Command [ in package coreutils
+ Command k in package kona
+ Command o in package orbiton
+ Command q in package q-dns-client
+ Command X in package xorg-server
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ if ! (( $+functions[print] )) && ! whence print >/dev/null 2>&1; then
+[?2004l[?2004h>     print() {
+[?2004l[?2004h>         printf '%s\n' "$*"
+[?2004l[?2004h>     }
+[?2004l[?2004h> fi
+[?2004lbash: ((: $+functions[print] : arithmetic syntax error: operand expected (error token is "$+functions[print] ")
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ ROOT="$HOME/josie_core"
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ LOG_FILE="$ROOT/command_engine.log"
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ mkdir -p "$ROOT"
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ exec > >(tee -a "$LOG_FILE") 2>&1
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ print "=================================================="
+[?2004l==================================================
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ print "=================================================="
+[?2004l==================================================
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ print "=== JOSIE ZSH MATRIX ENGINE ACTIVE ==="
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ print "=== JOSIE ZSH MATRIX ENGINE ACTIVE ==="
+[?2004l=== JOSIE ZSH MATRIX ENGINE ACTIVE ===
+=== JOSIE ZSH MATRIX ENGINE ACTIVE ===
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ print "=================================================="
+[?2004l==================================================
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ print "=================================================="
+[?2004l==================================================
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ # Function defined properly in Zsh for safe command execution
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ # Function defined properly in Zsh for safe command execution
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ josie_exec() {
+[?2004l[?2004h>     local target_cmd="$1"
+[?2004l[?2004h>     print "\n[EXEC] ❯ $target_cmd"
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ josie_exec() {
+[?2004l[?2004h>     local target_cmd="$1"
+[?2004l[?2004h>     
+[?2004l[?2004l[?2004h>     print "\n[EXEC] ❯ $target_cmd"
+[?2004l[?2004h>     if [[ "$target_cmd" == cmd* ]] && ! command -v cmd >/dev/null 2>&1; then
+[?2004l[?2004h>     
+[?2004l[?2004h> [?2004h>     if [[ "$target_cmd" == cmd* ]] && ! command -v cmd >/dev/null 2>&1; then
+[?2004l        if [[ -x /system/bin/cmd ]]; then
+[?2004l[?2004h>             target_cmd="/system/bin/cmd ${target_cmd#cmd }"
+[?2004l[?2004h>         if [[ -x /system/bin/cmd ]]; then
+[?2004l[?2004h>             target_cmd="/system/bin/cmd ${target_cmd#cmd }"
+[?2004l[?2004h> [?2004h        fi
+> [?2004l        fi
+[?2004l[?2004h> [?2004h    fi
+[?2004l>     fi
+[?2004h> 
+[?2004l[?2004l[?2004h[?2004h> 
+[?2004l> [?2004h>     if eval "$target_cmd"; then
+[?2004l[?2004h>         print "[SUCCESS] Command executed with exit code 0."
+[?2004l    if eval "$target_cmd"; then
+[?2004l[?2004h>         print "[SUCCESS] Command executed with exit code 0."
+[?2004l[?2004h>     else
+[?2004l[?2004h>         local exit_code=$?
+[?2004l[?2004h>     else
+[?2004l[?2004h>         local exit_code=$?
+[?2004h> [?2004l[?2004h>         print "[ERROR] Command failed with exit code $exit_code."
+[?2004l[?2004h>         return $exit_code
+[?2004l[?2004h>     fi
+        print "[ERROR] Command failed with exit code $exit_code."
+[?2004l[?2004h>         return $exit_code
+[?2004l[?2004h> }
+[?2004l[?2004l[?2004h>     fi
+[?2004l[?2004h> }
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ print "\n[1/3] Validating and cleansing input service subsystem..."
+[?2004l\n[1/3] Validating and cleansing input service subsystem...
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ print "\n[1/3] Validating and cleansing input service subsystem..."
+[?2004l\n[1/3] Validating and cleansing input service subsystem...
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ josie_exec "cmd input_method reset-text-services"
+[?2004l\n[EXEC] ❯ cmd input_method reset-text-services
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ josie_exec "cmd input_method reset-text-services"
+[?2004l\n[EXEC] ❯ cmd input_method reset-text-services
+[ERROR] Command failed with exit code 255.
+[ERROR] Command failed with exit code 255.
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
