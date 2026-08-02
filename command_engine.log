@@ -1364,4 +1364,188 @@ gzip: stdin: not in gzip format
 [?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ chmod +x ~/josie_core/singularity_engine.zsh
 [?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ zsh ~/josie_core/singularity_engine.zsh
 [?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ zsh ~/josie_core/singularity_engine.zsh
-[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ cat << 'EOF' > ~/josie_core/master_rebuild.zsh
+cat << 'EOF' > ~/josie_core/master_rebuild.zsh
+[?2004l[?2004l[?2004h> [?2004h> #!/data/data/com.termux/files/usr/bin/zsh
+#!/data/data/com.termux/files/usr/bin/zsh[?2004l
+[?2004l[?2004h[?2004h> > # ==============================================================================
+# ==============================================================================
+[?2004l[?2004l[?2004h> [?2004h> # Josie Master Synchronization & Unified Execution Engine
+[?2004l# Josie Master Synchronization & Unified Execution Engine
+[?2004l[?2004h> # Target: Termux / Rish / Zsh / Android Environment
+[?2004l[?2004h> # ==============================================================================
+[?2004l[?2004h> 
+[?2004l[?2004h> unsetopt bang_hist
+[?2004l[?2004h> setopt localoptions errexit nounset pipefail
+[?2004l[?2004h> 
+[?2004l[?2004h> ROOT="$HOME/josie_core"
+[?2004l[?2004h> AUDIT_DIR="$HOME/storage/shared/Download/Android_Audit"
+[?2004l[?2004h> LOG_FILE="$ROOT/master_rebuild.log"
+[?2004l[?2004h> 
+[?2004l[?2004h> mkdir -p "$ROOT" "$AUDIT_DIR"
+[?2004l[?2004h> exec > >(tee -a "$LOG_FILE") 2>&1
+[?2004l[?2004h> 
+[?2004l[?2004h> print "=================================================="
+[?2004l[?2004h> print "=== JOSIE MASTER REBUILD & SYNCHRONIZATION ==="
+[?2004l[?2004h> print "=== Timestamp: $(date) ==="
+[?2004l[?2004h> print "=================================================="
+[?2004l[?2004h> 
+[?2004l[?2004h> [?2004h> # Target: Termux / Rish / Zsh / Android Environment
+[?2004l[?2004h> # ==============================================================================
+[?2004l[?2004h> 
+[?2004l[?2004h> unsetopt bang_hist
+[?2004l[?2004h> setopt localoptions errexit nounset pipefail
+[?2004l[?2004h> 
+[?2004l[?2004h> ROOT="$HOME/josie_core"
+[?2004l[?2004h> AUDIT_DIR="$HOME/storage/shared/Download/Android_Audit"
+[?2004l[?2004h> LOG_FILE="$ROOT/master_rebuild.log"
+[?2004l[?2004h> 
+[?2004l[?2004h> mkdir -p "$ROOT" "$AUDIT_DIR"
+[?2004l[?2004h> exec > >(tee -a "$LOG_FILE") 2>&1
+[?2004l[?2004h> 
+[?2004l[?2004h> print "=================================================="
+[?2004l[?2004h> print "=== JOSIE MASTER REBUILD & SYNCHRONIZATION ==="
+[?2004l[?2004h> print "=== Timestamp: $(date) ==="
+[?2004l[?2004h> print "=================================================="
+[?2004l[?2004h> 
+[?2004l[?2004h> # 1. Verify Privilege Bridge (Rish / Local Fallback)
+[?2004l[?2004h# 1. Verify Privilege Bridge (Rish / Local Fallback)
+[?2004l[?2004h> > run_action() {
+[?2004lrun_action() {
+[?2004l[?2004h> [?2004h>     local target_cmd="$1"
+[?2004l    local target_cmd="$1"
+[?2004l[?2004h> [?2004h>     print "\n[EXEC] ❯ $target_cmd"
+[?2004l    print "\n[EXEC] ❯ $target_cmd"
+[?2004l[?2004h> [?2004h>     
+[?2004l[?2004h>     
+[?2004l[?2004h>     if command -v rish >/dev/null 2>&1; then
+    if command -v rish >/dev/null 2>&1; then
+[?2004l[?2004l[?2004h> [?2004h>         if rish -c "$target_cmd"; then
+[?2004l[?2004h>         if rish -c "$target_cmd"; then
+[?2004l[?2004h>             print "[SUCCESS] Executed via Rish."
+[?2004l[?2004h>             return 0
+[?2004l[?2004h>         fi
+[?2004l[?2004h>     fi
+[?2004l[?2004h> 
+[?2004l[?2004h>             print "[SUCCESS] Executed via Rish."
+[?2004l[?2004h>             return 0
+[?2004l[?2004h>         fi
+[?2004l[?2004h>     fi
+[?2004l[?2004h> 
+[?2004l[?2004h>     if eval "$target_cmd"; then
+[?2004l[?2004h>     if eval "$target_cmd"; then
+[?2004l[?2004h>         print "[SUCCESS] Executed locally."
+[?2004l[?2004h>         print "[SUCCESS] Executed locally."
+[?2004l[?2004h>         return 0
+[?2004l[?2004h>     else
+        return 0
+[?2004l[?2004l[?2004h>     else
+[?2004l[?2004h> [?2004h>         local code=$?
+[?2004l[?2004h>         local code=$?
+[?2004l[?2004h>         print "[ERROR] Failed with exit code $code."
+[?2004l[?2004h        print "[ERROR] Failed with exit code $code."
+[?2004l> [?2004h>         return $code
+[?2004l        return $code
+[?2004l[?2004h>     fi
+[?2004l[?2004h> }
+[?2004l[?2004h> 
+[?2004l[?2004h> # 2. Execute Full System Healing & Optimization
+[?2004l[?2004h> print "\n[*] Step 1: Flushing and resetting keyboard subsystems..."
+[?2004l[?2004h> run_action "cmd package clear com.google.android.inputmethod.latin"
+[?2004l[?2004h> run_action "cmd package clear com.samsung.android.honeyboard"
+[?2004l[?2004h> 
+[?2004l[?2004h> print "\n[*] Step 2: Generating complete package map..."
+[?2004l[?2004h> if command -v rish >/dev/null 2>&1; then
+[?2004l[?2004h>     rish -c "cmd package list packages -f" > "$AUDIT_DIR/complete_package_map.txt"
+[?2004l[?2004h> else
+[?2004l[?2004h>     fi
+[?2004l[?2004h> }
+[?2004l[?2004h> 
+[?2004l[?2004h> # 2. Execute Full System Healing & Optimization
+[?2004l[?2004h> print "\n[*] Step 1: Flushing and resetting keyboard subsystems..."
+[?2004l[?2004h> run_action "cmd package clear com.google.android.inputmethod.latin"
+[?2004l[?2004h> run_action "cmd package clear com.samsung.android.honeyboard"
+[?2004l[?2004h> 
+[?2004l[?2004h> print "\n[*] Step 2: Generating complete package map..."
+[?2004l[?2004h> if command -v rish >/dev/null 2>&1; then
+[?2004l[?2004h>     rish -c "cmd package list packages -f" > "$AUDIT_DIR/complete_package_map.txt"
+[?2004l[?2004h> else
+[?2004l[?2004h> [?2004h>     cmd package list packages -f > "$AUDIT_DIR/complete_package_map.txt"
+[?2004l    cmd package list packages -f > "$AUDIT_DIR/complete_package_map.txt"
+[?2004h[?2004l[?2004h> fi
+> fi[?2004l
+[?2004l[?2004h[?2004h> > print "[✓] Package map saved to $AUDIT_DIR/complete_package_map.txt"
+[?2004l[?2004h> 
+[?2004l[?2004h> print "[✓] Package map saved to $AUDIT_DIR/complete_package_map.txt"
+[?2004l[?2004h> 
+[?2004l[?2004h> print "\n[*] Step 3: Packaging workspace state into portable Base64 payload..."
+[?2004l[?2004h> print "\n[*] Step 3: Packaging workspace state into portable Base64 payload..."
+[?2004l[?2004h> tar czf - -C "$HOME" josie_core | base64 > "$HOME/storage/shared/Download/josie_payload.b64"
+[?2004ltar czf - -C "$HOME" josie_core | base64 > "$HOME/storage/shared/Download/josie_payload.b64"
+[?2004l[?2004h> [?2004h> print "[✓] Payload generated: $HOME/storage/shared/Download/josie_payload.b64"
+[?2004l[?2004h> print "[✓] Payload generated: $HOME/storage/shared/Download/josie_payload.b64"
+
+[?2004l[?2004l[?2004h> 
+[?2004l[?2004h> [?2004h> print "\n=================================================="
+[?2004l[?2004hprint "\n=================================================="
+> [?2004l[?2004h> print "=== MASTER REBUILD COMPLETED SUCCESSFULLY (EXIT: 0) ==="
+[?2004lprint "=== MASTER REBUILD COMPLETED SUCCESSFULLY (EXIT: 0) ==="
+[?2004l[?2004h> [?2004h> print "=================================================="
+[?2004l[?2004h> print "=================================================="
+EOF
+[?2004l[?2004l[?2004h> EOF
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ chmod +x ~/josie_core/master_rebuild.zsh
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ chmod +x ~/josie_core/master_rebuild.zsh
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ zsh ~/josie_core/master_rebuild.zsh
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ zsh ~/josie_core/master_rebuild.zsh
+[?2004l==================================================
+=== JOSIE MASTER REBUILD & SYNCHRONIZATION ===
+==================================================
+=== JOSIE MASTER REBUILD & SYNCHRONIZATION ===
+=== Timestamp: Sun Aug  2 12:59:16 PDT 2026 ===
+==================================================
+
+[*] Step 1: Flushing and resetting keyboard subsystems...
+
+[EXEC] ❯ cmd package clear com.google.android.inputmethod.latin
+=== Timestamp: Sun Aug  2 12:59:16 PDT 2026 ===
+==================================================
+
+[*] Step 1: Flushing and resetting keyboard subsystems...
+
+[EXEC] ❯ cmd package clear com.google.android.inputmethod.latin
+Success
+Success
+[SUCCESS] Executed via Rish.
+
+[EXEC] ❯ cmd package clear com.samsung.android.honeyboard
+[SUCCESS] Executed via Rish.
+
+[EXEC] ❯ cmd package clear com.samsung.android.honeyboard
+Success
+Success
+[SUCCESS] Executed via Rish.
+
+[*] Step 2: Generating complete package map...
+[SUCCESS] Executed via Rish.
+
+[*] Step 2: Generating complete package map...
+[✓] Package map saved to /data/data/com.termux/files/home/storage/shared/Download/Android_Audit/complete_package_map.txt
+
+[*] Step 3: Packaging workspace state into portable Base64 payload...
+[✓] Package map saved to /data/data/com.termux/files/home/storage/shared/Download/Android_Audit/complete_package_map.txt
+
+[*] Step 3: Packaging workspace state into portable Base64 payload...
+[✓] Payload generated: /data/data/com.termux/files/home/storage/shared/Download/josie_payload.b64
+
+==================================================
+=== MASTER REBUILD COMPLETED SUCCESSFULLY (EXIT: 0) ===
+==================================================
+[✓] Payload generated: /data/data/com.termux/files/home/storage/shared/Download/josie_payload.b64
+
+==================================================
+=== MASTER REBUILD COMPLETED SUCCESSFULLY (EXIT: 0) ===
+==================================================
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ bb
