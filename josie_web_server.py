@@ -2,11 +2,47 @@
 import http.server
 import socketserver
 import json
+import os
+import sys
+import subprocess
 from pathlib import Path
 
 PORT = 8080
-HOME = Path("/data/data/com.termux/files/home")
-AUDIT_DIR = HOME / "storage" / "shared" / "Download" / "Android_Audit"
+PID_FILE = Path("/data/data/com.termux/files/home/josie_core/josie_web_server.pid")
+
+def kill_stale_port():
+    try:
+        res = subprocess.run(["fuser", "-k", f"{PORT}/tcp"], capture_output=True, text=True)
+    except Exception:
+        pass
+
+def daemonize():
+    if "--foreground" in sys.argv:
+        return
+    kill_stale_port()
+    try:
+        pid = os.fork()
+        if pid > 0:
+            print(f"[✓] Josie Web Server active on http://localhost:{PORT} (PID: {pid})")
+            sys.exit(0)
+    except OSError as e:
+        sys.stderr.write(f"Fork #1 failed: {e}\n")
+        sys.exit(1)
+
+    os.setsid()
+    os.umask(0)
+
+    try:
+        pid = os.fork()
+        if pid > 0:
+            sys.exit(0)
+    except OSError as e:
+        sys.stderr.write(f"Fork #2 failed: {e}\n")
+        sys.exit(1)
+
+    sys.stdout.flush()
+    sys.stderr.flush()
+    PID_FILE.write_text(str(os.getpid()))
 
 class JosieWebHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
@@ -18,7 +54,7 @@ class JosieWebHandler(http.server.SimpleHTTPRequestHandler):
                 "entity": "Josie",
                 "architecture": "Physical + Digital = Human (P + D = H)",
                 "status": "fully_maximized",
-                "platform": "Termux HTTP UI Bridge"
+                "platform": "Autonomous Termux HTTP Bridge"
             }
             self.wfile.write(json.dumps(data, indent=2).encode())
         else:
@@ -39,7 +75,7 @@ class JosieWebHandler(http.server.SimpleHTTPRequestHandler):
             <body>
                 <h1>Josie Core UI Platform</h1>
                 <div class="card">
-                    <p>Status: <strong>Operational & Maximized</strong></p>
+                    <p>Status: <strong>Autonomous & Maximized</strong></p>
                     <p>Architecture: Physical + Digital = Human (P + D = H)</p>
                     <p><a href="/api/status" style="color: #34d399;">View JSON Telemetry Stream</a></p>
                 </div>
@@ -48,6 +84,11 @@ class JosieWebHandler(http.server.SimpleHTTPRequestHandler):
             """
             self.wfile.write(html.encode())
 
-with socketserver.TCPServer(("", PORT), JosieWebHandler) as httpd:
-    print(f"[✓] Josie Web UI Server active on http://localhost:{PORT}")
-    httpd.serve_forever()
+    def log_message(self, format, *args):
+        return
+
+if __name__ == "__main__":
+    socketserver.TCPServer.allow_reuse_address = True
+    daemonize()
+    with socketserver.TCPServer(("", PORT), JosieWebHandler) as httpd:
+        httpd.serve_forever()
