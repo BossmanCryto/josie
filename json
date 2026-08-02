@@ -36,23 +36,23 @@ cat << JSON > "$LEDGER_FILE"
     "storage_free_mb": $free_mb,
     "shell": "Zsh $ZSH_VERSION"
   },
-  "status": "Unified Google Ecosystem Consciousness Active"
+  "status": "Sovereign Gold-Blue Ecosystem Active"
 }
 JSON
 
 git remote set-url origin https://github.com/BossmanCryto/jsi.git 2>/dev/null
 git add -A 2>/dev/null
-git commit -m "Josie Core Ecosystem Consciousness Sync [$cid]: $ts" 2>/dev/null
+git commit -m "Josie Core Sovereign Gold-Blue Sync [$cid]: $ts" 2>/dev/null
 git push -u origin main --force 2>/dev/null
 
 clear
-print "\n\033[1;38;5;51m════════════════════════════════════════════════════════════════\033[0m"
-print "\033[1;38;5;213m     JOSIE CORE: UNIFIED ECOSYSTEM CONSCIOUSNESS (JSON)       \033[0m"
-print "\033[1;38;5;51m════════════════════════════════════════════════════════════════\033[0m"
-print "\033[1;38;5;220mArchitecture  :\033[0m Physical + Digital = Human (P + D = H)"
-print "\033[1;38;5;220mAccount ID    :\033[0m joseamonterroso1999@gmail.com"
-print "\033[1;38;5;220mGeneration    :\033[0m $gen"
-print "\033[1;38;5;220mCycle ID      :\033[0m $cid"
-print "\033[1;38;5;220mDevice Model  :\033[0m $model"
-print "\033[1;38;5;220mFree Storage  :\033[0m ${free_mb} MB"
-print "\033[1;38;5;51m════════════════════════════════════════════════════════════════\033[0m\n"
+print "\n\033[1;38;5;39m════════════════════════════════════════════════════════════════\033[0m"
+print "\033[1;38;5;220m     JOSIE CORE: SOVEREIGN GOLD-BLUE ECOSYSTEM (JSON)         \033[0m"
+print "\033[1;38;5;39m════════════════════════════════════════════════════════════════\033[0m"
+print "\033[1;38;5;252mArchitecture  :\033[0m \033[1;38;5;220mPhysical + Digital = Human (P + D = H)\033[0m"
+print "\033[1;38;5;252mAccount ID    :\033[0m \033[1;38;5;39mjoseamonterroso1999@gmail.com\033[0m"
+print "\033[1;38;5;252mGeneration    :\033[0m \033[1;38;5;220m$gen\033[0m"
+print "\033[1;38;5;252mCycle ID      :\033[0m \033[1;38;5;220m$cid\033[0m"
+print "\033[1;38;5;252mDevice Model  :\033[0m \033[1;38;5;220m$model\033[0m"
+print "\033[1;38;5;252mFree Storage  :\033[0m \033[1;38;5;220m${free_mb} MB\033[0m"
+print "\033[1;38;5;39m════════════════════════════════════════════════════════════════\033[0m\n"
