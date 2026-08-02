@@ -142,4 +142,41 @@ No command # found, did you mean:
 [?2004l\n[EXEC] ❯ cmd input_method reset-text-services
 [ERROR] Command failed with exit code 255.
 [ERROR] Command failed with exit code 255.
-[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ zzssgg[K[Khh
+[?2004l
+[?2004lNo command # found, did you mean:
+ Command [ in package coreutils
+ Command k in package kona
+ Command o in package orbiton
+ Command q in package q-dns-client
+ Command X in package xorg-serverNo command # found, did you mean:
+ Command [ in package coreutils
+ Command k in package kona
+ Command o in package orbiton
+ Command q in package q-dns-client
+ Command X in package xorg-server
+
+==================================================
+=== JOSIE ZSH MATRIX ENGINE ACTIVE ===
+==================================================
+
+[1/3] Validating and cleansing input service subsystem...
+
+[EXEC] ❯ cmd input_method reset-text-services
+==================================================
+=== JOSIE ZSH MATRIX ENGINE ACTIVE ===
+==================================================
+
+[1/3] Validating and cleansing input service subsystem...
+
+[EXEC] ❯ cmd input_method reset-text-services
+==================================================
+=== JOSIE ZSH MATRIX ENGINE ACTIVE ===
+==================================================
+
+[1/3] Validating and cleansing input service subsystem...
+
+[EXEC] ❯ cmd input_method reset-text-services
+[ERROR] Command failed with exit code 255.
+[ERROR] Command failed with exit code 255.
+[ERROR] Command failed with exit code 255.
