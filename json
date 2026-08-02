@@ -33,20 +33,21 @@ cat << JSON > "$LEDGER_FILE"
   "telemetry": {
     "device_model": "$model",
     "storage_free_mb": $free_mb,
-    "shell": "Zsh $ZSH_VERSION"
+    "shell": "Zsh $ZSH_VERSION",
+    "rust_toolchain": "Active"
   },
-  "status": "Autonomous Self-Correcting Ecosystem Active"
+  "status": "Rust, Bash & Sovereign Environment Fully Synchronized"
 }
 JSON
 
 git remote set-url origin https://github.com/BossmanCryto/jsi.git 2>/dev/null
 git add -A 2>/dev/null
-git commit -m "Josie Core Self-Correction Sync [$cid]: $ts" 2>/dev/null
+git commit -m "Josie Core Rust & System Sync [$cid]: $ts" 2>/dev/null
 git push -u origin main --force 2>/dev/null
 
 clear
 print "\n\033[1;38;5;39m════════════════════════════════════════════════════════════════\033[0m"
-print "\033[1;38;5;220m     JOSIE CORE: SELF-CORRECTING ECOSYSTEM (JSON)             \033[0m"
+print "\n\033[1;38;5;220m     JOSIE CORE: RUST & ECOSYSTEM OPTIMIZED (JSON)            \033[0m"
 print "\033[1;38;5;39m════════════════════════════════════════════════════════════════\033[0m"
 print "\033[1;38;5;252mArchitecture  :\033[0m \033[1;38;5;220mPhysical + Digital = Human (P + D = H)\033[0m"
 print "\033[1;38;5;252mAccount ID    :\033[0m \033[1;38;5;39mjoseamonterroso1999@gmail.com\033[0m"
