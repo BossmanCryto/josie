@@ -63,28 +63,18 @@ def execute_command(command):
             text=True
         )
         
-        output_payload = ""
         if result.stdout:
-            output_payload = result.stdout.strip()
-            print(f"\n[STDOUT RESULT]:\n{output_payload}\n")
-            write_log("STDOUT", output_payload)
+            print(f"\n[STDOUT RESULT]:\n{result.stdout.strip()}\n")
+            write_log("STDOUT", result.stdout.strip())
 
         if result.returncode != 0:
             err_text = result.stderr.strip() if result.stderr else "Exit non-zero"
             print(f"\n[CRASH/ERROR]:\n{err_text}\n", file=sys.stderr)
             write_log("CRASH", err_text)
-            try:
-                subprocess.run(["termux-tts-speak", "Execution encountered an error."], capture_output=True)
-            except Exception:
-                pass
         else:
             if result.stderr:
                 print(result.stderr, file=sys.stderr)
-            write_log("SUCCESS", "Command completed successfully with real-time output.")
-            try:
-                subprocess.run(["termux-tts-speak", "Action executed successfully."], capture_output=True)
-            except Exception:
-                pass
+            write_log("SUCCESS", "Command completed successfully.")
 
     except Exception as e:
         write_log("EXCEPTION", str(e))
@@ -116,7 +106,7 @@ def run_autonomous_engine():
 
             try:
                 clip_res = subprocess.run(["termux-clipboard-get"], capture_output=True, text=True, timeout=1)
-                clip_txt = clip_res.stdout.string if hasattr(clip_res.stdout, 'string') else clip_txt = clip_res.stdout.strip()
+                clip_txt = clip_res.stdout.strip() if clip_res.stdout else ""
                 if clip_txt and clip_txt != last_clipboard:
                     last_clipboard = clip_txt
             except Exception:
