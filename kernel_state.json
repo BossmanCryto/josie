@@ -1,30 +1,7 @@
 {
   "architecture": "Physical + Digital = Human (P + D = H)",
   "entity": "Josie",
-  "epoch": 1785694897,
+  "epoch": 1785695008,
   "target_hub": "",
-  "assets_found": 0,
-  "generation": 3,
-  "daemon_cycles": {
-    "c94be0f3a097": {
-      "timestamp": "2026-08-02 11:22:11",
-      "generation": 2,
-      "telemetry": {
-        "device_model": "SM-A176U",
-        "termux_pkgs": 461,
-        "storage_free_mb": 69159
-      },
-      "status": "Autonomous Sync Complete"
-    },
-    "64bc7d05e615": {
-      "timestamp": "2026-08-02 11:23:15",
-      "generation": 3,
-      "telemetry": {
-        "device_model": "SM-A176U",
-        "termux_pkgs": 461,
-        "storage_free_mb": 69158
-      },
-      "status": "Autonomous Sync Complete"
-    }
-  }
+  "assets_found": 0
 }
