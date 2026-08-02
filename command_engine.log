@@ -17886,3 +17886,137 @@ Shizuku startup script triggered via binder.
 [*] Phase 3: Granting Secure Settings & Package Permissions...
 
 [OMNI-EXEC] ❯ pm grant moe.shizuku.privileged.api android.permission.WRITE_SECURE_SETTINGS
+
+[OMNI-EXEC] ❯ appops set moe.shizuku.privileged.api PROJECT_MEDIA allow
+
+[OMNI-EXEC] ❯ appops set moe.shizuku.privileged.api PROJECT_MEDIA allow
+
+[*] Phase 4: Verifying Shizuku Process & Binder State...
+
+[OMNI-EXEC] ❯ dumpsys activity service moe.shizuku.privileged.api || ps -A | grep shizuku
+
+[*] Phase 4: Verifying Shizuku Process & Binder State...
+
+[OMNI-EXEC] ❯ dumpsys activity service moe.shizuku.privileged.api || ps -A | grep shizuku
+No services match: moe.shizuku.privileged.api
+Use -h for help.
+No services match: moe.shizuku.privileged.api
+Use -h for help.
+
+[*] Phase 5: Enforcing Full Subsystem & Mic Optimization...
+
+[OMNI-EXEC] ❯ setprop debug.shizuku.active true
+
+[*] Phase 5: Enforcing Full Subsystem & Mic Optimization...
+
+[OMNI-EXEC] ❯ setprop debug.shizuku.active true
+
+[OMNI-EXEC] ❯ setprop audio.mic.gains 1
+
+[OMNI-EXEC] ❯ setprop audio.mic.gains 1
+
+[OMNI-EXEC] ❯ sync
+
+[OMNI-EXEC] ❯ sync
+
+[OMNI-EXEC] ❯ echo 3 > /proc/sys/vm/drop_caches
+
+[OMNI-EXEC] ❯ echo 3 > /proc/sys/vm/drop_caches
+
+==================================================
+
+==================================================
+=== WIRELESS ADB & SHIZUKU ACTIVATION COMPLETE ===
+=== WIRELESS ADB & SHIZUKU ACTIVATION COMPLETE ===
+Status: All protocols initialized with live output feedback.
+Status: All protocols initialized with live output feedback.
+==================================================
+==================================================
+==================================================
+=== YOUTUBE & REPO OMNI-PARAPHRASE MASTER (v200) =
+==================================================
+=== YOUTUBE & REPO OMNI-PARAPHRASE MASTER (v200) =
+=== Timestamp: Sun Aug  2 13:27:18 PDT 2026 ===
+==================================================
+
+[*] Phase 1: Anchoring Shizuku / Rikka Privileged API Bindings...
+
+[OMNI-PARAPHRASE] ❯ pm grant moe.shizuku.privileged.api android.permission.WRITE_SECURE_SETTINGS
+=== Timestamp: Sun Aug  2 13:27:18 PDT 2026 ===
+==================================================
+
+[*] Phase 1: Anchoring Shizuku / Rikka Privileged API Bindings...
+
+[OMNI-PARAPHRASE] ❯ pm grant moe.shizuku.privileged.api android.permission.WRITE_SECURE_SETTINGS
+
+[OMNI-PARAPHRASE] ❯ appops set moe.shizuku.privileged.api PROJECT_MEDIA allow
+
+[OMNI-PARAPHRASE] ❯ appops set moe.shizuku.privileged.api PROJECT_MEDIA allow
+
+[*] Phase 2: Interrogating & Optimizing Audio / Mic Hardware Pipelines...
+
+[OMNI-PARAPHRASE] ❯ dumpsys audio | grep -A 25 'Microphone' || true
+
+[*] Phase 2: Interrogating & Optimizing Audio / Mic Hardware Pipelines...
+
+[OMNI-PARAPHRASE] ❯ dumpsys audio | grep -A 25 'Microphone' || true
+Events log: setMicrophoneMute use (logged after setMicrophoneMute() is executed)
+Events log: setMasterMute (logged when command received by AudioService)
+Events log: Using Audio
+08-02 13:24:47:936 uid: 10178 is using audio
+08-02 13:24:50:622 uid: 10178 is using audio
+08-02 13:25:04:578 uid: 10178 is using audio
+08-02 13:25:17:424 uid: 10178 is using audio
+08-02 13:25:23:476 uid: 10178 is using audio
+08-02 13:25:26:761 uid: 10178 is using audio
+08-02 13:25:29:552 uid: 10178 is using audio
+08-02 13:25:32:783 uid: 10178 is using audio
+08-02 13:25:35:592 uid: 10178 is using audio
+08-02 13:25:38:818 uid: 10178 is using audio
+08-02 13:25:42:705 uid: 10178 is using audio
+08-02 13:25:54:842 uid: 10178 is using audio
+08-02 13:25:56:882 uid: 10178 is using audio
+08-02 13:26:00:883 uid: 10178 is using audio
+08-02 13:26:02:582 uid: 10178 is using audio
+08-02 13:26:02:909 uid: 10178 is using audio
+08-02 13:26:07:349 uid: 10178 is using audio
+08-02 13:26:20:271 uid: 10062 is using audio
+08-02 13:26:20:976 uid: 10062 is using audio
+08-02 13:26:33:034 uid: 10240 is using audio
+08-02 13:26:35:402 uid: 10240 is using audio
+08-02 13:26:39:073 uid: 10240 is using audio
+08-02 13:26:41:502 uid: 10240 is using audio
+Events log: setMicrophoneMute use (logged after setMicrophoneMute() is executed)
+Events log: setMasterMute (logged when command received by AudioService)
+Events log: Using Audio
+08-02 13:24:47:936 uid: 10178 is using audio
+08-02 13:24:50:622 uid: 10178 is using audio
+08-02 13:25:04:578 uid: 10178 is using audio
+08-02 13:25:17:424 uid: 10178 is using audio
+08-02 13:25:23:476 uid: 10178 is using audio
+08-02 13:25:26:761 uid: 10178 is using audio
+08-02 13:25:29:552 uid: 10178 is using audio
+08-02 13:25:32:783 uid: 10178 is using audio
+08-02 13:25:35:592 uid: 10178 is using audio
+08-02 13:25:38:818 uid: 10178 is using audio
+08-02 13:25:42:705 uid: 10178 is using audio
+08-02 13:25:54:842 uid: 10178 is using audio
+08-02 13:25:56:882 uid: 10178 is using audio
+08-02 13:26:00:883 uid: 10178 is using audio
+08-02 13:26:02:582 uid: 10178 is using audio
+08-02 13:26:02:909 uid: 10178 is using audio
+08-02 13:26:07:349 uid: 10178 is using audio
+08-02 13:26:20:271 uid: 10062 is using audio
+08-02 13:26:20:976 uid: 10062 is using audio
+08-02 13:26:33:034 uid: 10240 is using audio
+08-02 13:26:35:402 uid: 10240 is using audio
+08-02 13:26:39:073 uid: 10240 is using audio
+08-02 13:26:41:502 uid: 10240 is using audio
+
+[OMNI-PARAPHRASE] ❯ setprop audio.mic.gains 1
+
+[OMNI-PARAPHRASE] ❯ setprop audio.mic.gains 1
+
+[OMNI-PARAPHRASE] ❯ setprop persist.audio.ros.enabled true
+
+[OMNI-PARAPHRASE] ❯ setprop persist.audio.ros.enabled true
