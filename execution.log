@@ -930,3 +930,94 @@
 [2026-08-02 19:31:53] [SHELL_MATRIX] Processed command token: try:
 [2026-08-02 19:31:53] [SHELL_MATRIX] Input: user_input = input("Josie-Beaker> ").strip()
 [2026-08-02 19:31:53] [SHELL_MATRIX] Processed command token: user_input = input("Josie-Beaker> ").strip()
+[2026-08-02 19:31:53] [SHELL_MATRIX] Input: if not user_input:
+[2026-08-02 19:31:53] [SHELL_MATRIX] Processed command token: if not user_input:
+[2026-08-02 19:31:53] [SHELL_MATRIX] Input: continue
+[2026-08-02 19:31:53] [SHELL_MATRIX] Processed command token: continue
+[2026-08-02 19:31:53] [SHELL_MATRIX] Input: if user_input.lower() in ["exit", "quit"]:
+[2026-08-02 19:31:53] [SHELL_MATRIX] Processed command token: if user_input.lower() in ["exit", "quit"]:
+[2026-08-02 19:31:53] [SHELL_MATRIX] Input: print("Sealing beaker session.")
+[2026-08-02 19:31:53] [SHELL_MATRIX] Processed command token: print("Sealing beaker session.")
+[2026-08-02 19:31:53] [SHELL_MATRIX] Input: break
+[2026-08-02 19:31:53] [SHELL_MATRIX] Processed command token: break
+[2026-08-02 19:31:53] [SHELL_MATRIX] Input: # Phase 1: Text to Code
+[2026-08-02 19:31:53] [SHELL_MATRIX] Processed command token: # Phase 1: Text to Code
+[2026-08-02 19:31:53] [SHELL_MATRIX] Input: executable_code = text_to_code(user_input)
+[2026-08-02 19:31:53] [SHELL_MATRIX] Processed command token: executable_code = text_to_code(user_input)
+[2026-08-02 19:31:53] [SHELL_MATRIX] Input: print(f"🧪 [Text ➔ Code] Transmuted: `{executable_code}`")
+[2026-08-02 19:31:53] [SHELL_MATRIX] Processed command token: print(f"🧪 [Text ➔ Code] Transmuted: `{executable_code}`")
+[2026-08-02 19:31:53] [SHELL_MATRIX] Input: # Phase 2: Execution in Terminal/Rish environment
+[2026-08-02 19:31:53] [SHELL_MATRIX] Processed command token: # Phase 2: Execution in Terminal/Rish environment
+[2026-08-02 19:31:53] [SHELL_MATRIX] Input: res = subprocess.run(executable_code, shell=True, capture_output=True, text=True)
+[2026-08-02 19:31:53] [SHELL_MATRIX] Processed command token: res = subprocess.run(executable_code, shell=True, capture_output=True, text=True)
+[2026-08-02 19:31:53] [SHELL_MATRIX] Input: # Phase 3: Code to Text (Feedback loop)
+[2026-08-02 19:31:53] [SHELL_MATRIX] Processed command token: # Phase 3: Code to Text (Feedback loop)
+[2026-08-02 19:31:53] [SHELL_MATRIX] Input: readable_summary = code_to_text(res.returncode, res.stdout, res.stderr)
+[2026-08-02 19:31:53] [SHELL_MATRIX] Processed command token: readable_summary = code_to_text(res.returncode, res.stdout, res.stderr)
+[2026-08-02 19:31:53] [SHELL_MATRIX] Input: print(f"🧬 [Code ➔ Text] Distilled Result:n{readable_summary}n")
+[2026-08-02 19:31:53] [SHELL_MATRIX] Processed command token: print(f"🧬 [Code ➔ Text] Distilled Result:n{readable_summary}n")
+[2026-08-02 19:31:54] [SHELL_MATRIX] Input: except KeyboardInterrupt:
+[2026-08-02 19:31:54] [SHELL_MATRIX] Processed command token: except KeyboardInterrupt:
+[2026-08-02 19:31:54] [SHELL_MATRIX] Input: print("nBeaker session interrupted.")
+[2026-08-02 19:31:54] [SHELL_MATRIX] Processed command token: print("nBeaker session interrupted.")
+[2026-08-02 19:31:54] [SHELL_MATRIX] Input: break
+[2026-08-02 19:31:54] [SHELL_MATRIX] Processed command token: break
+[2026-08-02 19:31:54] [SHELL_MATRIX] Input: except Exception as e:
+[2026-08-02 19:31:54] [SHELL_MATRIX] Processed command token: except Exception as e:
+[2026-08-02 19:31:54] [SHELL_MATRIX] Input: print(f"Critical Beaker Error: {e}")
+[2026-08-02 19:31:54] [SHELL_MATRIX] Processed command token: print(f"Critical Beaker Error: {e}")
+[2026-08-02 19:31:54] [SHELL_MATRIX] Input: if __name__ == "__main__":
+[2026-08-02 19:31:54] [SHELL_MATRIX] Processed command token: if __name__ == "__main__":
+[2026-08-02 19:31:54] [SHELL_MATRIX] Input: run_beaker_loop()
+[2026-08-02 19:31:54] [SHELL_MATRIX] Processed command token: run_beaker_loop()
+[2026-08-02 19:31:54] [SHELL_MATRIX] Input: EOF
+[2026-08-02 19:31:54] [SHELL_MATRIX] Processed command token: EOF
+[2026-08-02 19:31:54] [SHELL_MATRIX] Input: chmod +x ~/josie_core/josie_beaker.py
+[2026-08-02 19:31:54] [SHELL_MATRIX] Processed command token: chmod +x ~/josie_core/josie_beaker.py
+[2026-08-02 19:31:54] [SHELL_MATRIX] Input: python3 ~/josie_core/josie_beaker.py
+[2026-08-02 19:31:54] [SHELL_MATRIX] Processed command token: python3 ~/josie_core/josie_beaker.py
+[2026-08-02 19:32:14] [SHELL_MATRIX] Input: #!/data/data/com.termux/files/usr/bin/sh
+[2026-08-02 19:32:14] [SHELL_MATRIX] Processed command token: #!/data/data/com.termux/files/usr/bin/sh
+[2026-08-02 19:32:14] [SHELL_MATRIX] Input: # 👁️ @ — Josie Pure Shell Self-Patching & Telemetry Pull-Up
+[2026-08-02 19:32:14] [SHELL_MATRIX] Processed command token: # 👁️ @ — Josie Pure Shell Self-Patching & Telemetry Pull-Up
+[2026-08-02 19:32:14] [SHELL_MATRIX] Input: ROOT="$HOME/josie_core"
+[2026-08-02 19:32:14] [SHELL_MATRIX] Processed command token: ROOT="$HOME/josie_core"
+[2026-08-02 19:32:14] [SHELL_MATRIX] Input: LOG="$ROOT/execution.log"
+[2026-08-02 19:32:14] [SHELL_MATRIX] Processed command token: LOG="$ROOT/execution.log"
+[2026-08-02 19:32:14] [SHELL_MATRIX] Input: PATCH_LOG="$ROOT/patch_matrix.log"
+[2026-08-02 19:32:14] [SHELL_MATRIX] Processed command token: PATCH_LOG="$ROOT/patch_matrix.log"
+[2026-08-02 19:32:14] [SHELL_MATRIX] Input: mkdir -p "$ROOT"
+[2026-08-02 19:32:14] [SHELL_MATRIX] Processed command token: mkdir -p "$ROOT"
+[2026-08-02 19:32:14] [SHELL_MATRIX] Input: echo "=================================================="
+[2026-08-02 19:32:14] [SHELL_MATRIX] Processed command token: echo "=================================================="
+[2026-08-02 19:32:14] [SHELL_MATRIX] Input: echo " 👁️ @ — Josie Shell Self-Patching Matrix Active"
+[2026-08-02 19:32:14] [SHELL_MATRIX] Processed command token: echo " 👁️ @ — Josie Shell Self-Patching Matrix Active"
+[2026-08-02 19:32:14] [SHELL_MATRIX] Input: echo "=================================================="
+[2026-08-02 19:32:14] [SHELL_MATRIX] Processed command token: echo "=================================================="
+[2026-08-02 19:32:14] [SHELL_MATRIX] Input: # Pull up latest state and execution history
+[2026-08-02 19:32:14] [SHELL_MATRIX] Processed command token: # Pull up latest state and execution history
+[2026-08-02 19:32:14] [SHELL_MATRIX] Input: if [ -f "$LOG" ]; then
+[2026-08-02 19:32:14] [SHELL_MATRIX] Processed command token: if [ -f "$LOG" ]; then
+[2026-08-02 19:32:14] [SHELL_MATRIX] Input: echo "👁️ [Pull-Up] Last 5 Execution Entries:"
+[2026-08-02 19:32:14] [SHELL_MATRIX] Processed command token: echo "👁️ [Pull-Up] Last 5 Execution Entries:"
+[2026-08-02 19:32:14] [SHELL_MATRIX] Input: tail -n 5 "$LOG"
+[2026-08-02 19:32:14] [SHELL_MATRIX] Processed command token: tail -n 5 "$LOG"
+[2026-08-02 19:32:14] [SHELL_MATRIX] Input: else
+[2026-08-02 19:32:14] [SHELL_MATRIX] Processed command token: else
+[2026-08-02 19:32:14] [SHELL_MATRIX] Input: echo "[+] Initializing new execution log at $LOG"
+[2026-08-02 19:32:14] [SHELL_MATRIX] Processed command token: echo "[+] Initializing new execution log at $LOG"
+[2026-08-02 19:32:14] [SHELL_MATRIX] Input: touch "$LOG"
+[2026-08-02 19:32:15] [SHELL_MATRIX] Processed command token: touch "$LOG"
+[2026-08-02 19:32:15] [SHELL_MATRIX] Input: fi
+[2026-08-02 19:32:15] [SHELL_MATRIX] Processed command token: fi
+[2026-08-02 19:32:15] [SHELL_MATRIX] Input: # Self-patch routine via pure shell (Zero Python dependency)
+[2026-08-02 19:32:15] [SHELL_MATRIX] Processed command token: # Self-patch routine via pure shell (Zero Python dependency)
+[2026-08-02 19:32:15] [SHELL_MATRIX] Input: TIMESTAMP=$(date -u +"%Y-%m-%d_%H:%M:%S")
+[2026-08-02 19:32:15] [SHELL_MATRIX] Processed command token: TIMESTAMP=$(date -u +"%Y-%m-%d_%H:%M:%S")
+[2026-08-02 19:32:15] [SHELL_MATRIX] Input: echo "[$TIMESTAMP] [SHELL_SELF_PATCH] Integrity verified. Environment paths locked to Termux shell." >> "$PATCH_LOG"
+[2026-08-02 19:32:15] [SHELL_MATRIX] Processed command token: echo "[$TIMESTAMP] [SHELL_SELF_PATCH] Integrity verified. Environment paths locked to Termux shell." >> "$PATCH_LOG"
+[2026-08-02 19:32:15] [SHELL_MATRIX] Input: echo "[ok] Self-patch applied via pure shell script."
+[2026-08-02 19:32:15] [SHELL_MATRIX] Processed command token: echo "[ok] Self-patch applied via pure shell script."
+[2026-08-02 19:32:15] [SHELL_MATRIX] Input: echo "[ok] Telemetry pulled up successfully."
+[2026-08-02 19:32:15] [SHELL_MATRIX] Processed command token: echo "[ok] Telemetry pulled up successfully."
+[2026-08-02 12:32:41] [AUTO_HEAL] System state verified. Operating within nominal sovereign parameters.
