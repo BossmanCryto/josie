@@ -18701,4 +18701,31 @@ bash: /third_party_pkgs.txt: Read-only file system
 [?2004l[13:32:14] [MAX-SHELL] Automation sequence finalized successfully.
 [13:32:14] [MAX-SHELL] Automation sequence finalized successfully.
 [13:32:14] [MAX-SHELL] Automation sequence finalized successfully.
-[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ #!/data/data/com.termux/files/usr/bin/bash
+#!/data/data/com.termux/files/usr/bin/bash
+[?2004l[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ # ==============================================================================
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ # ==============================================================================
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ # ULTIMATE STANDALONE TERMUX AUTOMATION ENGINE (PURE BASH)
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ # ULTIMATE STANDALONE TERMUX AUTOMATION ENGINE (PURE BASH)
+[?2004l[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ # ==============================================================================
+[?2004l# ==============================================================================
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ set -euo pipefail
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ set -euo pipefail
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ # Environment Constants
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ # Environment Constants
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ TERMUX_HOME="/data/data/com.termux/files/home"
+[?2004lTERMUX_HOME="/data/data/com.termux/files/home"
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ AUDIT_ROOT="/storage/emulated/0/Android/data/Android_Audit"
+[?2004lAUDIT_ROOT="/storage/emulated/0/Android/data/Android_Audit"
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ SYS_LOG="${AUDIT_ROOT}/execution_trace.log"
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ SYS_LOG="${AUDIT_ROOT}/execution_trace.log"
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ # Self-healing directory structures
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ # Self-healing directory structures
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ mkdir -p "$AUDIT_ROOT" "${TERMUX_HOME}/.cache"
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ mkdir -p "$AUDIT_ROOT" "${TERMUX_HOME}/.cache"
+[?2004lmkdir: cannot create directory ‘/storage/emulated/0/Android/data/Android_Audit’: Permission denied
+mkdir: cannot create directory ‘/storage/emulated/0/Android/data/Android_Audit’: Permission denied
