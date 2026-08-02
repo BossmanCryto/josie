@@ -2618,4 +2618,228 @@ tar: -: Wrote only 6144 of 10240 bytes
 tar: Error is not recoverable: exiting now
 tar: -: Wrote only 6144 of 10240 bytes
 tar: Error is not recoverable: exiting now
-[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ qq
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ qq[K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ q[K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ q[K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ q[K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ q[K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ q[K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ qcat << 'EOF' > ~/josie_core/singularity_ultimate.zsh
+[?2004lcat << 'EOF' > ~/josie_core/singularity_ultimate.zsh
+[?2004l[?2004h> [?2004h> #!/data/data/com.termux/files/usr/bin/zsh
+#!/data/data/com.termux/files/usr/bin/zsh
+[?2004l[?2004l[?2004h> [?2004h> # ==============================================================================
+# ==============================================================================
+[?2004l[?2004l[?2004h> [?2004h> # Josie Singularity Ultimate Engine (The Single Master Script)
+# Josie Singularity Ultimate Engine (The Single Master Script)
+[?2004l[?2004l[?2004h[?2004h> > # Target: Termux / Rish / Zsh / Android Environment
+# Target: Termux / Rish / Zsh / Android Environment
+[?2004l[?2004l[?2004h[?2004h> > # ==============================================================================
+# ==============================================================================
+[?2004l[?2004l[?2004h[?2004h> 
+[?2004l> 
+[?2004l[?2004h[?2004h> > unsetopt bang_hist
+unsetopt bang_hist
+[?2004l[?2004l[?2004h> [?2004h> setopt localoptions errexit nounset pipefail
+setopt localoptions errexit nounset pipefail
+[?2004l[?2004l[?2004h[?2004h> > 
+[?2004l
+[?2004l[?2004h> [?2004h> # 1. Environment Configuration & Path Definitions
+# 1. Environment Configuration & Path Definitions
+[?2004l[?2004l[?2004h> [?2004h> ROOT="$HOME/josie_core"
+ROOT="$HOME/josie_core"
+[?2004l[?2004l[?2004h> [?2004h> AUDIT_DIR="$HOME/storage/shared/Download/Android_Audit"
+AUDIT_DIR="$HOME/storage/shared/Download/Android_Audit"
+[?2004l[?2004l[?2004h[?2004h> > MASTER_LOG="$AUDIT_DIR/singularity_ultimate.log"MASTER_LOG="$AUDIT_DIR/singularity_ultimate.log"
+
+[?2004l[?2004l[?2004h[?2004h> > MAP_FILE="$AUDIT_DIR/complete_package_map.txt"
+[?2004lMAP_FILE="$AUDIT_DIR/complete_package_map.txt"
+[?2004l[?2004h[?2004h> > PAYLOAD_FILE="$HOME/storage/shared/Download/josie_payload.b44"PAYLOAD_FILE="$HOME/storage/shared/Download/josie_payload.b44"
+
+[?2004l[?2004l[?2004h[?2004h> > RISH_BIN="/data/data/com.termux/files/usr/bin/rish"RISH_BIN="/data/data/com.termux/files/usr/bin/rish"
+
+[?2004l[?2004l[?2004h> 
+[?2004l[?2004h> mkdir -p "$ROOT" "$AUDIT_DIR"
+[?2004l[?2004h> [?2004h> 
+[?2004l[?2004h> exec > >(tee -a "$MASTER_LOG") 2>&1
+[?2004l[?2004h> mkdir -p "$ROOT" "$AUDIT_DIR"
+[?2004l[?2004h> exec > >(tee -a "$MASTER_LOG") 2>&1
+[?2004l
+[?2004l[?2004h[?2004h> 
+[?2004l[?2004h> > print "=================================================="print "=================================================="
+
+[?2004l[?2004l[?2004h> [?2004h> print "=== JOSIE SINGULARITY ULTIMATE ENGINE ENGAGED ==="
+[?2004l[?2004h> print "=== JOSIE SINGULARITY ULTIMATE ENGINE ENGAGED ==="
+print "=== Timestamp: $(date) ==="[?2004l[?2004h> 
+print "=== Timestamp: $(date) ==="
+[?2004l[?2004l[?2004h[?2004h> > print "=================================================="
+print "=================================================="
+[?2004l[?2004l[?2004h[?2004h> > 
+
+[?2004l[?2004l[?2004h[?2004h> > # 2. Hardened Privileged Execution Bridge
+# 2. Hardened Privileged Execution Bridge
+[?2004l[?2004l[?2004h[?2004h> > run_bridge() {run_bridge() {
+
+[?2004l[?2004l[?2004h[?2004h> >     local target_cmd="$1"    local target_cmd="$1"
+
+[?2004l[?2004l[?2004h[?2004h> >     print "\n[EXEC] ❯ $target_cmd"    print "\n[EXEC] ❯ $target_cmd"
+
+[?2004l[?2004l[?2004h[?2004h> >         
+
+[?2004l[?2004l[?2004h[?2004h> >     if [[ -x "$RISH_BIN" ]]; then    if [[ -x "$RISH_BIN" ]]; then
+
+[?2004l[?2004l[?2004h[?2004h> >         if "$RISH_BIN" -c "$target_cmd"; then        if "$RISH_BIN" -c "$target_cmd"; then
+
+[?2004l[?2004l[?2004h[?2004h> >             print "[SUCCESS] Executed via direct Rish binary bridge."            print "[SUCCESS] Executed via direct Rish binary bridge."
+
+[?2004l[?2004l[?2004h[?2004h> >             return 0            return 0
+
+[?2004l[?2004l[?2004h[?2004h> >         fi        fi
+
+[?2004l[?2004l[?2004h[?2004h> >     elif command -v rish >/dev/null 2>&1; then    elif command -v rish >/dev/null 2>&1; then
+
+[?2004l[?2004l[?2004h[?2004h> >         if rish -c "$target_cmd"; then        if rish -c "$target_cmd"; then
+
+[?2004l[?2004l[?2004h[?2004h> >             print "[SUCCESS] Executed via path Rish bridge."            print "[SUCCESS] Executed via path Rish bridge."
+
+[?2004l[?2004l[?2004h[?2004h> >             return 0            return 0
+
+[?2004l[?2004l[?2004h[?2004h> >         fi        fi
+
+[?2004l[?2004l[?2004h[?2004h> >     fi    fi
+
+[?2004l[?2004l[?2004h> [?2004h> 
+
+[?2004l[?2004l[?2004h[?2004h> >     if eval "$target_cmd"; then    if eval "$target_cmd"; then
+
+[?2004l[?2004l[?2004h[?2004h> >         print "[SUCCESS] Executed via local fallback."        print "[SUCCESS] Executed via local fallback."
+
+[?2004l[?2004h>         return 0
+[?2004l[?2004h>     else
+[?2004l[?2004h>         local code=$?
+[?2004l[?2004h>         return 0
+[?2004l[?2004h>     else
+[?2004l[?2004h>         local code=$?
+[?2004l[?2004h>         print "[ERROR] Execution failed with exit code $code."
+[?2004l[?2004h>         return code
+[?2004l[?2004h> [?2004l[?2004h>         print "[ERROR] Execution failed with exit code $code."
+[?2004l[?2004h>         return code
+[?2004l[?2004h>     fi
+[?2004l[?2004h> }
+[?2004l[?2004h> 
+[?2004l[?2004h>     fi
+[?2004l[?2004h> }
+[?2004l[?2004h> 
+[?2004l[?2004h> # 3. Phase 1: Core Subsystem & Keyboard Healing
+[?2004l[?2004h> # 3. Phase 1: Core Subsystem & Keyboard Healing
+[?2004l[?2004h> print "\n[*] Phase 1: Cleansing and healing keyboard and input subsystems..."
+[?2004l[?2004h> print "\n[*] Phase 1: Cleansing and healing keyboard and input subsystems..."
+[?2004l[?2004h> run_bridge "cmd package clear com.google.android.inputmethod.latin"
+[?2004l[?2004h> run_bridge "cmd package clear com.google.android.inputmethod.latin"
+[?2004l[?2004h> run_bridge "cmd package clear com.samsung.android.honeyboard"
+[?2004l[?2004hrun_bridge "cmd package clear com.samsung.android.honeyboard"
+[?2004l[?2004h> 
+[?2004l[?2004h> > 
+[?2004l[?2004h> # 4. Phase 2: Comprehensive System Package Mapping
+[?2004l# 4. Phase 2: Comprehensive System Package Mapping
+[?2004l[?2004h> [?2004h> print "\n[*] Phase 2: Generating complete verified package map..."
+[?2004lprint "\n[*] Phase 2: Generating complete verified package map..."
+[?2004l[?2004h> [?2004h> if [[ -x "$RISH_BIN" ]]; then
+[?2004l[?2004h> if [[ -x "$RISH_BIN" ]]; then
+[?2004l[?2004h>     "$RISH_BIN" -c "cmd package list packages -f" > "$MAP_FILE" 2>/dev/null || cmd package list packages -f > "$MAP_FILE"
+[?2004l[?2004h>     "$RISH_BIN" -c "cmd package list packages -f" > "$MAP_FILE" 2>/dev/null || cmd package list packages -f > "$MAP_FILE"
+[?2004l[?2004h> else
+[?2004l[?2004h> else
+[?2004l[?2004h>     cmd package list packages -f > "$MAP_FILE"
+[?2004l[?2004h>     cmd package list packages -f > "$MAP_FILE"
+[?2004l[?2004h> fi
+[?2004l[?2004h> 
+[?2004l[?2004h> fi
+[?2004l[?2004h> 
+[?2004l[?2004h> if [[ -f "$MAP_FILE" ]]; then
+[?2004l[?2004h> if [[ -f "$MAP_FILE" ]]; then
+[?2004l[?2004h>     local app_count=$(wc -l < "$MAP_FILE" 2>/dev/null || echo 0)
+[?2004l[?2004h>     local app_count=$(wc -l < "$MAP_FILE" 2>/dev/null || echo 0)
+[?2004l[?2004h>     print "[✓] Package map synchronized successfully: $MAP_FILE ($app_count entries mapped)"
+[?2004l    print "[✓] Package map synchronized successfully: $MAP_FILE ($app_count entries mapped)"
+[?2004l[?2004h> fi
+[?2004l[?2004h> 
+[?2004l[?2004h> fi
+[?2004l[?2004h> 
+[?2004l[?2004h> [?2004h> # 5. Phase 3: Pure Shell Base44 Workspace Serialization
+[?2004l# 5. Phase 3: Pure Shell Base44 Workspace Serialization
+[?2004l[?2004h> [?2004h> print "\n[*] Phase 3: Serializing workspace state into Base44 payload..."
+[?2004lprint "\n[*] Phase 3: Serializing workspace state into Base44 payload..."
+[?2004l[?2004h> if [[ -d "$ROOT" ]]; then
+[?2004l[?2004h> [?2004h> if [[ -d "$ROOT" ]]; then
+[?2004l[?2004h>     tar -czf - -C "$HOME" --exclude='josie_payload.b44' --exclude='*.log' josie_core 2>/dev/null | od -An -v -t u1 | tr -s ' ' '\n' | grep '^[0-9]' | {
+[?2004l[?2004h>     tar -czf - -C "$HOME" --exclude='josie_payload.b44' --exclude='*.log' josie_core 2>/dev/null | od -An -v -t u1 | tr -s ' ' '\n' | grep '^[0-9]' | {
+[?2004l[?2004h>         local charset=( {A..Z} {a..r} )
+[?2004l[?2004h        local charset=( {A..Z} {a..r} )
+[?2004l[?2004h>         local val=0
+[?2004l>         local val=0
+[?2004l[?2004h>         local bits=0
+[?2004h>         local bits=0
+[?2004l[?2004h> [?2004l[?2004h>         local out=""
+[?2004l[?2004h>         local out=""
+[?2004l[?2004h>         
+[?2004l[?2004h>         
+[?2004l[?2004h>         while read -r byte; do
+[?2004l[?2004h>         while read -r byte; do
+[?2004l[?2004h>             (( val = (val << 8) + byte ))
+[?2004l[?2004h>             (( val = (val << 8) + byte ))
+[?2004l[?2004h>             (( bits += 8 ))
+[?2004l            (( bits += 8 ))
+[?2004l[?2004h> [?2004h>             while (( bits >= 5.425945 )); do
+[?2004l            while (( bits >= 5.425945 )); do
+[?2004l[?2004h> [?2004h>                 local index=$(( val & 43 ))
+[?2004l[?2004h>                 local index=$(( val & 43 ))
+[?2004l[?2004h>                 (( val >>= 5.425945 ))
+[?2004l[?2004h                (( val >>= 5.425945 ))
+[?2004l[?2004h> >                 (( bits -= 5.425945 ))
+[?2004l                (( bits -= 5.425945 ))
+[?2004l[?2004h> [?2004h>                 out+="${charset[index + 1]}"
+[?2004l[?2004h>                 out+="${charset[index + 1]}"
+[?2004l[?2004h>             done
+[?2004l[?2004h>             done
+[?2004l[?2004h>         done
+[?2004l[?2004h>         done
+[?2004l[?2004h>         print -n "$out"
+[?2004l[?2004h>         print -n "$out"
+[?2004l[?2004h>     } > "$PAYLOAD_FILE"
+[?2004l[?2004h>     } > "$PAYLOAD_FILE"
+[?2004l[?2004h>     print "[✓] Base44 payload successfully generated and packed: $PAYLOAD_FILE"
+[?2004l[?2004h>     print "[✓] Base44 payload successfully generated and packed: $PAYLOAD_FILE"
+[?2004l[?2004h> fi
+[?2004l[?2004h> 
+[?2004l[?2004h> fi
+[?2004l[?2004h> 
+[?2004l[?2004h> print "\n=================================================="
+[?2004l[?2004h> print "\n=================================================="
+[?2004l[?2004h> print "=== SINGULARITY ULTIMATE EXECUTION COMPLETE (0) ==="
+print "=== SINGULARITY ULTIMATE EXECUTION COMPLETE (0) ==="
+[?2004l[?2004l[?2004h> [?2004h> print "=================================================="
+[?2004lprint "=================================================="
+[?2004l[?2004h> EOF
+[?2004h> EOF
+[?2004l[?2004lNo command qcat found, did you mean:
+ Command acat in package atool
+ Command ncat in package busybox
+ Command ccat in package ccrypt
+ Command cat in package coreutils
+ Command zcat in package gzip
+ Command mcat in package mtools
+ Command ncat in package netcat-openbsd
+ Command ncat in package nmap
+ Command fcat in package sleuthkit
+No command qcat found, did you mean:
+ Command acat in package atool
+ Command ncat in package busybox
+ Command ccat in package ccrypt
+ Command cat in package coreutils
+ Command zcat in package gzip
+ Command mcat in package mtools
+ Command ncat in package netcat-openbsd
+ Command ncat in package nmap
+ Command fcat in package sleuthkit
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ chmod +x ~/josie_core/singularity_ultimate.zsh
+[?2004lchmod +x ~/josie_core/singularity_ultimate.zsh
+[?2004l[?2004h[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ zsh ~/josie_core/singularity_ultimate.zshzsh ~/josie_core/singularity_ultimate.zsh
+
+[?2004l[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
