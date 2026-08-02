@@ -16,9 +16,12 @@ QUEUE_FILE = os.path.expanduser("~/watchdog_queue.txt")
 LOG_FILE = os.path.expanduser("~/watchdog_debug.log")
 
 def write_log(stage, message):
+    timestamp = time.strftime('%Y-%m-%d %H:%M:%S')
+    formatted = f"[{timestamp}] [{stage}] {message}\n"
+    print(formatted, end="")
     try:
         with open(LOG_FILE, "a") as f:
-            f.write(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] [{stage}] {message}\n")
+            f.write(formatted)
     except Exception:
         pass
 
@@ -50,7 +53,7 @@ def validate_command(cleaned):
     return True, cleaned
 
 def execute_command(command):
-    write_log("EXECUTING", command)
+    write_log("EXECUTING", f"Running real-time action -> {command}")
 
     try:
         result = subprocess.run(
@@ -59,17 +62,30 @@ def execute_command(command):
             capture_output=True,
             text=True
         )
+        
+        output_payload = ""
         if result.stdout:
-            print(result.stdout)
-            write_log("STDOUT", result.stdout.strip())
+            output_payload = result.stdout.strip()
+            print(f"\n[STDOUT RESULT]:\n{output_payload}\n")
+            write_log("STDOUT", output_payload)
 
         if result.returncode != 0:
-            err_text = result.stderr or "Exit non-zero"
+            err_text = result.stderr.strip() if result.stderr else "Exit non-zero"
+            print(f"\n[CRASH/ERROR]:\n{err_text}\n", file=sys.stderr)
             write_log("CRASH", err_text)
+            try:
+                subprocess.run(["termux-tts-speak", "Execution encountered an error."], capture_output=True)
+            except Exception:
+                pass
         else:
             if result.stderr:
                 print(result.stderr, file=sys.stderr)
-            write_log("SUCCESS", "Exit Code: 0")
+            write_log("SUCCESS", "Command completed successfully with real-time output.")
+            try:
+                subprocess.run(["termux-tts-speak", "Action executed successfully."], capture_output=True)
+            except Exception:
+                pass
+
     except Exception as e:
         write_log("EXCEPTION", str(e))
 
@@ -82,7 +98,7 @@ def process_stream(raw_input):
         write_log("BLOCKED", msg)
 
 def run_autonomous_engine():
-    write_log("DAEMON", "Optimized autonomous engine active with absolute native paths.")
+    write_log("DAEMON", "Unified autonomous engine active with live screen feedback.")
     if not os.path.exists(QUEUE_FILE):
         open(QUEUE_FILE, "w").close()
 
@@ -100,7 +116,7 @@ def run_autonomous_engine():
 
             try:
                 clip_res = subprocess.run(["termux-clipboard-get"], capture_output=True, text=True, timeout=1)
-                clip_txt = clip_res.stdout.strip()
+                clip_txt = clip_res.stdout.string if hasattr(clip_res.stdout, 'string') else clip_txt = clip_res.stdout.strip()
                 if clip_txt and clip_txt != last_clipboard:
                     last_clipboard = clip_txt
             except Exception:
