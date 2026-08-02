@@ -756,4 +756,212 @@ No command # found, did you mean:
 [EXEC] ❯ cmd input_method reset-text-services
 [WARNING] Command returned exit code 255. Initiating self-healing fallback...
 [WARNING] Command returned exit code 255. Initiating self-healing fallback...
+[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [K[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ cat << 'EOF' > ~/josie_core/rish_matrix.zsh
+cat << 'EOF' > ~/josie_core/rish_matrix.zsh
+[?2004l[?2004l[?2004h[?2004h> > #!/data/data/com.termux/files/usr/bin/zsh
+#!/data/data/com.termux/files/usr/bin/zsh
+[?2004l[?2004l[?2004h[?2004h> > # ==============================================================================
+# ==============================================================================
+[?2004l[?2004l[?2004h> [?2004h> # Josie Rish & Zsh Privileged Matrix Integration
+# Josie Rish & Zsh Privileged Matrix Integration
+[?2004l[?2004l[?2004h> [?2004h> # Target: Termux / Shizuku / Rish / Zsh Environment
+# Target: Termux / Shizuku / Rish / Zsh Environment
+[?2004l[?2004l[?2004h> [?2004h> # ==============================================================================
+[?2004l# ==============================================================================
+[?2004l[?2004h> 
+[?2004l[?2004h> unsetopt bang_hist
+[?2004l[?2004h> setopt localoptions errexit nounset pipefail
+[?2004h> 
+[?2004l[?2004h> unsetopt bang_hist
+[?2004l[?2004h> setopt localoptions errexit nounset pipefail
+[?2004l[?2004l[?2004h> [?2004h
+[?2004l> 
+[?2004l[?2004h> [?2004h> ROOT="$HOME/josie_core"
+ROOT="$HOME/josie_core"
+[?2004l[?2004l[?2004h> [?2004h> LOG_FILE="$ROOT/rish_matrix.log"
+LOG_FILE="$ROOT/rish_matrix.log"
+[?2004l[?2004l[?2004h> [?2004h> mkdir -p "$ROOT"
+mkdir -p "$ROOT"
+[?2004l[?2004l[?2004h> 
+[?2004l[?2004h> 
+[?2004l[?2004h> [?2004h> exec > >(tee -a "$LOG_FILE") 2>&1
+exec > >(tee -a "$LOG_FILE") 2>&1
+[?2004l[?2004l[?2004h> 
+[?2004l[?2004h> 
+[?2004l[?2004h> [?2004h> print "=================================================="
+print "=================================================="
+[?2004l[?2004l[?2004h> [?2004h> print "=== JOSIE RISH + ZSH MATRIX ENGINE ACTIVE ==="
+print "=== JOSIE RISH + ZSH MATRIX ENGINE ACTIVE ==="
+[?2004l[?2004l[?2004h> [?2004h> print "=================================================="
+[?2004lprint "=================================================="
+[?2004l[?2004h> 
+[?2004h> [?2004l
+[?2004l[?2004h> [?2004h> # Verify if rish is available for root/adb privileged execution
+# Verify if rish is available for root/adb privileged execution
+[?2004l[?2004l[?2004h> [?2004h> if command -v rish >/dev/null 2>&1; then
+if command -v rish >/dev/null 2>&1; then
+[?2004l[?2004l[?2004h> [?2004h>     print "[✓] Rish binary detected in path."
+    print "[✓] Rish binary detected in path."
+[?2004l[?2004l[?2004h> [?2004h> elif [[ -x /data/data/com.termux/files/usr/bin/rish ]]; then
+elif [[ -x /data/data/com.termux/files/usr/bin/rish ]]; then
+[?2004l[?2004l[?2004h[?2004h> >     print "[✓] Rish binary located."
+[?2004l[?2004h> else
+[?2004l    print "[✓] Rish binary located."
+[?2004h> [?2004l[?2004h> else
+[?2004l[?2004h>     print "[!] Warning: Rish not found in path. Falling back to standard shell execution."
+[?2004l[?2004h> fi
+[?2004l[?2004h> 
+[?2004l[?2004h>     print "[!] Warning: Rish not found in path. Falling back to standard shell execution."
+[?2004l[?2004h> fi
+[?2004l[?2004h> 
+[?2004l[?2004h> # Function to execute commands through Rish if available, falling back to eval
+[?2004l[?2004h> rish_exec() {
+[?2004l# Function to execute commands through Rish if available, falling back to eval
+[?2004l[?2004h> rish_exec() {
+[?2004l[?2004h>     local target_cmd="$1"
+[?2004l[?2004h> [?2004h>     local target_cmd="$1"
+[?2004l[?2004h>     print "\n[RISH-EXEC] ❯ $target_cmd"
+[?2004l[?2004h>         print "\n[RISH-EXEC] ❯ $target_cmd"
+[?2004l[?2004h>     
+
+[?2004l[?2004l[?2004h>     if command -v rish >/dev/null 2>&1; then[?2004h> 
+    if command -v rish >/dev/null 2>&1; then[?2004l
+[?2004l[?2004h[?2004h>         if rish -c "$target_cmd"; then
+> [?2004l        if rish -c "$target_cmd"; then
+[?2004l[?2004h> [?2004h>             print "[SUCCESS] Rish execution complete."
+            print "[SUCCESS] Rish execution complete."
+[?2004l[?2004l[?2004h> [?2004h>             return 0
+[?2004l[?2004h>         else
+[?2004l[?2004h>             return 0
+[?2004l[?2004h>         else
+[?2004l[?2004h>             print "[WARNING] Rish execution failed. Falling back to local eval..."
+[?2004l[?2004h>         fi
+[?2004l            print "[WARNING] Rish execution failed. Falling back to local eval..."
+[?2004l[?2004h>     fi
+[?2004l[?2004h>         fi
+[?2004l[?2004h> 
+[?2004l[?2004h>     fi
+[?2004l[?2004h[?2004h> > 
+[?2004l[?2004h>     if eval "$target_cmd"; then
+[?2004l[?2004h>     if eval "$target_cmd"; then
+[?2004l[?2004h>         print "[SUCCESS] Local fallback execution complete."
+[?2004l[?2004h>     else
+[?2004l        print "[SUCCESS] Local fallback execution complete."
+[?2004l[?2004h>     else
+[?2004l[?2004h> [?2004h>         local code=$?
+[?2004l[?2004h>         local code=$?
+[?2004l[?2004h>         print "[ERROR] Execution failed with exit code $code."
+[?2004l[?2004h>         return $code
+        print "[ERROR] Execution failed with exit code $code."
+[?2004l[?2004l[?2004h>     fi
+[?2004l[?2004h>         return $code
+[?2004l[?2004h>     fi
+[?2004l[?2004h> }
+[?2004l[?2004h> }
+[?2004l[?2004h> 
+[?2004l[?2004h> [?2004h> # --- PRIVILEGED SYSTEM REPAIR VIA RISH & ZSH ---
+[?2004l
+[?2004l[?2004h> # --- PRIVILEGED SYSTEM REPAIR VIA RISH & ZSH ---
+[?2004l[?2004h> print "\n[*] Initializing Privileged Subsystem Routines..."
+[?2004l[?2004h> 
+[?2004l[?2004h> print "\n[1/3] Resetting text input services via Rish..."
+[?2004l[?2004h> rish_exec "cmd input_method reset-text-services"
+[?2004l[?2004h> 
+[?2004l[?2004h> print "\n[2/3] Flushing Gboard and Samsung Keyboard package states..."
+[?2004l[?2004h> [?2004h> print "\n[*] Initializing Privileged Subsystem Routines..."
+[?2004l[?2004h> 
+[?2004l[?2004h> print "\n[1/3] Resetting text input services via Rish..."
+[?2004l[?2004h> rish_exec "cmd input_method reset-text-services"
+[?2004l[?2004h> 
+[?2004l[?2004h> print "\n[2/3] Flushing Gboard and Samsung Keyboard package states..."
+[?2004l[?2004h> for pkg in "com.google.android.inputmethod.latin" "com.samsung.android.honeyboard"; do
+[?2004l[?2004h>     rish_exec "cmd package clear $pkg"
+for pkg in "com.google.android.inputmethod.latin" "com.samsung.android.honeyboard"; do
+[?2004l[?2004l[?2004h>     rish_exec "cmd package clear $pkg"
+[?2004l[?2004h> [?2004h> done
+[?2004l[?2004h> 
+[?2004l[?2004h> done
+[?2004l[?2004h> 
+[?2004l[?2004h> print "\n[3/3] Generating privileged system package map..."
+[?2004l[?2004h> print "\n[3/3] Generating privileged system package map..."
+[?2004lrish_exec "cmd package list packages -f > $ROOT/rish_verified_packages.txt"
+[?2004l[?2004h> 
+[?2004l[?2004h> rish_exec "cmd package list packages -f > $ROOT/rish_verified_packages.txt"
+[?2004h> [?2004l[?2004h> 
+[?2004l[?2004h> print "\n=================================================="
+[?2004l[?2004h> print "\n=================================================="
+[?2004l[?2004h> print "=== RISH + ZSH MATRIX EXECUTION COMPLETE (EXIT: 0) ==="
+[?2004l[?2004hprint "=== RISH + ZSH MATRIX EXECUTION COMPLETE (EXIT: 0) ==="
+[?2004l[?2004h> > print "=================================================="
+[?2004l[?2004h> EOF
+[?2004lprint "=================================================="
+[?2004l[?2004h> EOF
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ chmod +x ~/josie_core/rish_matrix.zsh
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ chmod +x ~/josie_core/rish_matrix.zsh
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ zsh ~/josie_core/rish_matrix.zsh
+[?2004l[?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ zsh ~/josie_core/rish_matrix.zsh
+[?2004l==================================================
+=== JOSIE RISH + ZSH MATRIX ENGINE ACTIVE ===
+==================================================
+[✓] Rish binary detected in path.
+
+[*] Initializing Privileged Subsystem Routines...
+
+[1/3] Resetting text input services via Rish...
+
+[RISH-EXEC] ❯ cmd input_method reset-text-services
+==================================================
+=== JOSIE RISH + ZSH MATRIX ENGINE ACTIVE ===
+==================================================
+[✓] Rish binary detected in path.
+
+[*] Initializing Privileged Subsystem Routines...
+
+[1/3] Resetting text input services via Rish...
+
+[RISH-EXEC] ❯ cmd input_method reset-text-services
+Unknown command: reset-text-services
+Unknown command: reset-text-services
+[SUCCESS] Rish execution complete.
+
+[2/3] Flushing Gboard and Samsung Keyboard package states...
+
+[RISH-EXEC] ❯ cmd package clear com.google.android.inputmethod.latin
+[SUCCESS] Rish execution complete.
+
+[2/3] Flushing Gboard and Samsung Keyboard package states...
+
+[RISH-EXEC] ❯ cmd package clear com.google.android.inputmethod.latin
+Success
+Success
+[SUCCESS] Rish execution complete.
+
+[RISH-EXEC] ❯ cmd package clear com.samsung.android.honeyboard
+[SUCCESS] Rish execution complete.
+
+[RISH-EXEC] ❯ cmd package clear com.samsung.android.honeyboard
+Success
+Success
+[SUCCESS] Rish execution complete.
+
+[3/3] Generating privileged system package map...
+
+[RISH-EXEC] ❯ cmd package list packages -f > /data/data/com.termux/files/home/josie_core/rish_verified_packages.txt
+[SUCCESS] Rish execution complete.
+
+[3/3] Generating privileged system package map...
+
+[RISH-EXEC] ❯ cmd package list packages -f > /data/data/com.termux/files/home/josie_core/rish_verified_packages.txt
+[SUCCESS] Rish execution complete.
+
+==================================================
+=== RISH + ZSH MATRIX EXECUTION COMPLETE (EXIT: 0) ===
+==================================================
+[SUCCESS] Rish execution complete.
+
+==================================================
+=== RISH + ZSH MATRIX EXECUTION COMPLETE (EXIT: 0) ===
+==================================================
 [?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ [?2004h[1;32mu0_a337@termux[0m:[1;34m~/josie_core[1;33m [main][0m $ 
