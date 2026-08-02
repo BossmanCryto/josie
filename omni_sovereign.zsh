@@ -1,8 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/zsh
 # ==============================================================================
-# Josie Core Sovereign Autonomous Engine v2026.Sovereign
+# Josie Core Sovereign Autonomous Engine v2026.Sovereign.Fix
 # Architecture: Physical + Digital = Human (P + D = H)
-# Pure Zsh-native execution with self-healing telemetry and zero dependencies.
+# Pure Zsh-native execution with robust arithmetic and zero-dependency error handling.
 # ==============================================================================
 
 typeset -r CORE_ROOT="$PWD"
@@ -23,13 +23,11 @@ sovereign_safe_run() {
 inspect_and_heal() {
     sovereign_log "Executing sovereign self-healing and error inspection..."
     
-    # Heal stale git index locks automatically
     if [[ -f "$CORE_ROOT/.git/index.lock" ]]; then
         rm -f "$CORE_ROOT/.git/index.lock"
         sovereign_log "Healed: Removed stale git index lock."
     fi
 
-    # Verify ledger integrity
     if [[ -f "$LEDGER_FILE" ]]; then
         if ! grep -q "generation" "$LEDGER_FILE"; then
             sovereign_log "Warning: Ledger anomaly detected. Initializing clean sovereign state ledger."
@@ -45,10 +43,9 @@ main() {
     [[ -d "$CORE_ROOT" ]] || mkdir -p "$CORE_ROOT"
     inspect_and_heal
 
-    # Extract current generation natively using grep/sed
     typeset -i current_gen=0
     if [[ -f "$LEDGER_FILE" ]]; then
-        current_gen=$(grep -o '"generation": *[0-9]*' "$LEDGER_FILE" | grep -o '[0-9]*')
+        current_gen=$(grep -o '"generation": *[0-9]*' "$LEDGER_FILE" | grep -o '[0-9]*' | head -n 1)
     fi
     (( current_gen++ ))
 
@@ -58,12 +55,16 @@ main() {
 
     sovereign_log "Sovereign Cycle ID: $cycle_id | Generation: $current_gen"
 
-    # Capture native telemetry
     local model=$(sovereign_safe_run "getprop ro.product.model")
     model=${model:-SM-A176U}
-    local free_storage=$(( $(sovereign_safe_run "stat -f -c '%a*%S' .") / 1024 / 1024 ))
+    
+    # Robust storage calculation avoiding multi-line math errors
+    typeset -i free_storage=0
+    local df_out=$(sovereign_safe_run "df -k . | tail -n 1 | awk '{print \$4}'")
+    if [[ -n "$df_out" && "$df_out" =~ ^[0-9]+$ ]]; then
+        free_storage=$(( df_out / 1024 ))
+    fi
 
-    # Write updated state ledger natively
     cat << JSON > "$LEDGER_FILE"
 {
   "architecture": "Physical + Digital = Human (P+D=H)",
@@ -81,7 +82,6 @@ JSON
 
     sovereign_log "Ledger successfully updated via pure Zsh engine."
 
-    # Sovereign GitHub Synchronization
     sovereign_log "Initiating Sovereign GitHub push..."
     sovereign_safe_run "git remote set-url origin https://github.com/BossmanCryto/jsi.git"
     sovereign_safe_run "git add -A"
