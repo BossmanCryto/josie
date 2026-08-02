@@ -595,3 +595,112 @@
 [2026-08-02 19:25:40] [SHELL_MATRIX] Input: parts = cmd.strip().split()
 [2026-08-02 19:25:40] [SHELL_MATRIX] Processed command token: parts = cmd.strip().split()
 [2026-08-02 19:25:40] [SHELL_MATRIX] Input: if parts:
+[2026-08-02 19:25:40] [SHELL_MATRIX] Processed command token: if parts:
+[2026-08-02 19:25:40] [SHELL_MATRIX] Input: missing_pkg = parts[0]
+[2026-08-02 19:25:40] [SHELL_MATRIX] Processed command token: missing_pkg = parts[0]
+[2026-08-02 19:25:40] [SHELL_MATRIX] Input: print(f"👁️ Auto-patch applied: Installing missing utility -> pkg install -y {missing_pkg}")
+[2026-08-02 19:25:40] [SHELL_MATRIX] Processed command token: print(f"👁️ Auto-patch applied: Installing missing utility -> pkg install -y {missing_pkg}")
+[2026-08-02 19:25:40] [SHELL_MATRIX] Input: subprocess.run(f"pkg install -y {missing_pkg}", shell=True, stdout=subprocess.DEVNULL)
+[2026-08-02 19:25:40] [SHELL_MATRIX] Processed command token: subprocess.run(f"pkg install -y {missing_pkg}", shell=True, stdout=subprocess.DEVNULL)
+[2026-08-02 19:25:40] [SHELL_MATRIX] Input: return cmd
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: return cmd
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: return None
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: return None
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: def run_loop():
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: def run_loop():
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: print("n==================================================")
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: print("n==================================================")
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: print(" 👁️ @ — Josie Self-Healing Terminal Active")
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: print(" 👁️ @ — Josie Self-Healing Terminal Active")
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: print(" Commands execute with automatic error correction.")
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: print(" Commands execute with automatic error correction.")
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: print(" Type commands directly or type 'exit' to quit.")
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: print(" Type commands directly or type 'exit' to quit.")
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: print("==================================================n")
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: print("==================================================n")
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: while True:
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: while True:
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: try:
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: try:
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: prompt = input("Josie-Auto> ").strip()
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: prompt = input("Josie-Auto> ").strip()
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: if not prompt:
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: if not prompt:
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: continue
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: continue
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: if prompt.lower() in ["exit", "quit"]:
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: if prompt.lower() in ["exit", "quit"]:
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: print("Terminating self-healing session.")
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: print("Terminating self-healing session.")
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: break
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: break
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: log_event(f"User Input: {prompt}")
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: log_event(f"User Input: {prompt}")
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: # Initial execution attempt
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: # Initial execution attempt
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: res = subprocess.run(prompt, shell=True, capture_output=True, text=True)
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: res = subprocess.run(prompt, shell=True, capture_output=True, text=True)
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: if res.returncode == 0:
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: if res.returncode == 0:
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: if res.stdout:
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: if res.stdout:
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: print(res.stdout)
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: print(res.stdout)
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: log_event(f"Success: {prompt}")
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: log_event(f"Success: {prompt}")
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: else:
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: else:
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: err = res.stderr.strip() or res.stdout.strip()
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: err = res.stderr.strip() or res.stdout.strip()
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: print(f"⚠️ Execution Exception (Exit {res.returncode}): {err}")
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: print(f"⚠️ Execution Exception (Exit {res.returncode}): {err}")
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: # Trigger self-healing patch
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: # Trigger self-healing patch
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: fixed_cmd = attempt_auto_fix(prompt, err)
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: fixed_cmd = attempt_auto_fix(prompt, err)
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: if fixed_cmd and fixed_cmd != prompt:
+[2026-08-02 19:25:41] [SHELL_MATRIX] Processed command token: if fixed_cmd and fixed_cmd != prompt:
+[2026-08-02 19:25:41] [SHELL_MATRIX] Input: print(f"👁️ Re-executing patched command...")
+[2026-08-02 19:25:42] [SHELL_MATRIX] Processed command token: print(f"👁️ Re-executing patched command...")
+[2026-08-02 19:25:42] [SHELL_MATRIX] Input: res_fixed = subprocess.run(fixed_cmd, shell=True, capture_output=True, text=True)
+[2026-08-02 19:25:42] [SHELL_MATRIX] Processed command token: res_fixed = subprocess.run(fixed_cmd, shell=True, capture_output=True, text=True)
+[2026-08-02 19:25:42] [SHELL_MATRIX] Input: if res_fixed.returncode == 0:
+[2026-08-02 19:25:42] [SHELL_MATRIX] Processed command token: if res_fixed.returncode == 0:
+[2026-08-02 19:25:42] [SHELL_MATRIX] Input: print(res_fixed.stdout)
+[2026-08-02 19:25:42] [SHELL_MATRIX] Processed command token: print(res_fixed.stdout)
+[2026-08-02 19:25:42] [SHELL_MATRIX] Input: print("[ok] Self-healing correction successful.")
+[2026-08-02 19:25:42] [SHELL_MATRIX] Processed command token: print("[ok] Self-healing correction successful.")
+[2026-08-02 19:25:42] [SHELL_MATRIX] Input: log_event(f"Auto-fixed and succeeded: {fixed_cmd}")
+[2026-08-02 19:25:42] [SHELL_MATRIX] Processed command token: log_event(f"Auto-fixed and succeeded: {fixed_cmd}")
+[2026-08-02 19:25:42] [SHELL_MATRIX] Input: else:
+[2026-08-02 19:25:42] [SHELL_MATRIX] Processed command token: else:
+[2026-08-02 19:25:42] [SHELL_MATRIX] Input: print(f"❌ Patch failed: {res_fixed.stderr.strip()}")
+[2026-08-02 19:25:42] [SHELL_MATRIX] Processed command token: print(f"❌ Patch failed: {res_fixed.stderr.strip()}")
+[2026-08-02 19:25:42] [SHELL_MATRIX] Input: log_event(f"Patch failed for: {fixed_cmd}")
+[2026-08-02 19:25:42] [SHELL_MATRIX] Processed command token: log_event(f"Patch failed for: {fixed_cmd}")
+[2026-08-02 19:25:42] [SHELL_MATRIX] Input: else:
+[2026-08-02 19:25:42] [SHELL_MATRIX] Processed command token: else:
+[2026-08-02 19:25:42] [SHELL_MATRIX] Input: print(res.stderr)
+[2026-08-02 19:25:42] [SHELL_MATRIX] Processed command token: print(res.stderr)
+[2026-08-02 19:25:42] [SHELL_MATRIX] Input: except KeyboardInterrupt:
+[2026-08-02 19:25:42] [SHELL_MATRIX] Processed command token: except KeyboardInterrupt:
+[2026-08-02 19:25:42] [SHELL_MATRIX] Input: print("nSession interrupted.")
+[2026-08-02 19:25:42] [SHELL_MATRIX] Processed command token: print("nSession interrupted.")
+[2026-08-02 19:25:42] [SHELL_MATRIX] Input: break
+[2026-08-02 19:25:42] [SHELL_MATRIX] Processed command token: break
+[2026-08-02 19:25:42] [SHELL_MATRIX] Input: except Exception as e:
+[2026-08-02 19:25:42] [SHELL_MATRIX] Processed command token: except Exception as e:
+[2026-08-02 19:25:42] [SHELL_MATRIX] Input: print(f"Critical Engine Error: {e}")
+[2026-08-02 19:25:42] [SHELL_MATRIX] Processed command token: print(f"Critical Engine Error: {e}")
+[2026-08-02 19:25:42] [SHELL_MATRIX] Input: if __name__ == "__main__":
+[2026-08-02 19:25:42] [SHELL_MATRIX] Processed command token: if __name__ == "__main__":
+[2026-08-02 19:25:42] [SHELL_MATRIX] Input: run_loop()
+[2026-08-02 19:25:42] [SHELL_MATRIX] Processed command token: run_loop()
+[2026-08-02 19:25:42] [SHELL_MATRIX] Input: EOF
+[2026-08-02 19:25:42] [SHELL_MATRIX] Processed command token: EOF
+[2026-08-02 19:25:42] [SHELL_MATRIX] Input: chmod +x ~/josie_core/josie_autofix.py
+[2026-08-02 19:25:42] [SHELL_MATRIX] Processed command token: chmod +x ~/josie_core/josie_autofix.py
+[2026-08-02 19:25:42] [SHELL_MATRIX] Input: python3 ~/josie_core/josie_autofix.py
+[2026-08-02 19:25:42] [SHELL_MATRIX] Processed command token: python3 ~/josie_core/josie_autofix.py
+[2026-08-02 12:26:35] [AUTO_HEAL] System state verified. Operating within nominal sovereign parameters.
+[2026-08-02 12:26:41] [NEXUS_HARVEST] Pulling telemetry and storage assets into core memory.
