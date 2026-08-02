@@ -17,20 +17,11 @@ Input Method Manager Service state:
       selfReportedDisplayId=0
       uid=10269
       pid=2935
-    ClientState{b1800d4 mUid=10109 mPid=29372 mSelfReportedDisplayId=0}:
-      client=com.android.server.inputmethod.IInputMethodClientInvoker@5924e78
-      fallbackInputConnection=com.android.internal.inputmethod.IRemoteInputConnection$Stub$Proxy@c042951
-      sessionRequested=false
-      sessionRequestedForAccessibility=false
-      curSession=SessionState{uid=10109 pid=29372 method=3e4adb9 session=d6c7934 channel=ClientState{b1800d4 mUid=10109 mPid=29372 mSelfReportedDisplayId=0} userId=0}
-      selfReportedDisplayId=0
-      uid=10109
-      pid=29372
     ClientState{c095014 mUid=10337 mPid=31504 mSelfReportedDisplayId=0}:
       client=com.android.server.inputmethod.IInputMethodClientInvoker@b89ab
       fallbackInputConnection=com.android.internal.inputmethod.IRemoteInputConnection$Stub$Proxy@366fece
       sessionRequested=false
-      sessionRequestedForAccessibility=false
+      sessionRequestedForAccessibility=true
       curSession=SessionState{uid=10337 pid=31504 method=3e4adb9 session=66410de channel=ClientState{c095014 mUid=10337 mPid=31504 mSelfReportedDisplayId=0} userId=0}
       selfReportedDisplayId=0
       uid=10337
@@ -48,7 +39,7 @@ Input Method Manager Service state:
       client=com.android.server.inputmethod.IInputMethodClientInvoker@72dbe08
       fallbackInputConnection=com.android.internal.inputmethod.IRemoteInputConnection$Stub$Proxy@9089a1
       sessionRequested=false
-      sessionRequestedForAccessibility=true
+      sessionRequestedForAccessibility=false
       curSession=SessionState{uid=10240 pid=4815 method=3e4adb9 session=507c15c channel=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0} userId=0}
       selfReportedDisplayId=0
       uid=10240
@@ -62,15 +53,6 @@ Input Method Manager Service state:
       selfReportedDisplayId=0
       uid=1000
       pid=1177
-    ClientState{7b3ca47 mUid=10348 mPid=11836 mSelfReportedDisplayId=0}:
-      client=com.android.server.inputmethod.IInputMethodClientInvoker@918f274
-      fallbackInputConnection=com.android.internal.inputmethod.IRemoteInputConnection$Stub$Proxy@336c39d
-      sessionRequested=false
-      sessionRequestedForAccessibility=false
-      curSession=null
-      selfReportedDisplayId=0
-      uid=10348
-      pid=11836
     ClientState{7386920 mUid=10141 mPid=2250 mSelfReportedDisplayId=0}:
       client=com.android.server.inputmethod.IInputMethodClientInvoker@56c88d3
       fallbackInputConnection=com.android.internal.inputmethod.IRemoteInputConnection$Stub$Proxy@4ecf4e8
@@ -111,15 +93,15 @@ Input Method Manager Service state:
     userId=0
       unlocked=true
       hasMainConnection=true
-      isVisibleBound=false
+      isVisibleBound=true
       boundToMethod=true
-      curClient=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0}
+      curClient=ClientState{c095014 mUid=10337 mPid=31504 mSelfReportedDisplayId=0}
       curEditorInfo:
-        inputType=0x0 imeOptions=0x0 privateImeOptions=null
+        inputType=0x0 imeOptions=0x2000000 privateImeOptions=null
         actionLabel=null actionId=0
-        initialSelStart=-1 initialSelEnd=-1 initialToolType=1 initialCapsMode=0x0
+        initialSelStart=-1 initialSelEnd=-1 initialToolType=0 initialCapsMode=0x0
         hintText=null label=null
-        packageName=com.google.android.googlequicksearchbox autofillId=0 fieldId=0 fieldName=null
+        packageName=com.termux autofillId=1073741825 fieldId=2131231121 fieldName=null
         hintLocales=null
         supportedHandwritingGestureTypes=(none)
         supportedHandwritingGesturePreviewTypes=(none)
@@ -127,10 +109,10 @@ Input Method Manager Service state:
         writingToolsEnabled=true
         contentMimeTypes=null
       imeBindingState:
-        mFocusedWindow=android.os.BinderProxy@e792e98
+        mFocusedWindow=android.os.BinderProxy@5e9a971
         mFocusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
-        mFocusedWindowClient=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0}
-      enabledSession=SessionState{uid=10240 pid=4815 method=3e4adb9 session=507c15c channel=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0} userId=0}
+        mFocusedWindowClient=ClientState{c095014 mUid=10337 mPid=31504 mSelfReportedDisplayId=0}
+      enabledSession=SessionState{uid=10337 pid=31504 method=3e4adb9 session=66410de channel=ClientState{c095014 mUid=10337 mPid=31504 mSelfReportedDisplayId=0} userId=0}
       inFullscreenMode=false
       imeDrawsNavBar=false
       switchingController:
@@ -144,689 +126,591 @@ Input Method Manager Service state:
         mEnabledItems:
           i=0 item=ImeSubtypeListItem{mImeName=Autofill with Google mSubtypeName=null mLayoutName=null mSubtypeIndex=0 mShowInImeSwitcherMenu=true mIsAuxiliary=true mSuitableForHardware=false}
           i=1 item=ImeSubtypeListItem{mImeName=Gboard mSubtypeName=null mLayoutName=null mSubtypeIndex=0 mShowInImeSwitcherMenu=true mIsAuxiliary=false mSuitableForHardware=true}
-  softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
+          i=2 item=ImeSubtypeListItem{mImeName=Google Voice Typing mSubtypeName=null mLayoutName=null mSubtypeIndex=0 mShowInImeSwitcherMenu=true mIsAuxiliary=true mSuitableForHardware=false}
+          i=3 item=ImeSubtypeListItem{mImeName=Samsung Keyboard mSubtypeName=English (US) mLayoutName= mSubtypeIndex=1 mShowInImeSwitcherMenu=true mIsAuxiliary=false mSuitableForHardware=true}
+        User action since last switch: false
+      mLastEnabledInputMethodsStr=com.google.android.inputmethod.latin/com.google.android.inputmethod.latin/.latin.LatinIME:com.samsung.android.honeyboard/.service.HoneyBoardService;65537:com.google.android.gms/.autofill.service.AutofillInputMethodServiceProxy:com.samsung.android.honeyboard/com.samsung.android.honeyboard/.Service:com.google.android.tts/com.google.android.apps.speech.tts.googletts.settings.asr.voiceime.VoiceInputMethodService:com.google.android.inputmethod.latin/com.android.inputmethod.latin.LatinIME;1594443099
+      active computer control input connections on display ids:[]
+  mStartInputHistory:
+    StartInput #3893:
+      time=2026-08-02 14:22:13.145 (timestamp=36313050) reason=APP_CALLED_RESTART_INPUT_API restarting=true
+      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
+      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3937
+      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
       inputType=0xac001 imeOptions=0x40000006 fieldId=0x7f0b0de9 fieldName=null actionId=0 actionLabel=null
-    StartInput #3874:
-      time=2026-08-02 14:17:05.971 (timestamp=36005876) reason=WINDOW_FOCUS_GAIN restarting=false
+    StartInput #3909:
+      time=2026-08-02 14:22:13.224 (timestamp=36313129) reason=APP_CALLED_RESTART_INPUT_API restarting=true
       imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@48495ea [com.sec.android.app.launcher] targetUserId=0 targetDisplayId=0 clientBindSeq=3903
-      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-      inputType=0x0 imeOptions=0x0 fieldId=0x0 fieldName=null actionId=0 actionLabel=null
-    StartInput #3875:
-      time=2026-08-02 14:17:06.674 (timestamp=36006579) reason=WINDOW_FOCUS_GAIN restarting=false
+      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3938
+      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+      inputType=0xac001 imeOptions=0x40000006 fieldId=0x7f0b0de9 fieldName=null actionId=0 actionLabel=null
+    StartInput #3910:
+      time=2026-08-02 14:22:13.699 (timestamp=36313604) reason=APP_CALLED_RESTART_INPUT_API restarting=true
       imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@5e9a971 [com.termux] targetUserId=0 targetDisplayId=0 clientBindSeq=3904
-      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
+      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3939
+      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+      inputType=0xac001 imeOptions=0x40000006 fieldId=0x7f0b0de9 fieldName=null actionId=0 actionLabel=null
+    StartInput #3911:
+      time=2026-08-02 14:22:13.753 (timestamp=36313658) reason=APP_CALLED_RESTART_INPUT_API restarting=true
+      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
+      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3940
+      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+      inputType=0xac001 imeOptions=0x40000006 fieldId=0x7f0b0de9 fieldName=null actionId=0 actionLabel=null
+    StartInput #3912:
+      time=2026-08-02 14:22:15.035 (timestamp=36314940) reason=WINDOW_FOCUS_GAIN restarting=false
+      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
+      targetWin=android.os.BinderProxy@5e9a971 [com.termux] targetUserId=0 targetDisplayId=0 clientBindSeq=3941
+      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
       inputType=0x0 imeOptions=0x2000000 fieldId=0x7f080191 fieldName=null actionId=0 actionLabel=null
-    StartInput #3876:
-      time=2026-08-02 14:17:16.291 (timestamp=36016196) reason=WINDOW_FOCUS_GAIN restarting=false
+    StartInput #3913:
+      time=2026-08-02 14:22:22.437 (timestamp=36322342) reason=WINDOW_FOCUS_GAIN restarting=false
       imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@48495ea [com.sec.android.app.launcher] targetUserId=0 targetDisplayId=0 clientBindSeq=3905
-      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-      inputType=0x0 imeOptions=0x0 fieldId=0x0 fieldName=null actionId=0 actionLabel=null
-    StartInput #3877:
-      time=2026-08-02 14:17:17.822 (timestamp=36017727) reason=WINDOW_FOCUS_GAIN restarting=false
+      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3942
+      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+      inputType=0xac001 imeOptions=0x40000006 fieldId=0x7f0b0de9 fieldName=null actionId=0 actionLabel=null
+    StartInput #3914:
+      time=2026-08-02 14:22:26.919 (timestamp=36326824) reason=WINDOW_FOCUS_GAIN restarting=false
       imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3906
-      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-      inputType=0x0 imeOptions=0x0 fieldId=0x0 fieldName=null actionId=0 actionLabel=null
-    StartInput #3878:
-      time=2026-08-02 14:17:22.424 (timestamp=36022329) reason=WINDOW_FOCUS_GAIN restarting=false
-      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@48495ea [com.sec.android.app.launcher] targetUserId=0 targetDisplayId=0 clientBindSeq=3907
-      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-      inputType=0x0 imeOptions=0x0 fieldId=0x0 fieldName=null actionId=0 actionLabel=null
-    StartInput #3879:
-      time=2026-08-02 14:17:23.078 (timestamp=36022983) reason=WINDOW_FOCUS_GAIN restarting=false
-      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@5e9a971 [com.termux] targetUserId=0 targetDisplayId=0 clientBindSeq=3908
-      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
+      targetWin=android.os.BinderProxy@5e9a971 [com.termux] targetUserId=0 targetDisplayId=0 clientBindSeq=3943
+      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
       inputType=0x0 imeOptions=0x2000000 fieldId=0x7f080191 fieldName=null actionId=0 actionLabel=null
-    StartInput #3880:
-      time=2026-08-02 14:17:26.079 (timestamp=36025984) reason=WINDOW_FOCUS_GAIN restarting=false
+    StartInput #3915:
+      time=2026-08-02 14:22:29.738 (timestamp=36329643) reason=WINDOW_FOCUS_GAIN restarting=false
       imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@48495ea [com.sec.android.app.launcher] targetUserId=0 targetDisplayId=0 clientBindSeq=3909
-      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-      inputType=0x0 imeOptions=0x0 fieldId=0x0 fieldName=null actionId=0 actionLabel=null
-    StartInput #3881:
-      time=2026-08-02 14:17:27.365 (timestamp=36027270) reason=WINDOW_FOCUS_GAIN restarting=false
+      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3944
+      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+      inputType=0xac001 imeOptions=0x40000006 fieldId=0x7f0b0de9 fieldName=null actionId=0 actionLabel=null
+    StartInput #3916:
+      time=2026-08-02 14:22:53.553 (timestamp=36353458) reason=WINDOW_FOCUS_GAIN restarting=false
       imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3910
-      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-      inputType=0x0 imeOptions=0x0 fieldId=0x0 fieldName=null actionId=0 actionLabel=null
-    StartInput #3882:
-      time=2026-08-02 14:18:05.760 (timestamp=36065665) reason=WINDOW_FOCUS_GAIN restarting=false
-      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3911
+      targetWin=android.os.BinderProxy@5e9a971 [com.termux] targetUserId=0 targetDisplayId=0 clientBindSeq=3945
       softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
       inputType=0x0 imeOptions=0x0 fieldId=0x0 fieldName=null actionId=0 actionLabel=null
-    StartInput #3883:
-      time=2026-08-02 14:18:17.606 (timestamp=36077511) reason=WINDOW_FOCUS_GAIN restarting=false
+    StartInput #3917:
+      time=2026-08-02 14:22:53.783 (timestamp=36353688) reason=CHECK_FOCUS restarting=false
       imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3912
+      targetWin=android.os.BinderProxy@5e9a971 [com.termux] targetUserId=0 targetDisplayId=0 clientBindSeq=3946
       softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
-      inputType=0x0 imeOptions=0x0 fieldId=0x0 fieldName=null actionId=0 actionLabel=null
-    StartInput #3884:
-      time=2026-08-02 14:18:28.360 (timestamp=36088265) reason=WINDOW_FOCUS_GAIN restarting=false
-      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3913
-      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
-      inputType=0x0 imeOptions=0x0 fieldId=0x0 fieldName=null actionId=0 actionLabel=null
-    StartInput #3885:
-      time=2026-08-02 14:18:30.008 (timestamp=36089913) reason=WINDOW_FOCUS_GAIN restarting=false
-      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@48495ea [com.sec.android.app.launcher] targetUserId=0 targetDisplayId=0 clientBindSeq=3914
-      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-      inputType=0x0 imeOptions=0x0 fieldId=0x0 fieldName=null actionId=0 actionLabel=null
-    StartInput #3886:
-      time=2026-08-02 14:18:30.585 (timestamp=36090490) reason=WINDOW_FOCUS_GAIN restarting=false
-      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@5e9a971 [com.termux] targetUserId=0 targetDisplayId=0 clientBindSeq=3915
-      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
       inputType=0x0 imeOptions=0x2000000 fieldId=0x7f080191 fieldName=null actionId=0 actionLabel=null
-    StartInput #3887:
-      time=2026-08-02 14:18:35.514 (timestamp=36095419) reason=WINDOW_FOCUS_GAIN restarting=false
+    StartInput #3918:
+      time=2026-08-02 14:22:57.118 (timestamp=36357023) reason=WINDOW_FOCUS_GAIN restarting=false
       imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@48495ea [com.sec.android.app.launcher] targetUserId=0 targetDisplayId=0 clientBindSeq=3916
-      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-      inputType=0x0 imeOptions=0x0 fieldId=0x0 fieldName=null actionId=0 actionLabel=null
-    StartInput #3888:
-      time=2026-08-02 14:18:36.370 (timestamp=36096275) reason=WINDOW_FOCUS_GAIN restarting=false
-      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3917
-      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-      inputType=0x0 imeOptions=0x0 fieldId=0x0 fieldName=null actionId=0 actionLabel=null
-    StartInput #3889:
-      time=2026-08-02 14:19:52.911 (timestamp=36172816) reason=WINDOW_FOCUS_GAIN restarting=false
-      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@48495ea [com.sec.android.app.launcher] targetUserId=0 targetDisplayId=0 clientBindSeq=3918
-      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-      inputType=0x0 imeOptions=0x0 fieldId=0x0 fieldName=null actionId=0 actionLabel=null
-    StartInput #3890:
-      time=2026-08-02 14:19:53.784 (timestamp=36173689) reason=WINDOW_FOCUS_GAIN restarting=false
-      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@5e9a971 [com.termux] targetUserId=0 targetDisplayId=0 clientBindSeq=3919
-      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-      inputType=0x0 imeOptions=0x2000000 fieldId=0x7f080191 fieldName=null actionId=0 actionLabel=null
-    StartInput #3891:
-      time=2026-08-02 14:19:55.892 (timestamp=36175797) reason=WINDOW_FOCUS_GAIN restarting=false
-      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@48495ea [com.sec.android.app.launcher] targetUserId=0 targetDisplayId=0 clientBindSeq=3920
-      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-      inputType=0x0 imeOptions=0x0 fieldId=0x0 fieldName=null actionId=0 actionLabel=null
-    StartInput #3892:
-      time=2026-08-02 14:19:57.341 (timestamp=36177246) reason=WINDOW_FOCUS_GAIN restarting=false
-      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3921
+      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3947
       softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
       inputType=0x0 imeOptions=0x0 fieldId=0x0 fieldName=null actionId=0 actionLabel=null
-  mSoftInputShowHideHistory:
-    SoftInputShowHide[0] #5324:
-      time=2026-08-02 14:16:10.308 (timestamp=35950213)
-      reason=HIDE_SOFT_INPUT inFullscreenMode=false
-      requestClient=ClientState{7386920 mUid=10141 mPid=2250 mSelfReportedDisplayId=0}
-      focusedWindowName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      requestWindowName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      imeLayeringTargetName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      imeInputTargetName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      imeControlTargetName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      imeSurfaceParentName=Surface(name=ActivityRecord{238106330 u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity t10475}#117)/@0x79ecd5c
-      editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=0
-      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-    SoftInputShowHide[0] #5325:
-      time=2026-08-02 14:16:59.245 (timestamp=35999150)
+    StartInput #3919:
+      time=2026-08-02 14:23:00.041 (timestamp=36359946) reason=WINDOW_FOCUS_GAIN restarting=false
+      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
+      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3948
+      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+      inputType=0x0 imeOptions=0x0 fieldId=0x0 fieldName=null actionId=0 actionLabel=null
+    StartInput #3920:
+      time=2026-08-02 14:23:02.526 (timestamp=36362431) reason=SESSION_CREATED_BY_IME restarting=false
+      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
+      targetWin=android.os.BinderProxy@83130a1 [com.android.settings] targetUserId=0 targetDisplayId=0 clientBindSeq=3949
+      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
+      inputType=0x0 imeOptions=0x0 fieldId=0x0 fieldName=null actionId=0 actionLabel=null
+    StartInput #3921:
+      time=2026-08-02 14:23:02.978 (timestamp=36362883) reason=WINDOW_FOCUS_GAIN restarting=false
+      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
+      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3950
+      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+      inputType=0x0 imeOptions=0x0 fieldId=0x0 fieldName=null actionId=0 actionLabel=null
+    StartInput #3922:
+      time=2026-08-02 14:23:04.229 (timestamp=36364134) reason=WINDOW_FOCUS_GAIN restarting=false
+      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
+      targetWin=android.os.BinderProxy@83130a1 [com.android.settings] targetUserId=0 targetDisplayId=0 clientBindSeq=3951
+      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+      inputType=0x0 imeOptions=0x0 fieldId=0x0 fieldName=null actionId=0 actionLabel=null
+    StartInput #3923:
+      time=2026-08-02 14:23:04.294 (timestamp=36364199) reason=WINDOW_FOCUS_GAIN restarting=false
+     privateImeOptions=null fieldId (viewId)=2131231121
+      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+    SoftInputShowHide[0] #5364:
+      time=2026-08-02 14:22:31.074 (timestamp=36330979)
       reason=SHOW_SOFT_INPUT inFullscreenMode=false
       requestClient=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0}
       focusedWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
       requestWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
       imeLayeringTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
       imeInputTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeControlTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeSurfaceParentName=Surface(name=ActivityRecord{182213625 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity t10478}#34530)/@0xcc01bdc
-      editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=0
-      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-    SoftInputShowHide[0] #5326:
-      time=2026-08-02 14:17:01.043 (timestamp=36000948)
+      imeControlTargetName=RemoteInsetsControlTarget{876fb73 displayId=0 requestedVisibleTypes=511 animatingTypes=0}
+      imeSurfaceParentName=Surface(name=ImePlaceholder:13:14#14)/@0x4f99f50
+      editorInfo: inputType=704513 privateImeOptions=handlesSendAction,sendDictationEvents fieldId (viewId)=2131430889
+      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+    SoftInputShowHide[0] #5365:
+      time=2026-08-02 14:22:32.995 (timestamp=36332900)
       reason=SHOW_SOFT_INPUT inFullscreenMode=false
       requestClient=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0}
       focusedWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
       requestWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
       imeLayeringTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
       imeInputTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeControlTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeSurfaceParentName=Surface(name=ActivityRecord{182213625 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity t10478}#34530)/@0xcc01bdc
-      editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=0
-      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-    SoftInputShowHide[0] #5327:
-      time=2026-08-02 14:17:01.083 (timestamp=36000988)
+      imeControlTargetName=RemoteInsetsControlTarget{876fb73 displayId=0 requestedVisibleTypes=503 animatingTypes=0}
+      imeSurfaceParentName=Surface(name=ImePlaceholder:13:14#14)/@0x4f99f50
+      editorInfo: inputType=704513 privateImeOptions=handlesSendAction,sendDictationEvents fieldId (viewId)=2131430889
+      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+    SoftInputShowHide[0] #5366:
+      time=2026-08-02 14:22:32.997 (timestamp=36332902)
       reason=HIDE_SOFT_INPUT inFullscreenMode=false
       requestClient=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0}
       focusedWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
       requestWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
       imeLayeringTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
       imeInputTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeControlTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeSurfaceParentName=Surface(name=ActivityRecord{182213625 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity t10478}#34530)/@0xcc01bdc
-      editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=0
-      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-    SoftInputShowHide[0] #5328:
-      time=2026-08-02 14:17:06.688 (timestamp=36006593)
+      imeControlTargetName=RemoteInsetsControlTarget{876fb73 displayId=0 requestedVisibleTypes=503 animatingTypes=0}
+      imeSurfaceParentName=Surface(name=ImePlaceholder:13:14#14)/@0x4f99f50
+      editorInfo: inputType=704513 privateImeOptions=handlesSendAction,sendDictationEvents fieldId (viewId)=2131430889
+      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+    SoftInputShowHide[0] #5367:
+      time=2026-08-02 14:22:53.821 (timestamp=36353726)
       reason=SHOW_SOFT_INPUT inFullscreenMode=false
       requestClient=ClientState{c095014 mUid=10337 mPid=31504 mSelfReportedDisplayId=0}
       focusedWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
       requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      imeLayeringTargetName=Window{46cbb80 u0 SnapshotStartingWindow for taskId=10468}
-      imeInputTargetName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      imeControlTargetName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      imeSurfaceParentName=Surface(name=ActivityRecord{238106330 u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity t10475}#117)/@0x79ecd5c
-      editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=2131231121
-      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-    SoftInputShowHide[0] #5329:
-      time=2026-08-02 14:17:06.724 (timestamp=36006629)
-      reason=SHOW_SOFT_INPUT inFullscreenMode=false
-      requestClient=ClientState{c095014 mUid=10337 mPid=31504 mSelfReportedDisplayId=0}
-      focusedWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      imeLayeringTargetName=Window{46cbb80 u0 SnapshotStartingWindow for taskId=10468}
+      imeLayeringTargetName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
       imeInputTargetName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      imeControlTargetName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      imeSurfaceParentName=Surface(name=ActivityRecord{247894394 u0 com.termux/.app.TermuxActivity t10468}#6370)/@0xae1ef4a
-      editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=2131231121
-      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-    SoftInputShowHide[0] #5330:
-      time=2026-08-02 14:17:16.386 (timestamp=36016291)
-      reason=HIDE_SOFT_INPUT inFullscreenMode=false
-      requestClient=ClientState{7386920 mUid=10141 mPid=2250 mSelfReportedDisplayId=0}
-      focusedWindowName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      requestWindowName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      imeLayeringTargetName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      imeInputTargetName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      imeControlTargetName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      imeSurfaceParentName=Surface(name=ActivityRecord{238106330 u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity t10475}#117)/@0x79ecd5c
+      imeControlTargetName=RemoteInsetsControlTarget{876fb73 displayId=0 requestedVisibleTypes=511 animatingTypes=0}
+      imeSurfaceParentName=Surface(name=ImePlaceholder:13:14#14)/@0x4f99f50
       editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=0
-      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-    SoftInputShowHide[0] #5331:
-      time=2026-08-02 14:17:23.083 (timestamp=36022988)
+      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+    SoftInputShowHide[0] #5368:
+      time=2026-08-02 14:22:57.453 (timestamp=36357358)
       reason=SHOW_SOFT_INPUT inFullscreenMode=false
-      requestClient=ClientState{c095014 mUid=10337 mPid=31504 mSelfReportedDisplayId=0}
-      focusedWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      imeLayeringTargetName=Window{8b4a056 u0 SnapshotStartingWindow for taskId=10468}
-      imeInputTargetName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      imeControlTargetName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      imeSurfaceParentName=Surface(name=ActivityRecord{238106330 u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity t10475}#117)/@0x79ecd5c
-      editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=2131231121
-      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-    SoftInputShowHide[0] #5332:
-      time=2026-08-02 14:17:23.102 (timestamp=36023007)
-      reason=SHOW_SOFT_INPUT inFullscreenMode=false
-      requestClient=ClientState{c095014 mUid=10337 mPid=31504 mSelfReportedDisplayId=0}
-      focusedWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      imeLayeringTargetName=Window{8b4a056 u0 SnapshotStartingWindow for taskId=10468}
-      imeInputTargetName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      imeControlTargetName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      imeSurfaceParentName=Surface(name=ActivityRecord{247894394 u0 com.termux/.app.TermuxActivity t10468}#6370)/@0xae1ef4a
-      editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=2131231121
-      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-    SoftInputShowHide[0] #5333:
-      time=2026-08-02 14:17:26.183 (timestamp=36026088)
-      reason=HIDE_SOFT_INPUT inFullscreenMode=false
-      requestClient=ClientState{7386920 mUid=10141 mPid=2250 mSelfReportedDisplayId=0}
-      focusedWindowName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      requestWindowName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      imeLayeringTargetName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      imeInputTargetName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      imeControlTargetName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      imeSurfaceParentName=Surface(name=ActivityRecord{238106330 u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity t10475}#117)/@0x79ecd5c
+      requestClient=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0}
+      focusedWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      requestWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeLayeringTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeInputTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeControlTargetName=RemoteInsetsControlTarget{876fb73 displayId=0 requestedVisibleTypes=503 animatingTypes=8}
+      imeSurfaceParentName=Surface(name=ImePlaceholder:13:14#14)/@0x4f99f50
       editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=0
-      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-    SoftInputShowHide[0] #5334:
-      time=2026-08-02 14:18:30.593 (timestamp=36090498)
-      reason=SHOW_SOFT_INPUT inFullscreenMode=false
-      requestClient=ClientState{c095014 mUid=10337 mPid=31504 mSelfReportedDisplayId=0}
-      focusedWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      imeLayeringTargetName=Window{65d18c0 u0 SnapshotStartingWindow for taskId=10468}
-      imeInputTargetName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      imeControlTargetName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      imeSurfaceParentName=Surface(name=ActivityRecord{238106330 u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity t10475}#117)/@0x79ecd5c
-      editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=2131231121
-      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-    SoftInputShowHide[0] #5335:
-      time=2026-08-02 14:18:30.602 (timestamp=36090507)
-      reason=SHOW_SOFT_INPUT inFullscreenMode=false
-      requestClient=ClientState{c095014 mUid=10337 mPid=31504 mSelfReportedDisplayId=0}
-      focusedWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      imeLayeringTargetName=Window{65d18c0 u0 SnapshotStartingWindow for taskId=10468}
-      imeInputTargetName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      imeControlTargetName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      imeSurfaceParentName=Surface(name=ActivityRecord{247894394 u0 com.termux/.app.TermuxActivity t10468}#6370)/@0xae1ef4a
-      editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=2131231121
-      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-    SoftInputShowHide[0] #5336:
-      time=2026-08-02 14:18:35.565 (timestamp=36095470)
+      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+    SoftInputShowHide[0] #5369:
+      time=2026-08-02 14:22:57.463 (timestamp=36357368)
       reason=HIDE_SOFT_INPUT inFullscreenMode=false
-      requestClient=ClientState{7386920 mUid=10141 mPid=2250 mSelfReportedDisplayId=0}
-      focusedWindowName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      requestWindowName=not set
-      #22965 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:aafd65a1 (2572ms):
-        startTime=2026-08-02 14:12:51.483 (timestamp=35751388) ORIGIN_SERVER
+      requestClient=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0}
+      focusedWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      requestWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeLayeringTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeInputTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeControlTargetName=RemoteInsetsControlTarget{876fb73 displayId=0 requestedVisibleTypes=503 animatingTypes=0}
+      imeSurfaceParentName=Surface(name=ImePlaceholder:13:14#14)/@0x4f99f50
+      editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=0
+      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+    SoftInputShowHide[0] #5370:
+      time=2026-08-02 14:23:04.419 (timestamp=36364324)
+      reason=SHOW_SOFT_INPUT inFullscreenMode=false
+      requestClient=ClientState{c095014 mUid=10337 mPid=31504 mSelfReportedDisplayId=0}
+      focusedWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
+      requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
+      imeLayeringTargetName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
+      imeInputTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeControlTargetName=RemoteInsetsControlTarget{876fb73 displayId=0 requestedVisibleTypes=503 animatingTypes=0}
+      imeSurfaceParentName=Surface(name=ImePlaceholder:13:14#14)/@0x4f99f50
+      editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=2131231121
+     ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
+        requestWindowName=not set
+      #23159 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:950644db (1ms):
+        startTime=2026-08-02 14:20:37.946 (timestamp=36217851) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
+        requestWindowName=not set
+      #23160 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:600bb749 (1ms):
+        startTime=2026-08-02 14:20:37.973 (timestamp=36217878) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
+        requestWindowName=not set
+      #23161 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:a3d5b2e9 (1ms):
+        startTime=2026-08-02 14:20:48.523 (timestamp=36228428) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
+        requestWindowName=not set
+      #23162 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:69453c9d (1ms):
+        startTime=2026-08-02 14:21:00.482 (timestamp=36240387) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
+        requestWindowName=not set
+      #23163 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:e9d9aff2 (1ms):
+        startTime=2026-08-02 14:21:00.524 (timestamp=36240429) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
+        requestWindowName=not set
+      #23164 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:1740d364 (0ms):
+        startTime=2026-08-02 14:21:07.264 (timestamp=36247169) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
+        requestWindowName=not set
+      #23165 TYPE_HIDE - STATUS_CANCEL - com.sec.android.app.launcher:d88c9f29 (25ms):
+        startTime=2026-08-02 14:21:08.255 (timestamp=36248160) ORIGIN_SERVER
+        reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_ALREADY_HIDDEN
+        requestWindowName=not set
+      #23166 TYPE_HIDE - STATUS_CANCEL - system_server:c2b9cbd1 (25ms):
+        startTime=2026-08-02 14:21:08.354 (timestamp=36248258) ORIGIN_SERVER
+        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
+        requestWindowName=not set
+      #23168 TYPE_SHOW - STATUS_CANCEL - com.termux:68f19542 (2ms):
+        startTime=2026-08-02 14:21:08.966 (timestamp=36248871) ORIGIN_SERVER
+        reason=SHOW_RESTORE_IME_VISIBILITY PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+        requestWindowName=not set
+      #23167 TYPE_SHOW - STATUS_CANCEL - com.termux:56016993 (96ms):
+        startTime=2026-08-02 14:21:08.944 (timestamp=36248849) ORIGIN_SERVER
+        reason=ATTACH_NEW_INPUT PHASE_WM_ABORT_SHOW_IME_POST_LAYOUT
+        requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
+      #23170 TYPE_SHOW - STATUS_CANCEL - com.termux:dde3ebdd (0ms):
+        startTime=2026-08-02 14:21:09.046 (timestamp=36248951) ORIGIN_CLIENT
+        reason=SHOW_SOFT_INPUT PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+        requestWindowName=not set
+      #23169 TYPE_SHOW - STATUS_SUCCESS - system_server:9cb6d34a (211ms):
+        startTime=2026-08-02 14:21:08.971 (timestamp=36248876) ORIGIN_SERVER
+        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_CLIENT_ANIMATION_FINISHED_SHOW
+        requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
+      #23171 TYPE_HIDE - STATUS_CANCEL - com.sec.android.app.launcher:579a8a82 (7ms):
+        startTime=2026-08-02 14:21:21.075 (timestamp=36260979) ORIGIN_SERVER
+        reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_ALREADY_HIDDEN
+        requestWindowName=not set
+      #23173 TYPE_SHOW - STATUS_CANCEL - system_server:12fbea6e (15ms):
+        startTime=2026-08-02 14:21:21.165 (timestamp=36261070) ORIGIN_SERVER
+        reason=CONTROLS_CHANGED PHASE_CLIENT_ON_CONTROLS_CHANGED
+        requestWindowName=not set
+      #23172 TYPE_HIDE - STATUS_SUCCESS - system_server:17d7954a (169ms):
+        startTime=2026-08-02 14:21:21.102 (timestamp=36261007) ORIGIN_SERVER
+        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_WM_NOTIFY_IME_VISIBILITY_CHANGED_FROM_CLIENT
+        requestWindowName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
+      #23174 TYPE_HIDE - STATUS_CANCEL - system_server:dd24e313 (16ms):
+        startTime=2026-08-02 14:21:21.655 (timestamp=36261560) ORIGIN_SERVER
+        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
+        requestWindowName=not set
+      #23175 TYPE_HIDE - STATUS_CANCEL - system_server:e8b8a34a (4ms):
+        startTime=2026-08-02 14:21:21.958 (timestamp=36261863) ORIGIN_SERVER
+        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
+        requestWindowName=not set
+      #23176 TYPE_HIDE - STATUS_CANCEL - system_server:b209d1a6 (7ms):
+        startTime=2026-08-02 14:21:22.576 (timestamp=36262481) ORIGIN_SERVER
+        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
+        requestWindowName=not set
+      #23177 TYPE_HIDE - STATUS_CANCEL - com.sec.android.app.launcher:2674c152 (2ms):
+        startTime=2026-08-02 14:21:22.601 (timestamp=36262506) ORIGIN_SERVER
+        reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_ALREADY_HIDDEN
+        requestWindowName=not set
+      #23178 TYPE_HIDE - STATUS_CANCEL - system_server:a832a5 (3ms):
+        startTime=2026-08-02 14:21:22.608 (timestamp=36262513) ORIGIN_SERVER
+        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
+        requestWindowName=not set
+      #23179 TYPE_HIDE - STATUS_CANCEL - com.sec.android.app.launcher:2956de64 (9ms):
+        startTime=2026-08-02 14:21:24.305 (timestamp=36264210) ORIGIN_SERVER
+        reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_ALREADY_HIDDEN
+        requestWindowName=not set
+      #23180 TYPE_HIDE - STATUS_CANCEL - system_server:eab2f24 (34ms):
+        startTime=2026-08-02 14:21:24.321 (timestamp=36264226) ORIGIN_SERVER
+        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
+        requestWindowName=not set
+      #23181 TYPE_HIDE - STATUS_CANCEL - system_server:d16bbe6 (35ms):
+        startTime=2026-08-02 14:21:24.321 (timestamp=36264226) ORIGIN_SERVER
+        reason=HIDE_INPUT_TARGET_CHANGED PHASE_SERVER_SHOULD_HIDE
+        requestWindowName=not set
+      #23182 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:2450de4a (18ms):
+        startTime=2026-08-02 14:21:25.401 (timestamp=36265306) ORIGIN_SERVER
         reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_HANDLE_SET_IME_VISIBILITY
         requestWindowName=not set
-      #22969 TYPE_HIDE - STATUS_CANCEL - com.sec.android.app.launcher:da3dfb51 (6ms):
-        startTime=2026-08-02 14:12:54.373 (timestamp=35754278) ORIGIN_SERVER
-        reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_ALREADY_HIDDEN
+      #23183 TYPE_HIDE - STATUS_CANCEL - system_server:567a4dab (57ms):
+        startTime=2026-08-02 14:21:25.420 (timestamp=36265325) ORIGIN_SERVER
+        reason=HIDE_INPUT_TARGET_CHANGED PHASE_WM_SET_REMOTE_TARGET_IME_VISIBILITY
         requestWindowName=not set
-      #22970 TYPE_HIDE - STATUS_CANCEL - system_server:96b29e89 (23ms):
-        startTime=2026-08-02 14:12:54.424 (timestamp=35754329) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
-        requestWindowName=not set
-      #22972 TYPE_HIDE - STATUS_CANCEL - system_server:86188fc8 (3ms):
-        startTime=2026-08-02 14:12:55.533 (timestamp=35755438) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
-        requestWindowName=not set
-      #22971 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:5f0368a9 (324ms):
-        startTime=2026-08-02 14:12:55.516 (timestamp=35755421) ORIGIN_SERVER
-        reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #22973 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:381c1cb5 (1ms):
-        startTime=2026-08-02 14:12:58.088 (timestamp=35757993) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #22974 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:411b5eb2 (1ms):
-        startTime=2026-08-02 14:12:58.131 (timestamp=35758036) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #22975 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:185d8f9e (1ms):
-        startTime=2026-08-02 14:13:04.485 (timestamp=35764390) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #22976 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:461039ad (1ms):
-        startTime=2026-08-02 14:13:05.331 (timestamp=35765236) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #22977 TYPE_HIDE - STATUS_CANCEL - com.sec.android.app.launcher:faa61707 (7ms):
-        startTime=2026-08-02 14:13:07.440 (timestamp=35767345) ORIGIN_SERVER
-        reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #22978 TYPE_HIDE - STATUS_CANCEL - system_server:56c0328 (17ms):
-        startTime=2026-08-02 14:13:07.491 (timestamp=35767396) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
-        requestWindowName=not set
-      #22980 TYPE_SHOW - STATUS_CANCEL - com.termux:7d29bc4f (3ms):
-        startTime=2026-08-02 14:13:08.250 (timestamp=35768155) ORIGIN_SERVER
-        reason=SHOW_RESTORE_IME_VISIBILITY PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
-        requestWindowName=not set
-      #22982 TYPE_SHOW - STATUS_CANCEL - com.termux:d10f8d37 (1ms):
-        startTime=2026-08-02 14:13:08.272 (timestamp=35768177) ORIGIN_CLIENT
+      #23184 TYPE_SHOW - STATUS_CANCEL - com.termux:7741dcce (2ms):
+        startTime=2026-08-02 14:21:25.781 (timestamp=36265686) ORIGIN_CLIENT
         reason=SHOW_SOFT_INPUT PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
         requestWindowName=not set
-      #22979 TYPE_SHOW - STATUS_CANCEL - com.termux:a0105fa8 (172ms):
-        startTime=2026-08-02 14:13:08.225 (timestamp=35768130) ORIGIN_SERVER
+      #23186 TYPE_SHOW - STATUS_CANCEL - com.termux:d4bb507e (2ms):
+        startTime=2026-08-02 14:21:25.858 (timestamp=36265763) ORIGIN_SERVER
+        reason=SHOW_RESTORE_IME_VISIBILITY PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+        requestWindowName=not set
+      #23189 TYPE_SHOW - STATUS_FAIL - com.google.android.googlequicksearchbox:search:d6365a42 (1ms):
+        startTime=2026-08-02 14:21:26.089 (timestamp=36265994) ORIGIN_CLIENT
+        reason=SHOW_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
+        requestWindowName=not set
+      #23185 TYPE_SHOW - STATUS_SUCCESS - com.termux:a22005a (339ms):
+        startTime=2026-08-02 14:21:25.797 (timestamp=36265702) ORIGIN_SERVER
+        reason=ATTACH_NEW_INPUT PHASE_WM_ANIMATION_RUNNING
+        requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
+      #23190 TYPE_HIDE - STATUS_FAIL - com.sec.android.app.launcher:e93ee1ee (0ms):
+        startTime=2026-08-02 14:21:26.137 (timestamp=36266042) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
+       (timestamp=36292617) ORIGIN_SERVER
+        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_CLIENT_NOTIFY_IME_VISIBILITY_CHANGED
+        requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
+      #23226 TYPE_HIDE - STATUS_CANCEL - system_server:4da7f354 (1ms):
+        startTime=2026-08-02 14:21:53.110 (timestamp=36293015) ORIGIN_SERVER
+        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
+        requestWindowName=not set
+      #23227 TYPE_HIDE - STATUS_CANCEL - system_server:f63e4758 (60ms):
+        startTime=2026-08-02 14:21:53.407 (timestamp=36293312) ORIGIN_SERVER
+        reason=HIDE_INPUT_TARGET_CHANGED PHASE_WM_SET_REMOTE_TARGET_IME_VISIBILITY
+        requestWindowName=not set
+      #23228 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:c1e34ad2 (1ms):
+        startTime=2026-08-02 14:21:53.532 (timestamp=36293437) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
+        requestWindowName=not set
+      #23229 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:51b66ec6 (1ms):
+        startTime=2026-08-02 14:21:53.534 (timestamp=36293439) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
+        requestWindowName=not set
+      #23211 TYPE_SHOW - STATUS_TIMEOUT - system_server:1b020e6 (10003ms):
+        startTime=2026-08-02 14:21:45.458 (timestamp=36285363) ORIGIN_SERVER
+        reason=CONTROLS_CHANGED PHASE_WM_GET_CONTROL_WITH_LEASH lastProgressTime=2026-08-02 14:21:45.458
+        requestWindowName=not set
+      #23212 TYPE_SHOW - STATUS_TIMEOUT - system_server:2faeaf6a (10000ms):
+        startTime=2026-08-02 14:21:45.487 (timestamp=36285392) ORIGIN_SERVER
+        reason=CONTROLS_CHANGED PHASE_WM_GET_CONTROL_WITH_LEASH lastProgressTime=2026-08-02 14:21:45.487
+        requestWindowName=not set
+      #23213 TYPE_SHOW - STATUS_TIMEOUT - system_server:76972f75 (10000ms):
+        startTime=2026-08-02 14:21:45.567 (timestamp=36285472) ORIGIN_SERVER
+        reason=CONTROLS_CHANGED PHASE_WM_GET_CONTROL_WITH_LEASH lastProgressTime=2026-08-02 14:21:45.567
+        requestWindowName=not set
+      #23214 TYPE_HIDE - STATUS_TIMEOUT - com.termux:e4abb8e8 (10001ms):
+        startTime=2026-08-02 14:21:46.617 (timestamp=36286522) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT_REQUEST_HIDE_WITH_CONTROL PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES lastProgressTime=2026-08-02 14:21:46.621
+        requestWindowName=not set
+      #23219 TYPE_SHOW - STATUS_TIMEOUT - system_server:9bcef295 (10003ms):
+        startTime=2026-08-02 14:21:48.450 (timestamp=36288355) ORIGIN_SERVER
+        reason=CONTROLS_CHANGED PHASE_WM_GET_CONTROL_WITH_LEASH lastProgressTime=2026-08-02 14:21:48.450
+        requestWindowName=not set
+      #23221 TYPE_SHOW - STATUS_TIMEOUT - system_server:9015bcca (10000ms):
+        startTime=2026-08-02 14:21:48.504 (timestamp=36288408) ORIGIN_SERVER
+        reason=CONTROLS_CHANGED PHASE_WM_GET_CONTROL_WITH_LEASH lastProgressTime=2026-08-02 14:21:48.504
+        requestWindowName=not set
+      #23222 TYPE_SHOW - STATUS_TIMEOUT - system_server:c43020e7 (10000ms):
+        startTime=2026-08-02 14:21:48.547 (timestamp=36288452) ORIGIN_SERVER
+        reason=CONTROLS_CHANGED PHASE_WM_GET_CONTROL_WITH_LEASH lastProgressTime=2026-08-02 14:21:48.547
+        requestWindowName=not set
+      #23223 TYPE_HIDE - STATUS_TIMEOUT - com.termux:f17aaa50 (10004ms):
+        startTime=2026-08-02 14:21:52.667 (timestamp=36292572) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT_REQUEST_HIDE_WITH_CONTROL PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES lastProgressTime=2026-08-02 14:21:52.670
+        requestWindowName=not set
+      #23230 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:2c7acdd5 (3ms):
+        startTime=2026-08-02 14:22:13.091 (timestamp=36312996) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT_FROM_VIEW PHASE_CLIENT_ALREADY_HIDDEN
+        requestWindowName=not set
+      #23231 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:eb8c76a3 (1ms):
+        startTime=2026-08-02 14:22:13.215 (timestamp=36313120) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT_FROM_VIEW PHASE_CLIENT_ALREADY_HIDDEN
+        requestWindowName=not set
+      #23232 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:47d6aedd (1ms):
+        startTime=2026-08-02 14:22:13.679 (timestamp=36313584) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT_FROM_VIEW PHASE_CLIENT_ALREADY_HIDDEN
+        requestWindowName=not set
+      #23233 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:3097e939 (1ms):
+        startTime=2026-08-02 14:22:13.740 (timestamp=36313645) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT_FROM_VIEW PHASE_CLIENT_ALREADY_HIDDEN
+        requestWindowName=not set
+      #23234 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:ef2bdf39 (1ms):
+        startTime=2026-08-02 14:22:13.924 (timestamp=36313829) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
+        requestWindowName=not set
+      #23235 TYPE_SHOW - STATUS_FAIL - com.termux:d5a2f4e1 (1ms):
+        startTime=2026-08-02 14:22:15.096 (timestamp=36315001) ORIGIN_CLIENT
+        reason=SHOW_SOFT_INPUT PHASE_SERVER_UPDATE_CLIENT_VISIBILITY
+        requestWindowName=not set
+      #23237 TYPE_SHOW - STATUS_CANCEL - com.termux:f0635faa (18ms):
+        startTime=2026-08-02 14:22:15.126 (timestamp=36315031) ORIGIN_SERVER
+        reason=SHOW_RESTORE_IME_VISIBILITY PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+        requestWindowName=not set
+      #23236 TYPE_SHOW - STATUS_CANCEL - com.termux:36d5782d (107ms):
+        startTime=2026-08-02 14:22:15.111 (timestamp=36315016) ORIGIN_SERVER
         reason=ATTACH_NEW_INPUT PHASE_WM_ABORT_SHOW_IME_POST_LAYOUT
         requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      #22981 TYPE_SHOW - STATUS_SUCCESS - system_server:db83b6ec (338ms):
-        startTime=2026-08-02 14:13:08.265 (timestamp=35768170) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_CLIENT_ANIMATION_FINISHED_SHOW
+      #23239 TYPE_SHOW - STATUS_FAIL - com.google.android.googlequicksearchbox:search:6e64c041 (0ms):
+        startTime=2026-08-02 14:22:15.612 (timestamp=36315517) ORIGIN_CLIENT
+        reason=SHOW_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
+        requestWindowName=not set
+      #23238 TYPE_SHOW - STATUS_SUCCESS - system_server:345c50cf (534ms):
+        startTime=2026-08-02 14:22:15.134 (timestamp=36315039) ORIGIN_SERVER
+        reason=SHOW_INPUT_TARGET_CHANGED PHASE_WM_ANIMATION_RUNNING
         requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      #22983 TYPE_HIDE - STATUS_CANCEL - com.sec.android.app.launcher:85f63853 (2ms):
-        startTime=2026-08-02 14:13:16.037 (timestamp=35775942) ORIGIN_SERVER
-        reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_ALREADY_HIDDEN
+      #23244 TYPE_SHOW - STATUS_FAIL - system_server:c3465bf2 (66ms):
+        startTime=2026-08-02 14:22:16.995 (timestamp=36316900) ORIGIN_SERVER
+        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_WM_ABORT_SHOW_IME_POST_LAYOUT
+        requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
+      #23247 TYPE_HIDE - STATUS_CANCEL - system_server:f95aceb2 (26ms):
+        startTime=2026-08-02 14:22:17.041 (timestamp=36316946) ORIGIN_SERVER
+        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
         requestWindowName=not set
-      #22985 TYPE_SHOW - STATUS_CANCEL - system_server:456f8278 (10ms):
-        startTime=2026-08-02 14:13:16.094 (timestamp=35775999) ORIGIN_SERVER
-        reason=CONTROLS_CHANGED PHASE_CLIENT_ON_CONTROLS_CHANGED
+      #23249 TYPE_HIDE - STATUS_CANCEL - system_server:e86b62ba (11ms):
+        startTime=2026-08-02 14:22:17.081 (timestamp=36316986) ORIGIN_SERVER
+        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
         requestWindowName=not set
-      #22984 TYPE_HIDE - STATUS_SUCCESS - system_server:ec0268b4 (143ms):
-        startTime=2026-08-02 14:13:16.063 (timestamp=35775968) ORIGIN_SERVER
+      #23245 TYPE_HIDE - STATUS_SUCCESS - system_server:967d366d (74ms):
+        startTime=2026-08-02 14:22:17.033 (timestamp=36316938) ORIGIN_SERVER
         reason=IME_REQUESTED_CHANGED_LISTENER PHASE_WM_NOTIFY_IME_VISIBILITY_CHANGED_FROM_CLIENT
-        requestWindowName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      #22986 TYPE_HIDE - STATUS_CANCEL - system_server:b947d538 (13ms):
-        startTime=2026-08-02 14:13:16.581 (timestamp=35776486) ORIGIN_SERVER
+        requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
+      #23251 TYPE_HIDE - STATUS_CANCEL - system_server:7834b6d1 (4ms):
+        startTime=2026-08-02 14:22:17.129 (timestamp=36317034) ORIGIN_SERVER
         reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
         requestWindowName=not set
-      #22988 TYPE_HIDE - STATUS_CANCEL - system_server:1eb028d0 (2ms):
-        startTime=2026-08-02 14:13:17.135 (timestamp=35777040) ORIGIN_SERVER
+      #23253 TYPE_HIDE - STATUS_CANCEL - system_server:563adcb8 (6ms):
+        startTime=2026-08-02 14:22:17.146 (timestamp=36317051) ORIGIN_SERVER
         reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
         requestWindowName=not set
-      #22987 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:a49a5deb (216ms):
-        startTime=2026-08-02 14:13:17.123 (timestamp=35777028) ORIGIN_SERVER
-        reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_ALREADY_HIDDEN
+      #23255 TYPE_HIDE - STATUS_CANCEL  reason=SHOW_SOFT_INPUT PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
         requestWindowName=not set
-      #22989 TYPE_SHOW - STATUS_SUCCESS - com.google.android.googlequicksearchbox:search:795dba58 (280ms):
-        startTime=2026-08-02 14:13:24.903 (timestamp=35784807) ORIGIN_CLIENT
-        reason=SHOW_SOFT_INPUT PHASE_CLIENT_ANIMATION_FINISHED_SHOW
-        requestWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      #22990 TYPE_SHOW - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:e2dd4ec6 (0ms):
-        startTime=2026-08-02 14:13:25.208 (timestamp=35785113) ORIGIN_CLIENT
+      #23258 TYPE_SHOW - STATUS_TIMEOUT - system_server:9f066544 (10036ms):
+        startTime=2026-08-02 14:22:17.211 (timestamp=36317116) ORIGIN_SERVER
+        reason=CONTROLS_CHANGED PHASE_WM_GET_CONTROL_WITH_LEASH lastProgressTime=2026-08-02 14:22:17.211
+        requestWindowName=not set
+      #23260 TYPE_SHOW - STATUS_TIMEOUT - system_server:b6678023 (10025ms):
+        startTime=2026-08-02 14:22:17.222 (timestamp=36317127) ORIGIN_SERVER
+        reason=CONTROLS_CHANGED PHASE_WM_GET_CONTROL_WITH_LEASH lastProgressTime=2026-08-02 14:22:17.222
+        requestWindowName=not set
+      #23262 TYPE_SHOW - STATUS_TIMEOUT - system_server:f403f6ed (10013ms):
+        startTime=2026-08-02 14:22:17.234 (timestamp=36317139) ORIGIN_SERVER
+        reason=CONTROLS_CHANGED PHASE_WM_GET_CONTROL_WITH_LEASH lastProgressTime=2026-08-02 14:22:17.234
+        requestWindowName=not set
+      #23264 TYPE_SHOW - STATUS_TIMEOUT - system_server:6d512fc3 (10019ms):
+        startTime=2026-08-02 14:22:17.259 (timestamp=36317164) ORIGIN_SERVER
+        reason=CONTROLS_CHANGED PHASE_WM_GET_CONTROL_WITH_LEASH lastProgressTime=2026-08-02 14:22:17.259
+        requestWindowName=not set
+      #23266 TYPE_SHOW - STATUS_TIMEOUT - system_server:69e30708 (10004ms):
+        startTime=2026-08-02 14:22:17.274 (timestamp=36317179) ORIGIN_SERVER
+        reason=CONTROLS_CHANGED PHASE_WM_GET_CONTROL_WITH_LEASH lastProgressTime=2026-08-02 14:22:17.274
+        requestWindowName=not set
+      #23268 TYPE_SHOW - STATUS_TIMEOUT - system_server:ff7021cd (10000ms):
+        startTime=2026-08-02 14:22:17.329 (timestamp=36317234) ORIGIN_SERVER
+        reason=CONTROLS_CHANGED PHASE_WM_GET_CONTROL_WITH_LEASH lastProgressTime=2026-08-02 14:22:17.329
+        requestWindowName=not set
+      #23292 TYPE_SHOW - STATUS_FAIL - com.google.android.googlequicksearchbox:search:b77527bf (0ms):
+        startTime=2026-08-02 14:22:27.330 (timestamp=36327235) ORIGIN_CLIENT
+        reason=SHOW_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
+        requestWindowName=not set
+      #23270 TYPE_SHOW - STATUS_TIMEOUT - system_server:3c83e8ee (10000ms):
+        startTime=2026-08-02 14:22:17.345 (timestamp=36317250) ORIGIN_SERVER
+        reason=CONTROLS_CHANGED PHASE_WM_GET_CONTROL_WITH_LEASH lastProgressTime=2026-08-02 14:22:17.345
+        requestWindowName=not set
+      #23272 TYPE_SHOW - STATUS_TIMEOUT - system_server:9b3bdfde (10012ms):
+        startTime=2026-08-02 14:22:17.353 (timestamp=36317258) ORIGIN_SERVER
+        reason=CONTROLS_CHANGED PHASE_WM_GET_CONTROL_WITH_LEASH lastProgressTime=2026-08-02 14:22:17.353
+        requestWindowName=not set
+      #23274 TYPE_SHOW - STATUS_TIMEOUT - system_server:823d4892 (10002ms):
+        startTime=2026-08-02 14:22:17.368 (timestamp=36317273) ORIGIN_SERVER
+        reason=CONTROLS_CHANGED PHASE_WM_GET_CONTROL_WITH_LEASH lastProgressTime=2026-08-02 14:22:17.369
+        requestWindowName=not set
+      #23276 TYPE_SHOW - STATUS_TIMEOUT - system_server:6da421f3 (10009ms):
+        startTime=2026-08-02 14:22:17.386 (timestamp=36317291) ORIGIN_SERVER
+        reason=CONTROLS_CHANGED PHASE_WM_GET_CONTROL_WITH_LEASH lastProgressTime=2026-08-02 14:22:17.386
+        requestWindowName=not set
+      #23278 TYPE_SHOW - STATUS_TIMEOUT - system_server:d5e4a014 (10014ms):
+        startTime=2026-08-02 14:22:17.401 (timestamp=36317306) ORIGIN_SERVER
+        reason=CONTROLS_CHANGED PHASE_WM_GET_CONTROL_WITH_LEASH lastProgressTime=2026-08-02 14:22:17.401
+        requestWindowName=not set
+      #23280 TYPE_SHOW - STATUS_TIMEOUT - system_server:e1fc1608 (10005ms):
+        startTime=2026-08-02 14:22:17.423 (timestamp=36317328) ORIGIN_SERVER
+        reason=CONTROLS_CHANGED PHASE_WM_GET_CONTROL_WITH_LEASH lastProgressTime=2026-08-02 14:22:17.423
+        requestWindowName=not set
+      #23282 TYPE_SHOW - STATUS_TIMEOUT - system_server:d7d5774e (10028ms):
+        startTime=2026-08-02 14:22:17.448 (timestamp=36317353) ORIGIN_SERVER
+        reason=CONTROLS_CHANGED PHASE_WM_GET_CONTROL_WITH_LEASH lastProgressTime=2026-08-02 14:22:17.448
+        requestWindowName=not set
+      #23284 TYPE_SHOW - STATUS_TIMEOUT - system_server:cee62e86 (10018ms):
+        startTime=2026-08-02 14:22:17.459 (timestamp=36317364) ORIGIN_SERVER
+        reason=CONTROLS_CHANGED PHASE_WM_GET_CONTROL_WITH_LEASH lastProgressTime=2026-08-02 14:22:17.459
+        requestWindowName=not set
+      #23289 TYPE_SHOW - STATUS_SUCCESS - com.termux:f126cb49 (509ms):
+        startTime=2026-08-02 14:22:26.984 (timestamp=36326889) ORIGIN_SERVER
+        reason=SHOW_RESTORE_IME_VISIBILITY PHASE_WM_ANIMATION_RUNNING
+        requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
+      #23296 TYPE_SHOW - STATUS_FAIL - system_server:ba003cc1 (25ms):
+        startTime=2026-08-02 14:22:28.559 (timestamp=36328464) ORIGIN_SERVER
+        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_WM_ABORT_SHOW_IME_POST_LAYOUT
+        requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
+      #23297 TYPE_HIDE - STATUS_SUCCESS - system_server:daeccbe5 (39ms):
+        startTime=2026-08-02 14:22:28.571 (timestamp=36328476) ORIGIN_SERVER
+        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_CLIENT_NOTIFY_IME_VISIBILITY_CHANGED
+        requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
+      #23298 TYPE_HIDE - STATUS_CANCEL - system_server:4278d948 (1ms):
+        startTime=2026-08-02 14:22:28.983 (timestamp=36328888) ORIGIN_SERVER
+        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
+        requestWindowName=not set
+      #23299 TYPE_HIDE - STATUS_CANCEL - system_server:f6b12b24 (19ms):
+        startTime=2026-08-02 14:22:29.745 (timestamp=36329650) ORIGIN_SERVER
+        reason=HIDE_INPUT_TARGET_CHANGED PHASE_SERVER_SHOULD_HIDE
+        requestWindowName=not set
+      #23301 TYPE_SHOW - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:4c4d61cd (1ms):
+        startTime=2026-08-02 14:22:31.068 (timestamp=36330973) ORIGIN_CLIENT
+        reason=SHOW_SOFT_INPUT PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+        requestWindowName=not set
+      #23302 TYPE_SHOW - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:864818d6 (1ms):
+        startTime=2026-08-02 14:22:31.382 (timestamp=36331287) ORIGIN_CLIENT
         reason=SHOW_SOFT_INPUT PHASE_CLIENT_APPLY_ANIMATION
         requestWindowName=not set
-      #22991 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:271661b9 (184ms):
-        startTime=2026-08-02 14:13:34.904 (timestamp=35794809) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT_CLOSE_CURRENT_SESSION PHASE_WM_NOTIFY_HIDE_ANIMATION_FINISHED
+      #23300 TYPE_SHOW - STATUS_SUCCESS - com.google.android.googlequicksearchbox:search:6640010b (353ms):
+        startTime=2026-08-02 14:22:31.061 (timestamp=36330966) ORIGIN_CLIENT
+        reason=SHOW_SOFT_INPUT PHASE_WM_ANIMATION_RUNNING
+        requestWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      #23304 TYPE_HIDE - STATUS_FAIL - com.termux:e74e06b7 (1ms):
+        startTime=2026-08-02 14:22:31.439 (timestamp=36331344) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
         requestWindowName=not set
-      #22992 TYPE_SHOW - STATUS_FAIL - system_server:779a9802 (185ms):
-        startTime=2026-08-02 14:13:34.909 (timestamp=35794814) ORIGIN_SERVER
+      #23307 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:1fcac4b1 (1ms):
+        startTime=2026-08-02 14:22:32.965 (timestamp=36332870) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT_CLOSE_CURRENT_SESSION PHASE_CLIENT_ALREADY_HIDDEN
+        requestWindowName=not set
+      #23308 TYPE_SHOW - STATUS_FAIL - system_server:35079873 (74ms):
+        startTime=2026-08-02 14:22:32.967 (timestamp=36332872) ORIGIN_SERVER
         reason=IME_REQUESTED_CHANGED_LISTENER PHASE_WM_ABORT_SHOW_IME_POST_LAYOUT
         requestWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      #22993 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:e0848eb8 (0ms):
-        startTime=2026-08-02 14:13:35.226 (timestamp=35795131) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
+      #23309 TYPE_HIDE - STATUS_SUCCESS - system_server:64733c3f (89ms):
+        startTime=2026-08-02 14:22:32.991 (timestamp=36332896) ORIGIN_SERVER
+        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_CLIENT_NOTIFY_IME_VISIBILITY_CHANGED
         requestWindowName=not set
-      #22994 TYPE_HIDE - STATUS_CANCEL - system_server:799120fc (5ms):
-        startTime=2026-08-02 14:13:35.567 (timestamp=35795472) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
+      #23333 TYPE_HIDE - STATUS_CANCEL - system_server:af7366b3 (49ms):
+        startTime=2026-08-02 14:23:04.263 (timestamp=36364168) ORIGIN_SERVER
+        reason=HIDE_INPUT_TARGET_CHANGED PHASE_WM_SET_REMOTE_TARGET_IME_VISIBILITY
         requestWindowName=not set
-      #22995 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:3da46ebd (0ms):
-        startTime=2026-08-02 14:13:49.624 (timestamp=35809529) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
+      #23335 TYPE_HIDE - STATUS_CANCEL - system_server:a32f8066 (40ms):
+        startTime=2026-08-02 14:23:04.326 (timestamp=36364231) ORIGIN_SERVER
+        reason=HIDE_INPUT_TARGET_CHANGED PHASE_WM_SET_REMOTE_TARGET_IME_VISIBILITY
         requestWindowName=not set
-      #22996 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:6acc76d5 (1ms):
-        startTime=2026-08-02 14:13:49.958 (timestamp=35809863) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
+      #23322 TYPE_SHOW - STATUS_TIMEOUT - system_server:e8c60d3c (10000ms):
+        startTime=2026-08-02 14:22:54.380 (timestamp=36354285) ORIGIN_SERVER
+        reason=CONTROLS_CHANGED PHASE_WM_GET_CONTROL_WITH_LEASH lastProgressTime=2026-08-02 14:22:54.380
         requestWindowName=not set
-      #23026 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:2d240262 (0ms):
-        startTime=2026-08-02 14:15:37.504 (timestamp=35917409) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
+      #23338 TYPE_SHOW - STATUS_CANCEL - com.termux:ccda1fee (3ms):
+        startTime=2026-08-02 14:23:04.600 (timestamp=36364505) ORIGIN_CLIENT
+        reason=SHOW_SOFT_INPUT PHASE_CLIENT_APPLY_ANIMATION
         requestWindowName=not set
-      #23027 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:61c3bfd5 (0ms):
-        startTime=2026-08-02 14:15:42.953 (timestamp=35922858) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #23028 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:57728854 (1ms):
-        startTime=2026-08-02 14:15:45.249 (timestamp=35925154) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #23029 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:c93d15e7 (1ms):
-        startTime=2026-08-02 14:15:45.852 (timestamp=35925757) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #23030 TYPE_HIDE - STATUS_CANCEL - com.sec.android.app.launcher:e16a0c97 (6ms):
-        startTime=2026-08-02 14:15:51.580 (timestamp=35931485) ORIGIN_SERVER
-        reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #23031 TYPE_HIDE - STATUS_CANCEL - system_server:ab596d01 (1ms):
-        startTime=2026-08-02 14:15:51.634 (timestamp=35931539) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
-        requestWindowName=not set
-      #23033 TYPE_SHOW - STATUS_CANCEL - com.termux:2330bb14 (1ms):
-        startTime=2026-08-02 14:15:52.321 (timestamp=35932226) ORIGIN_CLIENT
-        reason=SHOW_SOFT_INPUT PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
-        requestWindowName=not set
-      #23034 TYPE_SHOW - STATUS_CANCEL - com.termux:313009fb (10ms):
-        startTime=2026-08-02 14:15:52.356 (timestamp=35932261) ORIGIN_SERVER
-        reason=SHOW_RESTORE_IME_VISIBILITY PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
-        requestWindowName=not set
-      #23032 TYPE_SHOW - STATUS_CANCEL - com.termux:97922821 (364ms):
-        startTime=2026-08-02 14:15:52.302 (timestamp=35932207) ORIGIN_SERVER
-        reason=ATTACH_NEW_INPUT PHASE_WM_ABORT_SHOW_IME_POST_LAYOUT
+      #23336 TYPE_SHOW - STATUS_SUCCESS - com.termux:764d78ca (221ms):
+        startTime=2026-08-02 14:23:04.416 (timestamp=36364321) ORIGIN_SERVER
+        reason=ATTACH_NEW_INPUT PHASE_WM_ANIMATION_RUNNING
         requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      #23035 TYPE_SHOW - STATUS_SUCCESS - system_server:b802921a (340ms):
-        startTime=2026-08-02 14:15:52.370 (timestamp=35932275) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_CLIENT_ANIMATION_FINISHED_SHOW
-        requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      #23036 TYPE_HIDE - STATUS_CANCEL - com.sec.android.app.launcher:e2fea449 (30ms):
-        startTime=2026-08-02 14:15:54.142 (timestamp=35934047) ORIGIN_SERVER
-        reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #23038 TYPE_SHOW - STATUS_CANCEL - system_server:dc470ad7 (10ms):
-        startTime=2026-08-02 14:15:54.239 (timestamp=35934144) ORIGIN_SERVER
-        reason=CONTROLS_CHANGED PHASE_CLIENT_ON_CONTROLS_CHANGED
-        requestWindowName=not set
-      #23037 TYPE_HIDE - STATUS_SUCCESS - system_server:8a4f3305 (178ms):
-        startTime=2026-08-02 14:15:54.181 (timestamp=35934086) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_WM_NOTIFY_IME_VISIBILITY_CHANGED_FROM_CLIENT
-        requestWindowName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      #23039 TYPE_SHOW - STATUS_CANCEL - system_server:e27fd1e3 (3ms):
-        startTime=2026-08-02 14:15:54.648 (timestamp=35934553) ORIGIN_SERVER
-        reason=CONTROLS_CHANGED PHASE_CLIENT_ON_CONTROLS_CHANGED
-        requestWindowName=not set
-      #23040 TYPE_SHOW - STATUS_CANCEL - system_server:435c8ad2 (2ms):
-        startTime=2026-08-02 14:15:54.681 (timestamp=35934586) ORIGIN_SERVER
-        reason=CONTROLS_CHANGED PHASE_CLIENT_ON_CONTROLS_CHANGED
-        requestWindowName=not set
-      #23041 TYPE_HIDE - STATUS_CANCEL - system_server:db4d23f5 (1ms):
-        startTime=2026-08-02 14:15:54.742 (timestamp=35934647) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
-        requestWindowName=not set
-      #23043 TYPE_HIDE - STATUS_CANCEL - system_server:67423217 (2ms):
-        startTime=2026-08-02 14:15:56.625 (timestamp=35936530) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
-        requestWindowName=not set
-      #23042 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:afbbfb1f (188ms):
-        startTime=2026-08-02 14:15:56.607 (timestamp=35936512) ORIGIN_SERVER
-        reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #23044 TYPE_HIDE - STATUS_CANCEL - com.sec.android.app.launcher:84c99afb (6ms):
-        startTime=2026-08-02 14:16:04.943 (timestamp=35944848) ORIGIN_SERVER
-        reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #23045 TYPE_HIDE - STATUS_CANCEL - system_server:ba9de7ca (24ms):
-        startTime=2026-08-02 14:16:04.968 (timestamp=35944873) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
-        requestWindowName=not set
-      #23047 TYPE_SHOW - STATUS_CANCEL - com.termux:282f17e4 (8ms):
-        startTime=2026-08-02 14:16:05.513 (timestamp=35945418) ORIGIN_SERVER
-        reason=SHOW_RESTORE_IME_VISIBILITY PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
-        requestWindowName=not set
-      #23046 TYPE_SHOW - STATUS_CANCEL - com.termux:3182d487 (90ms):
-        startTime=2026-08-02 14:16:05.498 (timestamp=35945403) ORIGIN_SERVER
-        reason=ATTACH_NEW_INPUT PHASE_WM_ABORT_SHOW_IME_POST_LAYOUT
-        requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      #23049 TYPE_SHOW - STATUS_CANCEL - com.termux:8e07b3f7 (1ms):
-        startTime=2026-08-02 14:16:05.635 (timestamp=35945540) ORIGIN_CLIENT
-        reason=SHOW_SOFT_INPUT PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
-        requestWindowName=not set
-      #23048 TYPE_SHOW - STATUS_SUCCESS - system_server:da2effc3 (178ms):
-        startTime=2026-08-02 14:16:05.523 (timestamp=35945428) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_CLIENT_ANIMATION_FINISHED_SHOW
-        requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      #23050 TYPE_HIDE - STATUS_CANCEL - com.sec.android.app.launcher:1b0ea632 (5ms):
-        startTime=2026-08-02 14:16:10.165 (timestamp=35950070) ORIGIN_SERVER
-        reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #23052 TYPE_SHOW - STATUS_CANCEL - system_server:53d4f133 (8ms):
-        startTime=2026-08-02 14:16:10.264 (timestamp=35950169) ORIGIN_SERVER
-        reason=CONTROLS_CHANGED PHASE_CLIENT_ON_CONTROLS_CHANGED
-        requestWindowName=not set
-      #23051 TYPE_HIDE - STATUS_SUCCESS - system_server:1980207d (160ms):
-        startTime=2026-08-02 14:16:10.209 (timestamp=35950114) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_WM_NOTIFY_IME_VISIBILITY_CHANGED_FROM_CLIENT
-        requestWindowName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      #23053 TYPE_SHOW - STATUS_CANCEL - system_server:2102d464 (4ms):
-        startTime=2026-08-02 14:16:10.696 (timestamp=35950601) ORIGIN_SERVER
-        reason=CONTROLS_CHANGED PHASE_CLIENT_ON_CONTROLS_CHANGED
-        requestWindowName=not set
-      #23054 TYPE_HIDE - STATUS_CANCEL - system_server:d40b0c1a (0ms):
-        startTime=2026-08-02 14:16:10.726 (timestamp=35950631) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
-        requestWindowName=not set
-      #23056 TYPE_HIDE - STATUS_CANCEL - system_server:7b2d9676 (2ms):
-        startTime=2026-08-02 14:16:11.255 (timestamp=35951160) ORIGIN_SERVER
-       (timestamp=36006606) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_CLIENT_ANIMATION_FINISHED_SHOW
-        requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      #23085 TYPE_HIDE - STATUS_CANCEL - com.sec.android.app.launcher:9eb6fd89 (5ms):
-        startTime=2026-08-02 14:17:16.286 (timestamp=36016191) ORIGIN_SERVER
-        reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #23087 TYPE_SHOW - STATUS_CANCEL - system_server:8f620e84 (17ms):
-        startTime=2026-08-02 14:17:16.340 (timestamp=36016245) ORIGIN_SERVER
-        reason=CONTROLS_CHANGED PHASE_CLIENT_ON_CONTROLS_CHANGED
-        requestWindowName=not set
-      #23086 TYPE_HIDE - STATUS_SUCCESS - system_server:11c5188a (183ms):
-        startTime=2026-08-02 14:17:16.315 (timestamp=36016220) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_WM_NOTIFY_IME_VISIBILITY_CHANGED_FROM_CLIENT
-        requestWindowName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      #23088 TYPE_HIDE - STATUS_CANCEL - system_server:ba09b3e4 (1ms):
-        startTime=2026-08-02 14:17:16.878 (timestamp=36016783) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
-        requestWindowName=not set
-      #23090 TYPE_HIDE - STATUS_CANCEL - system_server:96895c0a (2ms):
-        startTime=2026-08-02 14:17:17.844 (timestamp=36017749) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
-        requestWindowName=not set
-      #23089 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:ae49e818 (258ms):
-        startTime=2026-08-02 14:17:17.819 (timestamp=36017724) ORIGIN_SERVER
-        reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #23091 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:6ca1039c (1ms):
-        startTime=2026-08-02 14:17:20.985 (timestamp=36020890) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #23092 TYPE_HIDE - STATUS_CANCEL - com.sec.android.app.launcher:2c98890e (5ms):
-        startTime=2026-08-02 14:17:22.421 (timestamp=36022326) ORIGIN_SERVER
-        reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #23093 TYPE_HIDE - STATUS_CANCEL - system_server:32523c4 (39ms):
-        startTime=2026-08-02 14:17:22.456 (timestamp=36022361) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
-        requestWindowName=not set
-      #23095 TYPE_SHOW - STATUS_CANCEL - com.termux:4981bd3 (12ms):
-        startTime=2026-08-02 14:17:23.084 (timestamp=36022989) ORIGIN_SERVER
-        reason=SHOW_RESTORE_IME_VISIBILITY PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
-        requestWindowName=not set
-      #23097 TYPE_SHOW - STATUS_CANCEL - com.termux:43cded13 (2ms):
-        startTime=2026-08-02 14:17:23.102 (timestamp=36023007) ORIGIN_CLIENT
-        reason=SHOW_SOFT_INPUT PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
-        requestWindowName=not set
-      #23094 TYPE_SHOW - STATUS_CANCEL - com.termux:f5179ff5 (79ms):
-        startTime=2026-08-02 14:17:23.079 (timestamp=36022984) ORIGIN_SERVER
-        reason=ATTACH_NEW_INPUT PHASE_WM_ABORT_SHOW_IME_POST_LAYOUT
-        requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      #23096 TYPE_SHOW - STATUS_SUCCESS - system_server:b017bc1d (251ms):
-        startTime=2026-08-02 14:17:23.098 (timestamp=36023003) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_CLIENT_ANIMATION_FINISHED_SHOW
-        requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      #23098 TYPE_HIDE - STATUS_CANCEL - com.sec.android.app.launcher:c6819db (6ms):
-        startTime=2026-08-02 14:17:26.078 (timestamp=36025983) ORIGIN_SERVER
-        reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #23100 TYPE_SHOW - STATUS_CANCEL - system_server:2b769c97 (14ms):
-        startTime=2026-08-02 14:17:26.194 (timestamp=36026099) ORIGIN_SERVER
-        reason=CONTROLS_CHANGED PHASE_CLIENT_ON_CONTROLS_CHANGED
-        requestWindowName=not set
-      #23099 TYPE_HIDE - STATUS_SUCCESS - system_server:dea7835a (106ms):
-        startTime=2026-08-02 14:17:26.147 (timestamp=36026052) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_WM_NOTIFY_IME_VISIBILITY_CHANGED_FROM_CLIENT
-        requestWindowName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      #23101 TYPE_SHOW - STATUS_CANCEL - system_server:71134d99 (6ms):
-        startTime=2026-08-02 14:17:26.618 (timestamp=36026523) ORIGIN_SERVER
-        reason=CONTROLS_CHANGED PHASE_CLIENT_ON_CONTROLS_CHANGED
-        requestWindowName=not set
-      #23102 TYPE_HIDE - STATUS_CANCEL - system_server:c59507a1 (22ms):
-        startTime=2026-08-02 14:17:26.629 (timestamp=36026534) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
-        requestWindowName=not set
-      #23104 TYPE_HIDE - STATUS_CANCEL - system_server:25c7e8f6 (2ms):
-        startTime=2026-08-02 14:17:27.377 (timestamp=36027282) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
-        requestWindowName=not set
-      #23103 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:ba8ebbf1 (259ms):
-        startTime=2026-08-02 14:17:27.363 (timestamp=36027268) ORIGIN_SERVER
-        reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #23105 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:7b72497b (1ms):
-        startTime=2026-08-02 14:17:29.071 (timestamp=36028976) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #23106 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:2b5369c1 (1ms):
-        startTime=2026-08-02 14:17:29.073 (timestamp=36028978) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #23107 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:2f8ee720 (1ms):
-        startTime=2026-08-02 14:17:45.737 (timestamp=36045642) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #23108 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:e5102318 (1ms):
-        startTime=2026-08-02 14:18:03.613 (timestamp=36063518) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #23109 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:ac6fa59e (118ms):
-        startTime=2026-08-02 14:18:05.759 (timestamp=36065664) ORIGIN_SERVER
-        reason=HIDE_SAME_WINDOW_FOCUSED_WITHOUT_EDITOR PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #23110 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:4b9d72d4 (1ms):
-        startTime=2026-08-02 14:18:14.907 (timestamp=36074812) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #23111 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:ce3dcc6c (37ms):
-        startTime=2026-08-02 14:18:17.602 (timestamp=36077507) ORIGIN_SERVER
-        reason=HIDE_SAME_WINDOW_FOCUSED_WITHOUT_EDITOR PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #23112 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:9ff12462 (1ms):
-        startTime=2026-08-02 14:18:27.364 (timestamp=36087269) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #23113 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:b54e7f85 (69ms):
-        startTime=2026-08-02 14:18:28.358 (timestamp=36088263) ORIGIN_SERVER
-        reason=HIDE_SAME_WINDOW_FOCUSED_WITHOUT_EDITOR PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      #23144 TYPE_HIDE - STATUS_CANCEL - com.sec.android.app.launcher:cea61a4a (3ms):
-        startTime=2026-08-02 14:19:55.890 (timestamp=36175795) ORIGIN_SERVER
-        reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #23145 TYPE_SHOW - STATUS_CANCEL - system_server:b6446bc3 (4ms):
-        startTime=2026-08-02 14:19:55.928 (timestamp=36175833) ORIGIN_SERVER
-        reason=CONTROLS_CHANGED PHASE_CLIENT_ON_CONTROLS_CHANGED
-        requestWindowName=not set
-      #23147 TYPE_SHOW - STATUS_CANCEL - system_server:a920f12b (2ms):
-        startTime=2026-08-02 14:19:55.978 (timestamp=36175883) ORIGIN_SERVER
-        reason=CONTROLS_CHANGED PHASE_CLIENT_ON_CONTROLS_CHANGED
-        requestWindowName=not set
-      #23146 TYPE_HIDE - STATUS_SUCCESS - system_server:5734278c (119ms):
-        startTime=2026-08-02 14:19:55.933 (timestamp=36175838) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_WM_NOTIFY_IME_VISIBILITY_CHANGED_FROM_CLIENT
-        requestWindowName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      #23148 TYPE_SHOW - STATUS_CANCEL - system_server:25f45beb (13ms):
-        startTime=2026-08-02 14:19:56.400 (timestamp=36176305) ORIGIN_SERVER
-        reason=CONTROLS_CHANGED PHASE_CLIENT_ON_CONTROLS_CHANGED
-        requestWindowName=not set
-      #23149 TYPE_HIDE - STATUS_CANCEL - system_server:110d8e0d (7ms):
-        startTime=2026-08-02 14:19:56.421 (timestamp=36176326) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
-        requestWindowName=not set
-      #23151 TYPE_HIDE - STATUS_CANCEL - system_server:31fc2abf (1ms):
-        startTime=2026-08-02 14:19:57.351 (timestamp=36177256) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
-        requestWindowName=not set
-      #23150 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:70eefce7 (326ms):
-        startTime=2026-08-02 14:19:57.340 (timestamp=36177245) ORIGIN_SERVER
-        reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_ALREADY_HIDDEN
+      #23341 TYPE_SHOW - STATUS_FAIL - com.google.android.googlequicksearchbox:search:42546f3e (0ms):
+        startTime=2026-08-02 14:23:04.661 (timestamp=36364566) ORIGIN_CLIENT
+        reason=SHOW_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
         requestWindowName=not set
   UserId=0
     mBindingController:
       mSelectedMethodId=com.samsung.android.honeyboard/.service.HoneyBoardService
       mCurrentSubtype=android.view.inputmethod.InputMethodSubtype@10001
-      mCurSeq=3921
+      mCurSeq=3953
       mCurId=com.samsung.android.honeyboard/.service.HoneyBoardService
       mHasMainConnection=true
-      mVisibleBound=false
+      mVisibleBound=true
       mCurToken=android.os.Binder@aa1862b
       mCurTokenDisplayId=0
       mCurHostInputToken=null
       mCurIntent=Intent { act=android.view.InputMethod xflg=0x4 cmp=com.samsung.android.honeyboard/.service.HoneyBoardService (has extras) }
       mCurMethod=com.android.server.inputmethod.IInputMethodInvoker@ddf0bdb
-      mImeWindowVis=0
+      mImeWindowVis=3
       mBackDisposition=0
       mDisplayIdToShowIme=0
       mDeviceIdToShowIme=0
       mSupportsStylusHw=true
       mSupportsConnectionlessStylusHw=false
-    mCurClient=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0}
-    mFocusedWindowPerceptible={android.os.BinderProxy@f6c41de=true, null=true, android.os.BinderProxy@931f263=true, android.os.BinderProxy@48495ea=false, android.os.BinderProxy@b386a5c=true, android.os.BinderProxy@5e9a971=true, android.os.BinderProxy@e792e98=true}
+    mCurClient=ClientState{c095014 mUid=10337 mPid=31504 mSelfReportedDisplayId=0}
+    mFocusedWindowPerceptible={android.os.BinderProxy@f6c41de=true, null=true, android.os.BinderProxy@48495ea=true, android.os.BinderProxy@b386a5c=true, android.os.BinderProxy@83130a1=true, android.os.BinderProxy@5e9a971=true, android.os.BinderProxy@e792e98=true}
     mImeBindingState:
-      mFocusedWindow=android.os.BinderProxy@e792e98
+      mFocusedWindow=android.os.BinderProxy@5e9a971
       mFocusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
-      mFocusedWindowClient=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0}
+      mFocusedWindowClient=ClientState{c095014 mUid=10337 mPid=31504 mSelfReportedDisplayId=0}
     mBoundToMethod=true
-    mEnabledSession=SessionState{uid=10240 pid=4815 method=3e4adb9 session=507c15c channel=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0} userId=0}
+    mEnabledSession=SessionState{uid=10337 pid=31504 method=3e4adb9 session=66410de channel=ClientState{c095014 mUid=10337 mPid=31504 mSelfReportedDisplayId=0} userId=0}
     mVisibilityStateComputer:
       mImeHiddenByDisplayPolicy=false
-      mInputShown=false
-      mLastImeTargetWindow=android.os.BinderProxy@e792e98
+      mInputShown=true
+      mLastImeTargetWindow=android.os.BinderProxy@5e9a971
     mInFullscreenMode=false
     Input Methods:
       InputMethod #0:
@@ -877,8 +761,8 @@ Input Method Manager Service state:
               createTimestamp=31872588
         InputMethodSubtype array: count=1
           InputMethodSubtype #0:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=65537 mSubtypeLocale=en_US mSubtypeLanguageTag=en-US mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=65537
-          InputMethodSubtype #2:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale= mSubtypeLanguageTag= mSubtypeMode=voice mIsAuxiliary=true mOverridesImplicitlyEnabledSubtype=true mIsAsciiCapable=false mSubtypeHashCode=-1943950323
+      InputMethod #1:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=65539 mSubtypeLocale=en_AU mSubtypeLanguageTag=en-AU mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=65539
           InputMethodSubtype #3:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=131072 mSubtypeLocale=af mSubtypeLanguageTag=af mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=131072
@@ -929,8 +813,8 @@ Input Method Manager Service state:
           InputMethodSubtype #26:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=2162688 mSubtypeLocale=it mSubtypeLanguageTag=it mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=2162688
           InputMethodSubtype #27:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=4587520 mSubtypeLocale=ja mSubtypeLanguageTag=ja mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=4587520
-          InputMethodSubtype #54:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=2228224 mSubtypeLocale=is mSubtypeLanguageTag=is mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=2228224
+          InputMethodSubtype #28:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=4653072 mSubtypeLocale=zh_HK mSubtypeLanguageTag=zh-HK mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=4653072
           InputMethodSubtype #55:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=4653073 mSubtypeLocale=zh_CN mSubtypeLanguageTag=zh-CN mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=4653073
@@ -981,8 +865,8 @@ Input Method Manager Service state:
           InputMethodSubtype #78:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=6881280 mSubtypeLocale=km mSubtypeLanguageTag=km mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=6881280
           InputMethodSubtype #79:
-          InputMethodSubtype #105:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=9830400 mSubtypeLocale=mni mSubtypeLanguageTag=mni mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=9830400
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=7340032 mSubtypeLocale=lo mSubtypeLanguageTag=lo mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=7340032
+          InputMethodSubtype #80:
           InputMethodSubtype #106:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=8912896 mSubtypeLocale=sat mSubtypeLanguageTag=sat mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=8912896
           InputMethodSubtype #107:
@@ -1032,8 +916,8 @@ Input Method Manager Service state:
           InputMethodSubtype #129:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=23134208 mSubtypeLocale=knn mSubtypeLanguageTag=knn mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=23134208
           InputMethodSubtype #130:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=34996224 mSubtypeLocale=sco mSubtypeLanguageTag=sco mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=34996224
-          InputMethodSubtype #156:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=23265361 mSubtypeLocale=crp_PL mSubtypeLanguageTag=crp-PL mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=23265361
+          InputMethodSubtype #131:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=35061760 mSubtypeLocale=gd mSubtypeLanguageTag=gd mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=35061760
           InputMethodSubtype #157:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=9895936 mSubtypeLocale=ace mSubtypeLanguageTag=ace mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=9895936
@@ -1082,8 +966,8 @@ Input Method Manager Service state:
           InputMethodSubtype #179:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=36962304 mSubtypeLocale=hsb mSubtypeLanguageTag=hsb mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=36962304
           InputMethodSubtype #180:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=21233664 mSubtypeLocale=ig mSubtypeLanguageTag=ig mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=21233664
-          InputMethodSubtype #206:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=37158912 mSubtypeLocale=vec mSubtypeLanguageTag=vec mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=37158912
+          InputMethodSubtype #181:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=21364736 mSubtypeLocale=ike mSubtypeLanguageTag=ike mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=21364736
           InputMethodSubtype #207:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=24117248 mSubtypeLocale=ilo mSubtypeLanguageTag=ilo mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=24117248
@@ -1132,8 +1016,8 @@ Input Method Manager Service state:
           InputMethodSubtype #229:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=26214400 mSubtypeLocale=min mSubtypeLanguageTag=min mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=26214400
           InputMethodSubtype #230:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=35979264 mSubtypeLocale=ss mSubtypeLanguageTag=ss mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=35979264
-          InputMethodSubtype #256:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=26345472 mSubtypeLocale=mos mSubtypeLanguageTag=mos mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=26345472
+          InputMethodSubtype #231:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=36175872 mSubtypeLocale=tet mSubtypeLanguageTag=tet mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=36175872
           InputMethodSubtype #257:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=36765696 mSubtypeLocale=to mSubtypeLanguageTag=to mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=36765696
@@ -1182,8 +1066,8 @@ Input Method Manager Service state:
           InputMethodSubtype #279:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=39256064 mSubtypeLocale=cop mSubtypeLanguageTag=cop mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=39256064
           InputMethodSubtype #280:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=43057152 mSubtypeLocale=gay mSubtypeLanguageTag=gay mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=43057152
-          InputMethodSubtype #306:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=39321600 mSubtypeLocale=dng mSubtypeLanguageTag=dng mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=39321600
+          InputMethodSubtype #281:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=43122688 mSubtypeLocale=gug mSubtypeLanguageTag=gug mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=43122688
           InputMethodSubtype #307:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=43188224 mSubtypeLocale=hni mSubtypeLanguageTag=hni mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=43188224
@@ -1232,8 +1116,8 @@ Input Method Manager Service state:
           InputMethodSubtype #329:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=51707904 mSubtypeLocale=mam mSubtypeLanguageTag=mam mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=51707904
           InputMethodSubtype #330:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=54853632 mSubtypeLocale=din mSubtypeLanguageTag=din mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=54853632
-          InputMethodSubtype #356:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=51773440 mSubtypeLocale=ood mSubtypeLanguageTag=ood mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=51773440
+          InputMethodSubtype #331:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=54919168 mSubtypeLocale=gaa mSubtypeLanguageTag=gaa mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=54919168
           InputMethodSubtype #357:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=54984704 mSubtypeLocale=dyo mSubtypeLanguageTag=dyo mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=54984704
@@ -1282,8 +1166,8 @@ Input Method Manager Service state:
           InputMethodSubtype #379:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=56098816 mSubtypeLocale=bem mSubtypeLanguageTag=bem mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=56098816
           InputMethodSubtype #380:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=58982400 mSubtypeLocale=kmb mSubtypeLanguageTag=kmb mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=58982400
-          InputMethodSubtype #406:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=56164352 mSubtypeLocale=bom mSubtypeLanguageTag=bom mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=56164352
+          InputMethodSubtype #381:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=59047936 mSubtypeLocale=knc mSubtypeLanguageTag=knc mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=59047936
           InputMethodSubtype #407:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=59113472 mSubtypeLocale=kr mSubtypeLanguageTag=kr mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=59113472
@@ -1332,8 +1216,8 @@ Input Method Manager Service state:
           InputMethodSubtype #429:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=67633152 mSubtypeLocale=srr mSubtypeLanguageTag=srr mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=67633152
           InputMethodSubtype #430:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=70516736 mSubtypeLocale=bas mSubtypeLanguageTag=bas mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=70516736
-          InputMethodSubtype #456:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=67698688 mSubtypeLocale=suk mSubtypeLanguageTag=suk mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=67698688
+          InputMethodSubtype #431:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=70582272 mSubtypeLocale=bav mSubtypeLanguageTag=bav mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=70582272
           InputMethodSubtype #457:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=70647808 mSubtypeLocale=bax mSubtypeLanguageTag=bax mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=70647808
@@ -1382,8 +1266,8 @@ Input Method Manager Service state:
           InputMethodSubtype #479:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=72876032 mSubtypeLocale=box mSubtypeLanguageTag=box mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=72876032
           InputMethodSubtype #480:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=75759616 mSubtypeLocale=diu mSubtypeLanguageTag=diu mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=75759616
-          InputMethodSubtype #506:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=72941568 mSubtypeLocale=boz mSubtypeLanguageTag=boz mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=72941568
+          InputMethodSubtype #481:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=75825152 mSubtypeLocale=dop mSubtypeLanguageTag=dop mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=75825152
           InputMethodSubtype #507:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=75890688 mSubtypeLocale=dts mSubtypeLanguageTag=dts mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=75890688
@@ -1432,8 +1316,8 @@ Input Method Manager Service state:
           InputMethodSubtype #529:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=84410368 mSubtypeLocale=gxx mSubtypeLanguageTag=gxx mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=84410368
           InputMethodSubtype #530:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=87293952 mSubtypeLocale=kma mSubtypeLanguageTag=kma mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=87293952
-          InputMethodSubtype #556:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=84475904 mSubtypeLocale=hag mSubtypeLanguageTag=hag mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=84475904
+          InputMethodSubtype #531:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=87359488 mSubtypeLocale=knk mSubtypeLanguageTag=knk mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=87359488
           InputMethodSubtype #557:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=87425024 mSubtypeLocale=kno mSubtypeLanguageTag=kno mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=87425024
@@ -1482,8 +1366,8 @@ Input Method Manager Service state:
           InputMethodSubtype #579:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=89653248 mSubtypeLocale=lia mSubtypeLanguageTag=lia mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=89653248
           InputMethodSubtype #580:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=92536832 mSubtypeLocale=mkl mSubtypeLanguageTag=mkl mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=92536832
-          InputMethodSubtype #606:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=89718784 mSubtypeLocale=lns mSubtypeLanguageTag=lns mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=89718784
+          InputMethodSubtype #581:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=92602368 mSubtypeLocale=mnf mSubtypeLanguageTag=mnf mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=92602368
           InputMethodSubtype #607:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=92667904 mSubtypeLocale=moa mSubtypeLanguageTag=moa mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=92667904
@@ -1532,8 +1416,8 @@ Input Method Manager Service state:
           InputMethodSubtype #629:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=101187584 mSubtypeLocale=nko mSubtypeLanguageTag=nko mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=101187584
           InputMethodSubtype #630:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=104071168 mSubtypeLocale=sil mSubtypeLanguageTag=sil mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=104071168
-          InputMethodSubtype #656:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=101253120 mSubtypeLocale=nnh mSubtypeLanguageTag=nnh mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=101253120
+          InputMethodSubtype #631:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=104136704 mSubtypeLocale=sld mSubtypeLanguageTag=sld mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=104136704
           InputMethodSubtype #657:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=104202240 mSubtypeLocale=soy mSubtypeLanguageTag=soy mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=104202240
@@ -1582,8 +1466,8 @@ Input Method Manager Service state:
           InputMethodSubtype #679:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=106430464 mSubtypeLocale=wob mSubtypeLanguageTag=wob mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=106430464
           InputMethodSubtype #680:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=109314048 mSubtypeLocale=rm mSubtypeLanguageTag=rm mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=109314048
-          InputMethodSubtype #706:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=106496000 mSubtypeLocale=wwa mSubtypeLanguageTag=wwa mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=106496000
+          InputMethodSubtype #681:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=109379584 mSubtypeLocale=scz mSubtypeLanguageTag=scz mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=109379584
           InputMethodSubtype #707:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=109445120 mSubtypeLocale=stq mSubtypeLanguageTag=stq mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=109445120
@@ -1632,9 +1516,8 @@ Input Method Manager Service state:
           InputMethodSubtype #729:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=117964800 mSubtypeLocale=mca mSubtypeLanguageTag=mca mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=117964800
           InputMethodSubtype #730:
-              taskAffinity=com.google.android.inputmethod.latin
-              uid=10296 flags=0x20cabe44 privateFlags=0x8c801110 theme=0x7f15002c
-              requiresSmallestWidthDp=0 compatibleWidthLimitDp=0 largestWidthLimitDp=0
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=118030336 mSubtypeLocale=cao mSubtypeLanguageTag=cao mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=118030336
+          InputMethodSubtype #731:
               sourceDir=/data/app/~~2r54_61Fp52GvOp8_AFnbw==/com.google.android.inputmethod.latin-64uxwsnyyj6STcqaBhZ5TQ==/base.apk
               splitSourceDirs=[/data/app/~~2r54_61Fp52GvOp8_AFnbw==/com.google.android.inputmethod.latin-64uxwsnyyj6STcqaBhZ5TQ==/split_config.xxhdpi.apk]
               resourceDirs=[/product/overlay/NavigationBarMode3Button/NavigationBarMode3ButtonOverlay.apk, /product/overlay/TransparentNavigationBar/TransparentNavigationBarOverlay.apk, /product/overlay/NotesRoleEnabled/NotesRoleEnabledOverlay.apk]
@@ -1834,34 +1717,56 @@ Input Method Manager Service state:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale= mSubtypeLanguageTag= mSubtypeMode= mIsAuxiliary=true mOverridesImplicitlyEnabledSubtype=true mIsAsciiCapable=false mSubtypeHashCode=28668543
   mSoftInputShowHideHistory End
 
-ialSelStart=-1 initialSelEnd=-1 initialToolType=1 initialCapsMode=0x0
+  actionLabel=null actionId=0
+    initialSelStart=-1 initialSelEnd=-1 initialToolType=0 initialCapsMode=0x0
     hintText=null label=null
-    packageName=com.google.android.googlequicksearchbox autofillId=0 fieldId=0 fieldName=null
+    packageName=com.termux autofillId=1073741825 fieldId=2131231121 fieldName=null
     hintLocales=null
     supportedHandwritingGestureTypes=(none)
     supportedHandwritingGesturePreviewTypes=(none)
     isStylusHandwritingEnabled=false
     writingToolsEnabled=true
     contentMimeTypes=null
-  mServedInputConnection=null
+  mServedInputConnection=RemoteInputConnectionImpl{connection=com.termux.view.TerminalView$2@87371a2 mDeactivateRequested=false mServedView=com.termux.view.TerminalView{fe4fb6b VFED.V.L. .F...... 0,0-1080,454 #7f080191 app:id/terminal_view aid=1073741825}}
   mServedInputConnectionHandler=null
   mLastPendingStartSeqId=-1
   mCompletions=null
   mCursorRect=Rect(0, 0 - 0, 0)
-  mCursorSelStart=0 mCursorSelEnd=0 mCursorCandStart=-1 mCursorCandEnd=-1
+  mCursorSelStart=-1 mCursorSelEnd=-1 mCursorCandStart=-1 mCursorCandEnd=-1
   ImeBackCallbackProxy:
-    mImeCallbacks: []
+    mImeCallbacks:
+      DefaultImeOnBackAnimationCallback@5217320 Callback=android.window.IOnBackInvokedCallback$Stub$Proxy@b12ee33
 Input method service state for com.samsung.android.honeyboard.service.HoneyBoardService@bdad11d:
   mViewsCreated=true
-  mDecorViewVisible=false mDecorViewWasVisible=false mWindowVisible=false mInShowWindow=false
+  mDecorViewVisible=true mDecorViewWasVisible=true mWindowVisible=true mInShowWindow=false
   Configuration={1.0 310mcc260mnc [en_US] ldltr sw384dp w384dp h832dp 450dpi nrml long compactNeeded port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2340) mAppBounds=Rect(0, 0 - 1080, 2340) mMaxBounds=Rect(0, 0 - 1080, 2340) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0 mStageConfig=undefined mPopOver=undefined mOverlappingWithCutout=false} s.969 fontWeightAdjustment=300 ff=0 bf=-1 bts=0 cst=1.0 nightDim=0 themeSeq=0}
   mToken=android.os.BinderProxy@4f902df
-  mInputBinding=InputBinding{android.os.BinderProxy@2f92be5 / uid 10240 / pid 4815}
-  mInputConnection=RemoteInputConnection{idHash=#5eb5d98}
-  mStartedInputConnection=null
-  mInputStarted=true mInputViewStarted=false mCandidatesViewStarted=false
-  NavigationBarFrame=null mShouldShowImeSwitcherWhenImeIsShown=true mCustomImeSwitcherButtonRequestedVisible=false mAppearance=0x0 mDarkIntensity=0.0 mDrawLegacyNavigationBarBackground=false}
-  mBackCallbackRegistered=false
+  mInputBinding=InputBinding{android.os.BinderProxy@7fb0ff5 / uid 10337 / pid 31504}
+  mInputConnection=RemoteInputConnection{idHash=#140a18a}
+  mStartedInputConnection=RemoteInputConnection{idHash=#e02b5d1}
+  mInputStarted=true mInputViewStarted=true mCandidatesViewStarted=false
+  mInputEditorInfo:
+    inputType=0x0 imeOptions=0x2000000 privateImeOptions=null
+    actionLabel=null actionId=0
+    initialSelStart=-1 initialSelEnd=-1 initialToolType=1 initialCapsMode=0x0
+    hintText=null label=null
+    packageName=com.termux autofillId=1073741825 fieldId=2131231121 fieldName=null
+    hintLocales=null
+    supportedHandwritingGestureTypes=(none)
+    supportedHandwritingGesturePreviewTypes=(none)
+    isStylusHandwritingEnabled=false
+    writingToolsEnabled=true
+    contentMimeTypes=null
+  mShowInputRequested=true mLastShowInputRequested=true mShowInputFlags=0x1
+  mCandidatesVisibility=4 mFullscreenApplied=true mIsFullscreen=false mExtractViewHidden=false
+  mExtractedText: null
+  mExtractedToken=0
+  mIsInputViewShown=true mStatusIcon=0
+  Last computed insets:
+    contentTopInsets=1322 visibleTopInsets=1322 touchableInsets=3 touchableRegion=SkRegion((0,1322,1080,2240))
+  mSettingsObserver=SettingsObserver{mShowImeWithHardKeyboard=2}
+  mNavigationBarController={mImeDrawsImeNavBar=false mNavigationBarFrame=null mShouldShowImeSwitcherWhenImeIsShown=true mCustomImeSwitcherButtonRequestedVisible=false mAppearance=0x0 mDarkIntensity=0.0 mDrawLegacyNavigationBarBackground=false}
+  mBackCallbackRegistered=true
 
 ####################################
 Honeyboard Dump state :
@@ -1882,7 +1787,53 @@ appVersionCode                   : 593090300
 appVersionChanged                : false
 appLastUpdateTimeChanged         : true
 appUpdatedByMigration            : false
-dataMigrationStatus              : 1 (MIBarGestureBackOnKeyboard : false
+dataMigrationStatus              : 1 (MIGRATE_NOT_NEEDED)
+[Basic info End]
+
+[DeviceConfig Start]
+salesCode : TMK
+countryCode : USA
+region : USA
+deviceType : phone
+deviceName : a17x
+platform : erd8535
+predictEngineType : 
+spenUspLevel : 0
+hapticSupported : true
+isWifiOnlyModel : false
+isTablet : false
+hasMediumMemory : true
+hasHighMemory : false
+isRequiresForcedGlobalDevice : false 
+
+[DeviceConfig End]
+
+[SystemConfig Start]
+IsUltraPowerSaveMode : false
+IsPowerSaveMode : false
+IsEmergencyMode : false
+IsBatteryReserveMode : false
+IsKnoxMode : false
+KnoxState : 0
+CoverDisplayMode : false
+FlipCoverDisplayMode : false
+IsDexMode : false
+IsDexPhoneDisplay : true
+IsDexStandAloneMode : false
+IsDexDesktopDisplay : false
+IsPhysicalKeyboardConnected : false
+TabletMode : false
+SemDisplayDeviceType : 0
+IsUniversalSwitchOn : false
+IsSoundFeedbackOn : true
+IsVibrationFeedbackOn : false
+IsGestureMode : false
+IsEnabledAccessibilityScreenReader : false
+IsTalkBackRapidKeyInputOn : false
+isDeviceProvisioned: true
+isNightMode : true
+isOneHandAnyScreenRunning: false
+isNavBarGestureBackOnKeyboard : false
 defaultInputMethod: com.samsung.android.honeyboard/.service.HoneyBoardService
 enabledInputMethods: com.google.android.inputmethod.latin/com.google.android.inputmethod.latin/.latin.LatinIME:com.samsung.android.honeyboard/.service.HoneyBoardService;65537:com.google.android.gms/.autofill.service.AutofillInputMethodServiceProxy:com.samsung.android.honeyboard/com.samsung.android.honeyboard/.Service:com.google.android.tts/com.google.android.apps.speech.tts.googletts.settings.asr.voiceime.VoiceInputMethodService:com.google.android.inputmethod.latin/com.android.inputmethod.latin.LatinIME;1594443099
 isDefaultDisplay: true
@@ -1917,35 +1868,41 @@ mainThemeId : 285212672
 isKeyguardScreen : false
 editorOptions : 
 InputType : 0x0
-ImeOptions : 0x0
+ImeOptions : 0x2000000
 privateImeOpt : RAW = null
 {disableAutoCorrection = false, disableEmoticonInput= false, disableAmbiguousMode = false, disableHWRInput = false, disableVoice = false,
  disableHanjaInput = false, disableClipboard = false, disableModeChange = false, disableModes = false,
  disableCMSymbolKey = false, disableLatelyUsedSymbolsKey = false, disableBackspaceKey = false, disableEnterKey = false, disableSpaceKey = false,
  disableCMKey = false, disableRangeChangeKey = false, keyboardHeight = false, customSymbolsForPeriodKey = false, customSymbolsForCMSymbolKey = false,
- customInputConnection = false, onlySupportExpressionEmoticon = false, disabDZ9r83D5Ofu5e9MuNXtVBj6AtSY5p4QuFUZyFbesl8QHTWmyGBRMRNFA++e
+ customInputConnection = false, onlySupportExpressionEmoticon = false, disablePhysicalKeyboardToolbar = false, enableWritingComposer = false, aiCustomEditor = false,
+ disableCustomPaste = false, enterKeyLabelDone = false, disableChatTranslation = false, aiStickerWithoutContent = false, disableAllExpressionItemsExceptKaomoji = false}
+[BoardConfig End]
+
+[EnableLangChangCombinationKey Start]
+isEnableShiftSpace : false
+isEnableCtrlSpace : false
+isEnableLeftAltShift : false
+[EnableLangChangCombinationKey End]
+
+[ConfigFeature Status Start]
+DeX Mode : false
+Physical keyboard connection :false
+Region : USA
+Orient Land : false
+isUserUnlocked : true
+Context protected :  false
+[ConfigFeature Status End]
+
+
+[Swiftkey SDK Log Start]
+075BrZF2rvjTKFgE2hQD5mtorxfTiK7DqgALhm7DKPW1mWHmnOYdNiUDC9KAATblRDtLqfiNAiSFHIza8QXOl9T88s3xCcozYUQm8Q5QDtIQEEHPhnGCyJwolBBTdQ6afZVWB0YMZ2c6GP3kiWi6GNgP8PgjQX0LtzvQZHJf5xs=
+EI2aI+vr9dS3CS6V0Xmy4r5jtFoo1L+dcnVi6DxoZ9c+7CgFCm+OiwEjQgJRK5gyW8Ot9QFjQuv4tmZRGrznzewb4k3ll0xWAG6ETShhMKBGeJcNN5itjWkXSVd7RRom
+IehW9h9nl7q9DCEBxFDCVqpXkJk8EG3hAIC0Tt2845xTcVMcE9YeUO3wfkSZGTlAWjrrfDZ9r83D5Ofu5e9MuNXtVBj6AtSY5p4QuFUZyFbesl8QHTWmyGBRMRNFA++e
 S207tGpfHbyfqDk4jQxSvV0NbCaVGM3CFVimmil28tD6NP5/Ro1VK3PWJ7pvs3gNjBzxKCVRfSszxP4LcR/KvujCiS4me/9brF913r+6gpQnuxE+dKkk+xn9jVQqHvtb6qsq+F3b2w0dOzMf4yIcobGfCyOfIWaramgXuBSRPa7NaLb20KijU+AgS1xKlU98BreTf7kuukdVzEVCr6V29Q==
 jJo3CrMP2+xPUR0RTpWRM3ZMdC/TU+dAOcpJZXSmAlJWvD+oA6dzsNca7X5QKJAo7o1qR89anHRD1colXWKnH6EJKTNTzS/uXVcro35L1ZHJJrqK13b4ORNYwK+NyeHAboIfVkCV3Osz6+Bi9oa/ZtjEfa+7QgKyTcPd2AfC7RoIH3iMc7aKBkpc/B0WJUcK4EwIDENINHyfLz4nKNPrUA==
 5tVpa6nE9lyPQSCoMJAFxzuuhJzjmbxIMixEjzgdS4tnP0g4o4S9qH9Wre2iUHy2zg/80VrOuTBZoL2Pazfm99mdYkfarvfh4sZn7SDIdfZ0+CjYLx90JJ3s/k156cVrPRTgS5l5j40N8r9jtsfremkDXUjaUxtBfw2TBbBMz42AvG2fYPSYeLnechqvtK0Tw1QEygdylsrxtBOdlZnIVnlBJQqWNH9DfYrSpXTgIC+OIOVUD22nFcpctHWrtzv2i7k1d1y7s+z0JM7FOAG/Jg==
 z8xWbFDH1ToX4OZEZWDgcVG0qIPrVXtbtehCpnrECyg79LneM6Ui2IrJxz73YNaTVVoWuVLIK+9Zmbb0nciha+XPs2nqqiNtVf3NZzi1I71/fVO0Ert81p3xt19QrfC/WUMmZmbO6WRNGKYojC7s/fna6VM2WGnp0G/srjYh8chwl5WzcjBNgP14BugMd8EEpXfDWdBgjfHQiRe5hiAHaw==
-P3Ub6mqbwhpuQh0evPquLHBZqEZ0vCZLtgmLmxHi5uWE4j3zjMXlkYgJd2KJdwaRvWWmftzoL4KXXH6V4flt2T1GMOYDYWlfZaeperXVj7NQL8xeAEOYoH7hzQ7I+N+6s4gcTgqUUwq46ben5usAwDh5HOKKT1vZ8Z6wiPEYaGL/lVbhk9H0p35rRUN1rrA5QqHp1InevITHncmXh/T+R1gaZZRiAgLgD4vZTfTC794Oo48bYlii7tw+vg==
-tFzemTag754BovUFN6vxF//Orpl6ShBUa1rezPc9TaJN5+/EyELA7bW7ncgu0HhWbUg7u69czBfbXUHnZtIDhqqnP7AmMTfehiZ32R1Gagd0hM36KyVUKGAAD/eY6jZFPSF9pJs/SWlPbxzg8GUvYPOKgf8YUcuhtpThTxkOPDsVh2dt9rhEcH8mgBT3B7YSqhuN88zfLaMuu5+rr/Siig==
-ZWTxqQxP8VVXPwtpnjV4aCWed+aS5wqiHQYFLuVAKQ+UH8KF/K0YRCJmsXMi1OqstjH434gLFuiljKkVDcj5PyBiobaP5FcFlXApELT3eOYXJIC5Y8Ah0f4y1DSjSP6fLEuBcWbpI0c8OzpA2UJFUufEXba3g26nEvwVRp1Mgab3+ixCy2yCgm2Kk8Vtnc19rGO5YvjXYQWAhLt8BEKSN5n+5w20F60acaihc/qJcAx3pnmlMMwUAnbx1zHr2QNW9CeyY8IxI6npYeA/CDAMxQ==
-N7nQTs+Uy4wg/tiGokCFCyw7TkRfwv+67POXICYFx5dKTMuyhwkSUFjELX04YkE4iEZI2C4dc9tfnuMrSlRDB6t3AVPU3lrjIjxxzh8PdEUS0NtsfK2cdgbgCgGUy3nGBtEE4NWvcCLgfYXx6fG+PxWyRPXVTsO1IXI6VFQxIjQlQnBtQTgXN4fB8wvp4TWBruM1rqG4IGt0q/lnht7YvQ==
-mlmVbyNe3IVKkvJnWIP3mtPQdpgfxMIFIn02+h9Ieg4o/0BZ7JGcsTV7NCd0MZgEy0jGwflJBA4ia3PG53XPuSldRSxOZWcapTC+q4sEASWbuNQyLXSIlILu063fxeZNdIJ906OMjr4Tb+w2IvHYnQYAFq6Vhw24itEV9KghTj12BN0CB0Vk5pw0/II1PGEzjcoZwdZHGfqC8GlDLuCpNLbgahJs6TMJ7qnTiH/LrLBBhcFIXGTK3OPwGiX97p3hKMrHkHTH0Ofr0uTQ8IFGyQ==
-a/OlAepnuGs1OHyaL3JcemyyS4xZRiUBGl6cAIzzVHwCLzIVCTPLI+yoIjcLzewffqsoFnxZzSA7QVxNeX71a9OBeO76d3H3+8GOf0E9C0kSAMWj0XmpvTvKjFFtFZOuMpE/iIxFR6tDgRDJDmCNsVV7df6MPqjnNOFkLCZQR0ROO/je4ndb5I9BJkpDyRGd67+QsQZiXKAp/4xrp0gxSA==
-a/OlAepnuGs1OHyaL3JcekuyufbutP2lo9ZnxHSGfbWsxHFPDPiDv8VleOuT19aVBvjnuo/y2S0f+AoDDClUM5CKNXmWzKJ+iSb9WordiifITqlrW+cTK6/PAvDRYGfPLfBwF2Gk7vROwllsFI6ZnmWpBWyzbog/fSUoyaiS9MFCfNZg6uzFvgH7SHZcLJndjCZqhT8GuJN5WqeBbJaux9avOIYxKSHhmBCcHl6zMi3ljlBnS9ut483cY3WPJ2BtqfZ0qZ6AXJ6RsomKqPRhPw==
-0d3QZsAALf64g395MudE9Vdi++175g8Lml6vc531POExU55duWYneNWBjn3s+XAW6CR6vD5ZT4inwlWyT0t0bpZUcVtHdkY5edwAM+ok/QlNZSt12ZaerKKUTWbjQrDho44fx9XjpVQHVSGb8lDRk1RzjljaXsxsDO47mYdncqTj2YR+L3+75ZCisOlyWdmu+q9H0/2r3HlLnDFzXWPIGg==
-0d3QZsAALf64g395MudE9YVAktSBVtAuVPTdFGCSOhZtxI2RFWtBnU0h00KSzs21ERNZLbp8eYLF50OodAsEIH4i74y1hFyOeMJD567QpJwTd9qVpONjoCKgOArCPVkTy+mCAoMyzr7FLSQVpnFLFnLF9y67cSWgJg==
-2UAjG1RpJxX9GaxW7Rq8DYDiNAqTKoodS6IeqlG36kHNoCigTUntlp/EkO8IJr0GmXci1SGiRadDcrxrBK4JHSUYLgNc0DJ4CvwtgMVRYlrHptVOs9tyOHyfmRYDvPBi9C0l0mgtadyymNRnhRi0BxH+1XcPkzWQz2jn0Lo36h2CoIPYuwsI5MfwmlgpXmfOABo2hnfkHTVq9VeEBO6M85S0acBt/5j5Y5H/fa/YMv5PW+Cb8ZLf4OB1r+zum4PNQPkAorIN0vGBfdc63D8qOQ==
-nUhBCw5BrNziVzg48HUn0InndVGz08WjMlP9W0YqD5jmeXdPyxyBuG3aJxFGrCthZo8lZPGXdy/uAiHbC0UCEfH7dV/uzU88YqRlTnplay12hHjiLQRm8jmBdcsXVI0sKWnIC4qPAIAccqCTw1HbzjmYzp2ofICmy3+gaGxvqLsklOWaSU7iAAXmLAHBOkHNM7OZNQWdUxjCWd+mL/ZZdQ==
-nUhBCw5BrNziVzg48HUn0Nbb7Jz2WQPem44ykD1UGdsHKl1L3uyAkL47d1qlsZP9hql4qgaMthpcOA6MVvRnalYpPpvjU5CqbBcN7zsvCGKBhBK7eDPsLrvbXWEmX681RLNvzwbhrXeTO5CkJnkcQeryiJ1GFVIDoE3zMtRCSbEIbPrpJkehH8AvSIFRdiinR28NLPyI14vaekWWlnmCkEsawCA0KWV8eXLordkzNvcALwhpSdtE1ecfqWrw52pRhqYQnQuwN6qLrMfCQ11RZQ==
-6nnop+fPbIjJWvPFFXhownHrY56qtoNe3zqNoWP764XmXHfG0XbQir9KuBrl1ZtwiPytzodLarJq7tQBgZfEBaMsPlQE4bo6vWEDeGkLoNq0eHZW/N/qgybNz9+888FAJ5NoG0cbwO5j/Cqhuk92M7hvyYxvPUy3EfSG
-Ovrw2iA5Z7R1+1fEebLzxmgEmS7OCdpRH2GZ3jmG0TZwfFMSEO2xheflxLEtqbyv8zVKLPaTYFfTlVwG0WYQUOFC6SKrq2/GbAtuqLdlJFmwKBWuGKjLNwsNyx5qB3Jej+Jkksqf8SbDjjOjB8mCOYGbyLbDmJPYlka7AIW/fE+hEFN2ZD0pDP0pDfZFLqorVEk5Snszf5m7Ow289RCw7g==
-Ov5XCnlq/tlm9pzaC3rL1E9u5kwkZWazpn9NTJmGnjIwkjstDOowlpfjMSoGztC2uZmlMDVtOXkIrypdnBnysCyJKFEavThE5S1yZzYv0U1FJqc69bwmCHwdQyFabMx01FXbPqjMTBPvkwwjirrYAhzht3PpgD13GdVqhPneSJfy6ouY+NNS9pSUdJ3ugYXzbrDn8T0zTeeMkJuOtdN11aXHLHurAVaEvq3Zv4oR6JvMVzbQ5+Cw1EvWOolVSfzSuQ+SOTXa8P+YM44ldIlj7g==
-4JFAjv/DAMWyHj2ii+qBJ4kQhkXblr3hv1pbnLTZP10895dqzTu9Os44FhUtwARuJUH4nFTsuu2CZeM5ZyKia9JYpkwiwWDfVDHM1C7SWD9WYR949H5loJzs8FmVaodn7b+6w4q/XrQSZt08gAm7YJCGb6lTpQOn8HdFaL9iTw94c1hpXjo77KzJsoIVXlZkR5KqZi7gSh21OgYZSkgW8A==
-4JFAjv/DAMWyHj2ii+qBJ5iaDeftv+bZjMRIekkP+bQjuABO2IBBqSSsGcHen9PfZ6t0rqdtG1Xr/eCk7r1V2SbTX1+lqRnmEz4tk3SARXb1607bMPxc6pA1fwXoLKmrMmn9NLuNqVbzNCPxa0R61osV8gNCIHjZ5eTmUV9Bw7TbVr1NXaXPbsM0KjPUhxrXEC6hWhzw1b8SdJxl9FBuPl+EEdPmgGY8g46KGEN4GupZ3QLYWBFPBMboh8gSswxpwCsWeOOMjAlAOod4u2drdw==
-bk1aeHrc1rz3TJJ3nrP6H2efMuwFTzOxbad8P+BNCx9jYcdBqULw5kgP+T0HpMVqCAIDfPPcnseFW2+78aKjn/ec8GTYlvlKEMTp3FAMiO4c0UhhDtPM8hRm8yGsn6CabbdmfQqQiE0qLXN6xJ8NPmT1rmy1BcYS9+93x0DX2Q8AWqarOLFd5mKoGarwH4xqY8JNUmwaZJZAY43ZGY7ex8JJsaumY2PbLU4rw35KZBJD9uiwA==
+FTzOxbad8P+BNCx9jYcdBqULw5kgP+T0HpMVqCAIDfPPcnseFW2+78aKjn/ec8GTYlvlKEMTp3FAMiO4c0UhhDtPM8hRm8yGsn6CabbdmfQqQiE0qLXN6xJ8NPmT1rmy1BcYS9+93x0DX2Q8AWqarOLFd5mKoGarwH4xqY8JNUmwaZJZAY43ZGY7ex8JJsaumY2PbLU4rw35KZBJD9uiwA==
 3YHjX3ZrtNaW2HGsBx3PIBdrK1jnIqedDrG9ZEMjKcVFiSZSO8uStxQNPzKM88rTfSoAUMy16ZdGnfS8sWAqDeb7tqLVwmkHha2nV6wm5s8BdBIeNb5abO1HxdjCfUFTxuPGASOKOvMeyxv95khfcWRH2cYdfbgzfOjpCSpws9RR4NIi47cFJD6Pg8nD9qNOIEhfW+JSLSDBm4D1BP5ByDvLcVcDd8yVbYy6J+Tq/kSSxZSYnoigc1z6TT2WD1WSUQ7OvGenULtPtn5eOBEkQg==
 [Swiftkey SDK Log End]
 
@@ -1965,31 +1922,92 @@ bk1aeHrc1rz3TJJ3nrP6H2efMuwFTzOxbad8P+BNCx9jYcdBqULw5kgP+T0HpMVqCAIDfPPcnseFW2+7
 [File] : .config (697 bytes)
 [File] : punctuation.json (74 bytes)
 [File] : ime.json (125 bytes)
-[Fitory] : /prism/sipdb/Omron/ja_om
-[Version] : 4.5.0
-[SDK version] : 2.9.0.3
-[File] : libnjexyomi.so (102850 bytes)
-[File] : libennjubase1gb.so (16795 bytes)
-[File] : libnjfzk.so (8161 bytes)
-[File] : libnjubase_idx.so (1382796 bytes)
-[File] : libennjcon.so (184 bytes)
-[File] : libennjubase1.corr.so (364257 bytes)
-[File] : lib_correct_options_ja_JP_12key.conf.so (19469 bytes)
-[File] : libennjyomi.so (5849 bytes)
-[File] : libennjchar.so (1318 bytes)
-[File] : libEnjemail.so (166 bytes)
-[File] : libennjubase2.corr.so (2483094 bytes)
-[File] : lib_dic_morphem_ja_JP.conf.so (365 bytes)
-[File] : libnjubase_corr.so (1779819 bytes)
-[File] : lib_correct_options_en_USUK_12key.conf.so (2188 bytes)
-[File] : libennjuemoji.so (189284 bytes)
-[File] : libnjemoji.so (309507 bytes)
-[File] : libennjubase1us.so (15677 bytes)
-[File] : lib_correct_options_en_USUK_qwertykey.conf.so (123 bytes)
-[File] : libennjubase2.so (903863 bytes)
-[File] : libnjcon.so (18817 bytes)
-[File] : libennjemailuri.so (665 bytes)
-[File] : libnjpcpyomi.so (46815 bytes)
+[File] : es_US.lm (2923475 bytes)
+[File] : config.xml (162 bytes)
+[File] : extra.dat (439 bytes)
+[File] : swiftkey.lm3 (274 bytes)
+[File] : es_US_bus_c.lm1 (1580195 bytes)
+[File] : charactermap.json (422 bytes)
+[File] : emoji_bg_c.lm2 (227515 bytes)
+[File] : .config (797 bytes)
+[Directory] : /prism/sipdb/SwiftKey/ko
+[Version] : 5.0.2
+[Directory] : /prism/sipdb/SwiftKey/ko/emoji_search
+[Version] : 
+[File] : punctuation.json (534 bytes)
+[File] : ime.json (138 bytes)
+[File] : ko_KR_emoji_search.lm (790861 bytes)
+[File] : ko_KR_emoji_search_flags.lm (40892 bytes)
+[File] : charactermap.json (408 bytes)
+[File] : .config (693 bytes)
+[File] : punctuation.json (534 bytes)
+[File] : ime.json (138 bytes)
+[File] : ko_KR.vf (1932871 bytes)
+[File] : ko_KR_bus_mg_c_mph.lm (7768916 bytes)
+[File] : config.xml (177 bytes)
+[File] : swiftkey.lm3 (285 bytes)
+[File] : lex_2025-10-17-02.28.22.lm (219450 bytes)
+[File] : charactermap.json (408 bytes)
+[File] : emoji_bg_c.lm2 (272781 bytes)
+[File] : .config (1833 bytes)
+[Directory] : /prism/sipdb/SwiftKey/en_us_tf
+[Version] : 6.0.3
+[File] : lex_2025-05-22-10.56.22.lm (8448 bytes)
+[Directory] : /prism/sipdb/SwiftKey/en_us_tf/emoji_search
+[Version] : 
+[File] : en_US_emoji_search_flags.lm (30362 bytes)
+[File] : punctuation.json (74 bytes)
+[File] : ime.json (113 bytes)
+[File] : en_US_emoji_search.lm (512459 bytes)
+[File] : charactermap.json (963 bytes)
+[File] : .config (697 bytes)
+[File] : punctuation.json (74 bytes)
+[File] : ime.json (113 bytes)
+[File] : en_US.lm (7435620 bytes)
+[File] : config.xml (113 bytes)
+[File] : en_US_bus_c.lm1 (1539286 bytes)
+[File] : emoji_coefficients.zlib (171288 bytes)
+[File] : extra.dat (1557 bytes)
+[File] : swiftkey.lm3 (290 bytes)
+[File] : charactermap.json (963 bytes)
+[File] : emoji_intercept.bin (146422 bytes)
+[File] : emoji_bg_c.lm2 (183121 bytes)
+[File] : .config (1080 bytes)
+[Directory] : /prism/sipdb/SwiftKey/vi
+[Version] : 1.1.0
+[File] : ime.json (48 bytes)
+[File] : punctuation-SDK1.2.json (74 bytes)
+[File] : config.xml (113 bytes)
+[File] : vi_VN_fg_c.lm3 (1322437 bytes)
+[File] : vi_VN_bg_c.lm1 (362016 bytes)
+[File] : charactermap.json (4890 bytes)
+[File] : vi_VN_bg_c.lm3 (1825720 bytes)
+[File] : .config (699 bytes)
+[Directory] : /prism/sipdb/SwiftKey/fr_fr_tf
+[Version] : 6.0.1
+[File] : fr_FR_bus_c.lm1 (1625365 bytes)
+[File] : fr_FR.lm (7454937 bytes)
+[Directory] : /prism/sipdb/SwiftKey/fr_fr_tf/emoji_search
+[Version] : 
+[File] : fr_FR_emoji_search.lm (600951 bytes)
+[File] : punctuation.json (2383 bytes)
+[File] : ime.json (123 bytes)
+[File] : fr_FR_emoji_search_flags.lm (30810 bytes)
+[File] : charactermap.json (2225 bytes)
+[File] : .config (699 bytes)
+[File] : punctuation.json (2383 bytes)
+[File] : ime.json (123 bytes)
+[File] : config.xml (113 bytes)
+[File] : emoji_coefficients.zlib (151667 bytes)
+[File] : extra.dat (984 bytes)
+[File] : swiftkey.lm3 (274 bytes)
+[File] : charactermap.json (2225 bytes)
+[File] : emoji_intercept.bin (155660 bytes)
+[File] : emoji_bg_c.lm2 (269579 bytes)
+[File] : .config (898 bytes)
+[Directory] : /prism/sipdb/Omron
+[Version] : 
+[Direc6815 bytes)
 [File] : lib_dic_ver.so (7 bytes)
 [File] : libnjexyomi_emoji.so (2382 bytes)
 [File] : lib_dic_ja_JP.conf.so (10660 bytes)
@@ -2015,56 +2033,22 @@ bk1aeHrc1rz3TJJ3nrP6H2efMuwFTzOxbad8P+BNCx9jYcdBqULw5kgP+T0HpMVqCAIDfPPcnseFW2+7
 [Directory] : /prism/sipdb/Xt9/zh_cn
 [Version] : 1.0.0
 [File] : config.xml (134 bytes)
-[File] : Samsung_1102_r1-17-6-1_ZHtbUNpsHK_Big5HKSCS_bpmf_pinyin_CJ_xt9_big_ALM.ldb (6043806 bytes)
-[File] : Samsung_1102_r1-33-4-1_ZHtbUNpsHK_ZHTrace_trad_Big5HKSCS_pinyin_big.ldb (176906 bytes)
-[File] : Samsung_1102_r1-33-4-1_ZHtbUNpsHK_ZHTrace_trad_Big5HKSCS_BPMF_big.ldb (150686 bytes)
-[File] : Samsung_11310_custom_ZHtbUNpsTW_Big5HKSCS_bpmf_pinyin_CJ_xt9_bigTW_ALM.ldb (7192153 bytes)
-[File] : Samsung_ZHtbUNpsTW_ZHTrace_trad_Big5_pinyin_big.ldb (248712 bytes)
-[File] : Samsung_1102_r1-34-4-1_ZHsbUNps_ZHTrace_simp_GB13000_pinyin_big.ldb (261199 bytes)
-[File] : Samsung_ZHtbUNpsTW_ZHTrace_trad_Big5_BPMF_big.ldb (197916 bytes)
-[File] : Samsung_1102_r1-19-4-1_ZHsbUNps_GB18030_xt9_big_ALM.ldb (6777918 bytes)
-[Directory] : /prism/sipdb/Xt9/zh_hk
-[Version] : 1.0.0
-[File] : config.xml (134 bytes)
-[Preloaded DBs End]
-
-[Downloaded DBs Start]
-
-[Swiftkey Downloaded DBs]
-[Directory] : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/user
+[File] : Samsung_1102_r1-17-6-1_ZHtDirectory] : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/user/specific/specific_com_google_android_googlequicksearchbox
 [Version] : 
-[Directory] : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/user/specific
+[Directory] : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/user/specific/specific_com_google_android_googlequicksearchbox/backup
 [Version] : 
-[[Version] : 
-[Directory] : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/user/backup
+[File] : .config (209 bytes)
+[File] : specific_com_google_android_googlequicksearchbox (44495 bytes)
+[File] : .config (209 bytes)
+[File] : specific_com_google_android_googlequicksearchbox (44495 bytes)
+[Directory] : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/user/specific/specific_com_sec_android_app_launcher
 [Version] : 
-[File] : dynamic.lm (69122 bytes)
-[File] : learned.json (1092 bytes)
-[File] : .config (211 bytes)
-[File] : learned.json (1092 bytes)
-[File] : dynamic.lm (69122 bytes)
-[File] : revokedlist (0 bytes)
-[Directory] : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/blacklist
+[Directory] : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/user/specific/specific_com_termux
 [Version] : 
-[Swiftkey Downloaded DBs]
-
-
-[Xt9 Downloaded DBs]
-[Xt9 Downloaded DBs]
-
-
-[Omron Downloaded DBs]
-[Omron Downloaded DBs]
-
-[Downloaded DBs End]
-
-
-[Show file list in data location]
-path : /data/user/0/com.samsung.android.honeyboard/cache/image_manager_disk_cache, count : 0, size(Kb) : 0
-path : /data/user/0/com.samsung.android.honeyboard/cache/request_cache, count : 3, size(Kb) : 14
-path : /data/user/0/com.samsung.android.honeyboard/cache, count : 0, size(Kb) : 0
-path : /data/user/0/com.samsung.android.honeyboard/shared_prefs, count : 8, size(Kb) : 70
-path : /data/user/0/com.samsung.android.honeyboard/files, count : 7, siht(85), mSecondCode(0), mUmlaut(¹½⅓¼⅕⅙⅛), mKeyType(2), mLabel(2), mCode(50), mCodes([50]), mX(128), mY(19), mWidth(89), mHeight(85), mSecondCode(0), mUmlaut(²⅔⅖), mKeyType(2), mLabel(3), mCode(51), mCodes([51]), mX(233), mY(19), mWidth(89), mHeight(85), mSecondCode(0), mUmlaut(³¾⅗⅜), mKeyType(2), mLabel(4), mCode(52), mCodes([52]), mX(338), mY(19), mWidth(89), mHeight(85), mSecondCode(0), mUmlaut(⁴⅘), mKeyType(2), mLabel(5), mCode(53), mCodes([53]), mX(443), mY(19), mWidth(89), mHeight(85), mSecondCode(0), mUmlaut(⁵⅚⅝), mKeyType(2), mLabel(6), mCode(54), mCodes([54]), mX(548), mY(19), mWidth(89), mHeight(85), mSecondCode(0), mUmlaut(⁶), mKeyType(2), mLabel(7), mCode(55), mCodes([55]), mX(653), mY(19), mWidth(89), mHeight(85), mSecondCode(0), mUmlaut(⁷⅞), mKeyType(2), mLabel(8), mCode(56), mCodes([56]), mX(758), mY(19), mWidth(89), mHeight(85), mSecondCode(0), mUmlaut(⁸), mKeyType(2), mLabel(9), mCode(57), mCodes([57]), mX(863), mY(19), mWidth(89), mHeight(85), mSecondCode(0), mUmlaut(⁹), mKeyType(2), mLabel(0), mCode(48), mCodes([48]), mX(968), mY(19), mWidth(89), mHeight(85), mSecondCode(0), mUmlaut(⁰ⁿ), mKeyType(2), mLabel(q), mCode(113), mCodes([113]), mX(23), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(), mKeyType(1), mLabel(w), mCode(119), mCodes([119]), mX(128), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(ŵẁẃẅ), mKeyType(1), mLabel(e), mCode(101), mCodes([101]), mX(233), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(èéêëēėęěĕəɛẹ), mKeyType(1), mLabel(r), mCode(114), mCodes([114]), mX(338), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(ŕřṛ), mKeyType(1), mLabel(t), mCode(116), mCodes([116]), mX(443), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(þťŧțţṭ), mKeyType(1), mLabel(y), mCode(121), mCodes([121]), mX(548), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(ÿýỳŷƴ), mKeyType(1), mLabel(u), mCode(117), mCodes([117]), mX(653), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(ùúûüūŭůűųưụ), mKeyType(1), mLabel(i), mCode(105), mCodes([105]), mX(758), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(ìíîïīįıị), mKeyType(1), mLabel(o), mCode(111), mCodes([111]), mX(863), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(oʻòóôõöøōŏőœɔơọº), mKeyType(1), mLabel(p), mCode(112), mCodes([112]), mX(968), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(), mKeyType(1), mLabel(a), mCode(97), mCodes([97]), mX(76), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(àáâãäåæāăąª), mKeyType(1), mLabel(s), mCode(115), mCodes([115]), mX(181), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ß§śŝšṣ̌şșṣ), mKeyType(1), mLabel(d), mCode(100), mCodes([100]), mX(286), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ðďđɗḍ), mKeyType(1), mLabel(f), mCode(102), mCodes([102]), mX(391), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(1), mLabel(g), mCode(103), mCodes([103]), mX(496), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(gʻĝģğɣǧ), mKeyType(1), mLabel(h), mCode(104), mCodes([104]), mX(601), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ĥḥ), mKeyType(1), mLabel(j), mCode(106), mCodes([106]), mX(706), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ǰǰ̣ĵ), mKeyType(1), mLabel(k), mCode(107), mCodes([107]), mX(811), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ķƙ), mKeyType(1), mLabel(l), mCode(108), mCodes([108]), mX(916), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ĺļľłl·l·), mKeyType(1), mLabel(), mCode(-400), mCodes([-400]), mX(23), mY(398), mWidth(125), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0), mLabel(z), mCode(122), mCodes([122]), mX(180), mY(398), mWidth(89), mHeight(102), mSecondCode(0), mUmlaut(źżžẓ̌), mKeyType(1), mLabel(x), mCode(120), mCodes([120]), mX(286), mY(398), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(x̌), mKeyType(1), mLabel(c), mCode(99), mCodes([99]), mX(391), mY(398), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(çćĉčč̣), mKeyType(1), mLabel(v), mCode(118), mCodes([118]), mX(496), mY(398), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(1), mLabel(b), mCode(98), mCodes([98]), mX(601), mY(398), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ɓ), mKeyType(1), mLabel(n), mCode(110), mCodes([110]), mX(706), mY(398), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(n̈ñńņňŉŋɲṅ), mKeyType(1), mLabel(m), mCode(109), mCodes([109]), mX(811), mY(398), mWidth(89), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(1), mLabel(), mCode(-5), mCodes([-5]), mX(932), mY(398), mWidth(125), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0), mLabel(), mCode(-102), mCodes([-102]), mX(23), mY(530), mWidth(141), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0), mLabel(,), mCode(-117), mCodes([-117]), mX(181), mY(530), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0), mLabel(), mCode(32), mCodes([32]), mX(286), mY(530), mWidth(508), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0), mLabel(.), mCode(-122), mCodes([-122]), mX(811), mY(530), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0), mLabel(), mCode(10), mCodes([10]), mX(916), mY(530), mWidth(141), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0)]",
+[Directory] : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/user/specific/specific_com_android_intentresolver
+[Version] : 
+[Directory] : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/user/specific/specific_com_google_android_permissioncontroller
+(103), mSecondCode(0), mUmlaut(þťŧțţṭ), mKeyType(1), mLabel(y), mCode(121), mCodes([121]), mX(548), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(ÿýỳŷƴ), mKeyType(1), mLabel(u), mCode(117), mCodes([117]), mX(653), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(ùúûüūŭůűųưụ), mKeyType(1), mLabel(i), mCode(105), mCodes([105]), mX(758), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(ìíîïīįıị), mKeyType(1), mLabel(o), mCode(111), mCodes([111]), mX(863), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(oʻòóôõöøōŏőœɔơọº), mKeyType(1), mLabel(p), mCode(112), mCodes([112]), mX(968), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(), mKeyType(1), mLabel(a), mCode(97), mCodes([97]), mX(76), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(àáâãäåæāăąª), mKeyType(1), mLabel(s), mCode(115), mCodes([115]), mX(181), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ß§śŝšṣ̌şșṣ), mKeyType(1), mLabel(d), mCode(100), mCodes([100]), mX(286), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ðďđɗḍ), mKeyType(1), mLabel(f), mCode(102), mCodes([102]), mX(391), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(1), mLabel(g), mCode(103), mCodes([103]), mX(496), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(gʻĝģğɣǧ), mKeyType(1), mLabel(h), mCode(104), mCodes([104]), mX(601), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ĥḥ), mKeyType(1), mLabel(j), mCode(106), mCodes([106]), mX(706), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ǰǰ̣ĵ), mKeyType(1), mLabel(k), mCode(107), mCodes([107]), mX(811), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ķƙ), mKeyType(1), mLabel(l), mCode(108), mCodes([108]), mX(916), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ĺļľłl·l·), mKeyType(1), mLabel(), mCode(-400), mCodes([-400]), mX(23), mY(398), mWidth(125), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0), mLabel(z), mCode(122), mCodes([122]), mX(180), mY(398), mWidth(89), mHeight(102), mSecondCode(0), mUmlaut(źżžẓ̌), mKeyType(1), mLabel(x), mCode(120), mCodes([120]), mX(286), mY(398), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(x̌), mKeyType(1), mLabel(c), mCode(99), mCodes([99]), mX(391), mY(398), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(çćĉčč̣), mKeyType(1), mLabel(v), mCode(118), mCodes([118]), mX(496), mY(398), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(1), mLabel(b), mCode(98), mCodes([98]), mX(601), mY(398), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ɓ), mKeyType(1), mLabel(n), mCode(110), mCodes([110]), mX(706), mY(398), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(n̈ñńņňŉŋɲṅ), mKeyType(1), mLabel(m), mCode(109), mCodes([109]), mX(811), mY(398), mWidth(89), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(1), mLabel(), mCode(-5), mCodes([-5]), mX(932), mY(398), mWidth(125), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0), mLabel(), mCode(-102), mCodes([-102]), mX(23), mY(530), mWidth(141), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0), mLabel(,), mCode(-117), mCodes([-117]), mX(181), mY(530), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0), mLabel(), mCode(32), mCodes([32]), mX(286), mY(530), mWidth(508), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0), mLabel(.), mCode(-122), mCodes([-122]), mX(811), mY(530), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0), mLabel(), mCode(10), mCodes([10]), mX(916), mY(530), mWidth(141), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0)]",
     "ValidZoneList": "[Rect(0, 0 - 1080, 660)]"
 }
                 [BoardScrap dump End]
@@ -2088,7 +2072,79 @@ path : /data/user/0/com.samsung.android.honeyboard/files, count : 7, siht(85), m
     "15": "mLabel(y), mCode(121), mCodes([121]), mX(548), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(ÿýỳŷƴ), mKeyType(1)",
     "16": "mLabel(u), mCode(117), mCodes([117]), mX(653), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(ùúûüūŭůűųưụ), mKeyType(1)",
     "17": "mLabel(i), mCode(105), mCodes([105]), mX(758), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(ìíîïīįıị), mKeyType(1)",
-    "18": "mLabel(o), ion = com.samsung.android.honeyboard.plugins.keyscafe.herb.HerbValueList, 1
+    "18": "mLabel(o), mCode(111), mCodes([111]), mX(863), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(oʻòóôõöøōŏőœɔơọº), mKeyType(1)",
+    "19": "mLabel(p), mCode(112), mCodes([112]), mX(968), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(), mKeyType(1)",
+    "20": "mLabel(a), mCode(97), mCodes([97]), mX(76), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(àáâãäåæāăąª), mKeyType(1)",
+    "21": "mLabel(s), mCode(115), mCodes([115]), mX(181), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ß§śŝšṣ̌şșṣ), mKeyType(1)",
+    "22": "mLabel(d), mCode(100), mCodes([100]), mX(286), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ðďđɗḍ), mKeyType(1)",
+    "23": "mLabel(f), mCode(102), mCodes([102]), mX(391), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(1)",
+    "24": "mLabel(g), mCode(103), mCodes([103]), mX(496), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(gʻĝģğɣǧ), mKeyType(1)",
+    "25": "mLabel(h), mCode(104), mCodes([104]), mX(601), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ĥḥ), mKeyType(1)",
+    "26": "mLabel(j), mCode(106), mCodes([106]), mX(706), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ǰǰ̣ĵ), mKeyType(1)",
+    "27": "mLabel(k), mCode(107), mCodes([107]), mX(811), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ķƙ), mKeyType(1)",
+    "28": "mLabel(l), mCode(108), mCodes([108]), mX(916), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ĺļľłl·l·), mKeyType(1)",
+    "29": "mLabel(), mCode(-400), mCodes([-400]), mX(23), mY(398), mWidth(125), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0)",
+    "30": "mLabel(z), mCode(122), mCodes([122]), mX(180), mY(398), mWidth(89), mHeight(102), mSecondCode(0), mUmlaut(źżžẓ̌), mKeyType(1)",
+    "31": "mLabel(x), mCode(120), mCodes([120]), mX(286), mY(398), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(x̌), mKeyType(1)",
+    "32": "mLabel(c), mCode(99), mCodes([99]), mX(391), mY(398), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(çćĉčč̣), mKeyType(1)",
+    "33": "mLabel(v), mCode(118), mCodes([118]), mX(496), mY(398), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(1)",
+    "34": "mLabel(b), mCode(98), mCodes([98]), mX(601), mY(398), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ɓ), mKeyType(1)",
+    "35": "mLabel(n), mCode(110), mCodes([110]), mX(706), mY(398), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(n̈ñńņňŉŋɲṅ), mKeyType(1)",
+    "36": "mLabel(m), mCode(109), mCodes([109]), mX(811), mY(398), mWidth(89), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(1)",
+    "37": "mLabel(), mCode(-5), mCodes([-5]), mX(932), mY(398), mWidth(125), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0)",
+    "38": "mLabel(), mCode(-102), mCodes([-102]), mX(23), mY(530), mWidth(141), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0)",
+    "39": "mLabel(,), mCode(-117), mCodes([-117]), mX(181), mY(530), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0)",
+    "40": "mLabel(), mCode(32), mCodes([32]), mX(286), mY(530), mWidth(508), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0)",
+    "41": "mLabel(.), mCode(-122), mCodes([-122]), mX(811), mY(530), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0)",
+    "42": "mLabel(), mCode(10), mCodes([10]), mX(916), mY(530), mWidth(141), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0)"
+}
+                [KeyScrap dump End]
+
+[BoardScrap End]
+
+[LastValid Start]
+Invalid Area 
+Rect(0, 398 - 148, 500)
+Rect(932, 398 - 1080, 500)
+Rect(0, 500 - 182, 660)
+Rect(162, 500 - 269, 660)
+Rect(811, 500 - 917, 660)
+Rect(897, 500 - 1080, 660)
+
+
+[LastValid End]
+
+==================== SwiftkeyContact dump state ====================
+
+==================== Specific DLM dump state ====================
+
+==================== AutoRpelaceRevocation dump state ====================
+
+==================== Plugin dump state ====================
+
+####################################
+Plugin Dump state :
+  Instance Count = 6
+
+  action = com.samsung.android.honeyboard.action.PLUGIN_RTS
+  my version
+      class version = com.samsung.android.honeyboard.plugins.rts.PluginRts, 2
+      class version = com.samsung.android.honeyboard.plugins.rts.RtsContent$OnRtsContentCommitCallback, 1
+      class version = com.samsung.android.honeyboard.plugins.rts.RtsContent, 1
+      class version = com.samsung.android.honeyboard.plugins.rts.PluginRts$RtsContentCallback, 2
+      class version = com.samsung.android.honeyboard.plugins.rts.RtsContent$OnPreviewUriUpdateCallback, 1
+
+
+  action = com.samsung.android.honeyboard.action.PLUGIN_KEYS_CAFE_CASHER
+  my version
+      class version = com.samsung.android.honeyboard.plugins.keyscafe.casher.PluginCasher, 1
+
+
+  action = com.samsung.android.honeyboard.action.PLUGIN_KEYS_CAFE_HERB
+  my version
+      class version = com.samsung.android.honeyboard.plugins.keyscafe.herb.PluginHerbObserver, 1
+      class version = com.samsung.android.honeyboard.plugins.keyscafe.herb.HerbValue, 1
+      class version = com.samsung.android.honeyboard.plugins.keyscafe.herb.HerbValueList, 1
       class version = com.samsung.android.honeyboard.plugins.keyscafe.herb.PluginHerb, 1
 
 
@@ -2109,7 +2165,22 @@ path : /data/user/0/com.samsung.android.honeyboard/files, count : 7, siht(85), m
       class version = com.samsung.android.honeyboard.plugins.keyscafe.honeytea.viewmodel.HoneyTeaKeyLabelViewModel, 1
       class version = com.samsung.android.honeyboard.plugins.keyscafe.honeytea.keyinfo.HoneyTeaKeyInfo, 1
       class version = com.samsung.android.honeyboard.plugins.keyscafe.honeytea.viewmodel.HoneyTeaViewModel, 1
-      class version = com.samsung.android.honeyboard.plugins.keyscafe.honeytea.touch.HoneyTeaTouc      class version = com.samsung.android.honeyboard.plugins.board.PluginHoneyBoard, 3
+      class version = com.samsung.android.honeyboard.plugins.keyscafe.honeytea.touch.HoneyTeaTouchObservable, 1
+      class version = com.samsung.android.honeyboard.plugins.keyscafe.honeytea.widget.AbstractHoneyTeaKeyView, 1
+      class version = com.samsung.android.honeyboard.plugins.keyscafe.honeytea.viewmodel.HoneyTeaViewModelObservable, 1
+
+
+  action = com.samsung.android.honeyboard.action.PLUGIN_KEYS_CAFE_OREO_SHAKE
+  my version
+      class version = com.samsung.android.honeyboard.plugins.keyscafe.oreoshake.PluginOreoShake, 1
+      class version = com.samsung.android.honeyboard.plugins.keyscafe.oreoshake.OreoShakeInfo, 1
+
+
+  action = com.samsung.android.honeyboard.action.PLUGIN_HONEY_BOARD
+  my version
+      class version = com.samsung.android.honeyboard.plugins.board.PluginSearchCallback, 1
+      class version = com.samsung.android.honeyboard.plugins.board.PluginBoardCallback, 1
+      class version = com.samsung.an      class version = com.samsung.android.honeyboard.plugins.board.PluginHoneyBoard, 3
 
   Disabled Plugins
 
@@ -2142,91 +2213,15 @@ type: GLOBAL
 [KeyboardInputRangeItem] 1
 [HandwritingModeItem] false
 [SelectedLanguageItem] 1
-em] false
-[SpaceRowStyleCmItem] true
-[SpaceRowStylePeriodItem] true
-[SpaceRowStyleEmailURLPeriodItem] true
-[SpaceRowStyleEmailURLDotComItem] true
-[SpaceRowStyleEmailURLPeriodItem] true
-[SpaceRowStyleEmailURLDotComItem] false
-[SpaceRowStyleJapaneseArrowItem] true
-[SpaceRowStyleJapanesePeriodItem] true
-[HighContrastItem] false
-[TouchAndHoldSpaceBarTypeItem] cursor_control
-[UseContinuousInputItem] true
-[UseToolBarItem] true
-[VoiceInputTypeItem] 1
-[OrientationItem] false
-[DensityItem] 2.8125
-[DisplayWidthItem] 1080
-[DisplayHeightItem] 2340
-[MainTextLabelItem] 1
-[LanguageSwitchingUsingSpaceBarItem] false
-[LanguageSwitchingUsingKeyItem] true
-[TransliterationTypingModeItem] false
-[CoverDisplayModeItem] false
-[TalkBackEnabledItem] false
-[HoneyVoiceEnabledItem] false
-[Japanese8FlickCustomisationItem] false
-[VoiceEnabledItem] true
-[PredictionStatusItem] true
-[EditorEnterActionItem] -1
-[BilingualLanguageActivateItem] false
-[EnterKeyLabelDoneItem] false
-[KeyboardConfigKeeper End]
-
-==================== PresenterCache dump state ====================
-
-==================== TMST dump state ====================
-Policy: Linear
-
-
-==================== PredictionPolicy dump state ====================
-TextLearner Blocklist version: 1.0 
-Blocklist: 8 
-
-
-==================== CMKey dump state ====================
-[DumpCMKeyManager Start]
-CMKeyShowing     :44
-[DumpCMKeyManager End]
-[DumpCMSetting Start]
-CMKeyLast        :-1
-CMKeyLast PREV   :-1
-CMKeyLast VN     :-1
-CMKeyLast VN PREV:-1
-[DumpCMSetting End]
-
-==================== NetworkLog dump state ====================
-[NetworkLog dump Start]
-2026/8/02/ 02:12:46  screenOn (true) keyboardShow (true) Nq.c.d:250 Z5.a.execute:94 K6.o.execute:10 com.samsung.android.honeyboard.beehive.data.BeeItem.executeInner:202 com.samsung.android.honeyboard.beehive.data.BeeItem.execute$lambda$2$lambda$1:0 
-
-==================== BoardScrapHistory dump state ====================
-[BoardScrapHistory Start]
-Language = English
-InputType = 0/1
-InputRange = 4
-mDisplayWidthIncludingFloating(1080)
-mPosX(0)
-mPosY(1445)
-mLabel(8), mCode(56), mCodes([56]), mX(758), mY(19), mWidth(89), mHeight(85), mSecondCode(0), mUmlaut(⁸), mKeyType(2)
-mLabel(9), mCode(57), mCodes([57]), mX(863), mY(19), mWidth(89), mHeight(85), mSecondCode(0), mUmlaut(⁹), mKeyType(2)
-mLabel(0), mCode(48), mCodes([48]), mX(968), mY(19), mWidth(89), mHeight(85), mSecondCode(0), mUmlaut(⁰ⁿ), mKeyType(2)
-mLabel(+), mCode(43), mCodes([43]), mX(23), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(±), mKeyType(3)
-mLabel(×), mCode(215), mCodes([215]), mX(128), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(), mKeyType(3)
-mLabel(÷), mCode(247), mCodes([247]), mX(233), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(), mKeyType(3)
-mLabel(=), mCode(61), mCodes([61]), mX(338), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(≈≠≡), mKeyType(3)
-mLabel(/), mCode(47), mCodes([47]), mX(443), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(), mKeyType(3)
-mLabel(_), mCode(95), mCodes([95]), mX(548), mY(1), mUmlaut(€£¥₩₽), mKeyType(3)
-mLabel(%), mCode(37), mCodes([37]), mX(443), mY(266), mWidth(89), mHeight(102), mSecondCode(0), mUmlaut(٪‰), mKeyType(3)
-mLabel(^), mCode(94), mCodes([94]), mX(548), mY(266), mWidth(89), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(3)
-mLabel(&), mCode(38), mCodes([38]), mX(653), mY(266), mWidth(89), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(3)
-mLabel(*), mCode(42), mCodes([42]), mX(758), mY(266), mWidth(89), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(3)
-mLabel((), mCode(40), mCodes([40]), mX(863), mY(266), mWidth(89), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(3)
-mLabel()), mCode(41), mCodes([41]), mX(968), mY(266), mWidth(89), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(3)
-mLabel(), mCode(-109), mCodes([-109]), mX(23), mY(398), mWidth(125), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0)
-mLabel(-), mCode(45), mCodes([45]), mX(180), mY(398), mWidth(89), mHeight(102), mSecondCode(0), mUmlaut(‐–—), mKeyType(3)
-mLabel('), mCodet(102), mSecondCode(0), mUmlaut(), mKeyType(0)
+(39), mCodes([39]), mX(286), mY(398), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(3)
+mLabel("), mCode(34), mCodes([34]), mX(391), mY(398), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(«»), mKeyType(3)
+mLabel(:), mCode(58), mCodes([58]), mX(496), mY(398), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(3)
+mLabel(;), mCode(59), mCodes([59]), mX(601), mY(398), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(3)
+mLabel(,), mCode(44), mCodes([44]), mX(706), mY(398), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(3)
+mLabel(?), mCode(63), mCodes([63]), mX(811), mY(398), mWidth(89), mHeight(102), mSecondCode(0), mUmlaut(¿‽), mKeyType(3)
+mLabel(), mCode(-5), mCodes([-5]), mX(932), mY(398), mWidth(125), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0)
+mLabel(), mCode(-102), mCodes([-102]), mX(23), mY(530), mWidth(141), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0)
+mLabel(,), mCode(-117), mCodes([-117]), mX(181), mY(530), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0)
 mLabel(), mCode(32), mCodes([32]), mX(286), mY(530), mWidth(508), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0)
 mLabel(.), mCode(-122), mCodes([-122]), mX(811), mY(530), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0)
 mLabel(), mCode(10), mCodes([10]), mX(916), mY(530), mWidth(141), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0)
@@ -2251,236 +2246,47 @@ Modal change history =
 [Input method] 0
 [Dump MultiModalSwitcher End]
 
-==================== TranslationSupportLanguage dump state ==============right=0, bottom=135}, Insets{left=0, top=0, right=0, bottom=0}, Insets{left=0, top=0, right=0, bottom=0}
+==================== TranslationSupportLanguage dump state ====================
+supportedLanguagesSize : 0
+
+==================== WindowInsetHistoryRepository dump state ====================
+[WindowInsetHistoryRepository START]
+2026-08-02 13:08:24.596 Insets{left=0, top=0, right=0, bottom=135}, Insets{left=0, top=0, right=0, bottom=135}, Insets{left=0, top=0, right=0, bottom=0}, Insets{left=0, top=0, right=0, bottom=0}
+2026-08-02 13:08:24.627 Insets{left=0, top=0, right=0, bottom=135}, Insets{left=0, top=0, right=0, bottom=135}, Insets{left=0, top=0, right=0, bottom=0}, Insets{left=0, top=0, right=0, bottom=0}
+2026-08-02 13:08:27.877 Insets{left=0, top=0, right=0, bottom=135}, Insets{left=0, top=0, right=0, bottom=135}, Insets{left=0, top=0, right=0, bottom=0}, Insets{left=0, top=0, right=0, bottom=0}
+2026-08-02 13:36:19.886 Insets{left=0, top=0, right=0, bottom=135}, Insets{left=0, top=0, right=0, bottom=135}, Insets{left=0, top=0, right=0, bottom=0}, Insets{left=0, top=0, right=0, bottom=0}
+2026-08-02 13:36:58.317 Insets{left=0, top=0, right=0, bottom=135}, Insets{left=0, top=0, right=0, bottom=135}, Insets{left=0, top=0, right=0, bottom=0}, Insets{left=0, top=0, right=0, bottom=0}
 2026-08-02 13:37:07.654 Insets{left=0, top=0, right=0, bottom=135}, Insets{left=0, top=0, right=0, bottom=135}, Insets{left=0, top=0, right=0, bottom=0}, Insets{left=0, top=0, right=0, bottom=0}
 2026-08-02 13:39:12.556 Insets{left=0, top=0, right=0, bottom=135}, Insets{left=0, top=0, right=0, bottom=135}, Insets{left=0, top=0, right=0, bottom=0}, Insets{left=0, top=0, right=0, bottom=0}
 2026-08-02 14:17:06.869 Insets{left=0, top=0, right=0, bottom=135}, Insets{left=0, top=0, right=0, bottom=135}, Insets{left=0, top=0, right=0, bottom=0}, Insets{left=0, top=0, right=0, bottom=0}
+2026-08-02 14:21:25.974 Insets{left=0, top=0, right=0, bottom=135}, Insets{left=0, top=0, right=0, bottom=135}, Insets{left=0, top=0, right=0, bottom=0}, Insets{left=0, top=0, right=0, bottom=0}
 [WindowInsetHistoryRepository END]
 
 ==================== SoundFeedbackLog dump state ====================
 [Sound Feedback dump Start]
-2026-08-02 14:14:05.232 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.os.Looper.loopOnce:288 android.os.Looper.loop:392 
-2026-08-02 14:14:08.901 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
-2026-08-02 14:14:09.104 soundEffect:2, soundId:3 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
-2026-08-02 14:14:09.331 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
-2026-08-02 14:14:09.458 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
-2026-08-02 14:14:09.720 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
-2026-08-02 14:14:10.077 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
-2026-08-02 14:14:10.189 soundEffect:2, soundId:3 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
-2026-08-02 14:14:10.524 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
-2026-08-02 14:14:10.717 soundEffect:0, soundId::125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
+2026-08-02 14:14:12.868 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:14:13.038 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:14:13.225 soundEffect:2, soundId:3 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:14:13.578 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
+2026-08-02 14:14:16.403 soundEffect:6, soundId:4 com.samsung.android.honeyboard.icecone.multimodal.component.MultiModalVoiceComponent$voiceStateListener$1.playListeningSound:10 com.samsung.android.honeyboard.icecone.multimodal.component.MultiModalVoiceComponent$voiceStateListener$1.setMicState:93 Ht.g.b:454 S0.f.e:26 sl.q0.a:19 
+2026-08-02 14:14:16.761 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
+2026-08-02 14:14:22.354 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:14:22.375 soundEffect:7, soundId:5 com.samsung.android.honeyboard.icecone.multimodal.component.MultiModalVoiceComponent$voiceStateListener$1.playStopSound:10 com.samsung.android.honeyboard.icecone.multimodal.component.MultiModalVoiceComponent$voiceStateListener$1.setMicState:128 Ht.g.b:454 S0.f.d:13 S0.f.a:48 
+2026-08-02 14:14:22.710 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:14:22.857 soundEffect:2, soundId:3 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:14:23.213 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
+2026-08-02 14:15:27.531 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:15:27.884 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
+2026-08-02 14:15:28.295 soundEffect:0, soundId:1 Q9.d.d:74 Q9.d.e:8 com.samsung.android.honeyboard.beehive.viewmodel.BeeHiveViewModel.playTouchFeedback:13 com.samsung.android.honeyboard.beehive.viewmodel.BeeHiveViewModel.onClickBeeItem:38 com.samsung.android.honeyboard.beehive.viewmodel.BeeHiveViewModel.onClickBeeImageFrame:33 
+2026-08-02 14:15:28.649 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
+2026-08-02 14:17:09.561 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:17:09.918 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
 2026-08-02 14:17:10.505 soundEffect:0, soundId:1 Q9.d.d:74 Q9.d.e:8 com.samsung.android.honeyboard.beehive.viewmodel.BeeHiveViewModel.playTouchFeedback:13 com.samsung.android.honeyboard.beehive.viewmodel.BeeHiveViewModel.onClickBeeItem:38 com.samsung.android.honeyboard.beehive.viewmodel.BeeHiveViewModel.onClickBeeImageFrame:33 
 2026-08-02 14:17:10.858 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
 2026-08-02 14:17:25.459 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
 2026-08-02 14:17:25.815 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
-2026-08-02 14:18:32.763 soundEffect:0, soundId:1 Q9.d.d#########
-
-==================== SWIFTKEY dump state ====================
-[SwiftKey dump Start] SwiftKey SDK version : 5.7.1.206[SwiftKey dump End]
-
-==================== Settings dump state ====================
-[SettingValues Start]
-
-viewTypePref : 0
-viewTypePrefLand : 4
-standAloneDexModeViewTypePref : 2
-prevViewTypePref : 2
-prevViewTypePrefLand : 4
-prevStandAloneDexModeViewTypePref : 0
-frontViewTypePref : 0
-frontViewTypePrefLand : 4
-prevFrontViewTypePref : 0
-prevFrontViewTypePrefLand : 4
-useZhZ : false
-useChC : false
-useShS : false
-useNL : false
-useRL : false
-useHF : false
-useAngAn : false
-useEngEn : false
-useIngIn : false
-useKG : false
-useIangIan : false
-useUangUan : false
-useAlternativeChar : false
-useCoverAlternativeChar : false
-useAutoCaps : true
-useMultilingualTyping : true
-autoCursorMoveValue : 1200
-handwritingOnList : 
-prevHandwritingSubType : 0
-isFullHandwriting : false
-useAutoPunctuate : true
-backSpaceDeleteSpeed : 100
-customSymbols : & ^ % $ # @ ' ! ? , 
-customSymbolChanged : false false false falseypad : false
-chnHwrMode : 0
-chnHwrRecognitionType : 0
-chnHwrSwitch : 0
-hwrRecognitionTime : 500
-useChnAssociatedWords : true
-useChnInsertWordSpaceKey : false
-useChnLinkToContacts : false
-chnSogouCloudLink : 2
-chnSogouHotWord : 2
-useChnUseRareWords : true
-useChnUseTraditionalChineseInput : false
-chnShuangpinType : 2
-flickAngle : 38
-useHalfWidthInput : false
-useInputWordLearning : true
-japaneseVoiceInput : 1
-useMushroom : false
-useToggleInput : true
-useWildcardPrediction : false
-useOneHandRight : true
-useExtractUi : true
-useEmojiSuggestions : true
-rtsMethodPredictionEnabled : false
-rtsMethodPopupEnabled : true
-rtsPrimaryEnabled : true
-rtsBitmojiEnabled : false
-rtsArEmojiEnabled : true
-rtsPreloadedAndDownloadedEnabled : true
-rtsEmojiPairsEnabled : true
-useCustomVibrateIntensity : -1
-languageSwitchingUsingKey : true
-languageSwitchingUsingSpaceBar : false
-allowNetworkAccess : true
-autoReplacementSmartTipExecute : false
-spaceSmartTipExecute : false
-integratedPpExecuted : false
-gifPpAccepted : false
-googlePpAcceptediceOffensiveWord : true
-useHoneyVoiceSideKey : false
-useSaveScreenshotsToClipboard : false
-voiceInputType : 1
-myToneType : Feature Extract
-writingAssistFeaturesMode : true
-writingAssistFeaturesOnDeviceMode : false
-writingAssistLatestTranslateLanguage : 
-translationMode : 1
-composerLength : 0
-summaryType : More Briefly
-writingStyle : Show all
-specificWeightMode : 2
-specificWeightAdditionValue : 0.2
-specificWeightMultipleValue : 5
-Button and symbol layout : 0
-Last SA logging date : 2026-08-02 13:08:24
-
-[SettingValues End]
-
-[SettingValues History Start]
-useKeyTapFeedbackSound
-	- 2026-08-02 13:08:22.691, useKeyTapFeedbackSound, UNKNOWN -> true, X5.d.d(SourceFile:42)y7.u.i(SourceFile:14)y7.d.a(SourceFile:31)k7.s.<init>(SourceFile:639)A7.a.invoke(SourceFile:334)
-useKeyTapFeedbackVibrate
-	- 2026-08-02 13:08:22.710, useKeyTapFeedbackVibrate, UNKNOWN -> false, y7.b.invoke(SourceFile:32)X5.d.d(SourceFile:42)y7.u.i(SourceFile:14)y7.d.a(SourceFile:31)k7.s.<init>(SourceFile:681)
-japaneseVoiceInput
-	- 2026-08-02 13:08:23.9tionType
-	- 2026-08-02 13:08:23.962, chnHwrRecognitionType, UNKNOWN -> 0, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useReadDeletedCharacter
-	- 2026-08-02 13:08:23.962, useReadDeletedCharacter, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useChnUseTraditionalChineseInput
-	- 2026-08-02 13:08:23.962, useChnUseTraditionalChineseInput, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-prevViewTypePrefLand
-	- 2026-08-02 13:08:23.962, prevViewTypePrefLand, UNKNOWN -> 4, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-customSymbols
-	- 2026-08-02 13:08:23.962, customSymbols, UNKNOWN -> & ^ % $ # @ ' ! ? ,, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-	- 2026-08-02 13:37:05.629, customSymbols, & ^ % $ # @ ' ! ? , -> & ^ % $ # @ ' ! ? , , androidx.fragment.app.Fragment.performPause(SourceFile:30)androidx.fragment.app.l0.k(SourceFile:225)androidx.fragment.app.f0.O(SourceFile:58)androidx.fragment.app.f0.u(SourceFile:33)androidx.fragment.app.FragmentActivity.onPause(SourceFile:13)
-languageSwitchingUsingKey
-	- 2026-08-02 13:08:23.962, languageSwitchingUsingKey, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useHalfWidthInput
-	- 2026-08-02 13:08:23.962, useHalfWidthInput, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-touchAndHoldDelayValue
-	- 2026-08-02 13:08:23.962, touchAndHoldDelayValue, UNKNOWN -> 300, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-rtsMethodPredictionEnabled
-	- 2026-08-02 13:08:23.962, rtsMethodPredictionEnabled, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useDotOnCommonSpaceBarRowStyle
-	- 2026-08-02 13:08:23.962, useDotOnCommonSpaceBarRowStyle, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useHighContrast
-	- 2026-08-02 13:08:23.963, useHighContrast, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useContinuousInput
-	- 2026-08-02 13:08:23.963, useContinuousInput, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-specificWeightMode
-	- 2026-08-02 13:08:23.963, specificWeightMode, UNKNOWN -> 2, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.ceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-highContrastIndex
-	- 2026-08-02 13:08:23.964, highContrastIndex, UNKNOWN -> 0, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useCustomTheme
-	- 2026-08-02 13:08:23.964, useCustomTheme, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-usePenDetection
-	- 2026-08-02 13:08:23.964, usePenDetection, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-usePhonepadOnlyInPortrait
-	- 2026-08-02 13:08:23.964, usePhonepadOnlyInPortrait, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useMultilingualTyping
-	- 2026-08-02 13:08:23.964, useMultilingualTyping, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cupEnabled
-	- 2026-08-02 13:08:23.965, rtsMethodPopupEnabled, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-usePhoneticAlphabet
-	- 2026-08-02 13:08:23.965, usePhoneticAlphabet, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useDotOnUrlSpaceBarRowStyle
-	- 2026-08-02 13:08:23.965, useDotOnUrlSpaceBarRowStyle, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useAlternativeChar
-	- 2026-08-02 13:08:23.965, useAlternativeChar, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-chnSogouCloudLink
-	- 2026-08-02 13:08:23.965, chnSogouCloudLink, UNKNOWN -> 2, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)courceFile:73)cb.d.a(SourceFile:116)
-standAloneDexModeViewTypePref
-	- 2026-08-02 13:08:23.965, standAloneDexModeViewTypePref, UNKNOWN -> 2, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useChnInsertWordSpaceKey
-	- 2026-08-02 13:08:23.965, useChnInsertWordSpaceKey, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-usePredictiveText
-	- 2026-08-02 13:08:23.965, usePredictiveText, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-usePreventDoubleConsonants
-	- 2026-08-02 13:08:23.965, usePreventDoubleConsonants, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-chnHwrMode
-	- 2026-08-02 13:08:23.965, chnHwrMode, UNKNOWN -> 0, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(Sou026-08-02 13:08:23.966, keyboardFontSize, UNKNOWN -> 1, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-voiceInputType
-	- 2026-08-02 13:08:23.966, voiceInputType, UNKNOWN -> 1, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useDomainOnEmailSpaceBarRowStyle
-	- 2026-08-02 13:08:23.966, useDomainOnEmailSpaceBarRowStyle, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-autoCursorMoveValue
-	- 2026-08-02 13:08:23.966, autoCursorMoveValue, UNKNOWN -> 1200, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-prevFrontViewTypePrefLand
-	- 2026-08-02 13:08:23.966, prevFrontViewTypePrefLand, UNKNOWN -> 4, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SoukeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-frontViewTypePref
-	- 2026-08-02 13:08:23.967, frontViewTypePref, UNKNOWN -> 0, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useDotOnEmailSpaceBarRowStyle
-	- 2026-08-02 13:08:23.967, useDotOnEmailSpaceBarRowStyle, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useChnUseRareWords
-	- 2026-08-02 13:08:23.967, useChnUseRareWords, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-translationMode
-	- 2026-08-02 13:08:23.967, translationMode, UNKNOWN -> 1, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-usePointingKeypad
-	- 2026-08-02 13:08:23.967, usePointingKeypad, UNKNOWN -ourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-chnShuangpinType
-	- 2026-08-02 13:08:23.968, chnShuangpinType, UNKNOWN -> 2, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-rtsBitmojiEnabled
-	- 2026-08-02 13:08:23.968, rtsBitmojiEnabled, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-rtsEmojiPairsEnabled
-	- 2026-08-02 13:08:23.968, rtsEmojiPairsEnabled, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-coverKeyboardThemeIndex
-	- 2026-08-02 13:08:23.968, coverKeyboardThemeIndex, UNKNOWN -> 822149120, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-predictiveTextLineCount
-	- 2026-08-02 13:08:23.968, predictiveTextLineCount, UNKNO.a(SourceFile:116)
-useMushroom
-	- 2026-08-02 13:08:23.968, useMushroom, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useAutoPunctuate
-	- 2026-08-02 13:08:23.968, useAutoPunctuate, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-rtsArEmojiEnabled
-	- 2026-08-02 13:08:23.968, rtsArEmojiEnabled, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useNumberKeyFirstLine
-	- 2026-08-02 13:08:23.968, useNumberKeyFirstLine, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useOneHandRight
-	- 2026-08-02 13:08:23.968, useOneHandRight, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourcrceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-prevViewTypePref
-	- 2026-08-02 13:08:23.969, prevViewTypePref, UNKNOWN -> 0, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-	- 2026-08-02 13:36:56.671, prevViewTypePref, 0 -> 2, sl.z0.a(SourceFile:2)sl.P.a(SourceFile:2)sl.T.a(SourceFile:2)zl.a.c(SourceFile:10)vl.d.d(SourceFile:19)
-useSpeakKeyboardInputAloud
-	- 2026-08-02 13:08:23.969, useSpeakKeyboardInputAloud, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-flickAngle
-	- 2026-08-02 13:08:23.969, flickAngle, UNKNOWN -> 38, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-specificWeightMultipleValue
-	- 2026-08-02 13:08:23.969, specificWeightMultipleValue, UNKNOWN -> 5, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)==================== languagePack dump state ====================
+2026-08-02 14:18:32.763 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:18:33.117 pauseA==================== languagePack dump state ====================
 [LanguagePack Status Start]
  selected languages : English(65537)
  setupWizard language info : 
@@ -2534,27 +2340,4 @@ floating_keyboard_width_landscape = 0.75
 onehand_keyboard_height = 1.0
 onehand_keyboard_inner_height = 1.0
 onehand_keyboard_width = 0.75
-onehand_keyboard_inner_wid[SwiftKey dump Start] SwiftKey SDK version : 5.7.1.206[SwiftKey dump End]
-
-==================== Herb dump state ====================
-  fakeHerb = false
-
-==================== HoneyVoice dump state ====================
-isForceChangedToSvi: false
-installedLangPackStatus: {}
-honeyvoice state change history = 
-[ updateTime=2026-08-02 13:52:44.097, newRecognitionState=STATE_CANCEL ]
-[ updateTime=2026-08-02 14:05:07.087, newRecognitionState=STATE_LISTENING ]
-[ updateTime=2026-08-02 14:05:10.894, newRecognitionState=STATE_IDLE ]
-[ updateTime=2026-08-02 14:05:11.321, newRecognitionState=STATE_CANCEL ]
-[ updateTime=2026-08-02 14:13:27.268, newRecognitionState=STATE_LISTENING ]
-[ updateTime=2026-08-02 14:13:35.117, newRecognitionState=STATE_CANCEL ]
-[ updateTime=2026-08-02 14:14:16.364, newRecognitionState=STATE_LISTENING ]
-[ updateTime=2026-08-02 14:14:21.617, newRecognitionState=STATE_IDLE ]
-[ updateTime=2026-08-02 14:14:22.369, newRecognitionState=STATE_CANCEL ]
-[ updateTime=2026-08-02 14:14:22.376, newRecognitionState=STATE_IDLE ]
-honeyvoice search state change history = 
-
-==================== HoneyBoardServiceHistoryKeeper dump state ====================
-Info(displayId=0, createTime=2026-08-02 13:08:24, destroyTime=)
-####################################
+onehand_keyboard_inner_wid
