@@ -572,5 +572,22 @@
       },
       "status": "Queried, Analyzed, and Synchronized"
     }
+  },
+  "query_cycles": 1,
+  "web_system_queries": {
+    "1e982f977677": {
+      "timestamp": "2026-08-02 10:30:14",
+      "system_telemetry": {
+        "termux_packages": 459,
+        "android_packages": 0,
+        "device_model": "SM-A176U",
+        "android_version": "16"
+      },
+      "web_intelligence": {
+        "status": "connected",
+        "sample_data": "{'slideshow': {'author': 'Yours Truly', 'date': 'date of publication', 'slides': [{'title': 'Wake up"
+      },
+      "evaluation": "Successfully cross-examined local hardware state with web telemetry."
+    }
   }
 }
