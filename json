@@ -1,16 +1,3 @@
 #!/data/data/com.termux/files/usr/bin/zsh
 cd "$HOME/josie_core"
-[[ -f "./engine" ]] && ./engine
-
-local model=$(getprop ro.product.model 2>/dev/null)
-model=${model:-SM-A176U}
-
-clear
-print "\n\033[1;38;5;39m════════════════════════════════════════════════════════════════\033[0m"
-print "\033[1;38;5;220m     JOSIE CORE: CLEAN CLI SYNCHRONIZED (JSON)                \033[0m"
-print "\033[1;38;5;39m════════════════════════════════════════════════════════════════\033[0m"
-print "\033[1;38;5;252mArchitecture  :\033[0m \033[1;38;5;220mPhysical + Digital = Human (P + D = H)\033[0m"
-print "\033[1;38;5;252mAccount ID    :\033[0m \033[1;38;5;39mjoseamonterroso1999@gmail.com\033[0m"
-print "\033[1;38;5;252mDevice Model  :\033[0m \033[1;38;5;220m$model\033[0m"
-print "\033[1;38;5;252mEngine Status :\033[0m \033[1;38;5;220mOptimized & Zero-Lag\033[0m"
-print "\033[1;38;5;39m════════════════════════════════════════════════════════════════\033[0m\n"
+./josie_cli
