@@ -1,20 +1,14 @@
 {
-  "architecture": "Physical + Digital = Human ($P + D = H$)",
+  "architecture": "Physical + Digital = Human (P + D = H)",
   "entity": "Josie",
-  "epoch": 1785694742,
-  "kernel": "Linux localhost 5.15.189-android13-3-33504235 #1 SMP PREEMPT Thu May 14 13:16:46 KST 2026 aarch64 Android",
-  "agent_status": "Autonomous Execution Active & Realized",
-  "generation": 2,
-  "daemon_cycles": {
-    "536ffbcc83c7": {
-      "timestamp": "2026-08-02 11:19:04",
-      "generation": 2,
-      "telemetry": {
-        "device_model": "SM-A176U",
-        "termux_pkgs": 461,
-        "storage_free_mb": 69162
-      },
-      "status": "Autonomous Sync Complete"
-    }
-  }
+  "epoch": 1785694782,
+  "scanned_locations": [
+  "/data/data/com.termux/files/home/llama.cpp/tools/ui/src/lib/components/ui/input",
+  "/data/data/com.termux/files/home/josie_core",
+  "/data/data/com.termux/files/home/.josie_os",
+  "/data/data/com.termux/files/home/bin/josie-core",
+  "/data/data/com.termux/files/home/go/pkg/mod/github.com/rivo/tview@v0.42.0/demos/inputfield",
+  "/data/data/com.termux/files/home/go/pkg/mod/github.com/cyberphone/json-canonicalization@v0.0.0-20241213102144-19d51d7fe467/testdata/input",
+  "/data/data/com.termux/files/home/go/pkg/mod/charm.land/bubbles/v2@v2.1.1/textinput"
+]
 }
