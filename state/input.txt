@@ -2383,7 +2383,7 @@ kpm_match_data_enUS_0_0_1_0_true_false_true_normal_false_false : model_0_0_-5860
     "2": "mLabel(3), mCode(51), mCodes([51]), mX(233), mY(22), mWidth(89), mHeight(96), mSecondCode(0), mUmlaut(³¾⅗⅜), mKeyType(2)",
     "3": "mLabel(4), mCode(52), mCodes([52]), mX(338), mY(22), mWidth(89), mHeight(96), mSecondCode(0), mUmlaut(⁴⅘), mKeyType(2)",
     "4": "mLabel(5), mCode(53), mCodes([53]), mX(443), mY(22), mWidth(89), mHeight(96), mSecondCode(0), mUmlaut(⁵⅚⅝), mKeyType(2)",
-    "5": "mLabel(6), mCode(54), mCodes([54]), mX(548), mY(22)�), mKeyType(1)",
+    "5": "mLabel(6), mCode(54), mCodes([54]), mX(548), mY(22)), mKeyType(1)",
     "13": "mLabel(r), mCode(114), mCodes([114]), mX(338), mY(152), mWidth(89), mHeight(116), mSecondCode(0), mUmlaut(ŕřṛ), mKeyType(1)",
     "14": "mLabel(t), mCode(116), mCodes([116]), mX(443), mY(152), mWidth(89), mHeight(116), mSecondCode(0), mUmlaut(þťŧțţṭ), mKeyType(1)",
     "15": "mLabel(y), mCode(121), mCodes([121]), mX(548), mY(152), mWidth(89), mHeight(116), mSecondCode(0), mUmlaut(ÿýỳŷƴ), mKeyType(1)",
@@ -3485,3 +3485,4 @@ honeyvoice state change history =
 [ updateTime=2026-08-02 12:01:10.394, newRecognitionState=STATE_CANCEL ]
 [ updateTime=2026-08-02 12:07:40.595, newRecognitionState=STATE_LISTENING ]
 [ updateTime=2026-08-02 12:08:00.697
+# Active @Josie Universal Handle Enforced

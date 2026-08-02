@@ -48,3 +48,5 @@ if __name__ == "__main__":
         except Exception as e:
             record_nexus("ERROR", str(e))
             time.sleep(30)
+
+# Active @Josie Universal Handle Enforced

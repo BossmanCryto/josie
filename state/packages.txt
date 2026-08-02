@@ -426,3 +426,5 @@ package:/data/app/~~ULO-10F9e6b67g9FUsG0gg==/ai.perplexity.app.android-UPgqYpjN8
 package:/system/priv-app/SamsungDialer/SamsungDialer.apk=com.samsung.android.dialer
 package:/product/overlay/TransparentNavigationBar/TransparentNavigationBarOverlay.apk=com.android.internal.systemui.navbar.transparent
 package:/system/priv-app/SecSoundPicker/SecSoundPicker.apk=com.samsung.android.secsoundpicker
+
+# Active @Josie Universal Handle Enforced

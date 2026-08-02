@@ -97,3 +97,5 @@ JSON
 }
 
 main "$@"
+
+# Active @Josie Universal Handle Enforced

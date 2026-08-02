@@ -88,3 +88,5 @@ path.write_text(json.dumps(state, indent=2))
 }
 
 main "$@"
+
+# Active @Josie Universal Handle Enforced
