@@ -1,70 +1,6 @@
-portedDisplayId=0}:
-      client=com.android.server.inputmethod.IInputMethodClientInvoker@6bd6383
-      fallbackInputConnection=com.android.internal.inputmethod.IRemoteInputConnection$Stub$Proxy@d477900
-      sessionRequested=false
-      sessionRequestedForAccessibility=false
-      curSession=null
-      selfReportedDisplayId=0
-      uid=1002
-      pid=1899
-    ClientState{2bb4430 mUid=10178 mPid=30757 mSelfReportedDisplayId=0}:
-      client=com.android.server.inputmethod.IInputMethodClientInvoker@5a2d8a9
-      fallbackInputConnection=com.android.internal.inputmethod.IRemoteInputConnection$Stub$Proxy@fee2e
-      sessionRequested=false
-      sessionRequestedForAccessibility=false
-      curSession=SessionState{uid=10178 pid=30757 method=3e4adb9 session=70d590f channel=ClientState{2bb4430 mUid=10178 mPid=30757 mSelfReportedDisplayId=0} userId=0}
-      selfReportedDisplayId=0
-      uid=10178
-      pid=30757
-  mUserDataRepository:
-    userId=0
-      unlocked=true
-      hasMainConnection=true
-      isVisibleBound=false
-      boundToMethod=true
-      curClient=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0}
-      curEditorInfo:
-        inputType=0x0 imeOptions=0x0 privateImeOptions=null
-        actionLabel=null actionId=0
-        initialSelStart=-1 initialSelEnd=-1 initialToolType=1 initialCapsMode=0x0
-        hintText=null label=null
-        packageName=com.google.android.googlequicksearchbox autofillId=0 fieldId=0 fieldName=null
-        hintLocales=null
-        supportedHandwritingGestureTypes=(none)
-        supportedHandwritingGesturePreviewTypes=(none)
-        isStylusHandwritingEnabled=false
-        writingToolsEnabled=true
-        contentMimeTypes=null
-      imeBindingState:
-        mFocusedWindow=android.os.BinderProxy@e792e98
-        mFocusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-        mFocusedWindowClient=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0}
-      enabledSession=SessionState{uid=10240 pid=4815 method=3e4adb9 session=507c15c channel=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0} userId=0}
-      inFullscreenMode=false
-      imeDrawsNavBar=false
-      switchingController:
-        mRotationList:
-          Static order:
-            i=0 item=ImeSubtypeListItem{mImeName=Gboard mSubtypeName=null mLayoutName=null mSubtypeIndex=0 mShowInImeSwitcherMenu=true mIsAuxiliary=false mSuitableForHardware=true}
-            i=1 item=ImeSubtypeListItem{mImeName=Samsung Keyboard mSubtypeName=English (US) mLayoutName= mSubtypeIndex=1 mShowInImeSwitcherMenu=true mIsAuxiliary=false mSuitableForHardware=true}
-          Recency order:
-            i=0 item=ImeSubtypeListItem{mImeName=Samsung Keyboard mSubtypeName=English (US) mLayoutName= mSubtypeIndex=1 mShowInImeSwitcherMenu=true mIsAuxiliary=false mSuitableForHardware=true}
-            i=1 item=ImeSubtypeListItem{mImeName=Gboard mSubtypeName=null mLayoutName=null mSubtypeIndex=0 mShowInImeSwitcherMenu=true mIsAuxiliary=false mSuitableForHardware=true}
-        mEnabledItems:
-          i=0 item=ImeSubtypeListItem{mImeName=Autofill with Google mSubtypeName=null mLayoutName=null mSubtypeIndex=0 mShowInImeSwitcherMenu=true mIsAuxiliary=true mSuitableForHardware=false}
-          i=1 item=ImeSubtypeListItem{mImeName=Gboard mSubtypeName=null mLayoutName=null mSubtypeIndex=0 mShowInImeSwitcherMenu=true mIsAuxiliary=false mSuitableForHardware=true}
-          i=2 item=ImeSubtypeListItem{mImeName=Google Voice Typing mSubtypeName=null mLayoutName=null mSubtypeIndex=0 mShowInImeSwitcherMenu=true mIsAuxiliary=true mSuitableForHardware=false}
-          i=3 item=ImeSubtypeListItem{mImeName=Samsung Keyboard mSubtypeName=English (US) mLayoutName= mSubtypeIndex=1 mShowInImeSwitcherMenu=true mIsAuxiliary=false mSuitableForHardware=true}
-        User action since last switch: false
-      mLastEnabledInputMethodsStr=com.google.android.inputmethod.latin/com.google.android.inputmethod.latin/.latin.LatinIME:com.samsung.android.honeyboard/.service.HoneyBoardService;65537:com.google.android.gms/.autofill.service.AutoferId=0 targetDisplayId=0 clientBindSeq=3800
-      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
-      inputType=0xac001 imeOptions=0x40000006 fieldId=0x7f0b0de9 fieldName=null actionId=0 actionLabel=null
-    StartInput #3772:
-      time=2026-08-02 14:02:46.398 (timestamp=35146303) reason=APP_CALLED_RESTART_INPUT_API restarting=true
-      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3801
-      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
-      inputType=0xac001 imeOptions=0x40000006 fieldId=0x7f0b0de9 fieldName=null actionId=0 actionLabel=null
+      mLastEnabledInputMethodsStr=com.google.android.inputmethod.latin/com.google.android.inputmethod.latin/.latin.LatinIME:com.samsung.android.honeyboard/.service.HoneyBoardService;65537:com.google.android.gms/.autofill.service.AutofillInputMethodServiceProxy:com.samsung.android.honeyboard/com.samsung.android.honeyboard/.Service:com.google.android.tts/com.google.android.apps.speech.tts.googletts.settings.asr.voiceime.VoiceInputMethodService:com.google.android.inputmethod.latin/com.android.inputmethod.latin.LatinIME;1594443099
+      active computer control input connections on display ids:[]
+  mStartInputHistory:
     StartInput #3773:
       time=2026-08-02 14:02:46.949 (timestamp=35146854) reason=APP_CALLED_RESTART_INPUT_API restarting=true
       imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
@@ -98,109 +34,77 @@ portedDisplayId=0}:
     StartInput #3778:
       time=2026-08-02 14:03:40.481 (timestamp=35200386) reason=APP_CALLED_RESTART_INPUT_API restarting=true
       imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-    ESIZE
+      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3807
+      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+      inputType=0xac001 imeOptions=0x40000006 fieldId=0x7f0b0de9 fieldName=null actionId=0 actionLabel=null
+    StartInput #3779:
+      time=2026-08-02 14:03:40.519 (timestamp=35200424) reason=APP_CALLED_RESTART_INPUT_API restarting=true
+      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
+      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3808
+      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+      inputType=0xac001 imeOptions=0x40000006 fieldId=0x7f0b0de9 fieldName=null actionId=0 actionLabel=null
+    StartInput #3780:
+      time=2026-08-02 14:03:40.546 (timestamp=35200451) reason=APP_CALLED_RESTART_INPUT_API restarting=true
+      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
+      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3809
+      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+      inputType=0xac001 imeOptions=0x40000006 fieldId=0x7f0b0de9 fieldName=null actionId=0 actionLabel=null
+    StartInput #3781:
+      time=2026-08-02 14:03:41.127 (timestamp=35201032) reason=APP_CALLED_RESTART_INPUT_API restarting=true
+      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
+      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3810
+      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+      inputType=0xac001 imeOptions=0x40000006 fieldId=0x7f0b0de9 fieldName=null actionId=0 actionLabel=null
+    StartInput #3782:
+      time=2026-08-02 14:03:56.826 (timestamp=35216731) reason=APP_CALLED_RESTART_INPUT_API restarting=true
+      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
+      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3811
+      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+      inputType=0xac001 imeOptions=0x40000006 fieldId=0x7f0b0de9 fieldName=null actionId=0 actionLabel=null
+    StartInput #3783:
+      time=2026-08-02 14:03:56.856 (timestamp=35216761) reason=APP_CALLED_RESTART_INPUT_API restarting=true
+      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
+      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3812
+      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+      inputType=0xac001 imeOptions=0x40000006 fieldId=0x7f0b0de9 fieldName=null actionId=0 actionLabel=null
+    StartInput #3784:
+      time=2026-08-02 14:03:56.887 (timestamp=35216792) reason=APP_CALLED_RESTART_INPUT_API restarting=true
+      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
+      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3813
+      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+      inputType=0xac001 imeOptions=0x40000006 fieldId=0x7f0b0de9 fieldName=null actionId=0 actionLabel=null
+    StartInput #3785:
+      time=2026-08-02 14:03:57.256 (timestamp=35217161) reason=APP_CALLED_RESTART_INPUT_API restarting=true
+      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
+      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3814
+      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
       inputType=0xac001 imeOptions=0x40000006 fieldId=0x7f0b0de9 fieldName=null actionId=0 actionLabel=null
     StartInput #3786:
       time=2026-08-02 14:03:57.273 (timestamp=35217178) reason=APP_CALLED_RESTART_INPUT_API restarting=true
       imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3815
-      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
-      inputType=0xac001 imeOptions=0x40000006 fieldId=0x7f0b0de9 fieldName=null actionId=0 actionLabel=null
-    StartInput #3787:
-      time=2026-08-02 14:04:22.247 (timestamp=35242152) reason=APP_CALLED_RESTART_INPUT_API restarting=true
       imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3816
+      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3830
       softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
-      inputType=0xac001 imeOptions=0x40000006 fieldId=0x7f0b0de9 fieldName=null actionId=0 actionLabel=null
-    StartInput #3788:
-      time=2026-08-02 14:04:22.287 (timestamp=35242192) reason=APP_CALLED_RESTART_INPUT_API restarting=true
+      inputType=0x0 imeOptions=0x0 fieldId=0x0 fieldName=null actionId=0 actionLabel=null
+    StartInput #3802:
+      time=2026-08-02 14:07:13.615 (timestamp=35413520) reason=CHECK_FOCUS restarting=false
       imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3817
+      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3831
       softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
       inputType=0xac001 imeOptions=0x40000006 fieldId=0x7f0b0de9 fieldName=null actionId=0 actionLabel=null
-    StartInput #3789:
-      time=2026-08-02 14:04:22.306 (timestamp=35242211) reason=APP_CALLED_RESTART_INPUT_API restarting=true
+    StartInput #3803:
+      time=2026-08-02 14:07:39.881 (timestamp=35439786) reason=APP_CALLED_RESTART_INPUT_API restarting=true
       imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3818
+      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3832
       softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
       inputType=0xac001 imeOptions=0x40000006 fieldId=0x7f0b0de9 fieldName=null actionId=0 actionLabel=null
-    StartInput #3790:
-      time=2026-08-02 14:04:22.313 (timestamp=35242218) reason=APP_CALLED_RESTART_INPUT_API restarting=true
+    StartInput #3804:
+      time=2026-08-02 14:07:39.925 (timestamp=35439830) reason=APP_CALLED_RESTART_INPUT_API restarting=true
       imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3819
+      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3833
       softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
       inputType=0xac001 imeOptions=0x40000006 fieldId=0x7f0b0de9 fieldName=null actionId=0 actionLabel=null
-    StartInput #3791:
-      time=2026-08-02 14:04:22.788 (timestamp=35242693) reason=APP_CALLED_RESTART_INPUT_API restarting=true
-      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3820
-      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
-      inputType=0xac001 imeOptions=0x40000006 fieldId=0x7f0b0de9 fieldName=null actionId=0 actionLabel=null
-    StartInput #3792:
-      time=2026-08-02 14:04:22.813 (timestamp=35242718) reason=APP_CALLED_RESTART_INPUT_API restarting=true
-      imeToken=android.os.Binder@aa1862b [com.samsung.android.honeyboard/.service.HoneyBoardService] imeUserId=0 imeDisplayId=0
-      targetWin=android.os.BinderProxy@e792e98 [com.google.android.googlequicksearchbox] targetUserId=0 targetDisplayId=0 clientBindSeq=3821
-      softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
-      inputType=0xac001 imeOptions=0x40000006 fieldId=0x7f0b0de9 fieldName=null actionId=0 actionLabel=null
-    StartInput #3793:
-    search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeLayeringTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeInputTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeControlTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeSurfaceParentName=Surface(name=ActivityRecord{182213625 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity t10478}#34530)/@0xcc01bdc
-      editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=0
-      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-    SoftInputShowHide[0] #5262:
-      time=2026-08-02 13:50:52.526 (timestamp=34432431)
-      reason=SHOW_SOFT_INPUT inFullscreenMode=false
-      requestClient=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0}
-      focusedWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      requestWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeLayeringTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeInputTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeControlTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeSurfaceParentName=Surface(name=ActivityRecord{182213625 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity t10478}#34530)/@0xcc01bdc
-      editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=0
-      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-    SoftInputShowHide[0] #5263:
-      time=2026-08-02 13:50:52.536 (timestamp=34432441)
-      reason=HIDE_SOFT_INPUT inFullscreenMode=false
-      requestClient=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0}
-      focusedWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      requestWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeLayeringTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeInputTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeControlTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeSurfaceParentName=Surface(name=ActivityRecord{182213625 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity t10478}#34530)/@0xcc01bdc
-      editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=0
-      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-    SoftInputShowHide[0] #5264:
-      time=2026-08-02 13:52:37.933 (timestamp=34537838)
-      reason=SHOW_SOFT_INPUT inFullscreenMode=false
-      requestClient=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0}
-    6:22.227 (timestamp=34762132)
-      reason=SHOW_SOFT_INPUT inFullscreenMode=false
-      requestClient=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0}
-      focusedWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      requestWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeLayeringTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeInputTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeControlTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeSurfaceParentName=Surface(name=ActivityRecord{182213625 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity t10478}#34530)/@0xcc01bdc
-      editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=0
-      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
-    SoftInputShowHide[0] #5268:
-      time=2026-08-02 13:56:57.053 (timestamp=34796958)
-      reason=SHOW_SOFT_INPUT inFullscreenMode=false
-      requestClient=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0}
-      focusedWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      requestWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeLayeringTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeInputTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeControlTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      imeSurfaceParentName=Surface(name=ActivityRecord{182213625 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity t10478}#34530)/@0xcc01bdc
-      editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=0
-      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+  mSoftInputShowHideHistory:
     SoftInputShowHide[0] #5269:
       time=2026-08-02 13:56:57.083 (timestamp=34796988)
       reason=HIDE_SOFT_INPUT inFullscreenMode=false
@@ -212,7 +116,41 @@ portedDisplayId=0}:
       imeControlTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
       imeSurfaceParentName=Surface(name=ActivityRecord{182213625 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity t10478}#34530)/@0xcc01bdc
       editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=0
-    vity t10478}#34530)/@0xcc01bdc
+      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+    SoftInputShowHide[0] #5270:
+      time=2026-08-02 13:57:41.906 (timestamp=34841811)
+      reason=SHOW_SOFT_INPUT inFullscreenMode=false
+      requestClient=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0}
+      focusedWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      requestWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeLayeringTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeInputTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeControlTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeSurfaceParentName=Surface(name=ActivityRecord{182213625 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity t10478}#34530)/@0xcc01bdc
+      editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=0
+      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+    SoftInputShowHide[0] #5271:
+      time=2026-08-02 13:57:44.400 (timestamp=34844305)
+      reason=SHOW_SOFT_INPUT inFullscreenMode=false
+      requestClient=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0}
+      focusedWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      requestWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeLayeringTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeInputTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeControlTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeSurfaceParentName=Surface(name=ActivityRecord{182213625 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity t10478}#34530)/@0xcc01bdc
+      editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=0
+      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+    SoftInputShowHide[0] #5272:
+      time=2026-08-02 13:57:44.403 (timestamp=34844308)
+      reason=HIDE_SOFT_INPUT inFullscreenMode=false
+      requestClient=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0}
+      focusedWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      requestWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeLayeringTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeInputTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeControlTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeSurfaceParentName=Surface(name=ActivityRecord{182213625 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity t10478}#34530)/@0xcc01bdc
       editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=0
       focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
     SoftInputShowHide[0] #5273:
@@ -222,25 +160,16 @@ portedDisplayId=0}:
       focusedWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
       requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
       imeLayeringTargetName=Window{ff74a1b u0 SnapshotStartingWindow for taskId=10468}
-      imeInputTargetName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      imeControlTargetName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
-      imeSurfaceParentName=Surface(name=ActivityRecord{238106330 u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity t10475}#117)/@0x79ecd5c
-      editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=2131231121
-      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-    SoftInputShowHide[0] #5274:
-      time=2026-08-02 14:04:26.984 (timestamp=35246889)
-      reason=SHOW_SOFT_INPUT inFullscreenMode=false
-      requestClient=ClientState{c095014 mUid=10337 mPid=31504 mSelfReportedDisplayId=0}
       focusedWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
       requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
-      imeLayeringTargetName=Window{ff74a1b u0 SnapshotStartingWindow for taskId=10468}
+      imeLayeringTargetName=Window{5d36cf4 u0 SnapshotStartingWindow for taskId=10468}
       imeInputTargetName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
       imeControlTargetName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
       imeSurfaceParentName=Surface(name=ActivityRecord{247894394 u0 com.termux/.app.TermuxActivity t10468}#6370)/@0xae1ef4a
       editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=2131231121
       focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-    SoftInputShowHide[0] #5275:
-      time=2026-08-02 14:04:29.744 (timestamp=35249649)
+    SoftInputShowHide[0] #5281:
+      time=2026-08-02 14:06:37.957 (timestamp=35377862)
       reason=HIDE_SOFT_INPUT inFullscreenMode=false
       requestClient=ClientState{7386920 mUid=10141 mPid=2250 mSelfReportedDisplayId=0}
       focusedWindowName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
@@ -251,97 +180,45 @@ portedDisplayId=0}:
       imeSurfaceParentName=Surface(name=ActivityRecord{238106330 u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity t10475}#117)/@0x79ecd5c
       editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=0
       focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
+    SoftInputShowHide[0] #5282:
+      time=2026-08-02 14:07:13.635 (timestamp=35413539)
+      reason=SHOW_SOFT_INPUT inFullscreenMode=false
+      requestClient=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0}
+      focusedWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      requestWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeLayeringTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeInputTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeControlTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeSurfaceParentName=Surface(name=ActivityRecord{182213625 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity t10478}#34530)/@0xcc01bdc
+      editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=0
+      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+    SoftInputShowHide[0] #5283:
+      time=2026-08-02 14:07:18.050 (timestamp=35417955)
+      reason=SHOW_SOFT_INPUT inFullscreenMode=false
+      requestClient=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0}
+      focusedWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      requestWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeLayeringTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeInputTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeControlTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeSurfaceParentName=Surface(name=ActivityRecord{182213625 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity t10478}#34530)/@0xcc01bdc
+      editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=0
+      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+    SoftInputShowHide[0] #5284:
+      time=2026-08-02 14:07:18.122 (timestamp=35418027)
+      reason=HIDE_SOFT_INPUT inFullscreenMode=false
+      requestClient=ClientState{2650373 mUid=10240 mPid=4815 mSelfReportedDisplayId=0}
+      focusedWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      requestWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeLayeringTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeInputTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeControlTargetName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      imeSurfaceParentName=Surface(name=ActivityRecord{182213625 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity t10478}#34530)/@0xcc01bdc
+      editorInfo: inputType=0 privateImeOptions=null fieldId (viewId)=0
+      focusedWindowSoftInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
   mImeTrackerService#History:
     mActiveEntries: 0 elements
     mCompletedEntries: 200 elements
-      #22572 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:996879ba (1ms):
-        startTime=2026-08-02 13:53:30.302 (timestamp=34590207) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #22573 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:9a095d0b (1ms):
-        startTime=2026-08-02 13:53:39.934 (timestamp=34599839) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #22574 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:14f39b70 (1ms):
-        startTime=2026-08-02 13:53:45.190 (timestamp=34605095) ORIGIN_CLIENT
-       PHASE_WM_NOTIFY_HIDE_ANIMATION_FINISHED
-        requestWindowName=not set
-      #22604 TYPE_SHOW - STATUS_FAIL - system_server:b7d0c9d8 (54ms):
-        startTime=2026-08-02 13:56:57.031 (timestamp=34796936) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_WM_ABORT_SHOW_IME_POST_LAYOUT
-        requestWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      #22605 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:eab3fcf6 (1ms):
-        startTime=2026-08-02 13:56:57.091 (timestamp=34796996) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
-        requestWindowName=not set
-      #22606 TYPE_HIDE - STATUS_CANCEL - system_server:bdd3700e (2ms):
-        startTime=2026-08-02 13:56:57.483 (timestamp=34797388) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
-        requestWindowName=not set
-      #22607 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:55e72cc1 (1ms):
-        startTime=2026-08-02 13:57:15.892 (timestamp=34815797) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
-        requestWindowName=not set
-      #22608 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:1e2a47ea (1ms):
-        startTime=2026-08-02 13:57:15.893 (timestamp=34815798) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
-        requestWindowName=not set
-      #22609 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:acd322cf (1ms):
-        startTime=2026-08-02 13:57:23.053 (timestamp=34822958) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
-        requestWindowName=not set
-      #22610 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:25489a69 (0ms):
-        startTime=2026-08-02 13:57:23.054 (timestamp=34822959) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
-        requestWindowName=not set
-      #22611 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:e1e221e7 (0ms):
-        startTime=2026-08-02 13:57:30.531 (timestamp=34830436) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
-        requestWindowName=not set
-      #22612 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:792105ab (0ms):
-        startTime=2026-08-02 13:57:34.972 (timestamp=34834877) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
-        requestWindowName=not set
-      #22613 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:c07ea8c0 (1ms):
-        startTime=2026-08-02 13:57:34.972 (timestamp=34834877) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
-        requestWindowName=not set
-      #22614 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:6e121b94 (0ms):
-        startTime=2026-08-02 13:57:38.663 (timestamp=34838568) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
-        requestWindowName=not set
-      #22615 TYPE_SHOW - STATUS_SUCCESS - com.google.android.googlequicksearchbox:search:f67dc997 (355ms):
-        startTime=2026-08-02 13:57:41.888 (timestamp=34841793) ORIGIN_CLIENT
-        reason=SHOW_SOFT_INPUT PHASE_CLIENT_ANIMATION_FINISHED_SHOW
-        requestWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      #22616 TYPE_SHOW - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:495fd8d8 (1ms):
-        startTime=2026-08-02 13:57:42.308 (timestamp=34842213) ORIGIN_CLIENT
-        reason=SHOW_SOFT_INPUT PHASE_CLIENT_APPLY_ANIMATION
-        requestWindowName=not set
-      #22618 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:60ea1b89 (0ms):
-        startTime=2026-08-02 13:57:44.377 (timestamp=34844282) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #22617 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:8cd15437 (32ms):
-        startTime=2026-08-02 13:57:44.369 (timestamp=34844274) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_WM_NOTIFY_HIDE_ANIMATION_FINISHED
-        requestWindowName=not set
-      #22619 TYPE_SHOW - STATUS_FAIL - system_server:ffd356bd (30ms):
-        startTime=2026-08-02 13:57:44.377 (timestamp=34844282) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_WM_ABORT_SHOW_IME_POST_LAYOUT
-        requestWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
-      #22620 TYPE_HIDE - STATUS_CANCEL - system_server:ba0f4f27 (3ms):
-        startTime=2026-08-02 13:57:44.797 (timestamp=34844702) ORIGIN_SERVER
-        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
-        requestWindowName=not set
-      #22621 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:a6882b88 (1ms):
-        startTime=2026-08-02 13:57:50.665 (timestamp=34850570) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT_FROM_VIEW PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
-      #22622 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:d2684c87 (1ms):
-        startTime=2026-08-02 13:57:50.696 (timestamp=34850601) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT_FROM_VIEW PHASE_CLIENT_ALREADY_HIDDEN
-        requestWindowName=not set
       #22623 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:c9264e72 (1ms):
         startTime=2026-08-02 13:57:50.790 (timestamp=34850695) ORIGIN_CLIENT
         reason=HIDE_SOFT_INPUT_FROM_VIEW PHASE_CLIENT_ALREADY_HIDDEN
@@ -371,14 +248,14 @@ portedDisplayId=0}:
         reason=HIDE_SOFT_INPUT_FROM_VIEW PHASE_CLIENT_ALREADY_HIDDEN
         requestWindowName=not set
       #22630 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:57a996f2 (1ms):
-        startTime=2026-08-02 13:58:14.890 (timestamp=34874795) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT_FROM_VIEW PHASE_CLIENT_ALREADY_HIDDEN
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
         requestWindowName=not set
-      #22631 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:ca86566b (2ms):
-        startTime=2026-08-02 13:58:15.359 (timestamp=34875264) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT_FROM_VIEW PHASE_CLIENT_ALREADY_HIDDEN
+      #22660 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:26acb251 (0ms):
+        startTime=2026-08-02 13:59:50.722 (timestamp=34970627) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
         requestWindowName=not set
-      #22632 TYPE_HIDE - STATUS_CANCEL (timestamp=34970628) ORIGIN_CLIENT
+      #22661 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:e7e34dd5 (0ms):
+        startTime=2026-08-02 13:59:50.723 (timestamp=34970628) ORIGIN_CLIENT
         reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
         requestWindowName=not set
       #22662 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:51963537 (1ms):
@@ -489,14 +366,14 @@ portedDisplayId=0}:
         startTime=2026-08-02 14:00:34.633 (timestamp=35014538) ORIGIN_CLIENT
         reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
         requestWindowName=not set
-      #22689 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:bc83c30 (1ms):
-        startTime=2026-08-02 14:00:37.698 (timestamp=35017603) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
+      #22689 TYPE_HIDE  startTime=2026-08-02 14:02:06.523 (timestamp=35106428) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT_FROM_VIEW PHASE_CLIENT_ALREADY_HIDDEN
         requestWindowName=not set
-      #22690 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:548debde (0ms):
-        startTime=2026-08-02 14:00:37.700 (timestamp=35017605) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT PHASE_CLIENT_ALREADY_HIDDEN
-       - com.google.android.googlequicksearchbox:search:25b49fd5 (1ms):
+      #22719 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:e1cb09f6 (1ms):
+        startTime=2026-08-02 14:02:06.555 (timestamp=35106460) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT_FROM_VIEW PHASE_CLIENT_ALREADY_HIDDEN
+        requestWindowName=not set
+      #22720 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:25b49fd5 (1ms):
         startTime=2026-08-02 14:02:06.998 (timestamp=35106903) ORIGIN_CLIENT
         reason=HIDE_SOFT_INPUT_FROM_VIEW PHASE_CLIENT_ALREADY_HIDDEN
         requestWindowName=not set
@@ -606,28 +483,125 @@ portedDisplayId=0}:
         requestWindowName=not set
       #22747 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:3658342e (1ms):
         startTime=2026-08-02 14:03:56.852 (timestamp=35216757) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT_FROM_VIEW PHASE_CLIENT_ALREADY_HIDDEN
+  reason=SHOW_SOFT_INPUT PHASE_CLIENT_APPLY_ANIMATION
         requestWindowName=not set
-      #22748 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:984a2353 (1ms):
-        startTime=2026-08-02 14:03:56.883 (timestamp=35216788) ORIGIN_CLIENT
-        reason=HIDE_SOFT_INPUT_FROM_VIEW PHASE_CLIENT_ALREADY_HIDDEN
+      #22777 TYPE_SHOW - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:fda660b7 (1ms):
+        startTime=2026-08-02 14:05:10.893 (timestamp=35290798) ORIGIN_CLIENT
+        reason=SHOW_SOFT_INPUT PHASE_CLIENT_APPLY_ANIMATION
         requestWindowName=not set
-      #22749 TYPE_HIDE - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:13e30a48 (2ms):
-              mId=com.google.android.tts/com.google.android.apps.speech.tts.googletts.settings.asr.voiceime.VoiceInputMethodService mSettingsActivityName=com.google.android.apps.speech.tts.googletts.settings.asr.voiceime.ui.VoiceImeSettingsActivity mLanguageSettingsActivityName=null mIsVrOnly=false mIsVirtualDeviceOnly=false mSupportsSwitchingToNextInputMethod=false mInlineSuggestionsEnabled=false mSupportsInlineSuggestionsWithTouchExploration=false mSuppressesSpellChecker=false mShowInInputMethodPicker=true mSupportsStylusHandwriting=false mSupportsConnectionlessStylusHandwriting=false mStylusHandwritingSettingsActivityAttr=null
-        mIsDefaultResId=0x0
-        Service:
-          priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
-          ServiceInfo:
-            name=com.google.android.apps.speech.tts.googletts.settings.asr.voiceime.VoiceInputMethodService
-            packageName=com.google.android.tts
-            labelRes=0x7f14034e nonLocalizedLabel=null icon=0x0 banner=0x0
-            enabled=true exported=true directBootAware=false
-            permission=android.permission.BIND_INPUT_METHOD
-            flags=0x0
-            ApplicationInfo:
-              name=com.google.android.apps.speech.tts.googletts.GoogleTTSRoot_Application
-              packageName=com.google.android.tts
-              labelRes=0x7f14002d nonLocalizedLabel=null icon=0x7f110000 banner=0x0
+      #22778 TYPE_SHOW - STATUS_CANCEL - com.google.android.googlequicksearchbox:search:602d7b4a (1ms):
+        startTime=2026-08-02 14:05:10.970 (timestamp=35290875) ORIGIN_CLIENT
+        reason=SHOW_SOFT_INPUT PHASE_CLIENT_APPLY_ANIMATION
+        requestWindowName=not set
+      #22779 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:67d4c477 (77ms):
+        startTime=2026-08-02 14:05:13.742 (timestamp=35293647) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT_CLOSE_CURRENT_SESSION PHASE_WM_NOTIFY_HIDE_ANIMATION_FINISHED
+        requestWindowName=not set
+      #22781 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:c4bde6d7 (1ms):
+        startTime=2026-08-02 14:05:13.842 (timestamp=35293747) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
+        requestWindowName=not set
+      #22780 TYPE_SHOW - STATUS_FAIL - system_server:183881e5 (168ms):
+        startTime=2026-08-02 14:05:13.747 (timestamp=35293652) ORIGIN_SERVER
+        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_WM_ABORT_SHOW_IME_POST_LAYOUT
+        requestWindowName=Window{75b56f1 u0 com.google.android.googlequicksearchbox/com.google.android.apps.search.assistant.surfaces.voice.robin.main.MainActivity}
+      #22782 TYPE_HIDE - STATUS_CANCEL - system_server:7476c991 (1ms):
+        startTime=2026-08-02 14:05:14.335 (timestamp=35294240) ORIGIN_SERVER
+        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
+        requestWindowName=not set
+      #22783 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:d6238d3d (0ms):
+        startTime=2026-08-02 14:05:23.528 (timestamp=35303433) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
+        requestWindowName=not set
+      #22784 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:3deaf52e (0ms):
+        startTime=2026-08-02 14:05:23.528 (timestamp=35303433) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
+        requestWindowName=not set
+      #22785 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:d40dad4a (0ms):
+        startTime=2026-08-02 14:05:33.147 (timestamp=35313052) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
+        requestWindowName=not set
+      #22786 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:623ea298 (0ms):
+        startTime=2026-08-02 14:05:40.518 (timestamp=35320423) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
+        requestWindowName=not set
+      #22787 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:5a852931 (0ms):
+        startTime=2026-08-02 14:05:40.521 (timestamp=35320426) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
+        requestWindowName=not set
+      #22788 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:46ba6c8b (0ms):
+        startTime=2026-08-02 14:05:53.025 (timestamp=35332930) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
+        requestWindowName=not set
+      #22789 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:64d95d1c (1ms):
+        startTime=2026-08-02 14:06:05.209 (timestamp=35345114) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
+        requestWindowName=not set
+      #22790 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:ab79d534 (0ms):
+        startTime=2026-08-02 14:06:05.210 (timestamp=35345115) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
+        requestWindowName=not set
+      #22791 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:6105703f (1ms):
+        startTime=2026-08-02 14:06:14.232 (timestamp=35354137) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
+        requestWindowName=not set
+      #22792 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:8ed3607b (0ms):
+        startTime=2026-08-02 14:06:23.021 (timestamp=35362926) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
+        requestWindowName=not set
+      #22793 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:a16b2648 (1ms):
+        startTime=2026-08-02 14:06:23.022 (timestamp=35362927) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
+        requestWindowName=not set
+      #22794 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:6be2cacc (1ms):
+        startTime=2026-08-02 14:06:32.958 (timestamp=35372863) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
+        requestWindowName=not set
+      #22795 TYPE_HIDE - STATUS_FAIL - com.google.android.googlequicksearchbox:search:912d911d (0ms):
+        startTime=2026-08-02 14:06:33.705 (timestamp=35373610) ORIGIN_CLIENT
+        reason=HIDE_SOFT_INPUT PHASE_CLIENT_VIEW_SERVED
+        requestWindowName=not set
+      #22796 TYPE_HIDE - STATUS_CANCEL - com.sec.android.app.launcher:4e9f299a (4ms):
+        startTime=2026-08-02 14:06:35.307 (timestamp=35375212) ORIGIN_SERVER
+        reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_ALREADY_HIDDEN
+        requestWindowName=not set
+      #22797 TYPE_HIDE - STATUS_CANCEL - system_server:4c7d751d (8ms):
+        startTime=2026-08-02 14:06:35.369 (timestamp=35375274) ORIGIN_SERVER
+        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
+        requestWindowName=not set
+      #22799 TYPE_SHOW - STATUS_CANCEL - com.termux:91362f0f (19ms):
+        startTime=2026-08-02 14:06:36.168 (timestamp=35376073) ORIGIN_SERVER
+        reason=SHOW_RESTORE_IME_VISIBILITY PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+        requestWindowName=not set
+      #22801 TYPE_SHOW - STATUS_CANCEL - com.termux:80c51a34 (1ms):
+        startTime=2026-08-02 14:06:36.233 (timestamp=35376138) ORIGIN_CLIENT
+        reason=SHOW_SOFT_INPUT PHASE_CLIENT_REPORT_REQUESTED_VISIBLE_TYPES
+        requestWindowName=not set
+      #22798 TYPE_SHOW - STATUS_CANCEL - com.termux:60fe2551 (139ms):
+        startTime=2026-08-02 14:06:36.135 (timestamp=35376040) ORIGIN_SERVER
+        reason=ATTACH_NEW_INPUT PHASE_WM_ABORT_SHOW_IME_POST_LAYOUT
+        requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
+      #22800 TYPE_SHOW - STATUS_SUCCESS - system_server:726715af (405ms):
+        startTime=2026-08-02 14:06:36.175 (timestamp=35376080) ORIGIN_SERVER
+        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_CLIENT_ANIMATION_FINISHED_SHOW
+        requestWindowName=Window{483c356 u0 com.termux/com.termux.app.TermuxActivity}
+      #22802 TYPE_HIDE - STATUS_CANCEL - com.sec.android.app.launcher:38793393 (1ms):
+        startTime=2026-08-02 14:06:37.866 (timestamp=35377771) ORIGIN_SERVER
+        reason=HIDE_UNSPECIFIED_WINDOW PHASE_CLIENT_ALREADY_HIDDEN
+        requestWindowName=not set
+      #22804 TYPE_SHOW - STATUS_CANCEL - system_server:8fba2dc (9ms):
+        startTime=2026-08-02 14:06:37.929 (timestamp=35377834) ORIGIN_SERVER
+        reason=CONTROLS_CHANGED PHASE_CLIENT_ON_CONTROLS_CHANGED
+        requestWindowName=not set
+      #22803 TYPE_HIDE - STATUS_SUCCESS - system_server:d54b8ed9 (139ms):
+        startTime=2026-08-02 14:06:37.890 (timestamp=35377795) ORIGIN_SERVER
+        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_WM_NOTIFY_IME_VISIBILITY_CHANGED_FROM_CLIENT
+        requestWindowName=Window{f1d50db u0 com.sec.android.app.launcher/com.android.quickstep.RecentsActivity}
+      #22805 TYPE_HIDE - STATUS_CANCEL - system_server:2079f58c (23ms):
+        startTime=2026-08-02 14:06:38.398 (timestamp=35378303) ORIGIN_SERVER
+        reason=IME_REQUESTED_CHANGED_LISTENER PHASE_SERVER_SHOULD_HIDE
+        requestWindowName=not set
+      #22807 TYPE_HIDE - STATUS_CANCEL              labelRes=0x7f14002d nonLocalizedLabel=null icon=0x7f110000 banner=0x0
               className=com.google.android.apps.speech.tts.googletts.GoogleTTSRoot_Application
               processName=com.google.android.tts
               taskAffinity=null
@@ -709,14 +683,21 @@ portedDisplayId=0}:
           InputMethodSubtype #0:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale= mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=312418808
       InputMethod #2:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=1179649 mSubtypeLocale=es_US mSubtypeLanguageTag=es-US mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=1179649
-          InputMethodSubtype #16:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=1245184 mSubtypeLocale=eu mSubtypeLanguageTag=eu mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=1245184
-          InputMethodSubtype #17:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=1310720 mSubtypeLocale=el mSubtypeLanguageTag=el mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=1310720
-          InputMethodSubtype #18:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=1376256 mSubtypeLocale=tl mSubtypeLanguageTag=tl mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=1376256
-          InputMethodSubtype #19:
+        mId=com.samsung.android.honeyboard/.service.HoneyBoardService mSettingsActivityName=com.samsung.android.honeyboard.settings.common.HoneyBoardSettingsActivity mLanguageSettingsActivityName=null mIsVrOnly=false mIsVirtualDeviceOnly=false mSupportsSwitchingToNextInputMethod=false mInlineSuggestionsEnabled=true mSupportsInlineSuggestionsWithTouchExploration=false mSuppressesSpellChecker=false mShowInInputMethodPicker=true mSupportsStylusHandwriting=true mSupportsConnectionlessStylusHandwriting=false mStylusHandwritingSettingsActivityAttr=null
+        mIsDefaultResId=0x7f050009
+        Service:
+          priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+          ServiceInfo:
+            name=com.samsung.android.honeyboard.service.HoneyBoardService
+            packageName=com.samsung.android.honeyboard
+            enabled=true exported=true directBootAware=true
+            permission=android.permission.BIND_INPUT_METHOD
+            flags=0x0
+            ApplicationInfo:
+              name=com.samsung.android.honeyboard.app.HoneyBoardApplication
+              packageName=com.samsung.android.honeyboard
+              labelRes=0x7f1301a2 nonLocalizedLabel=null icon=0x7f100000 banner=0x0
+              className=com.samsung.android.honeyboard.app.HoneyBoardApplication
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=1441792 mSubtypeLocale=fr mSubtypeLanguageTag=fr mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=1441792
           InputMethodSubtype #20:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=1441798 mSubtypeLocale=fr_CA mSubtypeLanguageTag=fr-CA mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=1441798
@@ -760,15 +741,15 @@ portedDisplayId=0}:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=3276809 mSubtypeLocale=pt_BR mSubtypeLanguageTag=pt-BR mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=3276809
           InputMethodSubtype #40:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=3342336 mSubtypeLocale=ru mSubtypeLanguageTag=ru mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=3342336
-          InputMethodSubtype #67:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=5767168 mSubtypeLocale=gu mSubtypeLanguageTag=gu mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=5767168
-          InputMethodSubtype #68:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=5832704 mSubtypeLocale=kn mSubtypeLanguageTag=kn mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=5832704
-          InputMethodSubtype #69:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=6291456 mSubtypeLocale=ml mSubtypeLanguageTag=ml mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=6291456
-          InputMethodSubtype #70:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=6356992 mSubtypeLocale=mr mSubtypeLanguageTag=mr mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=6356992
-          InputMethodSubtype #71:
+          InputMethodSubtype #41:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=3407872 mSubtypeLocale=ro mSubtypeLanguageTag=ro mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=3407872
+          InputMethodSubtype #42:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=3473408 mSubtypeLocale=sq mSubtypeLanguageTag=sq mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=3473408
+          InputMethodSubtype #43:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=3538944 mSubtypeLocale=fi mSubtypeLanguageTag=fi mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=3538944
+          InputMethodSubtype #44:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=3604480 mSubtypeLocale=sr mSubtypeLanguageTag=sr mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=3604480
+          InputMethodSubtype #45:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=6422528 mSubtypeLocale=pa mSubtypeLanguageTag=pa mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=6422528
           InputMethodSubtype #72:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=6488064 mSubtypeLocale=si mSubtypeLanguageTag=si mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=6488064
@@ -812,14 +793,15 @@ portedDisplayId=0}:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=8454144 mSubtypeLocale=szl mSubtypeLanguageTag=szl mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=8454144
           InputMethodSubtype #92:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=8519680 mSubtypeLocale=bo mSubtypeLanguageTag=bo mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=8519680
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=1441842 mSubtypeLocale=fr_BE mSubtypeLanguageTag=fr-BE mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=1441842
-          InputMethodSubtype #119:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=1441848 mSubtypeLocale=fr_CH mSubtypeLanguageTag=fr-CH mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=1441848
-          InputMethodSubtype #120:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=19464192 mSubtypeLocale=fy mSubtypeLanguageTag=fy mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=19464192
-          InputMethodSubtype #121:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=19922944 mSubtypeLocale=fur mSubtypeLanguageTag=fur mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=19922944
-          InputMethodSubtype #122:
+          InputMethodSubtype #93:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=9568256 mSubtypeLocale=ug mSubtypeLanguageTag=ug mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=9568256
+          InputMethodSubtype #94:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=9633792 mSubtypeLocale=cy mSubtypeLanguageTag=cy mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=9633792
+          InputMethodSubtype #95:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=8585216 mSubtypeLocale=sa mSubtypeLanguageTag=sa mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=8585216
+          InputMethodSubtype #96:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=8650752 mSubtypeLocale=kok mSubtypeLanguageTag=kok mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=8650752
+          InputMethodSubtype #97:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=20119552 mSubtypeLocale=gll mSubtypeLanguageTag=gll mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=20119552
           InputMethodSubtype #123:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=1048632 mSubtypeLocale=de_CH mSubtypeLanguageTag=de-CH mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=1048632
@@ -862,14 +844,14 @@ portedDisplayId=0}:
           InputMethodSubtype #142:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=25624657 mSubtypeLocale=mzg_PL mSubtypeLanguageTag=mzg-PL mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=25624657
           InputMethodSubtype #143:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=33619968 mSubtypeLocale=ori mSubtypeLanguageTag=ori mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=33619968
-          InputMethodSubtype #169:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=34144256 mSubtypeLocale=pan mSubtypeLanguageTag=pan mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=34144256
-          InputMethodSubtype #170:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=35651584 mSubtypeLocale=scn mSubtypeLanguageTag=scn mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=35651584
-          InputMethodSubtype #171:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=35717120 mSubtypeLocale=sin mSubtypeLanguageTag=sin mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=35717120
-          InputMethodSubtype #172:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=25690112 mSubtypeLocale=mfe mSubtypeLanguageTag=mfe mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=25690112
+          InputMethodSubtype #144:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=26279936 mSubtypeLocale=mwl mSubtypeLanguageTag=mwl mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=26279936
+          InputMethodSubtype #145:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=26476544 mSubtypeLocale=nap mSubtypeLanguageTag=nap mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=26476544
+          InputMethodSubtype #146:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=21495815 mSubtypeLocale=nrf_FR mSubtypeLanguageTag=nrf-FR mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=21495815
+          InputMethodSubtype #147:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=1179717 mSubtypeLocale=es_LA mSubtypeLanguageTag=es-LA mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=1179717
           InputMethodSubtype #173:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=1179753 mSubtypeLocale=es_MX mSubtypeLanguageTag=es-MX mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=1179753
@@ -912,14 +894,14 @@ portedDisplayId=0}:
           InputMethodSubtype #192:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=18415616 mSubtypeLocale=dgi mSubtypeLanguageTag=dgi mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=18415616
           InputMethodSubtype #193:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=22609920 mSubtypeLocale=gil mSubtypeLanguageTag=gil mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=22609920
-          InputMethodSubtype #219:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=23068672 mSubtypeLocale=rn mSubtypeLanguageTag=rn mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=23068672
-          InputMethodSubtype #220:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=23592960 mSubtypeLocale=ln mSubtypeLanguageTag=ln mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=23592960
-          InputMethodSubtype #221:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=24379392 mSubtypeLocale=lg mSubtypeLanguageTag=lg mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=24379392
-          InputMethodSubtype #222:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=18874368 mSubtypeLocale=dga mSubtypeLanguageTag=dga mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=18874368
+          InputMethodSubtype #194:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=19005440 mSubtypeLocale=div mSubtypeLanguageTag=div mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=19005440
+          InputMethodSubtype #195:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=19202048 mSubtypeLocale=ee mSubtypeLanguageTag=ee mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=19202048
+          InputMethodSubtype #196:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=19333120 mSubtypeLocale=fj mSubtypeLanguageTag=fj mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=19333120
+          InputMethodSubtype #197:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=24576000 mSubtypeLocale=mad mSubtypeLanguageTag=mad mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=24576000
           InputMethodSubtype #223:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=24641536 mSubtypeLocale=mg mSubtypeLanguageTag=mg mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=24641536
@@ -962,14 +944,14 @@ portedDisplayId=0}:
           InputMethodSubtype #242:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=26607616 mSubtypeLocale=nia mSubtypeLanguageTag=nia mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=26607616
           InputMethodSubtype #243:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=38141952 mSubtypeLocale=amh mSubtypeLanguageTag=amh mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=38141952
-          InputMethodSubtype #269:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=38207488 mSubtypeLocale=arz mSubtypeLanguageTag=arz mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=38207488
-          InputMethodSubtype #270:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=38273024 mSubtypeLocale=apc mSubtypeLanguageTag=apc mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=38273024
-          InputMethodSubtype #271:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=38338560 mSubtypeLocale=arq mSubtypeLanguageTag=arq mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=38338560
-          InputMethodSubtype #272:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=26738688 mSubtypeLocale=ns mSubtypeLanguageTag=ns mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=26738688
+          InputMethodSubtype #244:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=33685504 mSubtypeLocale=om mSubtypeLanguageTag=om mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=33685504
+          InputMethodSubtype #245:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=33751040 mSubtypeLocale=pau mSubtypeLanguageTag=pau mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=33751040
+          InputMethodSubtype #246:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=33882112 mSubtypeLocale=pag mSubtypeLanguageTag=pag mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=33882112
+          InputMethodSubtype #247:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=38797312 mSubtypeLocale=ary mSubtypeLanguageTag=ary mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=38797312
           InputMethodSubtype #273:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=38862848 mSubtypeLocale=aeb mSubtypeLanguageTag=aeb mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=38862848
@@ -1012,14 +994,14 @@ portedDisplayId=0}:
           InputMethodSubtype #292:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=41222144 mSubtypeLocale=tkr mSubtypeLanguageTag=tkr mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=41222144
           InputMethodSubtype #293:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=50593792 mSubtypeLocale=pck mSubtypeLanguageTag=pck mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=50593792
-          InputMethodSubtype #319:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=50659328 mSubtypeLocale=sag mSubtypeLanguageTag=sag mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=50659328
-          InputMethodSubtype #320:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=50724864 mSubtypeLocale=sot mSubtypeLanguageTag=sot mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=50724864
-          InputMethodSubtype #321:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=50790400 mSubtypeLocale=son mSubtypeLanguageTag=son mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=50790400
-          InputMethodSubtype #322:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=41484288 mSubtypeLocale=lis mSubtypeLanguageTag=lis mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=41484288
+          InputMethodSubtype #294:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=41943040 mSubtypeLocale=mak mSubtypeLanguageTag=mak mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=41943040
+          InputMethodSubtype #295:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=42008576 mSubtypeLocale=mon mSubtypeLanguageTag=mon mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=42008576
+          InputMethodSubtype #296:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=42074112 mSubtypeLocale=nqo mSubtypeLanguageTag=nqo mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=42074112
+          InputMethodSubtype #297:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=50855936 mSubtypeLocale=wbp mSubtypeLanguageTag=wbp mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=50855936
           InputMethodSubtype #323:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=50921472 mSubtypeLocale=qwe mSubtypeLanguageTag=qwe mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=50921472
@@ -1062,14 +1044,14 @@ portedDisplayId=0}:
           InputMethodSubtype #342:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=52953088 mSubtypeLocale=kar mSubtypeLanguageTag=kar mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=52953088
           InputMethodSubtype #343:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=39976960 mSubtypeLocale=dty mSubtypeLanguageTag=dty mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=39976960
-          InputMethodSubtype #369:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=40042496 mSubtypeLocale=khn mSubtypeLanguageTag=khn mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=40042496
-          InputMethodSubtype #370:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=40173568 mSubtypeLocale=unr mSubtypeLanguageTag=unr mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=40173568
-          InputMethodSubtype #371:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=40239224 mSubtypeLocale=new_NP mSubtypeLanguageTag=new-NP mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=40239224
-          InputMethodSubtype #372:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=53018624 mSubtypeLocale=shn mSubtypeLanguageTag=shn mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=53018624
+          InputMethodSubtype #344:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=53739520 mSubtypeLocale=aii mSubtypeLanguageTag=aii mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=53739520
+          InputMethodSubtype #345:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=53805056 mSubtypeLocale=syc mSubtypeLanguageTag=syc mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=53805056
+          InputMethodSubtype #346:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=53870592 mSubtypeLocale=tru mSubtypeLanguageTag=tru mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=53870592
+          InputMethodSubtype #347:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=41287680 mSubtypeLocale=tcy mSubtypeLanguageTag=tcy mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=41287680
           InputMethodSubtype #373:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=53477376 mSubtypeLocale=sgh mSubtypeLanguageTag=sgh mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=53477376
@@ -1112,14 +1094,14 @@ portedDisplayId=0}:
           InputMethodSubtype #392:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=57737216 mSubtypeLocale=fuv mSubtypeLanguageTag=fuv mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=57737216
           InputMethodSubtype #393:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=60227584 mSubtypeLocale=ngl mSubtypeLanguageTag=ngl mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=60227584
-          InputMethodSubtype #419:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=60293120 mSubtypeLocale=nus mSubtypeLanguageTag=nus mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=60293120
-          InputMethodSubtype #420:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=60358656 mSubtypeLocale=nyf mSubtypeLanguageTag=nyf mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=60358656
-          InputMethodSubtype #421:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=67108864 mSubtypeLocale=nym mSubtypeLanguageTag=nym mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=67108864
-          InputMethodSubtype #422:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=57802752 mSubtypeLocale=gba mSubtypeLanguageTag=gba mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=57802752
+          InputMethodSubtype #394:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=57868288 mSubtypeLocale=gog mSubtypeLanguageTag=gog mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=57868288
+          InputMethodSubtype #395:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=57933824 mSubtypeLocale=guw mSubtypeLanguageTag=guw mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=57933824
+          InputMethodSubtype #396:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=57999360 mSubtypeLocale=gux mSubtypeLanguageTag=gux mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=57999360
+          InputMethodSubtype #397:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=67174400 mSubtypeLocale=nyn mSubtypeLanguageTag=nyn mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=67174400
           InputMethodSubtype #423:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=67239936 mSubtypeLocale=nyy mSubtypeLanguageTag=nyy mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=67239936
@@ -1162,14 +1144,14 @@ portedDisplayId=0}:
           InputMethodSubtype #442:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=69271552 mSubtypeLocale=yao mSubtypeLanguageTag=yao mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=69271552
           InputMethodSubtype #443:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=71761920 mSubtypeLocale=bim mSubtypeLanguageTag=bim mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=71761920
-          InputMethodSubtype #469:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=71827456 mSubtypeLocale=biv mSubtypeLanguageTag=biv mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=71827456
-          InputMethodSubtype #470:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=71892992 mSubtypeLocale=bjv mSubtypeLanguageTag=bjv mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=71892992
-          InputMethodSubtype #471:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=72351744 mSubtypeLocale=bjw mSubtypeLanguageTag=bjw mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=72351744
-          InputMethodSubtype #472:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=69337088 mSubtypeLocale=abn mSubtypeLanguageTag=abn mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=69337088
+          InputMethodSubtype #444:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=69402624 mSubtypeLocale=acd mSubtypeLanguageTag=acd mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=69402624
+          InputMethodSubtype #445:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=69468160 mSubtypeLocale=ade mSubtypeLanguageTag=ade mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=69468160
+          InputMethodSubtype #446:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=69533696 mSubtypeLocale=adh mSubtypeLanguageTag=adh mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=69533696
+          InputMethodSubtype #447:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=72417280 mSubtypeLocale=bkc mSubtypeLanguageTag=bkc mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=72417280
           InputMethodSubtype #473:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=72482816 mSubtypeLocale=bkh mSubtypeLanguageTag=bkh mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=72482816
@@ -1212,14 +1194,14 @@ portedDisplayId=0}:
           InputMethodSubtype #492:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=74514432 mSubtypeLocale=bwq mSubtypeLanguageTag=bwq mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=74514432
           InputMethodSubtype #493:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=77004800 mSubtypeLocale=gde mSubtypeLanguageTag=gde mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=77004800
-          InputMethodSubtype #519:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=77070336 mSubtypeLocale=gej mSubtypeLanguageTag=gej mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=77070336
-          InputMethodSubtype #520:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=77135872 mSubtypeLocale=gjn mSubtypeLanguageTag=gjn mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=77135872
-          InputMethodSubtype #521:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=83886080 mSubtypeLocale=gkn mSubtypeLanguageTag=gkn mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=83886080
-          InputMethodSubtype #522:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=74579968 mSubtypeLocale=bwu mSubtypeLanguageTag=bwu mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=74579968
+          InputMethodSubtype #494:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=74645504 mSubtypeLocale=byn mSubtypeLanguageTag=byn mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=74645504
+          InputMethodSubtype #495:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=74711040 mSubtypeLocale=byv mSubtypeLanguageTag=byv mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=74711040
+          InputMethodSubtype #496:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=74776576 mSubtypeLocale=cko mSubtypeLanguageTag=cko mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=74776576
+          InputMethodSubtype #497:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=83951616 mSubtypeLocale=gmm mSubtypeLanguageTag=gmm mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=83951616
           InputMethodSubtype #523:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=84017152 mSubtypeLocale=gnd mSubtypeLanguageTag=gnd mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=84017152
@@ -1262,14 +1244,14 @@ portedDisplayId=0}:
           InputMethodSubtype #542:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=86048768 mSubtypeLocale=jbu mSubtypeLanguageTag=jbu mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=86048768
           InputMethodSubtype #543:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=88539136 mSubtypeLocale=kxx mSubtypeLanguageTag=kxx mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=88539136
-          InputMethodSubtype #569:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=88604672 mSubtypeLocale=kyf mSubtypeLanguageTag=kyf mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=88604672
-          InputMethodSubtype #570:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=88670208 mSubtypeLocale=kyq mSubtypeLanguageTag=kyq mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=88670208
-          InputMethodSubtype #571:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=89128960 mSubtypeLocale=lag mSubtypeLanguageTag=lag mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=89128960
-          InputMethodSubtype #572:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=86114304 mSubtypeLocale=jmc mSubtypeLanguageTag=jmc mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=86114304
+          InputMethodSubtype #544:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=86179840 mSubtypeLocale=kcc mSubtypeLanguageTag=kcc mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=86179840
+          InputMethodSubtype #545:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=86245376 mSubtypeLocale=kck mSubtypeLanguageTag=kck mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=86245376
+          InputMethodSubtype #546:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=86310912 mSubtypeLocale=kdl mSubtypeLanguageTag=kdl mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=86310912
+          InputMethodSubtype #547:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=89194496 mSubtypeLocale=lam mSubtypeLanguageTag=lam mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=89194496
           InputMethodSubtype #573:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=89260032 mSubtypeLocale=las mSubtypeLanguageTag=las mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=89260032
@@ -1312,14 +1294,14 @@ portedDisplayId=0}:
           InputMethodSubtype #592:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=91291648 mSubtypeLocale=mdo mSubtypeLanguageTag=mdo mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=91291648
           InputMethodSubtype #593:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=93782016 mSubtypeLocale=mzm mSubtypeLanguageTag=mzm mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=93782016
-          InputMethodSubtype #619:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=93847552 mSubtypeLocale=mzw mSubtypeLanguageTag=mzw mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=93847552
-          InputMethodSubtype #620:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=93913088 mSubtypeLocale=nba mSubtypeLanguageTag=nba mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=93913088
-          InputMethodSubtype #621:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=100663296 mSubtypeLocale=ncu mSubtypeLanguageTag=ncu mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=100663296
-          InputMethodSubtype #622:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=91357184 mSubtypeLocale=meq mSubtypeLanguageTag=meq mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=91357184
+          InputMethodSubtype #594:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=91422720 mSubtypeLocale=mfh mSubtypeLanguageTag=mfh mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=91422720
+          InputMethodSubtype #595:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=91488256 mSubtypeLocale=mfi mSubtypeLanguageTag=mfi mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=91488256
+          InputMethodSubtype #596:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=91553792 mSubtypeLocale=mfq mSubtypeLanguageTag=mfq mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=91553792
+          InputMethodSubtype #597:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=100728832 mSubtypeLocale=ndh mSubtypeLanguageTag=ndh mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=100728832
           InputMethodSubtype #623:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=100794368 mSubtypeLocale=ndz mSubtypeLanguageTag=ndz mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=100794368
@@ -1362,14 +1344,14 @@ portedDisplayId=0}:
           InputMethodSubtype #642:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=102825984 mSubtypeLocale=ozm mSubtypeLanguageTag=ozm mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=102825984
           InputMethodSubtype #643:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=105316352 mSubtypeLocale=tik mSubtypeLanguageTag=tik mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=105316352
-          InputMethodSubtype #669:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=105381888 mSubtypeLocale=toh mSubtypeLanguageTag=toh mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=105381888
-          InputMethodSubtype #670:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=105447424 mSubtypeLocale=tpm mSubtypeLanguageTag=tpm mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=105447424
-          InputMethodSubtype #671:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=105906176 mSubtypeLocale=tsw mSubtypeLanguageTag=tsw mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=105906176
-          InputMethodSubtype #672:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=102891520 mSubtypeLocale=pbi mSubtypeLanguageTag=pbi mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=102891520
+          InputMethodSubtype #644:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=102957056 mSubtypeLocale=pkb mSubtypeLanguageTag=pkb mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=102957056
+          InputMethodSubtype #645:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=103022592 mSubtypeLocale=pko mSubtypeLanguageTag=pko mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=103022592
+          InputMethodSubtype #646:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=103088128 mSubtypeLocale=poy mSubtypeLanguageTag=poy mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=103088128
+          InputMethodSubtype #647:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=105971712 mSubtypeLocale=ttj mSubtypeLanguageTag=ttj mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=105971712
           InputMethodSubtype #673:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=106037248 mSubtypeLocale=udl mSubtypeLanguageTag=udl mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=106037248
@@ -1412,14 +1394,14 @@ portedDisplayId=0}:
           InputMethodSubtype #692:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=108068864 mSubtypeLocale=arn mSubtypeLanguageTag=arn mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=108068864
           InputMethodSubtype #693:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=110559232 mSubtypeLocale=cas mSubtypeLanguageTag=cas mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=110559232
-          InputMethodSubtype #719:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=110624768 mSubtypeLocale=plg mSubtypeLanguageTag=plg mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=110624768
-          InputMethodSubtype #720:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=110690304 mSubtypeLocale=yuz mSubtypeLanguageTag=yuz mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=110690304
-          InputMethodSubtype #721:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=117440512 mSubtypeLocale=moc mSubtypeLanguageTag=moc mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=117440512
-          InputMethodSubtype #722:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=108134400 mSubtypeLocale=prk mSubtypeLanguageTag=prk mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=108134400
+          InputMethodSubtype #694:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=108199936 mSubtypeLocale=ukk mSubtypeLanguageTag=ukk mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=108199936
+          InputMethodSubtype #695:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=108265472 mSubtypeLocale=wbm mSubtypeLanguageTag=wbm mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=108265472
+          InputMethodSubtype #696:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=108331008 mSubtypeLocale=cng mSubtypeLanguageTag=cng mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=108331008
+          InputMethodSubtype #697:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=117506048 mSubtypeLocale=trn mSubtypeLanguageTag=trn mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=117506048
           InputMethodSubtype #723:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=117571584 mSubtypeLocale=arw mSubtypeLanguageTag=arw mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=117571584
@@ -1462,14 +1444,14 @@ portedDisplayId=0}:
           InputMethodSubtype #742:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=119603200 mSubtypeLocale=lrc mSubtypeLanguageTag=lrc mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=119603200
           InputMethodSubtype #743:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=ar_EG mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=-1645604504
-          InputMethodSubtype #7:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=ar_MA mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=-1422112422
-          InputMethodSubtype #8:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=as_IN mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=218187082
-          InputMethodSubtype #9:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=az_AZ mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=true mSubtypeHashCode=339572125
-          InputMethodSubtype #10:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=119668736 mSubtypeLocale=bqi mSubtypeLanguageTag=bqi mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=119668736
+          InputMethodSubtype #744:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=119734272 mSubtypeLocale=yrk mSubtypeLanguageTag=yrk mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=119734272
+          InputMethodSubtype #745:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=119799808 mSubtypeLocale=xdq mSubtypeLanguageTag=xdq mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=119799808
+          InputMethodSubtype #746:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=119865344 mSubtypeLocale=ugh mSubtypeLanguageTag=ugh mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=119865344
+          InputMethodSubtype #747:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=be_BY mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=-409053621
           InputMethodSubtype #11:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=bg mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=-1081769027
@@ -1514,14 +1496,14 @@ portedDisplayId=0}:
           InputMethodSubtype #31:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=en_IN mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=true mSubtypeHashCode=-2065319775
           InputMethodSubtype #32:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=ha_NG mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=true mSubtypeHashCode=-690641699
-          InputMethodSubtype #59:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=haw mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=true mSubtypeHashCode=1358641246
-          InputMethodSubtype #60:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=hi_IN mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=202673563
-          InputMethodSubtype #61:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=hr mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=true mSubtypeHashCode=-2025561742
-          InputMethodSubtype #62:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=en_ZA mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=true mSubtypeHashCode=-234838049
+          InputMethodSubtype #33:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=en_KE mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=true mSubtypeHashCode=-547974772
+          InputMethodSubtype #34:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=en_NG mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=true mSubtypeHashCode=-2123172723
+          InputMethodSubtype #35:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=en_PH mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=true mSubtypeHashCode=-319536210
+          InputMethodSubtype #36:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=hsb_DE mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=true mSubtypeHashCode=1388481747
           InputMethodSubtype #63:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=hu mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=true mSubtypeHashCode=-1939674289
@@ -1566,14 +1548,14 @@ portedDisplayId=0}:
           InputMethodSubtype #83:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=lt mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=true mSubtypeHashCode=1581711284
           InputMethodSubtype #84:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=rm_CH mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=true mSubtypeHashCode=280596723
-          InputMethodSubtype #111:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=rn_BI mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=true mSubtypeHashCode=1909235026
-          InputMethodSubtype #112:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=ro_RO mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=true mSubtypeHashCode=1588712477
-          InputMethodSubtype #113:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=ro_MD mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=true mSubtypeHashCode=1131240707
-          InputMethodSubtype #114:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=lv mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=true mSubtypeHashCode=1638969586
+          InputMethodSubtype #85:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=mg mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=true mSubtypeHashCode=2097036002
+          InputMethodSubtype #86:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=mk mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=-763154282
+          InputMethodSubtype #87:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=ml_IN mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=688799549
+          InputMethodSubtype #88:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=ru_RU mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=-988987337
           InputMethodSubtype #115:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=rw mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=true mSubtypeHashCode=-1597313769
@@ -1618,107 +1600,46 @@ portedDisplayId=0}:
           InputMethodSubtype #135:
             mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=tr_TR mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=true mSubtypeHashCode=1929184189
           InputMethodSubtype #136:
-            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale= mSubtypeLanguageTag= mSubtypeMode= mIsAuxiliary=true mOverridesImplicitlyEnabledSubtype=true mIsAsciiCapable=false mSubtypeHashCode=28668543
-  mSoftInputShowHideHistory End
-
-
-mInputEditorInfo:
-    inputType=0x0 imeOptions=0x0 privateImeOptions=null
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=ug mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=-537815158
+          InputMethodSubtype #137:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=uk mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=-534121074
+          InputMethodSubtype #138:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=ur_IN mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=980993151
+          InputMethodSubtype #139:
+            mSubtypeNameOverride= mLayoutLabelNonLocalized= mPkLanguageTag= mPkLayoutType= mSubtypeId=0 mSubtypeLocale=ur_PK mSubtypeLanguageTag= mSubtypeMode=keyboard mIsAuxiliary=false mOverridesImplicitlyEnabledSubtype=false mIsAsciiCapable=false mSubtypeHashCode=1178626645
+          InputMethodSubtype #140:
+Input method client state for android.view.inputmethod.InputMethodManager@2a76b65:
+  mFallbackInputConnection=RemoteInputConnectionImpl{connection=android.view.inputmethod.BaseInputConnection@91fb03a mDeactivateRequested=false mServedView=null}
+  mActive=true mRestartOnNextWindowFocus=false mBindSequence=3833 mCurImeId=com.samsung.android.honeyboard/.service.HoneyBoardService
+  mFullscreenMode=false
+  mCurMethod=com.android.internal.inputmethod.IInputMethodSession$Stub$Proxy@50828e8
+  mAccessibilityInputMethodSession(3)=android.view.inputmethod.IAccessibilityInputMethodSessionInvoker@c604b01
+  mCurRootView=android.view.ViewRootImpl@c2858e1
+  mServedView=com.google.android.apps.search.assistant.surfaces.voice.robin.ui.common.input.RobinTextInputEditText{13b57aa VFED..CL. ........ 0,0-585,135 #7f0b0de9 app:id/assistant_robin_input_collapsed_text_half_sheet aid=1073741847}
+  mNextServedView=com.google.android.apps.search.assistant.surfaces.voice.robin.ui.common.input.RobinTextInputEditText{13b57aa VFED..CL. ........ 0,0-585,135 #7f0b0de9 app:id/assistant_robin_input_collapsed_text_half_sheet aid=1073741847}
+  mServedConnecting=false
+  mCurrentEditorInfo:
+    inputType=0xac001 imeOptions=0x40000006 privateImeOptions=handlesSendAction,sendDictationEvents
     actionLabel=null actionId=0
-    initialSelStart=-1 initialSelEnd=-1 initialToolType=1 initialCapsMode=0x0
-    hintText=null label=null
-    packageName=com.google.android.googlequicksearchbox autofillId=0 fieldId=0 fieldName=null
+    initialSelStart=24 initialSelEnd=24 initialToolType=1 initialCapsMode=0x0
+    hintText=Ask Gemini label=null
+    packageName=com.google.android.googlequicksearchbox autofillId=1073741847 fieldId=2131430889 fieldName=null
     hintLocales=null
-    supportedHandwritingGestureTypes=(none)
-    supportedHandwritingGesturePreviewTypes=(none)
-    isStylusHandwritingEnabled=false
+    supportedHandwritingGestureTypes=SELECT|SELECT_RANGE|INSERT|DELETE|DELETE_RANGE|REMOVE_SPACE|JOIN_OR_SPLIT
+    supportedHandwritingGesturePreviewTypes=SELECT|SELECT_RANGE|DELETE|DELETE_RANGE
+    isStylusHandwritingEnabled=true
     writingToolsEnabled=true
-    contentMimeTypes=null
-  mShowInputRequested=false mLastShowInputRequested=false mShowInputFlags=0x0
-  mCandidatesVisibility=4 mFullscreenApplied=true mIsFullscreen=false mExtractViewHidden=false
-  mExtractedText: null
-  mExtractedToken=0
-  mIsInputViewShown=true mStatusIcon=0
-  Last computed insets:
-    contentTopInsets=1322 visibleTopInsets=1322 touchableInsets=3 touchableRegion=SkRegion((0,1322,1080,2240))
-  mSettingsObserver=SettingsObserver{mShowImeWithHardKeyboard=2}
-  mNavigationBarController={mImeDrawsImeNavBar=false mNavigationBarFrame=null mShouldShowImeSwitcherWhenImeIsShown=true mCustomImeSwitcherButtonRequestedVisible=false mAppearance=0x0 mDarkIntensity=0.0 mDrawLegacyNavigationBarBackground=false}
-  mBackCallbackRegistered=false
+    contentMimeTypes=[image/*, video/*, audio/*, text/*, application/*]
+  mServedInputConnection=RemoteInputConnectionImpl{connection=kol@fa06da6 mDeactivateRequested=false mServedView=com.google.android.apps.search.assistant.surfaces.voice.robin.ui.common.input.RobinTextInputEditText{13b57aa VFED..CL. ........ 0,0-585,135 #7f0b0de9 app:id/assistant_robin_input_collapsed_text_half_sheet aid=1073741847}}
+  mServedInputConnectionHandler=null
+  mLastPendingStartSeqId=-1
+  mCompletions=null
+  mCursorRect=Rect(0, 0 - 0, 0)
+  mCursorSelStart=0 mCursorSelEnd=0 mCursorCandStart=-1 mCursorCandEnd=-1
+  ImeBackCallbackProxy:
+    mImeCallbacks: []
 
-####################################
-Honeyboard Dump state :
-
-==================== Basic dump state ====================
-[Basic info Start]
-versionName                      : 5.9.30.90
-build flavor                     : global
-build variant                    : Global
-upgrade_status                   : 1 (UPGRADE)
-initial_pda_version              : A176USQU5BZEB
-current_pda_version              : A176USQU5BZEB
-initial_app_version_code         : 593090300
-current_app_version_code         : 593090300
-pdaVersionCode                   : A176USQU5BZEB
-pdaVersionChanged                : false
-appVersionCode                   : 593090300
-appVersionChanged                : false
-appLastUpdateTimeChanged         : true
-appUpdatedByMigration            : false
-dataMigrationStatus              : 1 (MIGRATE_NOT_NEEDED)
-[Basic info End]
-
-[DeviceConfig Start]
-salesCode : TMK
-countryCode : USA
-region : USA
-deviceType : phone
-deviceName : a17x
-platform : erd8535
-predictEngineType : 
-spenUspLevel : 0
-hapticSupported : true
-isWifiOnlyModel : false
-isTablet : false
-hasMediumMemory : true
-hasHighMemory : false
-isRequiresForcedGlobalDevice : false 
-
-[DeviceConfig End]
-
-[SystemConfig Start]
-IsUltraPowerSaveMode : false
-IsPowerSaveMode : false
-IsEmergencyMode : false
-IsBatteryReserveMode : false
-IsKnoxMode : false
-KnoxState : 0
-CoverDisplayMode : false
-FlipCoverDisplayMode : false
-IsDexMode : false
-IsDexPhoneDisplay : true
-IsDexStandAloneMode : false
-IsDexDesktopDisplay : false
-IsPhysicalKeyboardConnected : false
-TabletMode : false
-SemDisplayDeviceType : 0
-IsUniversalSwitchOn : false
-IsSoundFeedbackOn : true
-IsVibrationFeedbackOn : false
-IsGestureMode : false
-IsEnabledAccessibilityScreenReader : false
-IsTalkBackRapidKeyInputOn : false
-isDeviceProvisioned: true
-isNightMode : true
-isOneHandAnyScreenRunning: false
-isNavBarGestureBackOnKeyboard : false
-defaultInputMethod: com.samsung.android.honeyboard/.service.HoneyBoardService
-enabledInputMethods: com.google.android.inputmethod.latin/com.google.android.inputmethod.latin/.latin.LatinIME:com.samsung.android.honeyboard/.service.HoneyBoardService;65537:com.google.android.gms/.autofill.service.AutofillInputMethodServiceProxy:com.samsung.android.honeyboard/com.samsung.android.honeyboard/.Service:com.google.android.tts/com.google.android.apps.speech.tts.googletts.settings.asr.voiceime.VoiceInputMethodService:com.google.android.inputmethod.latin/com.android.inputmethod.latin.LatinIME;1594443099
-isDefaultDisplay: true
-isDeviceProtected: false
-isHighRefreshRateDisplayMode: false
-isBoldFont: true
-isSemMinimalBatteryUse: false
-isSemEasyModeSwitchOn: false
+witchOn: false
 isDirectWritingOn: true
 isDirectWritingToolbarOn: true
 penUsageDetected: 0
@@ -1744,9 +1665,9 @@ isGalaxyTheme : false
 mainThemeId : 285212672
 isKeyguardScreen : false
 editorOptions : 
-InputType : 0x0
-ImeOptions : 0x0
-privateImeOpt : RAW = null
+InputType : 0xac001
+ImeOptions : 0x40000006
+privateImeOpt : RAW = handlesSendAction,sendDictationEvents
 {disableAutoCorrection = false, disableEmoticonInput= false, disableAmbiguousMode = false, disableHWRInput = false, disableVoice = false,
  disableHanjaInput = false, disableClipboard = false, disableModeChange = false, disableModes = false,
  disableCMSymbolKey = false, disableLatelyUsedSymbolsKey = false, disableBackspaceKey = false, disableEnterKey = false, disableSpaceKey = false,
@@ -1774,7 +1695,24 @@ Context protected :  false
 [Swiftkey SDK Log Start]
 075BrZF2rvjTKFgE2hQD5mtorxfTiK7DqgALhm7DKPW1mWHmnOYdNiUDC9KAATblRDtLqfiNAiSFHIza8QXOl9T88s3xCcozYUQm8Q5QDtIQEEHPhnGCyJwolBBTdQ6afZVWB0YMZ2c6GP3kiWi6GNgP8PgjQX0LtzvQZHJf5xs=
 EI2aI+vr9dS3CS6V0Xmy4r5jtFoo1L+dcnVi6DxoZ9c+7CgFCm+OiwEjQgJRK5gyW8Ot9QFjQuv4tmZRGrznzewb4k3ll0xWAG6ETShhMKBGeJcNN5itjWkXSVd7RRom
-IehW9h9nl7q9DCEBxFDCVqpXkJk8EG3hAIC0Tt2845xTcVMcE9YeUO3wfkSZGTlAWjrrfOMhC2cBPi6KWy4eyB13DvORywYHG/McAEu77l9MP8MGXhNerlg==
+IehW9h9nl7q9DCEBxFDCVqpXkJk8EG3hAIC0Tt2845xTcVMcE9YeUO3wfkSZGTlAWjrrfDZ9r83D5Ofu5e9MuNXtVBj6AtSY5p4QuFUZyFbesl8QHTWmyGBRMRNFA++e
+S207tGpfHbyfqDk4jQxSvV0NbCaVGM3CFVimmil28tD6NP5/Ro1VK3PWJ7pvs3gNjBzxKCVRfSszxP4LcR/KvujCiS4me/9brF913r+6gpQnuxE+dKkk+xn9jVQqHvtb6qsq+F3b2w0dOzMf4yIcobGfCyOfIWaramgXuBSRPa7NaLb20KijU+AgS1xKlU98BreTf7kuukdVzEVCr6V29Q==
+jJo3CrMP2+xPUR0RTpWRM3ZMdC/TU+dAOcpJZXSmAlJWvD+oA6dzsNca7X5QKJAo7o1qR89anHRD1colXWKnH6EJKTNTzS/uXVcro35L1ZHJJrqK13b4ORNYwK+NyeHAboIfVkCV3Osz6+Bi9oa/ZtjEfa+7QgKyTcPd2AfC7RoIH3iMc7aKBkpc/B0WJUcK4EwIDENINHyfLz4nKNPrUA==
+KqftOXiWyd24FDjb6VkQaSXe3pCotbNJ1yVZ/BzPofGSf+5kuITr1W/QcwwZiIKYTq239lAg1DmsOP4ssYo+V20eSeU/WOAxCQL72fdQ7vJUcaRIFPRZ7zTm8kq3ITyB4fMKG2EHarA3eZzHvWMco79HmHoUS0JHbW+7sqGI0TQjHf1Ffu6EQyQi3aMm39IzK0xGcgub1YR3R84zLgV6XmEFP/gWuqd3fZKdmQGZvrsaTVIi9hXc1U5c9Q==
+mZmawe569gaKXCEo45QX+fPWwPAtjWArR0u1zwfLO/y6f8UXLnXGC+MmMBk9TTV8wr3t8QNCh6uprt57dVxHJJ5Gz9Z+zhsHH/Vkvy2SHIijjQAGP2obIq+01AfuJWrrQKyf9BAO+SNBiVGuTXZ8suC2YsPA6vVM+ryFx/YW1BzQowlnN0OaHotCPfBWm6C7hRvkQSI5oldVkUKVlM5ZNA==
+mZmawe569gaKXCEo45QX+RzszZRgP3Ub6mqbwhpuQh0evPquLHBZqEZ0vCZLtgmLmxHi5uWE4j3zjMXlkYgJd2KJdwaRvWWmftzoL4KXXH6V4flt2T1GMOYDYWlfZaeperXVj7NQL8xeAEOYoH7hzQ7I+N+6s4gcTgqUUwq46ben5usAwDh5HOKKT1vZ8Z6wiPEYaGL/lVbhk9H0p35rRUN1rrA5QqHp1InevITHncmXh/T+R1gaZZRiAgLgD4vZTfTC794Oo48bYlii7tw+vg==
+tFzemTag754BovUFN6vxF//Orpl6ShBUa1rezPc9TaJN5+/EyELA7bW7ncgu0HhWbUg7u69czBfbXUHnZtIDhqqnP7AmMTfehiZ32R1Gagd0hM36KyVUKGAAD/eY6jZFPSF9pJs/SWlPbxzg8GUvYPOKgf8YUcuhtpThTxkOPDsVh2dt9rhEcH8mgBT3B7YSqhuN88zfLaMuu5+rr/Siig==
+ZWTxqQxP8VVXPwtpnjV4aCWed+aS5wqiHQYFLuVAKQ+UH8KF/K0YRCJmM5CKNXmWzKJ+iSb9WordiifITqlrW+cTK6/PAvDRYGfPLfBwF2Gk7vROwllsFI6ZnmWpBWyzbog/fSUoyaiS9MFCfNZg6uzFvgH7SHZcLJndjCZqhT8GuJN5WqeBbJaux9avOIYxKSHhmBCcHl6zMi3ljlBnS9ut483cY3WPJ2BtqfZ0qZ6AXJ6RsomKqPRhPw==
+0d3QZsAALf64g395MudE9Vdi++175g8Lml6vc531POExU55duWYneNWBjn3s+XAW6CR6vD5ZT4inwlWyT0t0bpZUcVtHdkY5edwAM+ok/QlNZSt12ZaerKKUTWbjQrDho44fx9XjpVQHVSGb8lDRk1RzjljaXsxsDO47mYdncqTj2YR+L3+75ZCisOlyWdmu+q9H0/2r3HlLnDFzXWPIGg==
+0d3QZsAALf64g395MudE9YVAktSBVtAuVPTdFGCSOhZtxI2RFWtBnU0h00KSzs21ERNZLbp8eYLF50OodAsEaRkhmEyd6q2jXIKPTlTPf6BahBUWaG2FYn8TSoLikQpkCN4/UyiYCN/Fc3ugaYzboKKmnIdTQmAJSfagfwE2a/nrU/BI4q9+a+U74EIHqskqzdiXAxyy8VjAvXttptKoTwFKvo9fDH/n5lAvxfWkZfYeY4243pz1rahdc5jo9MbfjgOVLVzA3zONo1Dny7SnUw==
+Ad0P4BNnQNFAmR6LhIKwyhFyM9+u8NFoS8d/iHUeL0mOBt++6Bl9X0qF/ga1d2UOn36t9U0KFNjhXkLj1iIQ6clR6ShGpCoYr8ZWGR5fB/VE5yPeaotFBTZRcZYU30kkVNC9bBPi9XPZMI0ahWqaXRJWOXBB7/nTMdxq57tVL9y0vUtgDcw6d8jQT2q7e7Hx
+NyIATB+eCPF0KzF/OAzJ1q7/H1jBN6huvWv5DNt5/iHW3AkTGF+dnTB7pWNUFQhZp0UmAw1jND9qCJXjevWXIScFEWv/3FfT2wKBvVVPlZEJET/a/M2PFNvaxGugV9srh1/U33K+RVDg5X6baZ3yEb42efJNptZXa2sib75jiu8NBpZvrIHLCMkesMOBs9bos+ns5dSYATqG6SsfEQH/bQ==
++xCp56xDnYWxth6v8K23XOFDXsDovXb6XsmvWPX6sNVmoKa17DO4MITUEUyR7JkpcKh7k1tIEFhkESmktYcOyLSLGE9LNx4nfUaDLaQQ/t0SEc8caQQjpciiTGco8lsRUjImmqmXC2lKMv5dCMd1w8rNzKKB5dL5XegT+DuUqlnNHawUP2WGmIigPKdJ8BOBDiEaqduLo6JZroR2mtoOSQKbJwUPivdKKooGR4hTKeyx/VLfccVLGaOA9tXhE6aWV7RPO4Rid7xmLHwPd5v2Og==
+2UAjG1RpJxX9GaxW7Rq8DfGyDHjym0OcgBXXdW8b4e6qAOJeQgaWZzysVBGq+O9qc9Xy3eP81StjkNYn7cePOmwO3tlQRBEB2W3his9vGV1qv2Dag9Q+iDXitLcYOk3AcXsrtCx8IH4i74y1hFyOeMJD567QpJwTd9qVpONjoCKgOArCPVkTy+mCAoMyzr7FLSQVpnFLFnLF9y67cSWgJg==
+2UAjG1RpJxX9GaxW7Rq8DYDiNAqTKoodS6IeqlG36kHNoCigTUntlp/EkO8IJr0GmXci1SGiRadDcrxrBK4JHSUYLgNc0DJ4CvwtgMVRYlrHptVOs9tyOHyfmRYDvPBi9C0l0mgtadyymNRnhRi0BxH+1XcPkzWQz2jn0Lo36h2CoIPYuwsI5MfwmlgpXmfOABo2hnfkHTVq9VeEBO6M85S0acBt/5j5Y5H/fa/YMv5PW+Cb8ZLf4OB1r+zum4PNQPkAorIN0vGBfdc63D8qOQ==
+nUhBCw5BrNziVzg48HUn0InndVGz08WjMlP9W0YqD5jmeXdPyxyBuG3aJxFGrCthZo8lZPGXdy/uAiHbC0UCEfH7dV/uzU88YqRlTnplay12hHjiLQRm8jmBdcsXVI0sKWnIC4qPAIAccqCTw1HbzjmYzp2ofICmy3+gaGxvqLsklOWaSU7iAAXmLAHBOkHNM7OZNQWdUxjCWd+mL/ZZdQ==
+nUhBCw5BrNziVzg48HUn0Nbb7Jz2WQPem44ykD1UGdsHKl1L3uyAkL47d1qlsZP9hql4qgaMthpcOA6MVvRnalYpPpvjU5CqbBcN7zsvCGKBhBK7eDPsLrvbXWEmX681RLNvzwbhrXeTO5CkJnkcQeryiJ1GFVIDoE3zMtRCSbEIbPrpJkehH8AvSIFRdiinR28NLPyI14vaekWWlnmCkEsawCA0KWV8eXLordkzNvcALwhpSdtE1ecfqWrw52pRhqYQnQuwN6qLrMfCQ11RZQ==
+6nnop+fPbIjJWvPFFXhownHrY56qtoNe3zqNoWP764XmXHfG0XbQir9KuBrl1ZtwiPytzodLarJq7tQBgZfEBaMsPlQE4bo6vWEDeGkLoNq0eHZW/N/qgybNz9+888FAJ5NoG0cbwO5j/Cqhuk92M7hvyYxvPUy3EfSGOMhC2cBPi6KWy4eyB13DvORywYHG/McAEu77l9MP8MGXhNerlg==
 6nnop+fPbIjJWvPFFXhowjUIrPeqj6aobxotw+1NWvTOtgi8rrOlLEDZcuSurFGuP1Lt2pWPIBZNwuPfcaF/bIsx+krKThzuJBfjtZeQug2gAJLCd6oGrVv4mvvEjK35Z65B1bBFgqYxHCXXPjBQSZDcai5HRH/YP4SuugbNou2B2PpbUU8nmL3ZbU/z1fkY4VX9vYjM8e2MzOr1X2U+FMFbqNxaBBe+QaOAN/91r7L1JfmNxKTJmGNkP9A9FnskDwYsR00vdr/NpgtqmLCTvg==
 1QmQI4ovc9Gj8vk3sIp7dpsXL7n5LiM2K/cQquIQ/uzjVb8GwuUprHrvxkpaQv+hUDKjSI9MmiNLqk2xcmW5VFAgfFhXF7NxrzXGYEcKWqGX5XfhxMZfPmR4P+DutVq3bN3aQs7+Tsjq8+j3uKF5znqr2qulyNsBHXeTJRhrfAKuioZFcHCuwY21lzC304DZ9WL4/1c8r3CxBlQkD0tTVA==
 1QmQI4ovc9Gj8vk3sIp7dsOcL5JM7Tq+O1bQTlzBioRdCpBKD5pLeZQg1sB41KhCkcq8QDnddQddsm9A93m8lG+fd7VK7u6ZV1sukWUpVdZZ3JWtC8/iyJjxfalfwWt/snURsZEve6y8P2OeFWe5sPjc88saIRC8hxFgRXEbeverFIAW79h9pKr4PBuL4d8OFlv5H84vU+OJ5azT8kZ687SypsfB/mZVpEqyHRSkawr0LqVsvitHfm/wi2fCx93SfFbikPBlz1HDeeaVmFQsmA==
@@ -1783,40 +1721,13 @@ Ovrw2iA5Z7R1+1fEebLzxmgEmS7OCdpRH2GZ3jmG0TZwfFMSEO2xheflxLEtqbyv8zVKLPaTYFfTlVwG
 Ov5XCnlq/tlm9pzaC3rL1E9u5kwkZWazpn9NTJmGnjIwkjstDOowlpfjMSoGztC2uZmlMDVtOXkIrypdnBnysCyJKFEavThE5S1yZzYv0U1FJqc69bwmCHwdQyFabMx01FXbPqjMTBPvkwwjirrYAhzht3PpgD13GdVqhPneSJfy6ouY+NNS9pSUdJ3ugYXzbrDn8T0zTeeMkJuOtdN11aXHLHurAVaEvq3Zv4oR6JvMVzbQ5+Cw1EvWOolVSfzSuQ+SOTXa8P+YM44ldIlj7g==
 4JFAjv/DAMWyHj2ii+qBJ4kQhkXblr3hv1pbnLTZP10895dqzTu9Os44FhUtwARuJUH4nFTsuu2CZeM5ZyKia9JYpkwiwWDfVDHM1C7SWD9WYR949H5loJzs8FmVaodn7b+6w4q/XrQSZt08gAm7YJCGb6lTpQOn8HdFaL9iTw94c1hpXjo77KzJsoIVXlZkR5KqZi7gSh21OgYZSkgW8A==
 4JFAjv/DAMWyHj2ii+qBJ5iaDeftv+bZjMRIekkP+bQjuABO2IBBqSSsGcHen9PfZ6t0rqdtG1Xr/eCk7r1V2SbTX1+lqRnmEz4tk3SARXb1607bMPxc6pA1fwXoLKmrMmn9NLuNqVbzNCPxa0R61osV8gNCIHjZ5eTmUV9Bw7TbVr1NXaXPbsM0KjPUhxrXEC6hWhzw1b8SdJxl9FBuPl+EEdPmgGY8g46KGEN4GupZ3QLYWBFPBMboh8gSswxpwCsWeOOMjAlAOod4u2drdw==
+bk1aeHrc1rz3TJJ3nrP6H2efMuwoFx7QO5R7wZ8F4i5zCkMfUHV1FON5k4j9TbrziMTZSFHteDaWunh3J4yZHb8CDLCfwqE1IU8I/1cAPpScfytwnPNmsysCq/Ni5DEJPufTmsPK2QxxN8lze/3WtHVKVL45znr7Kz2MoTCEG4mjiBNaB9dbgkAamZ/2Q1SS9dtrV1wG2fXzU5Z17KMhng==
+bk1aeHrc1rz3TJJ3nrP6H0StXJhG/EyuX6yO4ma326+9fPvg4d1D2ccLNUVEZCmc6NAfSeYbA3FVr79NfX228QOnV9LGLSiuHmd+oo5nH/NtnyuFnKzr4x7MPfg3JzC+96TEDuDkzk9HomrX14pCVdfDL9gLB95U1GVRPdBKsrBaovG7LpcvHzvMeglNIpSKcJ4uGpixE9WNJo6lq6UvTsy5chYfV/gYCsIDbWW1dWmcc97j69gZFnFRzKQ+/IUiWT0RIPQXthnU2D+4lEc3bA==
 [Swiftkey SDK Log End]
 
 
 [Preloaded DBs Start]
-[Directory] : /prism/sipdb/SwiftKey
-[Version] : 
-[Directory] : /prism/sipdb/SwiftKey/es_us
-[Version] : 3.1.9
-[Directory] : /prism/sipdb/SwiftKey/es_us/emoji_search
-[Version] : 
-[File] : punctuation.json (74 bytes)
-[File] : ime.json (125 bytes)
-[File] : es_US_emoji_search.lm (629164 bytes)
-[File] : es_US_emoji_search_flags.lm (30422 bytes)
-[File] : charactermap.json (422 bytes)
-[File] : .config (697 bytes)
-[File] : punctuation.json (74 bytes)
-[File] : ime.json (125 bytes)
-[File] : es_US.lm (2923475 bytes)
-[File] : config.xml (162 bytes)
-[File] : extra.dat (439 bytes)
-[File] : swiftkey.lm3 (274 bytes)
-[File] : es_US_bus_c.lm1 (1580195 bytes)
-[File] : charactermap.json (422 bytes)
-[File] : emoji_bg_c.lm2 (227515 bytes)
-[File] : .config (797 bytes)
-[Directory] : /prism/sipdb/SwiftKey/ko
-[Version] : 5.0.2
-[Directory] : /prism/sipdb/SwiftKey/ko/emoji_search
-[Version] : 
-[File] : punctuation.json (534 bytes)
-[File] : ime.json (138 bytes)
-[File] : ko_KR_emoji_search.lm (790861 bytes)
-[File] : ko_KR_emoji_search_flags.lm (40892 bytes)
+.lm (40892 bytes)
 [File] : charactermap.json (408 bytes)
 [File] : .config (693 bytes)
 [File] : punctuation.json (534 bytes)
@@ -1961,9 +1872,9 @@ Ov5XCnlq/tlm9pzaC3rL1E9u5kwkZWazpn9NTJmGnjIwkjstDOowlpfjMSoGztC2uZmlMDVtOXkIrypd
 [Directory] : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/user/specific/specific_com_google_android_googlequicksearchbox/backup
 [Version] : 
 [File] : .config (209 bytes)
-[File] : specific_com_google_android_googlequicksearchbox (43541 bytes)
-[File] : .config (209 bytes)
 [File] : specific_com_google_android_googlequicksearchbox (43564 bytes)
+[File] : .config (209 bytes)
+[File] : specific_com_google_android_googlequicksearchbox (43589 bytes)
 [Directory] : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/user/specific/specific_com_sec_android_app_launcher
 [Version] : 
 [Directory] : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/user/specific/specific_com_termux
@@ -1974,11 +1885,11 @@ Ov5XCnlq/tlm9pzaC3rL1E9u5kwkZWazpn9NTJmGnjIwkjstDOowlpfjMSoGztC2uZmlMDVtOXkIrypd
 [Version] : 
 [Directory] : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/user/backup
 [Version] : 
-[File] : dynamic.lm (52564 bytes)
+[File] : dynamic.lm (52587 bytes)
 [File] : learned.json (1091 bytes)
 [File] : .config (211 bytes)
 [File] : learned.json (1091 bytes)
-[File] : dynamic.lm (52587 bytes)
+[File] : dynamic.lm (52718 bytes)
 [File] : revokedlist (0 bytes)
 [Directory] : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/blacklist
 [Version] : 
@@ -1994,17 +1905,46 @@ Ov5XCnlq/tlm9pzaC3rL1E9u5kwkZWazpn9NTJmGnjIwkjstDOowlpfjMSoGztC2uZmlMDVtOXkIrypd
 
 [Downloaded DBs End]
 
-
-[Show file list in data location]
-path : /data/user/0/com.samsung.android.honeyboard/cache/image_manager_disk_cache, count : 0, size(Kb) : 0
-path : /data/user/0/com.samsung.android.honeyboard/cache, count : 0, size(Kb) : 0
-path : /data/user/0/com.samsung.android.honeyboard/shared_prefs, count : 8, size(Kb) : 69
-path : /data/user/0/com.samsung.android.honeyboard/files, count : 7, size(Kb) : 4
-path : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/user/specific/specific_com_google_android_googlequicksearchbox/backup, count : 2, size(Kb) : 42
-path : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/user/specific/specific_com_google_android_googlequicksearchbox, count : 2, size(Kb) : 42
-path : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/user/specific/specific_com_sec_android_app_launcher, count : 0, size(Kb) : 0
-path : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/user/specific/specific_com_termux, count : 0, size(Kb) : 0
-0), mUmlaut(), mKeyType(1)",
+app_SwiftKey/user/specific/specific_com_android_intentresolver, count : 0, size(Kb) : 0
+path : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/user/specific/specific_com_google_android_permissioncontroller, count : 0, size(Kb) : 0
+path : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/user/specific, count : 0, size(Kb) : 0
+path : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/user/backup, count : 2, size(Kb) : 52
+path : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/user, count : 4, size(Kb) : 52
+path : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey/blacklist, count : 0, size(Kb) : 0
+path : /data/user/0/com.samsung.android.honeyboard/app_SwiftKey, count : 0, size(Kb) : 0
+path : /data/user/0/com.samsung.android.honeyboard/app_omrondb, count : 0, size(Kb) : 0
+path : /data/user/0/com.samsung.android.honeyboard/app_ut, count : 0, size(Kb) : 0
+path : /data/user/0/com.samsung.android.honeyboard/Download, count : 0, size(Kb) : 0
+path : /data/user/0/com.samsung.android.ght(102), mSecondCode(0), mUmlaut(), mKeyType(0), mLabel(), mCode(-102), mCodes([-102]), mX(23), mY(530), mWidth(141), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0), mLabel(,), mCode(-117), mCodes([-117]), mX(181), mY(530), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0), mLabel(), mCode(32), mCodes([32]), mX(286), mY(530), mWidth(508), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0), mLabel(.), mCode(-122), mCodes([-122]), mX(811), mY(530), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0), mLabel(), mCode(10), mCodes([10]), mX(916), mY(530), mWidth(141), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(0)]",
+    "ValidZoneList": "[Rect(0, 0 - 1080, 660)]"
+}
+                [BoardScrap dump End]
+                [KeyScrap dump Start]
+                {
+    "0": "mLabel(1), mCode(49), mCodes([49]), mX(23), mY(19), mWidth(89), mHeight(85), mSecondCode(0), mUmlaut(¹½⅓¼⅕⅙⅛), mKeyType(2)",
+    "1": "mLabel(2), mCode(50), mCodes([50]), mX(128), mY(19), mWidth(89), mHeight(85), mSecondCode(0), mUmlaut(²⅔⅖), mKeyType(2)",
+    "2": "mLabel(3), mCode(51), mCodes([51]), mX(233), mY(19), mWidth(89), mHeight(85), mSecondCode(0), mUmlaut(³¾⅗⅜), mKeyType(2)",
+    "3": "mLabel(4), mCode(52), mCodes([52]), mX(338), mY(19), mWidth(89), mHeight(85), mSecondCode(0), mUmlaut(⁴⅘), mKeyType(2)",
+    "4": "mLabel(5), mCode(53), mCodes([53]), mX(443), mY(19), mWidth(89), mHeight(85), mSecondCode(0), mUmlaut(⁵⅚⅝), mKeyType(2)",
+    "5": "mLabel(6), mCode(54), mCodes([54]), mX(548), mY(19), mWidth(89), mHeight(85), mSecondCode(0), mUmlaut(⁶), mKeyType(2)",
+    "6": "mLabel(7), mCode(55), mCodes([55]), mX(653), mY(19), mWidth(89), mHeight(85), mSecondCode(0), mUmlaut(⁷⅞), mKeyType(2)",
+    "7": "mLabel(8), mCode(56), mCodes([56]), mX(758), mY(19), mWidth(89), mHeight(85), mSecondCode(0), mUmlaut(⁸), mKeyType(2)",
+    "8": "mLabel(9), mCode(57), mCodes([57]), mX(863), mY(19), mWidth(89), mHeight(85), mSecondCode(0), mUmlaut(⁹), mKeyType(2)",
+    "9": "mLabel(0), mCode(48), mCodes([48]), mX(968), mY(19), mWidth(89), mHeight(85), mSecondCode(0), mUmlaut(⁰ⁿ), mKeyType(2)",
+    "10": "mLabel(q), mCode(113), mCodes([113]), mX(23), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(), mKeyType(1)",
+    "11": "mLabel(w), mCode(119), mCodes([119]), mX(128), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(ŵẁẃẅ), mKeyType(1)",
+    "12": "mLabel(e), mCode(101), mCodes([101]), mX(233), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(èéêëēėęěĕəɛẹ), mKeyType(1)",
+    "13": "mLabel(r), mCode(114), mCodes([114]), mX(338), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(ŕřṛ), mKeyType(1)",
+    "14": "mLabel(t), mCode(116), mCodes([116]), mX(443), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(þťŧțţṭ), mKeyType(1)",
+    "15": "mLabel(y), mCode(121), mCodes([121]), mX(548), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(ÿýỳŷƴ), mKeyType(1)",
+    "16": "mLabel(u), mCode(117), mCodes([117]), mX(653), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(ùúûüūŭůűųưụ), mKeyType(1)",
+    "17": "mLabel(i), mCode(105), mCodes([105]), mX(758), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(ìíîïīįıị), mKeyType(1)",
+    "18": "mLabel(o), mCode(111), mCodes([111]), mX(863), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(oʻòóôõöøōŏőœɔơọº), mKeyType(1)",
+    "19": "mLabel(p), mCode(112), mCodes([112]), mX(968), mY(133), mWidth(89), mHeight(103), mSecondCode(0), mUmlaut(), mKeyType(1)",
+    "20": "mLabel(a), mCode(97), mCodes([97]), mX(76), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(àáâãäåæāăąª), mKeyType(1)",
+    "21": "mLabel(s), mCode(115), mCodes([115]), mX(181), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ß§śŝšṣ̌şșṣ), mKeyType(1)",
+    "22": "mLabel(d), mCode(100), mCodes([100]), mX(286), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ðďđɗḍ), mKeyType(1)",
+    "23": "mLabel(f), mCode(102), mCodes([102]), mX(391), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(), mKeyType(1)",
     "24": "mLabel(g), mCode(103), mCodes([103]), mX(496), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(gʻĝģğɣǧ), mKeyType(1)",
     "25": "mLabel(h), mCode(104), mCodes([104]), mX(601), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ĥḥ), mKeyType(1)",
     "26": "mLabel(j), mCode(106), mCodes([106]), mX(706), mY(266), mWidth(88), mHeight(102), mSecondCode(0), mUmlaut(ǰǰ̣ĵ), mKeyType(1)",
@@ -2108,6 +2048,166 @@ Plugin Dump state :
       class version = com.samsung.android.honeyboard.plugins.board.PluginSearchCallback, 1
       class version = com.samsung.android.honeyboard.plugins.board.PluginBoardCallback, 1
       class version = com.samsung.android.honeyboard.plugins.board.PluginBeeCallback, 1
+      class version = com.samsung.android.honeyboard.plugins.board.PluginHoneyBoard, 3
+
+  Disabled Plugins
+
+==================== ThemeStyleManager dump state ====================
+[ThemeStyleManager Start]
+CurrTheme = 4
+OpenThemeForHoneyBoardInstalled = false
+OpenThemeVersion = 0
+WallpaperThemeInstalled = false
+GalaxyTheme = false
+[ThemeStyleManager End]
+
+==================== RegionLayoutTypeProvider dump state ====================
+type: GLOBAL
+
+==================== KeyboardConfigKeeper dump state ====================
+[KeyboardConfigKeeper Start]
+[MmsRecipientInputTypeItem] false
+[EditorEnterActionItem] 0x40000006
+[ComposingItem] true
+[JapaneseComposingEmptyItem] true
+[DisableCtrlKeyInputItem] false
+[DisableRangeChangeKeyInputItem] false
+[TWFirstToneAvailableItem] false
+[ShiftStateItem] 0
+[LanguageItem] English
+[KeyboardViewTypeItem] 0
+[KeyboardInputTypeItem] mainType(0), subType(0)
+[CurrentLanguageInputTypeItem] mainType(0), subType(0)
+[KeyboardInputRangeItem] 1
+[HandwritingModeItem] false
+[SelectedLanguageItem] 1
+[TextOrNullInputClassItem] true
+[DateInputTypeItem] false
+[DateTimeInputTypeItem] false
+[DecimalNumberInputTypeItem] false
+[NumberOnlyInputTypeItem] false
+[NumberPasswordInputTypeItem] false
+[PhoneNumberInputClassItem] false
+[SignedDecimalNumberInputTypeItem] false
+[SignedNumberInputTypeItem] false
+[EmailInputTypeItem] false
+[UrlInputTypeItem] false
+[UrlEmailModeItem] false
+[PasswordInputTypeItem] false
+[WebPasswordEditorItem] false
+[NumberInputClassItem] false
+[DateTimeInputClassItem] false
+[DigitEditorItem] false
+[MonthInputTypeItem] false
+[YearDateTimeInputTypeItem] false
+[IPAddressInputTypeItem] false
+[FileNameInputTypeItem] false
+[CustomSymbolsForPeriodKeyItem] false
+[OptionInputTypeItem] false
+[DisableHanjaInputItem] false
+[DisableCmKeyInputItem] false
+[DisableCommaKeyInputItem] false
+[DisableLanguageChangeKeyItem] false
+[DisableSpaceKeyItem] false
+[NumberPickerInputItem] false
+[TimeInputTypeItem] false
+[DisablePasswordKoreanSecondaryLabelItem] false
+[NumberKeyFirstLineItem] true
+[AlternativeCharacterItem] false
+[SpaceRowStyleCmItem] true
+[SpaceRowStylePeriodItem] true
+[SpaceRowStyleEmailURLPeriodItem] true
+[SpaceRowStyleEmailURLDotComItem] true
+[SpaceRowStyleEmailURLPeriodItem] true
+[SpaceRowStyleEmailURLDotComItem] false
+[SpaceRowStyleJapaneseArrowItem] true
+[SpaceRowStyleJapanesePeriodItem] true
+[HighContrastItem] false
+[TouchAndHoldSpaceBarTypeItem] cursor_control
+[UseContinuousInputItem] true
+[UseToolBarItem] true
+[VoiceInputTypeItem] 1
+[OrientationItem] false
+[DensityItem] 2.8125
+[DisplayWidthItem] 1080
+[DisplayHeightItem] 2340
+[MainTextLabelItem] 1
+[LanguageSwitchingUsingSpaceBarItem] false
+[LanguageSwitchingUsingKeyItem] true
+[TransliterationTypingModeItem] false
+[CoverDisplayModeItem] false
+[TalkBackEnabledItem] false
+[HoneyVoiceEnabledItem] false
+[Japanese8FlickCustomisationItem] false
+[VoiceEnabledItem] true
+[PredictionStatusItem] true
+[EditorEnterActionItem] -1
+[BilingualLanguageActivateItem] false
+[EnterKeyLabelDoneItem] false
+[KeyboardConfigKeeper End]
+
+==================== PresenterCache dump state ====================
+size:3
+info:LruCache[maxSize=12,hits=12,misses=9,hitRate=57%]
+
+==================== KeyboardLayout dump state ====================
+[KeyboardLayoutDump Start]
+Extension height = 0
+Header height = 123
+Body height = 660
+FloatingHandler height = 59
+DeXTitleBar height = null
+[KeyboardLayoutDump End]
+
+==================== Keyboard Model dump state ====================
+[KeysCafe Layout dump Start]
+#### KeysCafe Layout R : true
+#### KeysCafe Layout S : false
+#### KeysCafe Layout V : false
+#### KeysCafe Theme R : true
+#### KeysCafe Theme S : false
+[KeysCafe Layout dump End]
+
+==================== PresenterContext dump state ====================
+
+==================== KeyboardPresenter dump state ====================
+
+==================== Moa Key dump state ====================
+
+==================== KeysCafe dump state ====================
+  keyDetectionLevel : 1
+  state : 0
+
+==================== Candidate dump state ====================
+text transition vi : true
+
+==================== KIS dump state ====================
+
+==================== TMST dump state ====================
+Policy: Linear
+
+
+==================== PredictionPolicy dump state ====================
+TextLearner Blocklist version: 1.0 
+Blocklist: 8 
+
+
+==================== CMKey dump state ====================
+[DumpCMKeyManager Start]
+CMKeyShowing     :44
+[DumpCMKeyManager End]
+[DumpCMSetting Start]
+CMKeyLast        :-1
+CMKeyLast PREV   :-1
+CMKeyLast VN     :-1
+CMKeyLast VN PREV:-1
+[DumpCMSetting End]
+
+==================== NetworkLog dump state ====================
+[NetworkLog dump Start]
+
+==================== BoardScrapHistory dump state ====================
+[BoardScrapHistory Start]
 Language = English
 InputType = 0/1
 InputRange = 4
@@ -2202,9 +2302,71 @@ supportedLanguagesSize : 0
 
 ==================== SoundFeedbackLog dump state ====================
 [Sound Feedback dump Start]
-2026-08-02 13:56:46.392 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
-2026-08-02 13:56:46.468 soundEffect:2, soundId:3 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
-2026-08-02 13:56:46.654 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c
+2026-08-02 13:56:53.059 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 sl.d.a:2 sl.i0.a:2 
+2026-08-02 13:56:53.306 soundEffect:2, soundId:3 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 13:56:53.659 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
+2026-08-02 13:56:53.667 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 13:56:53.739 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 13:56:53.828 soundEffect:2, soundId:3 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 13:56:54.181 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
+2026-08-02 13:56:54.252 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 13:56:54.351 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 13:56:54.379 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 13:56:54.570 soundEffect:2, soundId:3 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 13:56:54.923 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
+2026-08-02 13:56:55.211 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 13:56:55.387 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 13:56:55.424 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 13:56:55.555 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 13:56:55.909 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
+2026-08-02 13:56:56.002 soundEffect:2, soundId:3 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 13:56:56.170 soundEffect:2, soundId:3 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 13:56:56.339 soundEffect:2, soundId:3 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 13:56:56.692 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
+2026-08-02 13:57:44.136 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 13:57:44.160 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 13:57:44.513 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
+2026-08-02 14:05:04.388 soundEffect:2, soundId:3 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:05:04.753 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
+2026-08-02 14:05:04.950 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:05:05.305 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
+2026-08-02 14:05:06.009 soundEffect:2, soundId:3 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:05:06.365 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
+2026-08-02 14:05:07.153 soundEffect:6, soundId:4 com.samsung.android.honeyboard.icecone.multimodal.component.MultiModalVoiceComponent$voiceStateListener$1.playListeningSound:10 com.samsung.android.honeyboard.icecone.multimodal.component.MultiModalVoiceComponent$voiceStateListener$1.setMicState:93 Ht.g.b:454 S0.f.e:26 sl.q0.a:19 
+2026-08-02 14:05:07.524 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
+2026-08-02 14:05:11.330 soundEffect:7, soundId:5 com.samsung.android.honeyboard.icecone.multimodal.component.MultiModalVoiceComponent$voiceStateListener$1.playStopSound:10 com.samsung.android.honeyboard.icecone.multimodal.component.MultiModalVoiceComponent$voiceStateListener$1.setMicState:128 Ht.g.b:454 S0.f.d:13 S0.f.a:48 
+2026-08-02 14:05:11.336 soundEffect:1, soundId:2 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:05:11.505 soundEffect:1, soundId:2 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:05:11.654 soundEffect:1, soundId:2 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:05:11.788 soundEffect:1, soundId:2 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:05:11.938 soundEffect:1, soundId:2 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:05:12.292 soundEffect:1, soundId:2 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:05:12.295 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
+2026-08-02 14:05:12.604 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:05:12.761 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:05:13.114 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
+2026-08-02 14:05:13.315 soundEffect:2, soundId:3 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:05:13.671 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
+2026-08-02 14:07:15.643 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:07:15.892 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:07:16.130 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:07:16.401 soundEffect:0, soundId:1 Q9.d.d:74 sl.k0.a:21 sl.A0.a:2 zl.a.c:10 vl.d.d:19 
+2026-08-02 14:07:16.755 pauseAll soundPool android.os.Handler.handleCallback:1070 android.os.Handler.dispatchMessage:125 android.os.Looper.dispatchMessage:358 android.os.Looper.loopOnce:288 android.os.Looper.loop:392 
+[Sound Feedback dump End]
+
+==================== VibrationFeedbackLog dump state ====================
+[Vibration Feedback dump Start]
+Initial deviceId = 0
+
+[Vibration Feedback dump End]
+####################################
+
+==================== SWIFTKEY dump state ====================
+[SwiftKey dump Start] SwiftKey SDK version : 5.7.1.206[SwiftKey dump End]
+
+==================== Settings dump state ====================
+[SettingValues Start]
+
 viewTypePref : 0
 viewTypePrefLand : 4
 standAloneDexModeViewTypePref : 2
@@ -2245,44 +2407,7 @@ hwrCandidateType : 0
 useNoneKeyboardSwipe : false
 keyboardAlpha : 1.0
 keyboardSwipeType : settings_keyboard_swipe_continuous_input
-keyboardThemeIndex : 285212672
-useCustomTheme : false
-coverKeyboardThemeIndex : 822149120
-useKeyTapFeedbackPreview : true
-useKeyTapFeedbackSound : true
-useKeyTapFeedbackVibrate : false
-buttonAndSymbolLayout : 0
-useNumberAndSymbolType : language_dependent
-useNumberKeyFirstLine : true
-useCoverNumberKeyFirstLine : false
-predictiveTextLineCount : 2
-usePredictiveText : true
-usePredictiveTextCover : true
-usePhrasePredictiveText : false
-useToolbar : true
-useToolbarCover : true
-usePhysicalKeyboardToolbar : true
-usePeriodKeyPopupMultiTap : true
-keyboardFontSize : 1
-touchAndHoldDelayValue : 300
-touchAndHoldSpaceBarType : cursor_control
-moakeySwipeAngle : 0
-moakeySwipeLength : 1
-useContinuousInput : true
-usePenDetection : false
-usePhonepadOnlyInPortrait : false
-usePreventDoubleConsonants : false
-usePointingKeypad : false
-chnHwrMode : 0
-chnHwrRecognitionType : 0
-chnHwrSwitch : 0
-hwrRecognitionTime : 500
-useChnAssociatedWords : true
-useChnInsertWordSpaceKey : false
-useChnLinkToContacts : false
-chnSogouCloudLink : 2
-chnSogouHotWord : 2
-useChnUseRareWords : true
+keyboardThemeIndeChnUseRareWords : true
 useChnUseTraditionalChineseInput : false
 chnShuangpinType : 2
 flickAngle : 38
@@ -2318,37 +2443,7 @@ grammarlyPpAccepted : false
 honeyVoicePpAccepted : true
 honeyVoiceReadAudioDataAccepted : true
 gifPpDialogExecuted : false
-googlePpDialogExecuted : false
-sogouPpDialogExecuted : false
-mojitokDialogExecuted : false
-bitmojiDialogExecuted : false
-thirdPartyAccessNoticeDialogExecuted : false
-fontSizeChangeExecuted : false
-grammarlyPpDialogExecuted : false
-grammarlyWelcomeDialogExecuted : false
-honeyVoicePpDialogExecuted : false
-speakKeyboardInputAloudMode : 0
-speakKeyboardInputAloudCapitalMode : 1
-useSpeakKeyboardInputAloud : false
-usePhoneticAlphabet : false
-useReadDeletedCharacter : true
-spacebarRowStyle : 0
-useCommaOnCommonSpaceBarRowStyle : true
-useDotOnCommonSpaceBarRowStyle : true
-useDotOnEmailSpaceBarRowStyle : true
-useDomainOnEmailSpaceBarRowStyle : true
-useDotOnUrlSpaceBarRowStyle : true
-useDomainOnUrlSpaceBarRowStyle : false
-usePunctuationOnJapaneseSpaceBarRowStyle : true
-useArrowOnJapaneseSpaceBarRowStyle : true
-useHoneyVoiceOffensiveWord : true
-useHoneyVoiceSideKey : false
-useSaveScreenshotsToClipboard : false
-voiceInputType : 1
-myToneType : Feature Extract
-writingAssistFeaturesMode : true
-writingAssistFeaturesOnDeviceMode : false
-writingAssistLatestTranslateLanguage : 
+googlePpDialogExecuted : fastTranslateLanguage : 
 translationMode : 1
 composerLength : 0
 summaryType : More Briefly
@@ -2395,7 +2490,84 @@ touchAndHoldDelayValue
 	- 2026-08-02 13:08:23.962, touchAndHoldDelayValue, UNKNOWN -> 300, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
 rtsMethodPredictionEnabled
 	- 2026-08-02 13:08:23.962, rtsMethodPredictionEnabled, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useDotOnCommeFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+useDotOnCommonSpaceBarRowStyle
+	- 2026-08-02 13:08:23.962, useDotOnCommonSpaceBarRowStyle, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+useHighContrast
+	- 2026-08-02 13:08:23.963, useHighContrast, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+useContinuousInput
+	- 2026-08-02 13:08:23.963, useContinuousInput, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+specificWeightMode
+	- 2026-08-02 13:08:23.963, specificWeightMode, UNKNOWN -> 2, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+useHoneyVoiceSideKey
+	- 2026-08-02 13:08:23.963, useHoneyVoiceSideKey, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+usePhysicalKeyboardToolbar
+	- 2026-08-02 13:08:23.963, usePhysicalKeyboardToolbar, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+useAutoCaps
+	- 2026-08-02 13:08:23.963, useAutoCaps, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+writingAssistFeaturesMode
+	- 2026-08-02 13:08:23.963, writingAssistFeaturesMode, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+buttonAndSymbolLayout
+	- 2026-08-02 13:08:23.963, buttonAndSymbolLayout, UNKNOWN -> 0, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+highContrastIndex
+	- 2026-08-02 13:08:23.964, highContrastIndex, UNKNOWN -> 0, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+useCustomTheme
+	- 2026-08-02 13:08:23.964, useCustomTheme, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+usePenDetection
+	- 2026-08-02 13:08:23.964, usePenDetection, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+usePhonepadOnlyInPortrait
+	- 2026-08-02 13:08:23.964, usePhonepadOnlyInPortrait, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+useMultilingualTyping
+	- 2026-08-02 13:08:23.964, useMultilingualTyping, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+useArrowOnJapaneseSpaceBarRowStyle
+	- 2026-08-02 13:08:23.965, useArrowOnJapaneseSpaceBarRowStyle, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+rtsPreloadedAndDownloadedEnabled
+	- 2026-08-02 13:08:23.965, rtsPreloadedAndDownloadedEnabled, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+useKeyTapFeedbackPreview
+	- 2026-08-02 13:08:23.965, useKeyTapFeedbackPreview, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+useSaveScreenshotsToClipboard
+	- 2026-08-02 13:08:23.965, useSaveScreenshotsToClipboard, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+rtsMethodPopupEnabled
+	- 2026-08-02 13:08:23.965, rtsMethodPopupEnabled, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+usePhoneticAlphabet
+	- 2026-08-02 13:08:23.965, usePhoneticAlphabet, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+useDotOnUrlSpaceBarRowStyle
+	- 2026-08-02 13:08:23.965, useDotOnUrlSpaceBarRowStyle, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+useAlternativeChar
+	- 2026-08-02 13:08:23.965, useAlternativeChar, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+chnSogouCloudLink
+	- 2026-08-02 13:08:23.965, chnSogouCloudLink, UNKNOWN -> 2, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+specificWeightAdditionValue
+	- 2026-08-02 13:08:23.965, specificWeightAdditionValue, UNKNOWN -> 0.2, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+myToneType
+	- 2026-08-02 13:08:23.965, myToneType, UNKNOWN -> Feature Extract, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+useToggleInput
+	- 2026-08-02 13:08:23.965, useToggleInput, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+useChnLinkToContacts
+	- 2026-08-02 13:08:23.965, useChnLinkToContacts, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+useToolbarCover
+	- 2026-08-02 13:08:23.965, useToolbarCover, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+standAloneDexModeViewTypePref
+	- 2026-08-02 13:08:23.965, standAloneDexModeViewTypePref, UNKNOWN -> 2, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+useChnInsertWordSpaceKey
+	- 2026-08-02 13:08:23.965, useChnInsertWordSpaceKey, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+usePredictiveText
+	- 2026-08-02 13:08:23.965, usePredictiveText, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+usePreventDoubleConsonants
+	- 2026-08-02 13:08:23.965, usePreventDoubleConsonants, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+chnHwrMode
+	- 2026-08-02 13:08:23.965, chnHwrMode, UNKNOWN -> 0, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+useDomainOnUrlSpaceBarRowStyle
+	- 2026-08-02 13:08:23.966, useDomainOnUrlSpaceBarRowStyle, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+writingStyle
+	- 2026-08-02 13:08:23.966, writingStyle, UNKNOWN -> Show all, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+prevFrontViewTypePref
+	- 2026-08-02 13:08:23.966, prevFrontViewTypePref, UNKNOWN -> 0, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+useToolbar
+	- 2026-08-02 13:08:23.966, useToolbar, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+viewTypePrefLand
+	- 2026-08-02 13:08:23.966, viewTypePrefLand, UNKNOWN -> 4, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+usePeriodKeyPopupMultiTap
+	- 2026-08-02 13:08:23.966, usePeriodKeyPopupMultiTap, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
 keyboardThemeIndex
 	- 2026-08-02 13:08:23.966, keyboardThemeIndex, UNKNOWN -> 285212672, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
 customSymbolChanged
@@ -2423,98 +2595,31 @@ useEmojiSuggestions
 moakeySwipeAngle
 	- 2026-08-02 13:08:23.967, moakeySwipeAngle, UNKNOWN -> 0, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
 frontViewTypePref
-	- 2026-08-02 13:08:23.967, frontViewTypePref, UNKNOWN -> 0, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useDotOnEmailSpaceBarRowStyle
-	- 2026-08-02 13:08:23.967, useDotOnEmailSpaceBarRowStyle, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useChnUseRareWords
-	- 2026-08-02 13:08:23.967, useChnUseRareWords, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-translationMode
-	- 2026-08-02 13:08:23.967, translationMode, UNKNOWN -> 1, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-usePointingKeypad
-	- 2026-08-02 13:08:23.967, usePointingKeypad, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-chnSogouHotWord
-	- 2026-08-02 13:08:23.967, chnSogouHotWord, UNKNOWN -> 2, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useChnAssociatedWords
-	- 2026-08-02 13:08:23.967, useChnAssociatedWords, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-usePredictiveTextCover
-	- 2026-08-02 13:08:23.967, usePredictiveTextCover, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-prevStandAloneDexModeViewTypePref
-	- 2026-08-02 13:08:23.967, prevStandAloneDexModeViewTypePref, UNKNOWN -> 0, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-usePhrasePredictiveText
-	- 2026-08-02 13:08:23.967, usePhrasePredictiveText, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useNumberAndSymbolType
-	- 2026-08-02 13:08:23.967, useNumberAndSymbolType, UNKNOWN -> language_dependent, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useCoverAlternativeChar
-	- 2026-08-02 13:08:23.967, useCoverAlternativeChar, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useCustomVibrateIntensity
-	- 2026-08-02 13:08:23.967, useCustomVibrateIntensity, UNKNOWN -> -1, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-languageSwitchingUsingSpaceBar
-	- 2026-08-02 13:08:23.967, languageSwitchingUsingSpaceBar, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-frontViewTypePrefLand
-	- 2026-08-02 13:08:23.967, frontViewTypePrefLand, UNKNOWN -> 4, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useWildcardPrediction
-	- 2026-08-02 13:08:23.967, useWildcardPrediction, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useNoneKeyboardSwipe
-	- 2026-08-02 13:08:23.968, useNoneKeyboardSwipe, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-useCommaOnCommonSpaceBarRowStyle
-	- 2026-08-02 13:08:23.968, useCommaOnCommonSpaceBarRowStyle, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-composerLength
-	- 2026-08-02 13:08:23.968, composerLength, UNKNOWN -> 0, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-chnShuangpinType
-	- 2026-08-02 13:08:23.968, chnShuangpinType, UNKNOWN -> 2, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-rtsBitmojiEnabled
-	- 2026-08-02 13:08:23.968, rtsBitmojiEnabled, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-rtsEmojiPairsEnabled
-	- 2026-08-02 13:08:23.968, rtsEmojiPairsEnabled, UNKNOWN -> true, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-coverKeyboardThemeIndex
-	- 2026-08-02 13:08:23.968, coverKeyboardThemeIndex, UNKNOWN -> 822149120, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-predictiveTextLineCount
-	- 2026-08-02 13:08:23.968, predictiveTextLineCount, UNKNOWN -> 2, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
-hwrCandidateType
-	- 2026-08-02 13:08:23.968, hwrCandidateType, UNKNOWN -> 0, cb.b.invokeSuspend(Sou:00:00:00:00, MAC: 02:00:00:00:00:00, IP: /192.168.1.2, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 11ac, RSSI: -63, Link speed: 65Mbps, Tx Link speed: 65Mbps, Max Supported Tx Link speed: 433Mbps, Rx Link speed: 117Mbps, Max Supported Rx Link speed: 433Mbps, Frequency: 5805MHz, Net ID: -1, Metered hint: false, score: 60, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: -1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none><none>MLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -63 UnderlyingNetworks: Null]
-currentNetworkState        = wifi
-[Network Status End]
+	- 2026-08-02 13:08:23.967, frontViewTypePref, UNKNOWN -> 0, cb.b.invokeSuspend(SourceFile:65)cb.b.vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+	- 2026-08-02 13:36:56.671, prevViewTypePref, 0 -> 2, sl.z0.a(SourceFile:2)sl.P.a(SourceFile:2)sl.T.a(SourceFile:2)zl.a.c(SourceFile:10)vl.d.d(SourceFile:19)
+useSpeakKeyboardInputAloud
+	- 2026-08-02 13:08:23.969, useSpeakKeyboardInputAloud, UNKNOWN -> false, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+flickAngle
+	- 2026-08-02 13:08:23.969, flickAngle, UNKNOWN -> 38, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+specificWeightMultipleValue
+	- 2026-08-02 13:08:23.969, specificWeightMultipleValue, UNKNOWN -> 5, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(SourceFile:116)
+moakeySwipeLength
+	- 2026-08-02 13:08:23.969, moakeySwipeLength, UNKNOWN -> 1, cb.b.invokeSuspend(SourceFile:65)cb.b.invoke(SourceFile:12)X9.o.u(SourceFile:7)vv.L.t(SourceFile:73)cb.d.a(S==================== languagePack dump state ====================
+[LanguagePack Status Start]
+ selected languages : English(65537)
+ setupWizard language info : 
+ auto replace languages: English (US)
+ auto space languages : English (US)
+ auto spell check languages : 
+ writing assistant languages : English (US)
+ language.json  : {"version":"4.2","currentLanguageOrder":0,"selected":[{"activeOptionList":["auto_replace","auto_spacing","writing_assistant","prediction"],"bilingualId":-1,"engName":"English","id":65537,"inputType":"qwerty","isUsed":true}]}
+[LanguagePack Status End]
 
-==================== KeyboardSize dump state ====================
-[DumpKeyboardSizeData Start]
-Size version: 51.1
-Prev version: 51.1
-currConfigth = 0.75
-
-[DEX DESKTOP]
-dex_desktop_keyboard_size = 0.8
-[DumpKeyboardSizeData End]
-
-==================== Queen dump state ====================
-
-==================== Board dump state ====================
-StickerBoard Dump state
-    isBlockNetwork : false
-    unsupported : true
-    isSupportBitmoji : false
-    isSupportMojitok : false
-    isAvatarSupport : false
-    icePackOrder : {expression_board_home=0, emoji_board=1, ambivalence=2, kaomoji_board=3, com.samsung.android.icecone.gif=4}
-    arEmojiPackOrder : {}
-    specialEditionCscValue : 
-    isGdpr : false
-    pd : &pd=0
-    Using Bitmoji Rest API, SnapAuth : hasAccessToken = false, hasAvatarId = false
-GifBoard Dump state
-    unsupported : false
-    isPpAccepted : false
-SearchBoard Dump State :
-  emoji_board
-  com.samsung.android.icecone.sticker
-  com.samsung.android.icecone.gif
-  ambivalence
-EmoticonBoard Dump state
-    emojiSearch : true
-
-==================== Bee dump state ====================
-  Primary Bee Count : 4
-  Bee Swarm Count : 3
-  Total Bee Co       flag = 1
+==================== NetworkStatus dump state ====================
+[Network Status Start]
+currentActiveNetwork       = 100
+currentNetworkCapabilities = [ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=6317Kbps LinkDnBandwidth>=27981Kbps TransportInfo: <SSID: <unknown ssid>, BSSID: 02:00
+        flag = 1
         visibility = 0
         isUsingNetwork = false
         isUsingExpandView = false
@@ -2543,7 +2648,25 @@ ExpressionBadge Dump state :
   Rts app policy pref = {SETTINGS_SUGGEST_STICKER_APPS_com.google.android.apps.messaging=true}
 
 ==================== SWIFTKEY dump state ====================
-nState=STATE_CANCEL ]
+[SwiftKey dump Start] SwiftKey SDK version : 5.7.1.206[SwiftKey dump End]
+
+==================== Herb dump state ====================
+  fakeHerb = false
+
+==================== HoneyVoice dump state ====================
+isForceChangedToSvi: false
+installedLangPackStatus: {}
+honeyvoice state change history = 
+[ updateTime=2026-08-02 13:48:53.080, newRecognitionState=STATE_IDLE ]
+[ updateTime=2026-08-02 13:48:53.367, newRecognitionState=STATE_LISTENING ]
+[ updateTime=2026-08-02 13:48:53.753, newRecognitionState=STATE_IDLE ]
+[ updateTime=2026-08-02 13:48:54.050, newRecognitionState=STATE_LISTENING ]
+[ updateTime=2026-08-02 13:48:54.363, newRecognitionState=STATE_CANCEL ]
+[ updateTime=2026-08-02 13:52:39.857, newRecognitionState=STATE_LISTENING ]
+[ updateTime=2026-08-02 13:52:44.097, newRecognitionState=STATE_CANCEL ]
+[ updateTime=2026-08-02 14:05:07.087, newRecognitionState=STATE_LISTENING ]
+[ updateTime=2026-08-02 14:05:10.894, newRecognitionState=STATE_IDLE ]
+[ updateTime=2026-08-02 14:05:11.321, newRecognitionState=STATE_CANCEL ]
 honeyvoice search state change history = 
 
 ==================== HoneyBoardServiceHistoryKeeper dump state ====================
