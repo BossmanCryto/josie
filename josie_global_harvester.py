@@ -1,9 +1,9 @@
 #!/data/data/com.termux/files/usr/bin/python3
 """
-JST Global Repository & Intelligence Harvester Engine
+JOSIE Global Repository & Intelligence Harvester Engine
 Target Device: Samsung Galaxy A17 5G (SM-A176U, Android 16)
 Surveys, indexes, and catalogs all local repositories from Cryptoboyyyy_backup,
-intelligence_repos, and JST workspaces under Josie's autonomous agent framework.
+intelligence_repos, and JOSIE workspaces under Josie's autonomous agent framework.
 """
 
 import os
@@ -14,10 +14,10 @@ import subprocess
 from pathlib import Path
 
 HOME = Path(os.getenv("HOME", "/data/data/com.termux/files/home"))
-JST_DIR = HOME / "JOSIE_PROJECTS" / "jst"
+JOSIE_DIR = HOME / "JOSIE_PROJECTS" / "josie"
 AUDIT_DIR = HOME / "storage" / "shared" / "Download" / "Android_Audit"
 AUDIT_DIR.mkdir(parents=True, exist_ok=True)
-TARGET_JSON = AUDIT_DIR / "jst_global_harvester_matrix.json"
+TARGET_JSON = AUDIT_DIR / "josie_global_harvester_matrix.json"
 
 SEARCH_LOCATIONS = [
     HOME / "JOSIE_PROJECTS",
@@ -96,7 +96,7 @@ def generate_matrix():
         "readable_time": time.ctime(),
         "target_device": "Samsung Galaxy A17 5G (SM-A176U, Android 16)",
         "entity": "Josie Autonomous Intelligence Agent Ecosystem",
-        "primary_workspace": str(JST_DIR),
+        "primary_workspace": str(JOSIE_DIR),
         "total_repositories_scanned": len(repos),
         "git_repositories_count": sum(1 for r in repos if r['is_git_repo']),
         "discovered_repositories": repos,
@@ -107,7 +107,7 @@ def generate_matrix():
     return matrix
 
 def main():
-    print("=== JST GLOBAL REPOSITORY & INTELLIGENCE HARVESTER (Samsung Galaxy A17 5G) ===")
+    print("=== JOSIE GLOBAL REPOSITORY & INTELLIGENCE HARVESTER (Samsung Galaxy A17 5G) ===")
     matrix = generate_matrix()
     print(f"[✓] Total Repositories & Folders Scanned: {matrix['total_repositories_scanned']}")
     print(f"[✓] Valid Git Repositories Discovered: {matrix['git_repositories_count']}")

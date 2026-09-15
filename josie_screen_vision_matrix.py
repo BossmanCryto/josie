@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/python3
 """
-JST Screen Vision & Multimodal UI Matrix Engine ("JST Eyes")
+JOSIE Screen Vision & Multimodal UI Matrix Engine ("JOSIE Eyes")
 Target Device: Samsung Galaxy A17 5G (SM-A176U, Android 16)
 Inspects live screen windows, focused application activities, display bounds,
 screen resolution, density, and UI layout states.
@@ -16,7 +16,7 @@ from pathlib import Path
 HOME = Path(os.getenv("HOME", "/data/data/com.termux/files/home"))
 AUDIT_DIR = HOME / "storage" / "shared" / "Download" / "Android_Audit"
 AUDIT_DIR.mkdir(parents=True, exist_ok=True)
-TARGET_JSON = AUDIT_DIR / "jst_screen_vision_matrix.json"
+TARGET_JSON = AUDIT_DIR / "josie_screen_vision_matrix.json"
 RISH_BIN = "/data/data/com.termux/files/usr/bin/rish"
 
 def run_rish(command_string):
@@ -91,7 +91,7 @@ def generate_matrix():
         "timestamp": time.time(),
         "readable_time": time.ctime(),
         "target_device": "Samsung Galaxy A17 5G (SM-A176U, Android 16)",
-        "vision_engine": "JST Screen Vision Matrix (Multimodal Eyes)",
+        "vision_engine": "JOSIE Screen Vision Matrix (Multimodal Eyes)",
         "screen_dimensions": dims,
         "screen_focused_state": focus,
         "screen_orientation_state": orientation_data,
@@ -101,7 +101,7 @@ def generate_matrix():
     return matrix
 
 def main():
-    print("=== JST SCREEN VISION & MULTIMODAL UI MATRIX (Samsung Galaxy A17 5G) ===")
+    print("=== JOSIE SCREEN VISION & MULTIMODAL UI MATRIX (Samsung Galaxy A17 5G) ===")
     matrix = generate_matrix()
     print(f"[✓] Screen Resolution: {matrix['screen_dimensions']['display_size']}")
     print(f"[✓] Screen Density: {matrix['screen_dimensions']['display_density']}")

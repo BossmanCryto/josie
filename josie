@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 set -euo pipefail
-JOSIE_HOME="/data/data/com.termux/files/home/JOSIE_PROJECTS/jst"
+JOSIE_HOME="/data/data/com.termux/files/home/JOSIE_PROJECTS/josie"
 AUDIT_DIR="/data/data/com.termux/files/home/storage/shared/Download/Android_Audit"
 
 msg() {
@@ -41,11 +41,11 @@ case "${1:-start}" in
         ;;
     screen|vision|eyes|look|ui)
         msg "[*] Launching JOSIE Screen Vision & Multimodal UI Matrix..."
-        python3 "$JOSIE_HOME/jst_screen_vision_matrix.py" "${@:2}"
+        python3 "$JOSIE_HOME/josie_screen_vision_matrix.py" "${@:2}"
         ;;
     harvest|repos|backup|crypto)
         msg "[*] Launching JOSIE Global Repository & Intelligence Harvester..."
-        python3 "$JOSIE_HOME/jst_global_harvester.py" "${@:2}"
+        python3 "$JOSIE_HOME/josie_global_harvester.py" "${@:2}"
         ;;
     stream)
         msg "[*] Triggering Node.js asynchronous telemetry stream..."
