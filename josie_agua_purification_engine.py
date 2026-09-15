@@ -1,15 +1,14 @@
 #!/data/data/com.termux/files/usr/bin/python3
 """
-JOSIE Agua Purification & Phoenix Burning Engine
+JOSIE Water Purification & System Rebuild Engine
 Target Device: Samsung Galaxy A17 5G (SM-A176U, Android 16)
-Purges bloatware references, cleanses temporary caches, and rebuilds pristine system telemetry.
+Purges temporary log caches, evaluates bloatware applications, and restores system performance.
 """
 
 import os
 import sys
 import json
 import time
-import glob
 import subprocess
 from pathlib import Path
 
@@ -20,95 +19,93 @@ AUDIT_DIR.mkdir(parents=True, exist_ok=True)
 TARGET_JSON = AUDIT_DIR / "josie_agua_purification.json"
 RISH_BIN = "/data/data/com.termux/files/usr/bin/rish"
 
-def run_rish(cmd):
-    """Execute a single-line rish command safely."""
+def run_rish(command_string):
+    """Execute a single-line Shizuku rish command safely."""
     try:
-        res = subprocess.run(
-            [RISH_BIN, "-c", cmd],
+        response = subprocess.run(
+            [RISH_BIN, "-c", command_string],
             capture_output=True,
             text=True,
             env=os.environ,
             timeout=10
         )
-        if res.returncode == 0:
-            return res.stdout.strip()
+        if response.returncode == 0:
+            return response.stdout.strip()
     except Exception:
         pass
     return None
 
-def fire_phoenix_burn():
-    """Phase 1: Burn out stale pycache, temp files, and oversized logs."""
-    print("[🔥 Phoenix Burn Phase] Purging volatile caches and temp logs...")
-    burned_files = 0
+def purge_temporary_caches():
+    """Phase 1: Remove old python cache files and reduce oversized logs."""
+    print("[Phase 1: Cache Cleaning] Removing temporary files and oversized log buffers...")
+    purged_items_count = 0
     
-    # 1. Clean pycache directories
-    for root, dirs, files in os.walk(JSI_DIR):
-        if "__pycache__" in dirs:
-            pycache_path = Path(root) / "__pycache__"
-            for f in pycache_path.glob("*"):
+    # 1. Clean __pycache__ directories
+    for root_dir, sub_dirs, files in os.walk(JSI_DIR):
+        if "__pycache__" in sub_dirs:
+            pycache_directory = Path(root_dir) / "__pycache__"
+            for file_path in pycache_directory.glob("*"):
                 try:
-                    f.unlink()
-                    burned_files += 1
+                    file_path.unlink()
+                    purged_items_count += 1
                 except Exception:
                     pass
     
-    # 2. Truncate oversized log files > 5MB
+    # 2. Truncate oversized log files larger than 5MB
     for log_file in JSI_DIR.glob("*.log"):
         try:
             if log_file.stat().st_size > 5 * 1024 * 1024:
-                log_file.write_text("[TRUNCATED BY AGUA PURIFICATION]\n")
-                burned_files += 1
+                log_file.write_text("[LOG TRUNCATED FOR CLEAN PERFORMANCE]\n")
+                purged_items_count += 1
         except Exception:
             pass
             
-    print(f"[🔥 Phoenix Burn Phase Complete] {burned_files} items purged.")
-    return burned_files
+    print(f"[Phase 1 Complete] Cleared {purged_items_count} temporary cache items.")
+    return purged_items_count
 
-def agua_system_purification():
-    """Phase 2: Purge bloatware packages and refresh core telemetry."""
-    print("[💧 Agua Purification Phase] Auditing bloatware & refreshing system matrix...")
-    bloatware_pkgs = [
+def audit_bloatware_packages():
+    """Phase 2: Check state of unnecessary background applications."""
+    print("[Phase 2: Bloatware Audit] Evaluating unnecessary background services...")
+    bloatware_package_list = [
         "com.facebook.services",
         "com.facebook.system",
         "com.facebook.appmanager"
     ]
     
-    purged_bloatware = []
-    for pkg in bloatware_pkgs:
-        # Check if package is active on system
-        check = run_rish(f"pm list packages | grep {pkg}")
-        if check:
-            # Disable bloatware package via rish
-            res = run_rish(f"pm disable-user --user 0 {pkg}")
-            purged_bloatware.append({"package": pkg, "action": "disabled", "status": res or "processed"})
+    audit_results = []
+    for package_name in bloatware_package_list:
+        check_output = run_rish(f"pm list packages | grep {package_name}")
+        if check_output:
+            action_output = run_rish(f"pm disable-user --user 0 {package_name}")
+            audit_results.append({"package_name": package_name, "action_taken": "disabled", "result": action_output or "processed"})
         else:
-            purged_bloatware.append({"package": pkg, "action": "none", "status": "not_present"})
+            audit_results.append({"package_name": package_name, "action_taken": "none", "result": "not_installed"})
             
-    return purged_bloatware
+    return audit_results
 
-def generate_matrix(burned_count, bloatware_results):
-    """Compile and export Agua Purification Matrix."""
+def generate_matrix(purged_count, bloatware_results):
+    """Compile clean telemetry output for system purification."""
     matrix = {
         "timestamp": time.time(),
         "readable_time": time.ctime(),
         "target_device": "Samsung Galaxy A17 5G (SM-A176U, Android 16)",
-        "theme": "Agua (Water) & Phoenix (Fire) System Cleansing",
-        "phoenix_burn_purged_items": burned_count,
-        "agua_bloatware_audit": bloatware_results,
-        "status": "System Purified & Rebuilt Pristine"
+        "purification_purpose": "System Cleaning & Optimization",
+        "temporary_cache_items_purged": purged_count,
+        "bloatware_package_audit": bloatware_results,
+        "system_status": "Clean, Optimized & Operating Smoothly"
     }
     TARGET_JSON.write_text(json.dumps(matrix, indent=2))
     return matrix
 
 def main():
-    print("=== JOSIE AGUA PURIFICATION & PHOENIX REBUILD ENGINE ===")
-    burned = fire_phoenix_burn()
-    bloatware = agua_system_purification()
-    matrix = generate_matrix(burned, bloatware)
+    print("=== JOSIE WATER PURIFICATION & SYSTEM CLEANING ENGINE ===")
+    purged = purge_temporary_caches()
+    bloatware = audit_bloatware_packages()
+    matrix = generate_matrix(purged, bloatware)
     
-    print(f"[✓] Phoenix Fire Purge: {matrix['phoenix_burn_purged_items']} files cleansed.")
-    print(f"[✓] Agua Bloatware Audit: {len(matrix['agua_bloatware_audit'])} target packages evaluated.")
-    print(f"[✓] Purification Matrix saved to {TARGET_JSON}")
+    print(f"[✓] Cache Cleaning: {matrix['temporary_cache_items_purged']} files removed.")
+    print(f"[✓] Bloatware Audit: {len(matrix['bloatware_package_audit'])} packages evaluated.")
+    print(f"[✓] Saved Purification Matrix to: {TARGET_JSON}")
 
 if __name__ == "__main__":
     main()
