@@ -1,9 +1,9 @@
 #!/data/data/com.termux/files/usr/bin/python3
 """
-JOSIE Quick Settings & Keyboard Tile Matrix Engine
+JOSIE Quick Settings Tiles & System Titles Matrix Engine
 Target Device: Samsung Galaxy A17 5G (SM-A176U, Android 16)
 Provides deep introspection, dynamic reconfiguration, and autonomous management
-for Android Quick Settings (QS) Tiles, QuickStar Tile Layouts, and Termux Word/Key Tiles.
+for Android Quick Settings (QS) Tiles, System Titles, and Keyboard/Word Tiles.
 """
 
 import os
@@ -17,6 +17,7 @@ HOME = Path(os.getenv("HOME", "/data/data/com.termux/files/home"))
 AUDIT_DIR = HOME / "storage" / "shared" / "Download" / "Android_Audit"
 AUDIT_DIR.mkdir(parents=True, exist_ok=True)
 TARGET_JSON = AUDIT_DIR / "josie_qs_tile_matrix.json"
+TITLE_JSON = AUDIT_DIR / "josie_system_titles_matrix.json"
 LEGACY_JSON = AUDIT_DIR / "josie_wordtile_matrix.json"
 TERMUX_PROPERTIES = HOME / ".termux" / "termux.properties"
 RISH_BIN = "/data/data/com.termux/files/usr/bin/rish"
@@ -50,19 +51,20 @@ def set_qs_tiles(tiles_list):
     res = run_rish(f"settings put secure sysui_qs_tiles '{tiles_str}'")
     return res is not None
 
-def add_qs_tile(tile_name):
-    """Add a custom tile to Quick Settings if not already present."""
-    tiles = get_qs_tiles()
-    if tile_name not in tiles:
-        tiles.append(tile_name)
-        set_qs_tiles(tiles)
-
-def remove_qs_tile(tile_name):
-    """Remove a custom tile from Quick Settings."""
-    tiles = get_qs_tiles()
-    if tile_name in tiles:
-        tiles.remove(tile_name)
-        set_qs_tiles(tiles)
+def get_system_titles():
+    """Extract system application titles and component labels."""
+    titles = []
+    try:
+        pkgs_raw = run_rish("pm list packages -e")
+        if pkgs_raw:
+            for line in pkgs_raw.splitlines()[:30]:
+                if line.startswith("package:"):
+                    pkg = line.replace("package:", "").strip()
+                    title_name = pkg.split(".")[-1].replace("_", " ").title()
+                    titles.append({"package": pkg, "title": title_name})
+    except Exception:
+        pass
+    return titles
 
 def read_termux_tile_config():
     """Read Termux properties configuration for key & word prediction tiles."""
@@ -76,17 +78,10 @@ def read_termux_tile_config():
             config[k.strip()] = v.strip()
     return config
 
-def reload_termux_settings():
-    """Trigger termux-reload-settings (alias: reload-keys)."""
-    try:
-        subprocess.run(["termux-reload-settings"], capture_output=True)
-        return True
-    except Exception:
-        return False
-
 def generate_matrix():
-    """Generate complete telemetry matrix for Quick Settings & Keyboard tiles."""
+    """Generate complete telemetry matrix for Quick Settings Tiles & System Titles."""
     qs_tiles = get_qs_tiles()
+    system_titles = get_system_titles()
     termux_cfg = read_termux_tile_config()
     quickstar_matrix = run_rish("settings get global quickstar_qs_tile_layout_custom_matrix") or "0"
     
@@ -96,27 +91,29 @@ def generate_matrix():
         "target_device": "Samsung Galaxy A17 5G (SM-A176U, Android 16)",
         "qs_tiles_count": len(qs_tiles),
         "qs_tiles": qs_tiles,
+        "system_titles_count": len(system_titles),
+        "system_titles": system_titles,
         "termux_properties_path": str(TERMUX_PROPERTIES),
         "termux_word_input_fixed": termux_cfg.get("enforce-char-based-input", "false"),
-        "termux_back_key": termux_cfg.get("back-key", "unknown"),
         "quickstar_custom_matrix": quickstar_matrix,
         "status": "Operational & Synchronized"
     }
     
-    # Save to primary and legacy JSON paths for total compatibility
     TARGET_JSON.write_text(json.dumps(matrix, indent=2))
+    TITLE_JSON.write_text(json.dumps(matrix, indent=2))
     LEGACY_JSON.write_text(json.dumps(matrix, indent=2))
     return matrix
 
 def main():
-    print("=== JOSIE QUICK SETTINGS & KEYBOARD TILE MATRIX (Samsung A17 5G) ===")
+    print("=== JOSIE QUICK SETTINGS TILES & SYSTEM TITLES MATRIX (Samsung A17 5G) ===")
     matrix = generate_matrix()
     print(f"[✓] Quick Settings Tiles Detected: {matrix['qs_tiles_count']}")
     for idx, tile in enumerate(matrix['qs_tiles'], 1):
         print(f"  {idx}. {tile}")
+    print(f"[✓] System Titles Mapped: {matrix['system_titles_count']}")
     print(f"[✓] Termux Char-based Input Fix: {matrix['termux_word_input_fixed']}")
     print(f"[✓] QuickStar Custom Matrix: {matrix['quickstar_custom_matrix']}")
-    print(f"[✓] Matrix state saved to {TARGET_JSON}")
+    print(f"[✓] Matrices saved to {TARGET_JSON} & {TITLE_JSON}")
 
 if __name__ == "__main__":
     main()
