@@ -27,6 +27,10 @@ case "${1:-start}" in
         msg "[*] Launching JOSIE Agua Purification & Phoenix Rebuild Engine..."
         python3 "$JOSIE_HOME/josie_agua_purification_engine.py" "${@:2}"
         ;;
+    learn|learning|discovery|intel|study)
+        msg "[*] Launching JOSIE Deep Learning & Discovery Matrix Engine..."
+        python3 "$JOSIE_HOME/josie_learning_matrix.py" "${@:2}"
+        ;;
     stream)
         msg "[*] Triggering Node.js asynchronous telemetry stream..."
         if command -v node &>/dev/null; then
