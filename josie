@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#!/data/data/com.termux/files/usr/bin/bash
 set -euo pipefail
-JOSIE_HOME="/data/data/com.termux/files/home/josie_core"
+JOSIE_HOME="/data/data/com.termux/files/home/JOSIE_PROJECTS/jsi"
 AUDIT_DIR="/data/data/com.termux/files/home/storage/shared/Download/Android_Audit"
 
 msg() {
@@ -16,7 +16,11 @@ case "${1:-start}" in
         msg "Entity Name   : Josie"
         msg "Runtimes      : Python3, Node.js, Bash Active"
         msg "════════════════════════════════════════════════════════════════"
-        python3 "$JOSIE_HOME/python/engine.py" "health_check"
+        python3 "$JOSIE_HOME/active_pulse_engine.py"
+        ;;
+    wordtile|tile|qs)
+        msg "[*] Launching JOSIE Word Tile & Quick Settings Matrix..."
+        python3 "$JOSIE_HOME/josie_wordtile_matrix.py" "${@:2}"
         ;;
     stream)
         msg "[*] Triggering Node.js asynchronous telemetry stream..."
@@ -36,6 +40,6 @@ case "${1:-start}" in
         msg "[OK] Package list saved to $AUDIT_DIR/installed_packages.txt"
         ;;
     *)
-        msg "Usage: josie [start|stream|hook|audit]"
+        msg "Usage: josie [start|doctor|wordtile|tile|qs|stream|hook|audit]"
         ;;
 esac
