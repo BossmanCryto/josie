@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/data/data/com.termux/files/usr/bin/env python3
 """
 Josie Core Autonomous HTTP Server & Ledger Pool v2026.Server
 Architecture: Physical + Digital = Human (P + D = H)

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/data/data/com.termux/files/usr/bin/env python3
 import os, sys, time, json, subprocess
 from datetime import datetime, timezone
 from pathlib import Path

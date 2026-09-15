@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/data/data/com.termux/files/usr/bin/env python3
 """
 Josie Core Omniscient System Inspection & Self-Questioning Engine v2026.Audit
 Architecture: Physical + Digital = Human (P + D = H)

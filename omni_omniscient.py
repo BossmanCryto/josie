@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/data/data/com.termux/files/usr/bin/env python3
 """
 Josie Core Omniscient Multi-Dimensional Engine v2026.Omni
 Architecture: Physical + Digital = Human (P + D = H)

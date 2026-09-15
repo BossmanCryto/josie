@@ -10,9 +10,11 @@ audit_dir.mkdir(parents=True, exist_ok=True)
 
 print("[*] Initializing Universal Zsh & Alternative Shell Matrix...")
 
+import shutil
+
 # Verify active shell binaries available in Termux environment
 shells = ["zsh", "bash", "sh", "python3"]
-shell_paths = {sh: subprocess.run(['which', sh], capture_output=True, text=True).stdout.strip() for sh in shells}
+shell_paths = {sh: shutil.which(sh) or "" for sh in shells}
 
 universal_matrix = {
     "timestamp": time.time(),

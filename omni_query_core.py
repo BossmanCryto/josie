@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/data/data/com.termux/files/usr/bin/env python3
 """
 Josie Core Ultimate System & Web-Query Diagnostic Engine v2026.Query
 Architecture: Physical + Digital = Human (P + D = H)

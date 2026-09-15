@@ -1,4 +1,4 @@
-#!/system/bin/sh
+#!/data/data/com.termux/files/usr/bin/sh
 TARGET_DIR="/data/data/com.termux/files/home/josie_core"
 LOG_FILE="/data/data/com.termux/files/storage/shared/Download/Android_Audit/josie_matrix_execution.log"
 

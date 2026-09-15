@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/data/data/com.termux/files/usr/bin/env python3
 """
 Josie Core Maximized Autonomous Engine v2026.Max
 Architecture: Physical + Digital = Human (P + D = H)

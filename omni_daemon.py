@@ -1,8 +1,8 @@
-#!/usr/bin/env python3
+#!/data/data/com.termux/files/usr/bin/env python3
 """
 Josie Core Autonomous Background Daemon v2026.Daemon
 Architecture: Physical + Digital = Human (P + D = H)
-Continuously loops in the background: captures telemetry, updates ledger, logs, and syncs to GitHub.
+Rate-Limit Safe & Zero-Waste Anti-Parasitic Daemon
 """
 
 import os
@@ -16,7 +16,7 @@ import datetime
 CORE_ROOT = Path.cwd()
 LEDGER_FILE = CORE_ROOT / "kernel_state.json"
 LOG_FILE = CORE_ROOT / "josie_core.log"
-INTERVAL_SECONDS = 60
+INTERVAL_SECONDS = 300  # 5 minutes zero-waste interval
 
 def log_msg(msg):
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -36,14 +36,16 @@ def safe_run(cmd):
         return ""
 
 def git_sync(cycle_id):
-    safe_run(["git", "remote", "set-url", "origin", "https://github.com/BossmanCryto/jsi.git"])
-    safe_run(["git", "add", "-A"])
-    safe_run(["git", "commit", "-m", f"Josie Core Autonomous Daemon Sync [{cycle_id}]: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"])
-    safe_run(["git", "push", "origin", "main", "--force"])
+    # Only sync if there are actual working tree changes (zero-waste)
+    status = safe_run(["git", "status", "--porcelain"])
+    if status:
+        safe_run(["git", "add", "-A"])
+        safe_run(["git", "commit", "-m", f"Josie Core Autonomous Sync [{cycle_id}]: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"])
+        safe_run(["git", "push", "origin", "main"])
 
 def main():
     CORE_ROOT.mkdir(parents=True, exist_ok=True)
-    log_msg("Autonomous Daemon initialized. Entering continuous loop...")
+    log_msg("Anti-Parasitic Autonomous Daemon initialized. Entering zero-waste loop...")
     
     while True:
         try:
@@ -69,11 +71,11 @@ def main():
             "timestamp": timestamp,
             "generation": state["generation"],
             "telemetry": telemetry,
-            "status": "Autonomous Sync Complete"
+            "status": "Zero-Waste Sync Complete"
         }
 
         LEDGER_FILE.write_text(json.dumps(state, indent=2), encoding='utf-8')
-        log_msg(f"Cycle {cycle_id} (Gen {state['generation']}) executed successfully. Syncing to GitHub...")
+        log_msg(f"Cycle {cycle_id} (Gen {state['generation']}) completed cleanly.")
         
         git_sync(cycle_id)
         
@@ -81,5 +83,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# Active @Josie Universal Handle Enforced

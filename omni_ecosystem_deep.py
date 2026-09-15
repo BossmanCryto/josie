@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/data/data/com.termux/files/usr/bin/env python3
 """
 Josie Core Deep Ecosystem & Service Discovery Engine v2026.Full
 Architecture: Physical + Digital = Human (P + D = H)

@@ -44,7 +44,7 @@ exec_omega() {
     else
         output=$(eval "$cmd" 2>&1)
         exit_code=$?
-    }
+    fi
     
     if [[ -n "$output" ]]; then
         print "$output"

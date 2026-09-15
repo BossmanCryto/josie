@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/data/data/com.termux/files/usr/bin/env python3
 """
 Josie Core Web & System Query Engine v2026.OmniQuery
 Architecture: Physical + Digital = Human (P + D = H)
