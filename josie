@@ -19,7 +19,7 @@ case "${1:-start}" in
         msg "════════════════════════════════════════════════════════════════"
         python3 "$JOSIE_HOME/active_pulse_engine.py"
         ;;
-    qs|tile|tiles|title|titles|qs-tile|word|wordtile|tile-matrix)
+    qs|tile|tiles|qs-tile|word|wordtile|tile-matrix)
         msg "[*] Launching JOSIE Quick Settings & Keyboard Tile Matrix..."
         python3 "$JOSIE_HOME/josie_qs_tile_matrix.py" "${@:2}"
         ;;
