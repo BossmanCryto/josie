@@ -43,6 +43,10 @@ case "${1:-start}" in
         msg "[*] Launching JST Screen Vision & Multimodal UI Matrix..."
         python3 "$JOSIE_HOME/jst_screen_vision_matrix.py" "${@:2}"
         ;;
+    harvest|repos|backup|crypto)
+        msg "[*] Launching JST Global Repository & Intelligence Harvester..."
+        python3 "$JOSIE_HOME/jst_global_harvester.py" "${@:2}"
+        ;;
     stream)
         msg "[*] Triggering Node.js asynchronous telemetry stream..."
         if command -v node &>/dev/null; then
