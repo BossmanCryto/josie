@@ -10,38 +10,42 @@ msg() {
 case "${1:-start}" in
     start|doctor)
         msg "════════════════════════════════════════════════════════════════"
-        msg "       JST OMEGA POLYGLOT CORE: FULLY OPERATIONAL             "
+        msg "     JOSIE OMEGA INTELLIGENCE ECOSYSTEM: FULLY OPERATIONAL     "
         msg "       TARGET: SAMSUNG GALAXY A17 5G (SM-A176U)                 "
         msg "════════════════════════════════════════════════════════════════"
         msg "Architecture  : Physical + Digital = Human (P + D = H)"
-        msg "Entity Name   : JST / Josie"
+        msg "Entity Name   : Josie (Universal Autonomous AI Core)"
         msg "Runtimes      : Python3, Node.js, Zsh, Rust, Bash Active"
         msg "════════════════════════════════════════════════════════════════"
         python3 "$JOSIE_HOME/active_pulse_engine.py"
         ;;
     qs|tile|tiles|qs-tile|word|wordtile|tile-matrix)
-        msg "[*] Launching JST Quick Settings & Keyboard Tile Matrix..."
+        msg "[*] Launching JOSIE Quick Settings & Keyboard Tile Matrix..."
         python3 "$JOSIE_HOME/josie_qs_tile_matrix.py" "${@:2}"
         ;;
     agua|purify|phoenix|clean)
-        msg "[*] Launching JST Water Purification & System Rebuild Engine..."
+        msg "[*] Launching JOSIE Water Purification & System Rebuild Engine..."
         python3 "$JOSIE_HOME/josie_agua_purification_engine.py" "${@:2}"
         ;;
     learn|learning|discovery|intel|study)
-        msg "[*] Launching JST Deep Learning & Discovery Matrix Engine..."
+        msg "[*] Launching JOSIE Deep Learning & Discovery Matrix Engine..."
         python3 "$JOSIE_HOME/josie_learning_matrix.py" "${@:2}"
         ;;
     max|maximizer|boost|speed)
-        msg "[*] Launching JST System Speedup & Maximizer Engine..."
+        msg "[*] Launching JOSIE System Speedup & Maximizer Engine..."
         python3 "$JOSIE_HOME/josie_system_maximizer.py" "${@:2}"
         ;;
     144|audit144|verify144|exhaustive)
-        msg "[*] Launching JST 144-Point Exhaustive Diagnostic Matrix..."
+        msg "[*] Launching JOSIE 144-Point Exhaustive Diagnostic Matrix..."
         python3 "$JOSIE_HOME/josie_144_audit_matrix.py" "${@:2}"
         ;;
     screen|vision|eyes|look|ui)
-        msg "[*] Launching JST Screen Vision & Multimodal UI Matrix..."
+        msg "[*] Launching JOSIE Screen Vision & Multimodal UI Matrix..."
         python3 "$JOSIE_HOME/jst_screen_vision_matrix.py" "${@:2}"
+        ;;
+    harvest|repos|backup|crypto)
+        msg "[*] Launching JOSIE Global Repository & Intelligence Harvester..."
+        python3 "$JOSIE_HOME/jst_global_harvester.py" "${@:2}"
         ;;
     stream)
         msg "[*] Triggering Node.js asynchronous telemetry stream..."
@@ -61,6 +65,6 @@ case "${1:-start}" in
         msg "[OK] Package list saved to $AUDIT_DIR/installed_packages.txt"
         ;;
     *)
-        msg "Usage: jst [start|doctor|qs|tile|tiles|agua|learn|max|144|screen|vision|eyes]"
+        msg "Usage: josie [start|doctor|qs|tile|tiles|agua|learn|max|144|screen|vision|harvest|repos]"
         ;;
 esac
