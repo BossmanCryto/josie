@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# ==============================================================================
+# JOSIE OS: Stop Coder Server
+# ==============================================================================
+echo "[CODER] Stopping Coder server..."
+pkill -f "coder server" && echo "[CODER] Coder stopped." || echo "[CODER] Coder was not running."

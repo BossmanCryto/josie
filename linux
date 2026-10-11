@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# ==============================================================================
+# JOSIE OS: Kali Linux Primary Subsystem Runner
+# ==============================================================================
+exec /data/data/com.termux/files/home/bin/kali "$@"

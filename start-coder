@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+# ==============================================================================
+# JOSIE OS: Coder CDE Server Runner (https://github.com/coder/coder)
+# Native PostgreSQL + Elevated Shizuku/Rish Runtime (Full Network/Tailnet bypass)
+# ==============================================================================
+set -e
+
+CODER_PORT=3000
+PG_DIR="/data/data/com.termux/files/usr/var/lib/postgresql"
+PG_LOG="/data/data/com.termux/files/usr/var/log/postgresql.log"
+
+# 1. Ensure PostgreSQL is running
+if ! pg_isready -q; then
+    echo "[CODER] Starting native PostgreSQL cluster..."
+    pg_ctl -D "$PG_DIR" -l "$PG_LOG" start
+    sleep 1
+fi
+
+# 2. Ensure /data/local/tmp/coder binary is installed
+if ! rish -c "test -x /data/local/tmp/coder" 2>/dev/null; then
+    echo "[CODER] Syncing binary to /data/local/tmp/coder..."
+    cp -f /data/data/com.termux/files/home/bin/coder /sdcard/coder_tmp 2>/dev/null || true
+    rish -c "cp /sdcard/coder_tmp /data/local/tmp/coder && chmod 755 /data/local/tmp/coder && rm -f /sdcard/coder_tmp"
+fi
+
+# 3. Stop any existing server
+rish -c "pkill -f 'coder server'" 2>/dev/null || true
+
+# 4. Launch Coder Server under elevated shell
+echo "[CODER] Launching Coder v2.36.7 on http://127.0.0.1:${CODER_PORT}..."
+nohup rish -c "export HOME=/data/local/tmp; export USER=shell; mkdir -p /data/local/tmp/.cache; /data/local/tmp/coder server --no-open --provisioner-daemons 0 --cache-dir /data/local/tmp/.cache --postgres-url 'postgres://$(whoami)@127.0.0.1:5432/coder?sslmode=disable' --http-address 0.0.0.0:${CODER_PORT} --access-url http://127.0.0.1:${CODER_PORT}" > /data/data/com.termux/files/home/.coder_server.log 2>&1 &
+
+sleep 2
+echo "[CODER] Server active and listening:"
+echo "  Local Web UI:    http://127.0.0.1:${CODER_PORT}"
+echo "  Network Web UI:  http://192.168.1.23:${CODER_PORT}"
+echo "  Server Logs:     ~/.coder_server.log"

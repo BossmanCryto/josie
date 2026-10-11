@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# ==============================================================================
+# JOSIE OS: Share Coder Web UI securely over Cloudflare Quick Tunnel
+# ==============================================================================
+echo "[CODER-SHARE] Launching Cloudflare Tunnel for http://127.0.0.1:3000..."
+cloudflared tunnel --url http://127.0.0.1:3000
