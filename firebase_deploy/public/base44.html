@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⚡ BASE44 PLATFORM STUDIO</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #070b14;
+      color: #f1f5f9;
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container {
+      width: 100%;
+      max-width: 800px;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #1e293b;
+    }
+    h2 {
+      color: #38bdf8;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .apk-btn {
+      background: #059669;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.2s;
+    }
+    .apk-btn:hover { background: #047857; }
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: #94a3b8;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    textarea {
+      width: 100%;
+      height: 120px;
+      background: #070b14;
+      border: 1px solid #334155;
+      color: #ffffff;
+      padding: 12px;
+      border-radius: 10px;
+      font-family: monospace;
+      font-size: 14px;
+      outline: none;
+      margin-bottom: 14px;
+      resize: vertical;
+    }
+    textarea:focus { border-color: #38bdf8; }
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    button {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    button.encode { background: #0284c7; color: #fff; }
+    button.encode:hover { background: #0369a1; }
+    button.decode { background: #6366f1; color: #fff; }
+    button.decode:hover { background: #4f46e5; }
+    button.copy { background: #1e293b; color: #38bdf8; border: 1px solid #334155; margin-top: 6px; }
+    button.copy:hover { background: #334155; }
+    .stats {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .stat-card {
+      flex: 1;
+      background: #070b14;
+      border: 1px solid #1e293b;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .stat-val { font-size: 18px; font-weight: 800; color: #34d399; }
+    .stat-lbl { font-size: 11px; color: #64748b; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <h2>⚡ Base44 Platform Studio</h2>
+        <div style="font-size:12px; color:#64748b; margin-top:3px;">Zero-Loss 44-Character Alphanumeric Byte Matrix Engine</div>
+      </div>
+      <a class="apk-btn" href="/download/base44.apk" download>
+        📥 Download Native APK
+      </a>
+    </div>
+
+    <div class="stats">
+      <div class="stat-card">
+        <div class="stat-val" id="statInput">0 B</div>
+        <div class="stat-lbl">Input Bytes</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val" id="statOutput">0 chars</div>
+        <div class="stat-lbl">Base44 Size</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-val" id="statAlphabet">44</div>
+        <div class="stat-lbl">Alphabet Base</div>
+      </div>
+    </div>
+
+    <label>Payload Input</label>
+    <textarea id="input" placeholder="Type text, code, or payload to encode/decode..."></textarea>
+
+    <div class="btn-row">
+      <button class="encode" onclick="encode()">⚡ ENCODE TO BASE44</button>
+      <button class="decode" onclick="decode()">🔓 DECODE FROM BASE44</button>
+    </div>
+
+    <label>Matrix Output</label>
+    <textarea id="output" readonly placeholder="Result will appear here..."></textarea>
+    <button class="copy" onclick="copyResult()">📋 Copy to Clipboard</button>
+  </div>
+
+  <script>
+    const alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefgh";
+
+    function encode() {
+      const text = document.getElementById('input').value;
+      if (!text) return;
+      const bytes = new TextEncoder().encode(text);
+      let nz = 0;
+      for (let b of bytes) { if (b === 0) nz++; else break; }
+      
+      let hex = Array.from(bytes).map(b => b.toString(16).padStart(2, '0')).join('');
+      if (!hex) { document.getElementById('output').value = ''; return; }
+      
+      let num = BigInt("0x" + hex);
+      let res = [];
+      const base = 44n;
+      while (num > 0n) {
+        let rem = num % base;
+        res.push(alphabet[Number(rem)]);
+        num = num / base;
+      }
+      let enc = "0".repeat(nz) + res.reverse().join('');
+      document.getElementById('output').value = enc;
+      updateStats(bytes.length, enc.length);
+    }
+
+    function decode() {
+      const enc = document.getElementById('input').value.trim();
+      if (!enc) return;
+      let nz = 0;
+      while (nz < enc.length && enc[nz] === '0') nz++;
+      
+      let num = 0n;
+      const base = 44n;
+      for (let i = nz; i < enc.length; i++) {
+        let idx = alphabet.indexOf(enc[i]);
+        if (idx >= 0) num = num * base + BigInt(idx);
+      }
+      let hex = num.toString(16);
+      if (hex.length % 2 !== 0) hex = "0" + hex;
+      
+      let bytes = [];
+      for (let i = 0; i < nz; i++) bytes.push(0);
+      if (hex !== "00" && hex !== "0") {
+        for (let i = 0; i < hex.length; i += 2) {
+          bytes.push(parseInt(hex.substr(i, 2), 16));
+        }
+      }
+      const dec = new TextDecoder().decode(new Uint8Array(bytes));
+      document.getElementById('output').value = dec;
+      updateStats(bytes.length, enc.length);
+    }
+
+    function updateStats(inBytes, outLen) {
+      document.getElementById('statInput').textContent = inBytes + " B";
+      document.getElementById('statOutput').textContent = outLen + " chars";
+    }
+
+    function copyResult() {
+      const out = document.getElementById('output');
+      out.select();
+      navigator.clipboard.writeText(out.value);
+      alert('Copied to clipboard!');
+    }
+  </script>
+</body>
+</html>
