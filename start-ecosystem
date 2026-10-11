@@ -20,19 +20,19 @@ sleep 1.5
 # 2. Start Cloudflare HTTPS tunnel in background
 ( /data/data/com.termux/files/home/bin/code-share & ) 2>/dev/null || true
 
-# 3. Restart AI Robot Cockpit (:8080)
+# 3. Restart Josie AGI Core Cockpit (:8080)
 pkill -f "python3.*web_app.py" 2>/dev/null || true
 fuser -k ${ROBOT_PORT}/tcp 2>/dev/null || true
 sleep 0.5
 
-echo "  • Starting Josie Robot Cockpit on 0.0.0.0:${ROBOT_PORT}..."
+echo "  • Starting Josie AGI Core Cockpit on 0.0.0.0:${ROBOT_PORT}..."
 setsid -f python3 /data/data/com.termux/files/home/web_app.py > "$ROBOT_LOG" 2>&1
 sleep 1.2
 
 echo "================================================================"
 echo " 🚀 JOSIE COUPLED WORKSPACE ECOSYSTEM IS LIVE & SYNCHRONIZED!"
 echo "================================================================"
-echo " 🤖 AI Robot Cockpit (Port ${ROBOT_PORT}):"
+echo " ⚡ Josie AGI Core Cockpit (Port ${ROBOT_PORT}):"
 echo "    Local URL:    http://127.0.0.1:${ROBOT_PORT}"
 echo "    Network URL:  http://192.168.1.23:${ROBOT_PORT}"
 echo ""
@@ -40,6 +40,6 @@ echo " 🔒 VS Code Web HTTPS (Port ${VSCODE_PORT}):"
 echo "    Local URL:    https://127.0.0.1:${VSCODE_PORT}"
 echo "    Network URL:  https://192.168.1.23:${VSCODE_PORT}"
 echo ""
-echo " ⚡ COUPLED WORKSPACE PORTAL (AI + VS Code in Split Screen):"
+echo " ⚡ COUPLED WORKSPACE PORTAL (AGI + VS Code in Split Screen):"
 echo "    👉 http://192.168.1.23:${ROBOT_PORT}"
 echo "================================================================"

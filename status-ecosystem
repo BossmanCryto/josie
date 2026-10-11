@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# ==============================================================================
+# JOSIE OS: Check Ecosystem Status (:8080 and :8088)
+# ==============================================================================
+ROBOT_PID=$(pgrep -f "python3.*web_app.py" | head -n 1 || true)
+VSCODE_PID=$(pgrep -f "code-server" | head -n 1 || true)
+
+echo "════════════════════════════════════════════════════════════════"
+echo " ⚡ JOSIE COUPLED ECOSYSTEM STATUS"
+echo "════════════════════════════════════════════════════════════════"
+if [ -n "$ROBOT_PID" ]; then
+    echo " ⚡ Josie AGI Core (:8080)     : ✔ RUNNING (PID $ROBOT_PID)"
+    echo "    • Local:   http://127.0.0.1:8080"
+    echo "    • Network: http://192.168.1.23:8080"
+else
+    echo " ⚡ Josie AGI Core (:8080)     : ○ STOPPED"
+fi
+
+if [ -n "$VSCODE_PID" ]; then
+    echo " 💻 VS Code Web (:8088)        : ✔ RUNNING (PID $VSCODE_PID)"
+    echo "    • Local:   http://127.0.0.1:8088"
+    echo "    • Network: http://192.168.1.23:8088"
+else
+    echo " 💻 VS Code Web (:8088)        : ○ STOPPED"
+fi
+
+echo "════════════════════════════════════════════════════════════════"
+echo " 🌐 Unified Portal URL (Chromebook):"
+echo "    👉 http://192.168.1.23:8080  (AI Chat + VS Code Split Screen)"
+echo "════════════════════════════════════════════════════════════════"

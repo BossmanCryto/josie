@@ -1,33 +1,3 @@
 #!/usr/bin/env bash
-# ==============================================================================
-# JOSIE OS: AI Robot Assistant Server (Port 8080)
-# ==============================================================================
-set -e
-
-PORT=8080
-LOG_FILE="/data/data/com.termux/files/home/.robot_server.log"
-
-# 1. Kill any stale process on 8080
-pkill -f "python3.*web_app.py" 2>/dev/null || true
-fuser -k ${PORT}/tcp 2>/dev/null || true
-sleep 1
-
-# 2. Launch daemon detached
-echo "[ROBOT] Starting AI Robot Chat daemon on http://127.0.0.1:${PORT}..."
-setsid -f python3 /data/data/com.termux/files/home/web_app.py > "$LOG_FILE" 2>&1
-sleep 1.5
-
-# 3. Verify socket
-if python3 -c "import socket; s = socket.socket(); s.settimeout(2); s.connect(('127.0.0.1', ${PORT})); s.close()" 2>/dev/null; then
-    echo "=========================================="
-    echo " 🤖 AI Robot Assistant is LIVE & HEALTHY!"
-    echo " Local URL:    http://127.0.0.1:${PORT}"
-    echo " Network URL:  http://192.168.1.23:${PORT}"
-    echo " Logs:         $LOG_FILE"
-    echo "=========================================="
-else
-    echo "⚠️ Warning: Port ${PORT} did not respond immediately. Check $LOG_FILE"
-fi
-
-# 4. Open in Android browser if available
-am start -a android.intent.action.VIEW -d "http://127.0.0.1:${PORT}" >/dev/null 2>&1 || true
+# Forwarding to Josie AGI Core Server (Port 8080)
+exec /data/data/com.termux/files/home/bin/start-agi "$@"

@@ -1,23 +1,23 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# JOSIE OS: code-server Background Daemon (Port 8088)
+# JOSIE OS: code-server HTTPS Background Daemon (Port 8088)
 # ==============================================================================
 CS_PORT=8088
 LOG_FILE="/data/data/com.termux/files/home/.code-server.log"
+CONFIG_FILE="/data/data/com.termux/files/home/.config/code-server/config.yaml"
 
-if pgrep -f "node.*code-server" >/dev/null 2>&1; then
-    echo "[CODE-SERVER] Already active on port ${CS_PORT}"
-else
-    echo "[CODE-SERVER] Starting background service on 0.0.0.0:${CS_PORT}..."
-    setsid -f code-server --config /data/data/com.termux/files/home/.config/code-server/config.yaml \
-      > "$LOG_FILE" 2>&1
-    sleep 2
-fi
+pkill -f "node.*code-server" 2>/dev/null || true
+sleep 1
+
+echo "[CODE-SERVER] Starting HTTPS service on 0.0.0.0:${CS_PORT}..."
+setsid -f code-server --config "$CONFIG_FILE" > "$LOG_FILE" 2>&1
+sleep 2
 
 echo "=========================================="
-echo " VS Code Web Server is LIVE!"
-echo " Local URL:    http://127.0.0.1:${CS_PORT}"
-echo " Network URL:  http://192.168.1.23:${CS_PORT}"
+echo " 🔒 VS Code Web Server is LIVE via HTTPS!"
+echo " Local URL:    https://127.0.0.1:${CS_PORT}"
+echo " Network URL:  https://192.168.1.23:${CS_PORT}"
 echo " Auth:         None (Passwordless)"
+echo " Certificate:  ~/.config/code-server/ssl/cert.pem"
 echo " Logs:         $LOG_FILE"
 echo "=========================================="
