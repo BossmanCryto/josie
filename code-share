@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# ==============================================================================
+# JOSIE OS: Cloudflare Instant Public HTTPS Tunnel for VS Code Web
+# ==============================================================================
+set -e
+
+PORT=8088
+URL_FILE="/data/data/com.termux/files/home/.vscode_public_url.txt"
+LOG_FILE="/data/data/com.termux/files/home/.code-tunnel.log"
+
+pkill -f "cloudflared tunnel" 2>/dev/null || true
+rm -f "$URL_FILE"
+
+echo "[TUNNEL] Launching Cloudflare HTTPS tunnel for port ${PORT}..."
+setsid -f cloudflared tunnel --url "http://127.0.0.1:${PORT}" > "$LOG_FILE" 2>&1
+
+# Wait up to 6 seconds for public URL to appear in log
+for i in {1..12}; do
+    URL=$(grep -o 'https://[-a-zA-Z0-9@:%._\+~#=]*\.trycloudflare\.com' "$LOG_FILE" 2>/dev/null | tail -n 1 || true)
+    if [ -n "$URL" ]; then
+        echo "$URL" > "$URL_FILE"
+        echo "=================================================="
+        echo " 🌐 OFFICIAL GREEN-PADLOCK PUBLIC HTTPS LINK:"
+        echo "    $URL"
+        echo "=================================================="
+        echo " Saved to: $URL_FILE"
+        exit 0
+    fi
+    sleep 0.5
+done
+
+echo "⚠️ Tunnel starting in background. Check: cat $LOG_FILE"

@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# ==============================================================================
+# JOSIE OS: AGI Intelligence Server (Port 8080)
+# ==============================================================================
+set -e
+PORT=8080
+LOG_FILE="/data/data/com.termux/files/home/.agi_server.log"
+
+pkill -f "python3.*web_app.py" 2>/dev/null || true
+fuser -k ${PORT}/tcp 2>/dev/null || true
+sleep 1
+
+echo "[AGI] Starting Josie AGI Core daemon on http://127.0.0.1:${PORT}..."
+setsid -f python3 /data/data/com.termux/files/home/web_app.py > "$LOG_FILE" 2>&1
+sleep 1.5
+
+echo "=========================================="
+echo " ⚡ Josie AGI Core is LIVE & HEALTHY!"
+echo " Local URL:    http://127.0.0.1:${PORT}"
+echo " Network URL:  http://192.168.1.23:${PORT}"
+echo " Logs:         $LOG_FILE"
+echo "=========================================="
+
+am start -a android.intent.action.VIEW -d "http://127.0.0.1:${PORT}" >/dev/null 2>&1 || true

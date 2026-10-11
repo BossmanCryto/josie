@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# ==============================================================================
+# JOSIE OS: Stop Josie AGI Core (:8080)
+# ==============================================================================
+echo "[AGI] Stopping Josie AGI Core..."
+pkill -f "python3.*web_app.py" && echo "[AGI] Service stopped." || echo "[AGI] Service was not running."
+fuser -k 8080/tcp 2>/dev/null || true
