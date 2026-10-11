@@ -285,14 +285,8 @@ MAIN_HTML = """<!DOCTYPE html>
     <div class="chat-panel mode-split" id="chatPanel">
       <div id="chat">
         <div class="msg bot">
-          <div class="msg-header"><span>Josie AGI Core (Claude & OpenRouter)</span></div>
-Welcome Jose! All models, OpenRouter cascade, Claude Cognition, and Firecrawl v2 are online. Language is strictly English.
-
-• **🧠 All Models**: Claude 3.7 Sonnet, DeepSeek V3/R1, Llama 3.3 70B, GPT-4o, and Gemini 2.0!
-• **⚡ Interactive Code**: Every code block features **📋 Copy Code** & **▶ Run Script**!
-• **🔥 Firecrawl v2**: Scrape any webpage or search live web directly from chat!
-• **🔍 Diagnostics & Auto-Repair**: Tap `Check` or `Fix all` anytime.
-• **⚡ Terminal Execution**: Type <code>$ &lt;command&gt;</code> to run native bash.
+          <div class="msg-header"><span>Josie AGI Core</span></div>
+⚡ **Josie AGI Online** — Claude 3.7 & OpenRouter cascade active. Ready for instructions.
         </div>
       </div>
 
