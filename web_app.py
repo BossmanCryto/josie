@@ -330,7 +330,8 @@ MAIN_HTML = """<!DOCTYPE html>
     const orKeyInput = document.getElementById('openrouterKey');
 
     const host = window.location.hostname || "192.168.1.23";
-    let vscodeUrl = "https://" + host + ":8088/?folder=" + encodeURIComponent("/data/data/com.termux/files/home");
+    const isCloudflare = host.includes("trycloudflare.com") || host.includes("cloudflare");
+    let vscodeUrl = "https://" + (isCloudflare ? "192.168.1.23" : host) + ":8088/?folder=" + encodeURIComponent("/data/data/com.termux/files/home");
     extVscodeLink.href = vscodeUrl;
 
     const savedKey = localStorage.getItem('josie_or_key') || "";
