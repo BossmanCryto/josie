@@ -224,7 +224,7 @@ MAIN_HTML = """<!DOCTYPE html>
   <div class="workspace-container">
     <div class="sidebar" id="sidebar">
       <div style="display:flex; justify-content:space-between; align-items:center;">
-        <span style="font-weight:800; font-size:14px; color:#38bdf8;">🌐 ALL MODELS & OPENROUTER</span>
+        <span style="font-weight:800; font-size:14px; color:#38bdf8;">🌐 COGNITIVE MODEL SUITE</span>
         <button class="icon-btn" onclick="toggleSidebar()" style="width:28px;height:28px;font-size:11px;">✕</button>
       </div>
 
@@ -279,13 +279,13 @@ MAIN_HTML = """<!DOCTYPE html>
 
       <div>
         <label>System Persona (English Only)</label>
-        <textarea id="sysPrompt" rows="3">You are Josie AGI Core, an elite AI operating system powered by Claude, OpenRouter, and Firecrawl. Always answer strictly in English.</textarea>
+        <textarea id="sysPrompt" rows="3">You are Josie AGI Core, an elite autonomous intelligence. Always answer strictly in English.</textarea>
       </div>
 
       <div>
         <label>Presets</label>
-        <button class="chip" style="width:100%;margin-top:4px;" onclick="presetFirecrawl('firecrawl_scrape', 'https://openrouter.ai/docs Summarize OpenRouter API features')">🌐 OpenRouter Docs</button>
-        <button class="chip" style="width:100%;margin-top:4px;" onclick="presetFirecrawl('firecrawl_search', 'latest Claude 3.7 benchmarks')">🔎 Search Claude 3.7</button>
+        <button class="chip" style="width:100%;margin-top:4px;" onclick="presetFirecrawl('firecrawl_scrape', 'https://benchlm.ai/models list top models')">🌐 BenchLM Leaderboard</button>
+        <button class="chip" style="width:100%;margin-top:4px;" onclick="presetFirecrawl('firecrawl_search', 'latest frontier AI benchmarks')">🔎 Search Frontier AI</button>
       </div>
     </div>
 
@@ -297,7 +297,7 @@ MAIN_HTML = """<!DOCTYPE html>
           <span class="chip" onclick="quickSend('Check')">🔍 Diagnostic Check</span>
           <span class="chip" onclick="quickSend('Fix all')">🛠️ Fix All Systems</span>
           <span class="chip" onclick="setFirecrawlMode()">🔥 Firecrawl Scrape</span>
-          <span class="chip" onclick="presetFirecrawl('firecrawl_search', 'openrouter models update')">🔎 Search OpenRouter</span>
+          <span class="chip" onclick="presetFirecrawl('firecrawl_search', 'latest AI benchmarks')">🔎 Search Benchmarks</span>
           <span class="chip" onclick="setMode('base44')">🔤 Base44 Studio</span>
           <span class="chip" onclick="quickSend('$ git -C ~/josie-git status')">🌿 Git Status</span>
           <span class="chip" onclick="quickSend('Search memory for CVE-2024-3094')">🧠 Memory Vault</span>
@@ -306,7 +306,7 @@ MAIN_HTML = """<!DOCTYPE html>
         <div class="input-row">
           <button class="icon-btn" title="Toggle Firecrawl Scrape Mode" onclick="setFirecrawlMode()">🔥</button>
           <button class="icon-btn" id="micBtn" onclick="toggleSpeech()" title="Voice Dictation">🎤</button>
-          <input type="text" id="prompt" placeholder="Ask Claude/OpenRouter, paste URL, or type $ <command>..." autofocus onkeydown="if(event.key==='Enter') send()">
+          <input type="text" id="prompt" placeholder="Ask Josie AGI, paste URL, or type $ <command>..." autofocus onkeydown="if(event.key==='Enter') send()">
           <button class="send-btn" id="sendBtn" onclick="send()">Send</button>
         </div>
       </div>
@@ -841,28 +841,41 @@ def ask_ai_cascade(prompt, chosen_model="anthropic/claude-3.7-sonnet", user_key=
     full_sys = (sys_prompt + "\nAnswer strictly in clear, professional English." + memory_instruction).strip()
 
     reply = None
-    # 1. Gemini Fast (if key exists)
+    # 1. User Selected Model via OpenRouter Direct
+    or_key = user_key or get_openrouter_key()
+    if or_key and chosen_model != "pollinations":
+        or_res = ask_openrouter(prompt, chosen_model, or_key, full_sys)
+        if or_res: reply = or_res
+
+    # 2. Gemini Fast (Fallback if key exists)
     if not reply:
         g = ask_gemini_fast(prompt, full_sys)
         if g: reply = g
 
-    # 2. OpenRouter (All Models)
-    if not reply:
-        or_key = user_key or get_openrouter_key()
-        if or_key and chosen_model != "pollinations":
-            or_res = ask_openrouter(prompt, chosen_model, or_key, full_sys)
-            if or_res: reply = or_res
-
-    # 3. Pollinations High-Speed
+    # 3. Pollinations High-Speed (POST method for large context)
     if not reply:
         try:
-            clean = urllib.parse.quote(prompt.strip()[:600])
-            cmd = ["curl", "-s", "-m", "8", f"https://text.pollinations.ai/{clean}?system={urllib.parse.quote(full_sys[:250])}"]
-            res = subprocess.run(cmd, capture_output=True, text=True, timeout=9)
-            ans = res.stdout.strip()
-            if ans and not ans.startswith("{") and len(ans) > 2:
-                reply = ans
-        except Exception: pass
+            p_payload = json.dumps({
+                "messages": [
+                    {"role": "system", "content": full_sys[:1500]},
+                    {"role": "user", "content": prompt[:4000]}
+                ],
+                "model": "openai"
+            }).encode('utf-8')
+            p_req = urllib.request.Request("https://text.pollinations.ai/", data=p_payload, headers={"Content-Type": "application/json", "User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(p_req, timeout=12) as p_resp:
+                ans = p_resp.read().decode('utf-8').strip()
+                if ans and not ans.startswith("{") and len(ans) > 2:
+                    reply = ans
+        except Exception:
+            try:
+                clean = urllib.parse.quote(prompt.strip()[:300])
+                cmd = ["curl", "-s", "-m", "8", f"https://text.pollinations.ai/{clean}"]
+                res = subprocess.run(cmd, capture_output=True, text=True, timeout=9)
+                ans = res.stdout.strip()
+                if ans and not ans.startswith("{") and len(ans) > 2:
+                    reply = ans
+            except Exception: pass
 
     # 4. Local SQLite Memory Direct Synthesis
     if not reply:
