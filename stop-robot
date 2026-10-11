@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# ==============================================================================
+# JOSIE OS: Stop AI Robot Assistant Server
+# ==============================================================================
+echo "[ROBOT] Stopping AI Robot Assistant..."
+pkill -f "python3.*web_app.py" && echo "[ROBOT] Server stopped." || echo "[ROBOT] Server was not running."
+fuser -k 8080/tcp 2>/dev/null || true
