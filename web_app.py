@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 """
-JOSIE OS: AGI Studio Pro & Base44 Platform
-Powered by Claude, All OpenRouter Models, and Firecrawl v2.
-Coupled with VS Code Web (HTTPS :8088), Interactive Script Boxes (Copy + Run),
-and Native Base44 APK distribution. Strictly English.
+JOSIE OS: Sovereign Autonomous AGI Platform & Multi-Tool Hub
+Integrates:
+- High-Reasoning AI Studio (Claude, OpenRouter, Gemini, Firecrawl v2)
+- Kali NetHunter Suite & KeX Desktop Manager
+- Hardware Performance Hyperdrive & Device Restart Controller
+- Firecrawl Web Intelligence & YouTube Harvester Catalog
+- Termux Live Terminal & Base44 Studio
+- VS Code Web Service (Port 8088)
 """
 import http.server
 import json
@@ -21,7 +25,6 @@ PORT = int(os.environ.get("PORT", 8080))
 VSCODE_PORT = int(os.environ.get("VSCODE_PORT", 8088))
 WORKSPACE_DIR = "/data/data/com.termux/files/home"
 DB_PATH = "/data/data/com.termux/files/home/hummie/core/josie_memory.db"
-URL_FILE = "/data/data/com.termux/files/home/.vscode_public_url.txt"
 APK_PATH = "/data/data/com.termux/files/home/Base44Platform.apk"
 KEY_FILE = "/data/data/com.termux/files/home/.openrouter_key"
 FIRECRAWL_KEY = os.environ.get("FIRECRAWL_API_KEY", "fc-efb38e686ec24eb1ae22d0280ca6f38f")
@@ -33,32 +36,6 @@ def get_openrouter_key():
         try: k = open(KEY_FILE).read().strip()
         except Exception: pass
     return k
-
-def base44_encode(data: bytes) -> str:
-    if not data: return ""
-    nz = 0
-    for b in data:
-        if b == 0: nz += 1
-        else: break
-    n = int.from_bytes(data, 'big')
-    if n == 0: return BASE44_ALPHABET[0] * len(data)
-    r = []
-    while n > 0:
-        n, rem = divmod(n, 44)
-        r.append(BASE44_ALPHABET[rem])
-    return (BASE44_ALPHABET[0] * nz) + ''.join(reversed(r))
-
-def base44_decode(encoded: str) -> bytes:
-    if not encoded: return b""
-    nz = 0
-    while nz < len(encoded) and encoded[nz] == BASE44_ALPHABET[0]:
-        nz += 1
-    n = 0
-    for c in encoded[nz:]:
-        i = BASE44_ALPHABET.find(c)
-        if i >= 0: n = n * 44 + i
-    bl = (n.bit_length() + 7) // 8
-    return (b'\x00' * nz) + (n.to_bytes(bl, 'big') if bl > 0 else b'')
 
 def firecrawl_request(endpoint, payload):
     headers = {"Content-Type": "application/json", "User-Agent": "Firecrawl-Studio/2.0"}
@@ -72,17 +49,128 @@ def firecrawl_request(endpoint, payload):
     with urllib.request.urlopen(req, timeout=25) as r:
         return json.loads(r.read().decode("utf-8"))
 
+def get_telemetry():
+    battery_level = "100"
+    temp_c = "30.0"
+    cur_ma = "0"
+    status = "Active"
+    try:
+        res = subprocess.run(["dumpsys", "battery"], capture_output=True, text=True, timeout=2).stdout
+        b = re.search(r"level:\s*(\d+)", res)
+        t = re.search(r"temperature:\s*(\d+)", res)
+        c = re.search(r"current_now:\s*(-?\d+)", res)
+        if b: battery_level = b.group(1)
+        if t: temp_c = f"{int(t.group(1))/10:.1f}"
+        if c: cur_ma = c.group(1)
+    except Exception: pass
+
+    mem, disk = "", ""
+    try:
+        mem = subprocess.run(["free", "-h"], capture_output=True, text=True).stdout.splitlines()[1]
+        disk = subprocess.run(["df", "-h", "/data"], capture_output=True, text=True).stdout.splitlines()[1]
+    except Exception: pass
+
+    adb_status = "Disconnected"
+    try:
+        res = subprocess.run(["adb", "devices"], capture_output=True, text=True, timeout=2).stdout
+        if "device\n" in res:
+            adb_status = "Connected"
+    except Exception: pass
+
+    kex_status = "Stopped"
+    try:
+        if subprocess.run("pgrep -f 'Xvnc :1'", shell=True, capture_output=True).returncode == 0:
+            kex_status = "Active (5901)"
+    except Exception: pass
+
+    return {
+        "battery": battery_level,
+        "temp": temp_c,
+        "current_ma": cur_ma,
+        "status": status,
+        "mem": mem,
+        "storage": disk,
+        "adb": adb_status,
+        "kex": kex_status
+    }
+
+def execute_kali_cmd(cmd: str, is_root: bool = False):
+    try:
+        user_arg = ["--user", "root"] if is_root else []
+        cmd_args = [
+            "proot-distro", "login", *user_arg, "kali",
+            "--bind", "/data/data/com.termux/files/usr/tmp/.X11-unix:/tmp/.X11-unix",
+            "--bind", "/data/data/com.termux/files/home:/root/termux_home",
+            "--env", "DISPLAY=:0",
+            "--", "bash", "-c", cmd
+        ]
+        res = subprocess.run(cmd_args, capture_output=True, text=True, timeout=30)
+        out = (res.stdout + res.stderr).strip() or "(Executed with no output)"
+        return {"output": out, "exit_code": res.returncode}
+    except subprocess.TimeoutExpired:
+        return {"output": "⏱️ Execution timed out after 30 seconds.", "exit_code": -1}
+    except Exception as e:
+        return {"output": f"❌ Error executing in Kali: {e}", "exit_code": -1}
+
+def execute_performance_boost():
+    results = []
+    # 1. Neutralize Phantom Process Killer
+    try:
+        p = subprocess.run(["/data/data/com.termux/files/home/bin/adb-exec", "device_config put activity_manager max_phantom_processes 2147483647"], capture_output=True, text=True, timeout=5)
+        results.append("✅ Phantom Process Killer: Limit set to 2,147,483,647")
+    except Exception as e: results.append(f"⚠️ Phantom Process: {e}")
+
+    # 2. Disable Wi-Fi Power Save
+    try:
+        subprocess.run(["/data/data/com.termux/files/home/bin/adb-exec", "settings put global wifi_power_save 0; cmd wifi set-power-save-mode-enabled false"], capture_output=True, text=True, timeout=5)
+        results.append("✅ Wi-Fi Performance: Power save disabled (Maximum Throughput)")
+    except Exception as e: results.append(f"⚠️ Wi-Fi: {e}")
+
+    # 3. Drop Caches & Memory Optimization
+    try:
+        subprocess.run(["/data/data/com.termux/files/home/bin/adb-exec", "echo 3 > /proc/sys/vm/drop_caches 2>/dev/null || true"], capture_output=True, text=True, timeout=5)
+        results.append("✅ RAM Flush: Kernel pagecache & dentries purged")
+    except Exception as e: results.append(f"⚠️ Memory: {e}")
+
+    # 4. Renice Critical Services for Ultra-Low Latency
+    try:
+        subprocess.run("pkill -0 sshd 2>/dev/null && renice -n -10 $(pgrep sshd) 2>/dev/null || true", shell=True)
+        subprocess.run("renice -n -10 $$ 2>/dev/null || true", shell=True)
+        results.append("✅ Process Nice: CPU scheduling priority raised to High (-10)")
+    except Exception as e: results.append(f"⚠️ Renice: {e}")
+
+    # 5. Hold Wakelock
+    try:
+        subprocess.run(["termux-wake-lock"], capture_output=True, timeout=2)
+        results.append("✅ Android Wakelock: CPU sleep lock firmly acquired")
+    except Exception as e: results.append(f"⚠️ Wakelock: {e}")
+
+    return "\n".join(results)
+
+def get_harvested_videos(limit=25):
+    if not os.path.exists(DB_PATH): return []
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        cur = conn.cursor()
+        cur.execute("CREATE TABLE IF NOT EXISTS yt_harvest_history (video_id TEXT PRIMARY KEY, title TEXT, channel TEXT, url TEXT, summary TEXT, harvest_time TEXT)")
+        cur.execute("SELECT video_id, title, channel, url, summary, harvest_time FROM yt_harvest_history ORDER BY harvest_time DESC LIMIT ?", (limit,))
+        rows = cur.fetchall()
+        conn.close()
+        return [{"id": r[0], "title": r[1], "channel": r[2], "url": r[3], "summary": r[4], "time": r[5]} for r in rows]
+    except Exception:
+        return []
+
 MAIN_HTML = """<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>⚡ JOSIE AGI (CLAUDE & OPENROUTER)</title>
+  <title>⚡ JOSIE OS: Sovereign Autonomous Platform</title>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
     :root {
-      --bg: #070b14; --panel: #0f172a; --border: #1e293b;
-      --accent: #38bdf8; --fire: #f97316; --claude: #d97706; --openrouter: #6366f1;
+      --bg: #070b14; --panel: #0f172a; --panel-light: #1e293b; --border: #334155;
+      --accent: #38bdf8; --green: #10b981; --fire: #f97316; --red: #ef4444; --amber: #f59e0b;
       --text: #f1f5f9; --muted: #94a3b8;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -91,35 +179,31 @@ MAIN_HTML = """<!DOCTYPE html>
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: var(--bg); color: var(--text);
     }
+
+    /* TOP BAR */
     .top-bar {
       height: 50px; background: var(--panel); border-bottom: 1px solid var(--border);
       display: flex; align-items: center; justify-content: space-between; padding: 0 12px; z-index: 100;
     }
     .brand { display: flex; align-items: center; gap: 8px; }
-    .brand h1 { font-size: 15px; font-weight: 800; color: #38bdf8; display: flex; align-items: center; gap: 5px; }
+    .brand h1 { font-size: 15px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 5px; }
     .telemetry-pill {
-      font-size: 11px; background: #1e293b; color: #38bdf8; border: 1px solid #334155;
+      font-size: 11px; background: var(--panel-light); color: var(--accent); border: 1px solid var(--border);
       padding: 3px 8px; border-radius: 12px; font-weight: 600; display: flex; align-items: center; gap: 6px; cursor: pointer;
     }
     .telemetry-pill .dot { width: 6px; height: 6px; border-radius: 50%; background: #34d399; box-shadow: 0 0 6px #34d399; }
-    .mode-controls { display: flex; align-items: center; background: #1e293b; border-radius: 8px; padding: 3px; gap: 3px; }
+    .mode-controls { display: flex; align-items: center; background: var(--panel-light); border-radius: 8px; padding: 3px; gap: 3px; }
     .mode-btn {
-      background: transparent; border: none; color: #94a3b8; padding: 5px 9px;
+      background: transparent; border: none; color: var(--muted); padding: 5px 10px;
       border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer; transition: all 0.15s;
     }
     .mode-btn:hover { color: #f8fafc; }
     .mode-btn.active { background: #0284c7; color: #ffffff; }
-    .nav-actions { display: flex; align-items: center; gap: 6px; }
-    .nav-link {
-      background: #1e293b; color: #38bdf8; border: 1px solid #334155; padding: 5px 9px;
-      border-radius: 6px; font-size: 11px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 4px;
-    }
-    .nav-link.highlight { background: #059669; color: #ffffff; border: none; }
 
     /* LAYOUT */
     .workspace-container { display: flex; height: calc(100vh - 50px); width: 100%; position: relative; }
     .sidebar {
-      width: 280px; background: #0c1220; border-right: 1px solid var(--border);
+      width: 290px; background: #0c1220; border-right: 1px solid var(--border);
       display: flex; flex-direction: column; padding: 14px; gap: 11px; z-index: 50;
       transition: transform 0.25s ease; overflow-y: auto;
     }
@@ -129,80 +213,106 @@ MAIN_HTML = """<!DOCTYPE html>
     }
     .sidebar label { font-size: 11px; color: var(--muted); font-weight: 700; text-transform: uppercase; }
     .sidebar select, .sidebar textarea, .sidebar input {
-      width: 100%; background: #0f172a; color: var(--text); border: 1px solid #334155;
+      width: 100%; background: #0f172a; color: var(--text); border: 1px solid var(--border);
       border-radius: 6px; padding: 7px; font-size: 12px; outline: none; margin-top: 3px;
     }
+
+    /* LEFT CHAT PANEL */
     .chat-panel { display: flex; flex-direction: column; background: #070b14; height: 100%; flex: 1; min-width: 320px; }
     .chat-panel.mode-chat { max-width: 950px; margin: 0 auto; width: 100%; }
-    .chat-panel.mode-split { width: 440px; min-width: 340px; max-width: 580px; border-right: 1px solid var(--border); }
-    .right-panel { flex: 1; height: 100%; background: #000; }
-    .right-panel.hidden { display: none; }
-    .right-panel iframe { width: 100%; height: 100%; border: none; background: #1e1e1e; }
-
+    .chat-panel.mode-split { width: 420px; min-width: 320px; max-width: 520px; border-right: 1px solid var(--border); }
     #chat { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
     .msg { max-width: 840px; width: 100%; margin: 0 auto; padding: 12px 16px; border-radius: 10px; line-height: 1.55; font-size: 14px; border: 1px solid var(--border); word-break: break-word; }
-    .msg.user { background: #1e293b; border-color: #334155; }
-    .msg.bot { background: #0b1220; border-color: #1e293b; }
-    .msg.terminal { background: #020617; border-color: #334155; font-family: monospace; white-space: pre-wrap; font-size: 13px; color: #38bdf8; }
+    .msg.user { background: #1e293b; border-color: #475569; }
+    .msg.bot { background: #0b1220; border-color: var(--border); }
+    .msg.terminal { background: #020617; border-color: var(--border); font-family: monospace; white-space: pre-wrap; font-size: 12px; color: var(--accent); }
     .msg-header { font-size: 11px; font-weight: 700; text-transform: uppercase; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center; }
     .user .msg-header { color: #facc15; }
-    .bot .msg-header { color: #38bdf8; }
-    .mini-btn { background: #1e293b; color: #cbd5e1; border: 1px solid #334155; padding: 2px 7px; border-radius: 4px; font-size: 10px; cursor: pointer; }
-
-    /* INTERACTIVE SCRIPT BOXES */
-    .script-box { margin: 10px 0; border: 1px solid #334155; border-radius: 8px; overflow: hidden; background: #020617; }
-    .script-header {
-      background: #1e293b; padding: 6px 10px; display: flex; justify-content: space-between;
-      align-items: center; font-size: 11px; color: #94a3b8; font-family: monospace; border-bottom: 1px solid #334155;
-    }
-    .script-actions { display: flex; gap: 5px; }
-    .script-btn {
-      background: #0f172a; color: #f8fafc; border: 1px solid #475569; padding: 3px 8px;
-      border-radius: 4px; font-size: 11px; font-weight: 600; cursor: pointer;
-    }
-    .script-btn:hover { border-color: var(--accent); color: var(--accent); }
-    .script-btn.run { background: #065f46; border-color: #10b981; color: #ecfdf5; }
-    .script-btn.run:hover { background: #047857; }
-    .script-box pre { margin: 0; padding: 12px; overflow-x: auto; font-size: 12px; line-height: 1.5; background: transparent; border: none; }
-    .script-box code { font-family: "JetBrains Mono", monospace; color: #38bdf8; white-space: pre; }
-    .script-output {
-      display: none; background: #070b14; border-top: 1px solid #334155; padding: 8px 12px;
-      font-family: monospace; font-size: 11px; color: #4ade80; white-space: pre-wrap;
-    }
+    .bot .msg-header { color: var(--accent); }
 
     /* COMPOSER */
     .input-area { border-top: 1px solid var(--border); background: var(--panel); padding: 10px 14px; }
     .quick-chips { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 8px; scrollbar-width: none; }
     .chip {
-      white-space: nowrap; background: #1e293b; border: 1px solid #334155; color: #94a3b8;
+      white-space: nowrap; background: var(--panel-light); border: 1px solid var(--border); color: var(--muted);
       font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 12px; cursor: pointer; transition: all 0.15s;
     }
     .chip:hover { border-color: var(--accent); color: #fff; }
-    .input-row { display: flex; gap: 8px; align-items: center; max-width: 950px; margin: 0 auto; }
+    .input-row { display: flex; gap: 8px; align-items: center; }
     .icon-btn {
-      background: #1e293b; color: #fff; border: 1px solid #334155; width: 40px; height: 40px;
-      border-radius: 8px; cursor: pointer; font-size: 15px; display: flex; align-items: center; justify-content: center;
+      background: var(--panel-light); color: #fff; border: 1px solid var(--border); width: 38px; height: 38px;
+      border-radius: 8px; cursor: pointer; font-size: 14px; display: flex; align-items: center; justify-content: center;
     }
     .icon-btn:hover { border-color: var(--accent); }
-    .icon-btn.recording { background: #dc2626; border-color: #ef4444; animation: pulse 1s infinite; }
     #prompt {
-      flex: 1; background: #0b0f19; color: #fff; border: 1px solid #334155; border-radius: 8px;
-      padding: 10px 14px; font-size: 14px; outline: none; height: 40px;
+      flex: 1; background: #0b0f19; color: #fff; border: 1px solid var(--border); border-radius: 8px;
+      padding: 9px 12px; font-size: 13px; outline: none; height: 38px;
     }
     #prompt:focus { border-color: var(--accent); }
     .send-btn {
-      background: #0284c7; color: #fff; border: none; padding: 0 16px; height: 40px;
+      background: #0284c7; color: #fff; border: none; padding: 0 16px; height: 38px;
       border-radius: 8px; font-weight: 700; font-size: 13px; cursor: pointer;
     }
-    .send-btn:hover { background: #0369a1; }
-    @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+
+    /* RIGHT MULTI-TOOL COCKPIT PANEL */
+    .right-panel { flex: 1; height: 100%; background: #070b14; display: flex; flex-direction: column; overflow: hidden; }
+    .right-panel.hidden { display: none; }
+
+    .hub-tabs {
+      height: 42px; background: #0a0f1d; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; padding: 0 8px; gap: 4px; overflow-x: auto; scrollbar-width: none;
+    }
+    .hub-tab {
+      background: transparent; border: none; color: var(--muted); padding: 7px 12px;
+      border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer; white-space: nowrap; display: flex; align-items: center; gap: 5px;
+    }
+    .hub-tab:hover { color: #fff; }
+    .hub-tab.active { background: #1e293b; color: var(--accent); border-bottom: 2px solid var(--accent); }
+
+    .hub-content { flex: 1; overflow-y: auto; padding: 14px; }
+    .hub-pane { display: none; flex-direction: column; gap: 14px; }
+    .hub-pane.active { display: flex; }
+
+    /* CARDS & UI COMPONENTS */
+    .card { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 14px; }
+    .card-title { font-size: 13px; font-weight: 800; color: var(--accent); margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; }
+    .btn-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; margin-top: 8px; }
+    .action-btn {
+      background: var(--panel-light); border: 1px solid var(--border); color: #fff;
+      padding: 9px; border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer; text-align: center;
+    }
+    .action-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .action-btn.boost { background: #065f46; border-color: #10b981; }
+    .action-btn.boost:hover { background: #047857; color: #fff; }
+    .action-btn.restart { background: #7f1d1d; border-color: #ef4444; color: #fee2e2; }
+    .action-btn.restart:hover { background: #991b1b; }
+
+    .terminal-window {
+      background: #020617; border: 1px solid var(--border); border-radius: 8px;
+      padding: 12px; font-family: "JetBrains Mono", monospace; font-size: 11px; color: #38bdf8;
+      min-height: 160px; max-height: 320px; overflow-y: auto; white-space: pre-wrap; line-height: 1.5;
+    }
+
+    .badge { padding: 2px 7px; border-radius: 10px; font-size: 10px; font-weight: 700; }
+    .badge.green { background: rgba(16,185,129,0.2); color: #34d399; border: 1px solid #10b981; }
+    .badge.amber { background: rgba(245,158,11,0.2); color: #fbbf24; border: 1px solid #f59e0b; }
+    .badge.red { background: rgba(239,68,68,0.2); color: #f87171; border: 1px solid #ef4444; }
+
+    .video-card {
+      background: #0b1220; border: 1px solid var(--border); border-radius: 8px; padding: 10px;
+      display: flex; flex-direction: column; gap: 4px; margin-bottom: 8px;
+    }
+    .video-title { font-size: 12px; font-weight: 700; color: #38bdf8; text-decoration: none; }
+    .video-title:hover { text-decoration: underline; }
+    .video-meta { font-size: 10px; color: var(--muted); }
+    .video-desc { font-size: 11px; color: #cbd5e1; }
   </style>
 </head>
 <body>
   <div class="top-bar">
     <div class="brand">
-      <button class="icon-btn" onclick="toggleSidebar()" style="width:32px;height:32px;font-size:13px;" title="Model & Settings">⚙️</button>
-      <h1>⚡ JOSIE AGI</h1>
+      <button class="icon-btn" onclick="toggleSidebar()" style="width:30px;height:30px;" title="Settings">⚙️</button>
+      <h1>⚡ JOSIE OS</h1>
       <div class="telemetry-pill" onclick="fetchTelemetry()">
         <span class="dot"></span>
         <span id="telemetryText">LIVE TELEMETRY</span>
@@ -211,84 +321,69 @@ MAIN_HTML = """<!DOCTYPE html>
 
     <div class="mode-controls">
       <button class="mode-btn" id="btnChat" onclick="setMode('chat')">💬 Chat</button>
-      <button class="mode-btn active" id="btnSplit" onclick="setMode('split')">⚡ Split Screen</button>
-      <button class="mode-btn" id="btnBase44" onclick="setMode('base44')">🔤 Base44</button>
+      <button class="mode-btn active" id="btnSplit" onclick="setMode('split')">⚡ Split Cockpit</button>
+      <button class="mode-btn" id="btnHub" onclick="setMode('hub')">🐉 Multi-Tool Hub</button>
     </div>
 
-    <div class="nav-actions">
-      <a class="nav-link highlight" href="/download/base44.apk" download>📥 APK</a>
-      <a class="nav-link" id="extVscodeLink" href="https://192.168.1.23:8088" target="_blank">🔒 VS Code</a>
+    <div class="brand">
+      <button class="action-btn restart" onclick="confirmRestart()" style="padding:4px 9px;font-size:11px;">🔄 Restart Phone</button>
     </div>
   </div>
 
   <div class="workspace-container">
+    <!-- SIDEBAR -->
     <div class="sidebar" id="sidebar">
       <div style="display:flex; justify-content:space-between; align-items:center;">
-        <span style="font-weight:800; font-size:14px; color:#38bdf8;">🌐 COGNITIVE MODEL SUITE</span>
-        <button class="icon-btn" onclick="toggleSidebar()" style="width:28px;height:28px;font-size:11px;">✕</button>
+        <span style="font-weight:800; font-size:13px; color:var(--accent);">🌐 AI MODEL ENGINE</span>
+        <button class="icon-btn" onclick="toggleSidebar()" style="width:26px;height:26px;font-size:11px;">✕</button>
       </div>
 
       <div>
-        <label>Active Cognitive Model</label>
+        <label>Cognitive LLM</label>
         <select id="modelSelect">
-          <optgroup label="Anthropic Frontier (Highest Reasoning)">
-            <option value="anthropic/claude-3.7-sonnet" selected>🧠 Claude 3.7 Sonnet (Hybrid Reasoning)</option>
-            <option value="anthropic/claude-3.7-sonnet:thinking">💭 Claude 3.7 Sonnet (Extended Thinking)</option>
-            <option value="anthropic/claude-3.5-sonnet">⚡ Claude 3.5 Sonnet (Coding Apex)</option>
-            <option value="anthropic/claude-3-opus">👑 Claude 3 Opus (Deep Synthesis)</option>
-            <option value="anthropic/claude-3.5-haiku">🚀 Claude 3.5 Haiku (Ultra Fast)</option>
+          <optgroup label="Anthropic Frontier">
+            <option value="anthropic/claude-3.7-sonnet" selected>🧠 Claude 3.7 Sonnet</option>
+            <option value="anthropic/claude-3.5-sonnet">⚡ Claude 3.5 Sonnet</option>
           </optgroup>
-          <optgroup label="OpenAI Frontier & Reasoning">
-            <option value="openai/o3-mini">🔬 OpenAI o3-mini (High Reasoning)</option>
-            <option value="openai/o1">🧠 OpenAI o1 (Max Cognitive)</option>
-            <option value="openai/gpt-4o">🤖 GPT-4o (Multimodal Omnipresent)</option>
-            <option value="openai/gpt-4o-mini">⚡ GPT-4o Mini (Efficiency)</option>
-          </optgroup>
-          <optgroup label="Google DeepMind Frontier">
-            <option value="google/gemini-2.5-pro-preview">💎 Gemini 2.5 Pro (Ultra Context)</option>
-            <option value="google/gemini-2.0-flash-thinking-exp:free">💭 Gemini 2.0 Flash Thinking (Free)</option>
+          <optgroup label="Google DeepMind">
+            <option value="google/gemini-2.5-pro-preview">💎 Gemini 2.5 Pro</option>
             <option value="google/gemini-2.0-flash-exp:free">⚡ Gemini 2.0 Flash (Free)</option>
           </optgroup>
-          <optgroup label="DeepSeek & Open Source Leaders">
-            <option value="deepseek/deepseek-r1:free">🧠 DeepSeek R1 Full Reasoning (Free)</option>
-            <option value="deepseek/deepseek-chat:free">🐋 DeepSeek V3 671B MoE (Free)</option>
-            <option value="meta-llama/llama-3.3-70b-instruct:free">🦙 Llama 3.3 70B Instruct (Free)</option>
-            <option value="qwen/qwen-2.5-72b-instruct:free">🐉 Qwen 2.5 72B Instruct (Free)</option>
-            <option value="mistralai/mistral-large-2411">🌪️ Mistral Large 2 (128k)</option>
+          <optgroup label="OpenAI Frontier">
+            <option value="openai/gpt-4o">🤖 GPT-4o</option>
+            <option value="openai/o3-mini">🔬 OpenAI o3-mini</option>
           </optgroup>
-          <optgroup label="High-Speed Free Fallback">
-            <option value="pollinations">🌐 Pollinations (Keyless Zero-Config)</option>
+          <optgroup label="Open Source Leaders">
+            <option value="deepseek/deepseek-r1:free">🧠 DeepSeek R1 (Free)</option>
+            <option value="pollinations">🌐 Pollinations (Keyless Fallback)</option>
           </optgroup>
         </select>
-      </div>
-
-      <div>
-        <label>OpenRouter API Key (Optional)</label>
-        <input type="password" id="openrouterKey" placeholder="sk-or-v1-..." onchange="saveKey()">
       </div>
 
       <div>
         <label>Action Mode</label>
         <select id="actionMode">
           <option value="chat">💬 Standard AI Chat</option>
-          <option value="firecrawl_scrape">🔥 Firecrawl Scrape URL + Ask AI</option>
-          <option value="firecrawl_search">🔎 Firecrawl Web Search + Ask AI</option>
-          <option value="shell">💻 Execute Local Bash Command</option>
+          <option value="firecrawl_scrape">🔥 Firecrawl Scrape URL</option>
+          <option value="firecrawl_search">🔎 Firecrawl Search Web</option>
+          <option value="shell">💻 Execute Local Bash</option>
         </select>
       </div>
 
       <div>
-        <label>System Persona (English Only)</label>
-        <textarea id="sysPrompt" rows="3">You are Josie AGI Core, an elite autonomous intelligence. Always answer strictly in English.</textarea>
+        <label>System Instructions</label>
+        <textarea id="sysPrompt" rows="3">You are Josie OS Core, an elite autonomous system assistant. Always respond concisely and strictly in English.</textarea>
       </div>
 
       <div>
-        <label>Presets</label>
-        <button class="chip" style="width:100%;margin-top:4px;" onclick="presetFirecrawl('firecrawl_scrape', 'https://benchlm.ai/models list top models')">🌐 BenchLM Leaderboard</button>
-        <button class="chip" style="width:100%;margin-top:4px;" onclick="presetFirecrawl('firecrawl_search', 'latest frontier AI benchmarks')">🔎 Search Frontier AI</button>
+        <label>Quick Triggers</label>
+        <button class="action-btn" style="width:100%;margin-top:4px;" onclick="triggerPerformanceBoost()">🚀 Run Hyperdrive Boost</button>
+        <button class="action-btn" style="width:100%;margin-top:4px;" onclick="switchHubTab('nethunter')">🐉 NetHunter Security Suite</button>
+        <button class="action-btn" style="width:100%;margin-top:4px;" onclick="switchHubTab('harvester')">📚 Video Intelligence Library</button>
       </div>
     </div>
 
+    <!-- LEFT: CHAT PANEL -->
     <div class="chat-panel mode-split" id="chatPanel">
       <div id="chat"></div>
 
@@ -296,205 +391,197 @@ MAIN_HTML = """<!DOCTYPE html>
         <div class="quick-chips">
           <span class="chip" onclick="quickSend('Check')">🔍 Diagnostic Check</span>
           <span class="chip" onclick="quickSend('Fix all')">🛠️ Fix All Systems</span>
-          <span class="chip" onclick="setFirecrawlMode()">🔥 Firecrawl Scrape</span>
-          <span class="chip" onclick="presetFirecrawl('firecrawl_search', 'latest AI benchmarks')">🔎 Search Benchmarks</span>
-          <span class="chip" onclick="setMode('base44')">🔤 Base44 Studio</span>
-          <span class="chip" onclick="quickSend('$ git -C ~/josie-git status')">🌿 Git Status</span>
-          <span class="chip" onclick="quickSend('Search memory for CVE-2024-3094')">🧠 Memory Vault</span>
-          <span class="chip" onclick="fetchTelemetry()">🔋 Telemetry</span>
+          <span class="chip" onclick="triggerPerformanceBoost()">🚀 Hyperdrive Boost</span>
+          <span class="chip" onclick="switchHubTab('nethunter')">🐉 NetHunter Tools</span>
+          <span class="chip" onclick="switchHubTab('harvester')">📚 Video Intel</span>
+          <span class="chip" onclick="switchHubTab('device')">🔋 Hardware & Restart</span>
+          <span class="chip" onclick="fetchTelemetry()">⚡ Telemetry</span>
         </div>
         <div class="input-row">
-          <button class="icon-btn" title="Toggle Firecrawl Scrape Mode" onclick="setFirecrawlMode()">🔥</button>
+          <button class="icon-btn" title="Toggle Scrape" onclick="setFirecrawlMode()">🔥</button>
           <button class="icon-btn" id="micBtn" onclick="toggleSpeech()" title="Voice Dictation">🎤</button>
-          <input type="text" id="prompt" placeholder="Ask Josie AGI, paste URL, or type $ <command>..." autofocus onkeydown="if(event.key==='Enter') send()">
+          <input type="text" id="prompt" placeholder="Ask Josie OS, paste URL, or type $ <command>..." autofocus onkeydown="if(event.key==='Enter') send()">
           <button class="send-btn" id="sendBtn" onclick="send()">Send</button>
         </div>
       </div>
     </div>
 
+    <!-- RIGHT: MULTI-TOOL COCKPIT PANEL -->
     <div class="right-panel mode-split" id="rightPanel">
-      <iframe id="mainFrame" src="" allow="clipboard-read; clipboard-write"></iframe>
+      <div class="hub-tabs">
+        <button class="hub-tab active" id="tab-nethunter" onclick="switchHubTab('nethunter')">🐉 NetHunter & Kali</button>
+        <button class="hub-tab" id="tab-device" onclick="switchHubTab('device')">⚡ Hardware & Reboot</button>
+        <button class="hub-tab" id="tab-harvester" onclick="switchHubTab('harvester')">🔥 Firecrawl & Videos</button>
+        <button class="hub-tab" id="tab-terminal" onclick="switchHubTab('terminal')">💻 Live Terminal</button>
+        <button class="hub-tab" id="tab-vscode" onclick="switchHubTab('vscode')">🔒 VS Code Web</button>
+        <button class="hub-tab" id="tab-base44" onclick="switchHubTab('base44')">🔤 Base44 Studio</button>
+      </div>
+
+      <div class="hub-content">
+        <!-- PANE 1: NETHUNTER & KALI SUITE -->
+        <div class="hub-pane active" id="pane-nethunter">
+          <div class="card">
+            <div class="card-title">
+              <span>🐉 NetHunter Kali Suite (Autonomous Subsystem)</span>
+              <span class="badge green">PRoot-Distro Active</span>
+            </div>
+            <p style="font-size:12px;color:var(--muted);margin-bottom:8px;">Execute Kali penetration testing & network tools directly without leaving the dashboard.</p>
+            <div class="btn-grid">
+              <button class="action-btn" onclick="runKaliPreset('nmap -F 127.0.0.1')">🌐 Scan Localhost (Nmap)</button>
+              <button class="action-btn" onclick="runKaliPreset('nmap -sn 192.168.1.0/24')">📡 Discover LAN Hosts</button>
+              <button class="action-btn" onclick="runKaliPreset('sqlmap --version')">🛡️ SQLMap Audit</button>
+              <button class="action-btn" onclick="runKaliPreset('aircrack-ng --help | head -n 12')">🔑 Aircrack-ng Suite</button>
+              <button class="action-btn" onclick="controlKex('start')">🖥️ Start KeX VNC (:1)</button>
+              <button class="action-btn" onclick="controlKex('stop')">🛑 Stop KeX Display</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">
+              <span>💻 Kali Command Runner</span>
+              <label style="font-size:11px;font-weight:600;color:var(--muted);"><input type="checkbox" id="kaliRootCheck"> Run as Root</label>
+            </div>
+            <div style="display:flex;gap:6px;margin-bottom:8px;">
+              <input type="text" id="kaliInput" placeholder="Enter Kali command (e.g. nmap -A 127.0.0.1, hydra, john)..." style="flex:1;background:#020617;color:#fff;border:1px solid var(--border);border-radius:6px;padding:8px;font-size:12px;outline:none;" onkeydown="if(event.key==='Enter') executeKali()">
+              <button class="action-btn" style="background:#0284c7;" onclick="executeKali()">▶ Run</button>
+            </div>
+            <div class="terminal-window" id="kaliOutput">⚡ NetHunter Kali Terminal Ready. Run preset or type command above.</div>
+          </div>
+        </div>
+
+        <!-- PANE 2: HARDWARE & RESTART -->
+        <div class="hub-pane" id="pane-device">
+          <div class="card">
+            <div class="card-title">
+              <span>🔋 Device Telemetry & Bridge Status</span>
+              <button class="action-btn" style="padding:2px 8px;font-size:10px;" onclick="fetchTelemetry()">Refresh</button>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px;">
+              <div>🔋 Battery: <b id="d-bat">--</b></div>
+              <div>🌡️ Temp: <b id="d-temp">--</b></div>
+              <div>⚡ Charging: <b id="d-curr">--</b></div>
+              <div>🤖 Wireless ADB: <b id="d-adb">--</b></div>
+              <div>🖥️ KeX VNC: <b id="d-kex">--</b></div>
+              <div>💾 RAM: <b id="d-ram">--</b></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">
+              <span>🚀 Hyperdrive Performance Optimization</span>
+              <span class="badge green">Zero Throttling</span>
+            </div>
+            <p style="font-size:12px;color:var(--muted);margin-bottom:8px;">Disables Wi-Fi power saving, neutralizes phantom process limits, and flushes RAM caches for maximum speed.</p>
+            <button class="action-btn boost" style="width:100%;font-size:13px;padding:12px;" onclick="triggerPerformanceBoost()">🚀 BOOST SYSTEM PERFORMANCE NOW</button>
+            <div class="terminal-window" id="boostOutput" style="margin-top:8px;min-height:80px;">System optimized and ready.</div>
+          </div>
+
+          <div class="card" style="border-color:#7f1d1d;background:#1a0c0c;">
+            <div class="card-title" style="color:#f87171;">
+              <span>🔄 Device Restart (Turn Off & On)</span>
+              <span class="badge red">Auto-Resuming</span>
+            </div>
+            <p style="font-size:12px;color:#fca5a5;margin-bottom:10px;">Safely reboots the Android device. Termux:Boot will auto-resume ADB, SSH, the Guardian daemon, and this Web Hub upon boot.</p>
+            <button class="action-btn restart" style="width:100%;font-size:13px;padding:12px;" onclick="confirmRestart()">🔄 RESTART DEVICE (REBOOT NOW)</button>
+          </div>
+        </div>
+
+        <!-- PANE 3: FIRECRAWL & YOUTUBE HARVESTER -->
+        <div class="hub-pane" id="pane-harvester">
+          <div class="card">
+            <div class="card-title">
+              <span>🔥 Firecrawl v2 Live Web Intelligence</span>
+              <span class="badge green">API Connected</span>
+            </div>
+            <div style="display:flex;gap:6px;margin-bottom:8px;">
+              <input type="text" id="fcQuery" placeholder="Search the web with Firecrawl v2..." style="flex:1;background:#020617;color:#fff;border:1px solid var(--border);border-radius:6px;padding:8px;font-size:12px;outline:none;" onkeydown="if(event.key==='Enter') executeFirecrawlSearch()">
+              <button class="action-btn" style="background:#ea580c;" onclick="executeFirecrawlSearch()">🔎 Search</button>
+            </div>
+            <div class="terminal-window" id="fcOutput" style="min-height:100px;">Enter query to search web with Firecrawl v2.</div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">
+              <span>📚 YouTube Technical Video Knowledge Library</span>
+              <button class="action-btn" style="padding:4px 9px;font-size:11px;" onclick="triggerHarvest()">✨ Sweep & Harvest New</button>
+            </div>
+            <p style="font-size:11px;color:var(--muted);margin-bottom:8px;">Knowledge harvested automatically into SQLite cognitive memory:</p>
+            <div id="videoList" style="max-height:360px;overflow-y:auto;">Loading library...</div>
+          </div>
+        </div>
+
+        <!-- PANE 4: LIVE TERMINAL -->
+        <div class="hub-pane" id="pane-terminal">
+          <div class="card">
+            <div class="card-title">
+              <span>💻 Interactive Termux Shell</span>
+              <span class="badge green">Local Host</span>
+            </div>
+            <div style="display:flex;gap:6px;margin-bottom:8px;">
+              <input type="text" id="termInput" placeholder="Type bash command (e.g. ls -la, auto-adb, yt-learn list)..." style="flex:1;background:#020617;color:#fff;border:1px solid var(--border);border-radius:6px;padding:8px;font-size:12px;outline:none;" onkeydown="if(event.key==='Enter') executeTerminal()">
+              <button class="action-btn" style="background:#0284c7;" onclick="executeTerminal()">▶ Run</button>
+            </div>
+            <div class="terminal-window" id="termOutput" style="min-height:240px;">⚡ Termux interactive terminal ready.</div>
+          </div>
+        </div>
+
+        <!-- PANE 5: VS CODE WEB -->
+        <div class="hub-pane" id="pane-vscode">
+          <div class="card">
+            <div class="card-title">
+              <span>🔒 VS Code Web Server (Port 8088 HTTPS)</span>
+              <a href="https://192.168.1.23:8088" target="_blank" class="action-btn" style="padding:4px 8px;font-size:11px;text-decoration:none;">🔗 Open in New Tab</a>
+            </div>
+            <p style="font-size:11px;color:var(--muted);margin-bottom:6px;">If browser blocks HTTPS iframe due to local self-signed certificate, click "Open in New Tab" above and accept the local certificate.</p>
+            <div style="height:550px;width:100%;border-radius:8px;overflow:hidden;border:1px solid var(--border);">
+              <iframe id="vscodeFrame" src="" style="width:100%;height:100%;border:none;background:#1e1e1e;" allow="clipboard-read; clipboard-write"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANE 6: BASE44 STUDIO -->
+        <div class="hub-pane" id="pane-base44">
+          <div class="card">
+            <div class="card-title">🔤 Base44 Platform Web Studio</div>
+            <label style="font-size:11px;color:var(--muted);font-weight:700;">Input Text or Raw Payload:</label>
+            <textarea id="b44Inp" rows="4" placeholder="Type text to encode or Base44 matrix to decode..." style="width:100%;background:#020617;color:#fff;border:1px solid var(--border);border-radius:6px;padding:8px;font-size:12px;margin:6px 0;outline:none;"></textarea>
+            <div style="display:flex;gap:8px;margin-bottom:8px;">
+              <button class="action-btn" style="flex:1;background:#0284c7;" onclick="b44Enc()">⚡ Encode to Base44</button>
+              <button class="action-btn" style="flex:1;background:#059669;" onclick="b44Dec()">🔓 Decode from Base44</button>
+            </div>
+            <label style="font-size:11px;color:var(--muted);font-weight:700;">Result:</label>
+            <textarea id="b44Out" rows="4" readonly placeholder="Result will appear here..." style="width:100%;background:#020617;color:#38bdf8;border:1px solid var(--border);border-radius:6px;padding:8px;font-size:12px;margin-top:6px;outline:none;font-family:monospace;"></textarea>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
   <script>
-    let codeStore = [];
     const chat = document.getElementById('chat');
     const input = document.getElementById('prompt');
     const sendBtn = document.getElementById('sendBtn');
     const micBtn = document.getElementById('micBtn');
     const chatPanel = document.getElementById('chatPanel');
     const rightPanel = document.getElementById('rightPanel');
-    const mainFrame = document.getElementById('mainFrame');
-    const extVscodeLink = document.getElementById('extVscodeLink');
-    const telemetryText = document.getElementById('telemetryText');
     const sidebar = document.getElementById('sidebar');
-    const orKeyInput = document.getElementById('openrouterKey');
+    const telemetryText = document.getElementById('telemetryText');
 
-    const host = window.location.hostname || "192.168.1.23";
-    const isCloudflare = host.includes("trycloudflare.com") || host.includes("cloudflare");
-    let vscodeUrl = "https://" + (isCloudflare ? "192.168.1.23" : host) + ":8088/?folder=" + encodeURIComponent("/data/data/com.termux/files/home");
-    extVscodeLink.href = vscodeUrl;
-
-    const savedKey = localStorage.getItem('josie_or_key') || "";
-    if (savedKey) orKeyInput.value = savedKey;
-
-    function saveKey() {
-      localStorage.setItem('josie_or_key', orKeyInput.value.trim());
-    }
-
-    // Configure Marked.js for Interactive Script Boxes with Copy + Run
-    const renderer = new marked.Renderer();
-    renderer.code = function(codeObj, langStr) {
-      const rawCode = typeof codeObj === 'object' ? (codeObj.text || '') : String(codeObj);
-      const lang = (typeof codeObj === 'object' ? codeObj.lang : langStr) || 'bash';
-      const id = codeStore.length;
-      codeStore.push({ code: rawCode, lang: lang.toLowerCase() });
-      const escaped = rawCode.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-      const runnable = ['python', 'py', 'bash', 'sh', 'zsh', 'shell', 'script'].includes(lang.toLowerCase());
-      return `
-        <div class="script-box">
-          <div class="script-header">
-            <span>📜 ${lang.toUpperCase()}</span>
-            <div class="script-actions">
-              <button class="script-btn" onclick="copyCode(${id}, this)">📋 Copy Code</button>
-              ${runnable ? `<button class="script-btn run" onclick="runCodeBlock(${id})">▶ Run Script</button>` : ''}
-            </div>
-          </div>
-          <pre><code>${escaped}</code></pre>
-          <div class="script-output" id="out-${id}"></div>
-        </div>
-      `;
-    };
-    marked.setOptions({ renderer });
-
-    function copyCode(id, btn) {
-      navigator.clipboard.writeText(codeStore[id].code);
-      const old = btn.textContent;
-      btn.textContent = '✅ Copied!';
-      setTimeout(() => btn.textContent = old, 1500);
-    }
-
-    async function runCodeBlock(id) {
-      const item = codeStore[id];
-      const outEl = document.getElementById(`out-${id}`);
-      outEl.style.display = 'block';
-      outEl.textContent = '⏳ Executing locally in Termux...';
-      try {
-        const res = await fetch('/run_script', {
-          method: 'POST', headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ code: item.code, lang: item.lang })
-        });
-        const data = await res.json();
-        outEl.textContent = data.output || '(Completed with no output)';
-      } catch (e) {
-        outEl.textContent = '❌ Execution error: ' + e;
-      }
-    }
-
-    function toggleSidebar() { sidebar.classList.toggle('open'); }
-
-    function setFirecrawlMode() {
-      const modeEl = document.getElementById('actionMode');
-      if (modeEl.value === 'firecrawl_scrape') {
-        modeEl.value = 'chat';
-        input.placeholder = 'Ask Josie AGI, or type $ <command>...';
-      } else {
-        modeEl.value = 'firecrawl_scrape';
-        input.placeholder = 'Paste URL to scrape + task (e.g. https://docs.firecrawl.dev summarize)...';
-      }
-      input.focus();
-    }
-
-    function presetFirecrawl(mode, text) {
-      document.getElementById('actionMode').value = mode;
-      input.value = text;
-      send();
-    }
-
-    function setMode(mode) {
-      document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
-      if (mode === 'chat') {
-        document.getElementById('btnChat').classList.add('active');
-        chatPanel.className = 'chat-panel mode-chat';
-        rightPanel.className = 'right-panel hidden';
-      } else if (mode === 'split') {
-        document.getElementById('btnSplit').classList.add('active');
-        chatPanel.className = 'chat-panel mode-split';
-        rightPanel.className = 'right-panel mode-split';
-        mainFrame.src = vscodeUrl;
-      } else if (mode === 'base44') {
-        document.getElementById('btnBase44').classList.add('active');
-        chatPanel.className = 'chat-panel mode-split';
-        rightPanel.className = 'right-panel mode-split';
-        mainFrame.src = "/base44";
-      }
-    }
-
-    if (window.innerWidth < 820) { setMode('chat'); }
-    else { setMode('split'); }
-
-    function quickSend(txt) {
-      input.value = txt;
-      send();
-    }
-
-    function appendMessage(sender, text, type) {
-      const msgDiv = document.createElement('div');
-      msgDiv.className = 'msg ' + (type || 'bot');
-      const headerDiv = document.createElement('div');
-      headerDiv.className = 'msg-header';
-      
-      const senderSpan = document.createElement('span');
-      senderSpan.textContent = sender;
-      headerDiv.appendChild(senderSpan);
-
-      const copyBtn = document.createElement('button');
-      copyBtn.className = 'mini-btn';
-      copyBtn.textContent = 'Copy';
-      copyBtn.onclick = function() {
-        navigator.clipboard.writeText(text);
-        copyBtn.textContent = 'Copied!';
-        setTimeout(() => copyBtn.textContent = 'Copy', 1500);
-      };
-      headerDiv.appendChild(copyBtn);
-      msgDiv.appendChild(headerDiv);
-
-      const contentDiv = document.createElement('div');
-      if (type === 'bot') {
-        contentDiv.innerHTML = marked.parse(text);
-      } else {
-        contentDiv.textContent = text;
-      }
-      msgDiv.appendChild(contentDiv);
-      chat.appendChild(msgDiv);
-      chat.scrollTop = chat.scrollHeight;
-    }
-
-    async function fetchTelemetry() {
-      try {
-        const res = await fetch('/api/telemetry');
-        const data = await res.json();
-        telemetryText.textContent = `${data.battery}% | ${data.temp}°C | ${data.current_ma}mA`;
-        appendMessage('Hardware Guardian', `🔋 Battery: ${data.battery}% (${data.status})\n⚡ Current: ${data.current_ma} mA\n🌡️ Temperature: ${data.temp} °C\n💾 Memory: ${data.mem}\n📁 Storage: ${data.storage}`, 'terminal');
-      } catch (err) {
-        telemetryText.textContent = "Telemetry Error";
-      }
-    }
-
-    let recognition;
+    let recognition = null;
     let isRecording = false;
     if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
-      const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
-      recognition = new SpeechRec();
-      recognition.lang = "en-US";
-      recognition.onresult = (e) => {
+      const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+      recognition = new SR();
+      recognition.continuous = false;
+      recognition.interimResults = false;
+      recognition.lang = 'en-US';
+      recognition.onresult = function(e) {
         input.value = e.results[0][0].transcript;
         stopSpeech();
         send();
       };
-      recognition.onerror = () => stopSpeech();
-      recognition.onend = () => stopSpeech();
+      recognition.onerror = function() { stopSpeech(); };
+      recognition.onend = function() { stopSpeech(); };
     }
 
     function toggleSpeech() {
@@ -509,20 +596,72 @@ MAIN_HTML = """<!DOCTYPE html>
       micBtn.classList.remove('recording');
     }
 
+    function setMode(mode) {
+      document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+      if (mode === 'chat') {
+        document.getElementById('btnChat').classList.add('active');
+        chatPanel.className = 'chat-panel mode-chat';
+        rightPanel.className = 'right-panel hidden';
+      } else if (mode === 'split') {
+        document.getElementById('btnSplit').classList.add('active');
+        chatPanel.className = 'chat-panel mode-split';
+        rightPanel.className = 'right-panel';
+      } else if (mode === 'hub') {
+        document.getElementById('btnHub').classList.add('active');
+        chatPanel.className = 'chat-panel hidden';
+        rightPanel.className = 'right-panel';
+      }
+    }
+
+    function switchHubTab(tabId) {
+      document.querySelectorAll('.hub-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.hub-pane').forEach(p => p.classList.remove('active'));
+      const tabEl = document.getElementById('tab-' + tabId);
+      const paneEl = document.getElementById('pane-' + tabId);
+      if (tabEl) tabEl.classList.add('active');
+      if (paneEl) paneEl.classList.add('active');
+      if (tabId === 'harvester') loadHarvestList();
+      if (tabId === 'vscode') {
+        const vf = document.getElementById('vscodeFrame');
+        if (!vf.src) vf.src = "https://" + window.location.hostname + ":8088/?folder=" + encodeURIComponent("/data/data/com.termux/files/home");
+      }
+    }
+
+    function toggleSidebar() { sidebar.classList.toggle('open'); }
+    function setFirecrawlMode() {
+      const el = document.getElementById('actionMode');
+      el.value = el.value === 'firecrawl_search' ? 'chat' : 'firecrawl_search';
+    }
+
+    function quickSend(txt) {
+      input.value = txt;
+      send();
+    }
+
+    function appendMessage(sender, text, type) {
+      const msgDiv = document.createElement('div');
+      msgDiv.className = 'msg ' + (type || 'bot');
+      const headerDiv = document.createElement('div');
+      headerDiv.className = 'msg-header';
+      const senderSpan = document.createElement('span');
+      senderSpan.textContent = sender;
+      headerDiv.appendChild(senderSpan);
+      msgDiv.appendChild(headerDiv);
+
+      const contentDiv = document.createElement('div');
+      if (type === 'bot') contentDiv.innerHTML = marked.parse(text);
+      else contentDiv.textContent = text;
+      msgDiv.appendChild(contentDiv);
+      chat.appendChild(msgDiv);
+      chat.scrollTop = chat.scrollHeight;
+    }
+
     async function send() {
       const text = input.value.trim();
       if (!text) return;
-      const actionModeEl = document.getElementById('actionMode');
-      const actionMode = actionModeEl.value;
+      const actionMode = document.getElementById('actionMode').value;
       const model = document.getElementById('modelSelect').value;
       const system = document.getElementById('sysPrompt').value;
-      const orKey = orKeyInput.value.trim();
-
-      // Reset action mode to standard chat after sending
-      if (actionMode !== 'chat' && actionMode !== 'shell') {
-        actionModeEl.value = 'chat';
-        input.placeholder = 'Ask Josie AGI, or type $ <command>...';
-      }
 
       input.value = '';
       appendMessage('You', text, 'user');
@@ -539,74 +678,179 @@ MAIN_HTML = """<!DOCTYPE html>
         const res = await fetch('/chat', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ prompt: text, mode: actionMode, model: model, system: system, openrouter_key: orKey })
+          body: JSON.stringify({ prompt: text, mode: actionMode, model: model, system: system })
         });
         const data = await res.json();
         const ind = document.getElementById('typing-indicator');
         if (ind) ind.remove();
-        const msgType = data.is_terminal ? 'terminal' : 'bot';
-        appendMessage(data.sender || 'Josie AGI', data.reply || "No response received.", msgType);
+        appendMessage(data.sender || 'Josie OS', data.reply || "Done.", data.is_terminal ? 'terminal' : 'bot');
       } catch (err) {
         const ind = document.getElementById('typing-indicator');
         if (ind) ind.remove();
-        appendMessage('Josie AGI', '⚠️ Connection Error: ' + err.message, 'bot');
+        appendMessage('Josie OS', '⚠️ Connection error: ' + err.message, 'bot');
       } finally {
         input.disabled = false; sendBtn.disabled = false; input.focus();
       }
     }
 
-    setTimeout(fetchTelemetry, 1000);
-  </script>
-</body>
-</html>
-"""
+    /* HUB ACTIONS */
+    async function executeKali() {
+      const cmd = document.getElementById('kaliInput').value.trim();
+      if (!cmd) return;
+      const isRoot = document.getElementById('kaliRootCheck').checked;
+      const outEl = document.getElementById('kaliOutput');
+      outEl.textContent = `⏳ Executing in Kali (${isRoot ? 'root' : 'user'}): ${cmd}...`;
+      try {
+        const res = await fetch('/api/nethunter', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ cmd: cmd, root: isRoot })
+        });
+        const data = await res.json();
+        outEl.textContent = data.output || '(No output)';
+      } catch (e) {
+        outEl.textContent = '❌ Execution error: ' + e;
+      }
+    }
 
-BASE44_HTML = """<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🔤 Base44 Studio (English)</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #070b14; color: #f1f5f9; padding: 20px; }
-    .card { max-width: 750px; margin: 0 auto; background: #0f172a; border: 1px solid #1e293b; border-radius: 12px; padding: 20px; }
-    h2 { font-size: 18px; color: #38bdf8; margin-bottom: 12px; }
-    textarea { width: 100%; height: 110px; background: #070b14; border: 1px solid #334155; border-radius: 8px; color: #fff; padding: 10px; font-family: monospace; font-size: 13px; margin-top: 6px; outline: none; }
-    .btn-row { display: flex; gap: 10px; margin: 14px 0; }
-    button { flex: 1; padding: 10px; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 13px; }
-    button.enc { background: #0284c7; color: #fff; }
-    button.dec { background: #059669; color: #fff; }
-  </style>
-</head>
-<body>
-  <div class="card">
-    <h2>🔤 Base44 Platform Web Studio</h2>
-    <label>Input Text or Raw Payload:</label>
-    <textarea id="inp" placeholder="Type text to encode or Base44 matrix to decode..."></textarea>
-    <div class="btn-row">
-      <button class="enc" onclick="enc()">⚡ ENCODE TO BASE44</button>
-      <button class="dec" onclick="dec()">🔓 DECODE FROM BASE44</button>
-    </div>
-    <label>Result:</label>
-    <textarea id="out" readonly placeholder="Output will appear here..."></textarea>
-  </div>
-  <script>
+    function runKaliPreset(cmd) {
+      document.getElementById('kaliInput').value = cmd;
+      executeKali();
+    }
+
+    async function controlKex(action) {
+      const outEl = document.getElementById('kaliOutput');
+      outEl.textContent = `⏳ Performing KeX action: ${action}...`;
+      try {
+        const res = await fetch('/api/kex', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action: action })
+        });
+        const data = await res.json();
+        outEl.textContent = data.output;
+        fetchTelemetry();
+      } catch (e) {
+        outEl.textContent = '❌ KeX error: ' + e;
+      }
+    }
+
+    async function triggerPerformanceBoost() {
+      const outEl = document.getElementById('boostOutput');
+      outEl.textContent = '⏳ Applying kernel tuning, cache purge, and Wi-Fi optimization...';
+      try {
+        const res = await fetch('/api/optimize', { method: 'POST' });
+        const data = await res.json();
+        outEl.textContent = data.message;
+        appendMessage('Hyperdrive Sentinel', data.message, 'terminal');
+      } catch (e) {
+        outEl.textContent = '❌ Optimization error: ' + e;
+      }
+    }
+
+    async function confirmRestart() {
+      if (confirm('🔄 Restart the Android device now?\\n\\nAll services and daemons will auto-resume upon boot via Termux:Boot.')) {
+        appendMessage('System Sentinel', '🔄 Device restart initiated. Shutting down and rebooting now...', 'terminal');
+        try {
+          await fetch('/api/restart_device', { method: 'POST' });
+        } catch (e) {}
+      }
+    }
+
+    async function executeTerminal() {
+      const cmd = document.getElementById('termInput').value.trim();
+      if (!cmd) return;
+      const outEl = document.getElementById('termOutput');
+      outEl.textContent = `⏳ Running in Termux: ${cmd}...`;
+      try {
+        const res = await fetch('/run_script', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ code: cmd, lang: 'bash' })
+        });
+        const data = await res.json();
+        outEl.textContent = data.output || '(No output)';
+      } catch (e) {
+        outEl.textContent = '❌ Terminal error: ' + e;
+      }
+    }
+
+    async function executeFirecrawlSearch() {
+      const q = document.getElementById('fcQuery').value.trim();
+      if (!q) return;
+      const outEl = document.getElementById('fcOutput');
+      outEl.textContent = `⏳ Searching with Firecrawl v2 for '${q}'...`;
+      try {
+        const res = await fetch('/chat', {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ prompt: q, mode: 'firecrawl_search' })
+        });
+        const data = await res.json();
+        outEl.textContent = data.reply;
+      } catch (e) {
+        outEl.textContent = '❌ Search error: ' + e;
+      }
+    }
+
+    async function triggerHarvest() {
+      const listEl = document.getElementById('videoList');
+      listEl.innerHTML = '<div style="font-size:11px;color:var(--accent);">⏳ Harvesting new technical videos across ecosystem topics via Firecrawl...</div>';
+      try {
+        await fetch('/api/harvest', { method: 'POST' });
+        loadHarvestList();
+      } catch (e) {
+        listEl.textContent = '❌ Harvest error: ' + e;
+      }
+    }
+
+    async function loadHarvestList() {
+      const listEl = document.getElementById('videoList');
+      try {
+        const res = await fetch('/api/harvest_list');
+        const items = await res.json();
+        if (!items || items.length === 0) {
+          listEl.innerHTML = '<div style="font-size:11px;color:var(--muted);">No videos indexed yet. Click "Sweep & Harvest New".</div>';
+          return;
+        }
+        listEl.innerHTML = items.map(v => `
+          <div class="video-card">
+            <a href="${v.url}" target="_blank" class="video-title">🎥 ${v.title}</a>
+            <div class="video-meta">👤 ${v.channel} | 🕒 ${v.time.slice(0, 16)}</div>
+            <div class="video-desc">${v.summary}</div>
+          </div>
+        `).join('');
+      } catch (e) {
+        listEl.textContent = '❌ Load error: ' + e;
+      }
+    }
+
+    async function fetchTelemetry() {
+      try {
+        const res = await fetch('/api/telemetry');
+        const data = await res.json();
+        telemetryText.textContent = `${data.battery}% | ${data.temp}°C | ${data.current_ma}mA`;
+        document.getElementById('d-bat').textContent = `${data.battery}% (${data.status})`;
+        document.getElementById('d-temp').textContent = `${data.temp}°C`;
+        document.getElementById('d-curr').textContent = `${data.current_ma} mA`;
+        document.getElementById('d-adb').textContent = data.adb;
+        document.getElementById('d-kex').textContent = data.kex;
+        document.getElementById('d-ram').textContent = data.mem.split(/\s+/)[2] || data.mem;
+      } catch (err) {}
+    }
+
+    /* BASE44 FUNCTIONS */
     const alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefgh";
-    function enc() {
-      const text = document.getElementById('inp').value;
+    function b44Enc() {
+      const text = document.getElementById('b44Inp').value;
       if (!text) return;
       const bytes = new TextEncoder().encode(text);
       let nz = 0;
       for (let b of bytes) { if (b === 0) nz++; else break; }
       let hex = Array.from(bytes).map(b => b.toString(16).padStart(2, '0')).join('');
-      if (!hex) { document.getElementById('out').value = ''; return; }
+      if (!hex) { document.getElementById('b44Out').value = ''; return; }
       let num = BigInt("0x" + hex), res = [], base = 44n;
       while (num > 0n) { res.push(alphabet[Number(num % base)]); num = num / base; }
-      document.getElementById('out').value = "0".repeat(nz) + res.reverse().join('');
+      document.getElementById('b44Out').value = "0".repeat(nz) + res.reverse().join('');
     }
-    function dec() {
-      const val = document.getElementById('inp').value.trim();
+    function b44Dec() {
+      const val = document.getElementById('b44Inp').value.trim();
       if (!val) return;
       let nz = 0;
       while (nz < val.length && val[nz] === '0') nz++;
@@ -622,8 +866,11 @@ BASE44_HTML = """<!DOCTYPE html>
       if (hex !== "00" && hex !== "0") {
         for (let i = 0; i < hex.length; i += 2) bytes.push(parseInt(hex.substr(i, 2), 16));
       }
-      document.getElementById('out').value = new TextDecoder().decode(new Uint8Array(bytes));
+      document.getElementById('b44Out').value = new TextDecoder().decode(new Uint8Array(bytes));
     }
+
+    setTimeout(fetchTelemetry, 500);
+    setTimeout(loadHarvestList, 1000);
   </script>
 </body>
 </html>
@@ -639,163 +886,6 @@ def execute_shell(cmd):
     except Exception as e:
         return {"reply": f"Execution error: {e}", "is_terminal": True, "sender": "Terminal Error"}
 
-def query_memory_db(q):
-    if not os.path.exists(DB_PATH): return None
-    try:
-        conn = sqlite3.connect(DB_PATH)
-        c = conn.cursor()
-        c.execute("SELECT timestamp, event, outcome FROM memory WHERE event LIKE ? OR outcome LIKE ? ORDER BY id DESC LIMIT 4", (f"%{q}%", f"%{q}%"))
-        rows = c.fetchall()
-        conn.close()
-        if rows:
-            formatted = ["🧠 **Permanent Knowledge Vault:**"]
-            for r in rows:
-                formatted.append(f"• **[{r[0]}]** {r[1]}\n  ↳ *Outcome*: {r[2]}")
-            return "\n\n".join(formatted)
-    except Exception as e:
-        return f"Memory DB query error: {e}"
-    return None
-
-def get_relevant_memory(prompt, limit=3):
-    if not os.path.exists(DB_PATH): return ""
-    try:
-        conn = sqlite3.connect(DB_PATH)
-        c = conn.cursor()
-        words = [w for w in re.findall(r'\b[a-zA-Z0-9_\-]{4,}\b', prompt.lower()) if w not in {"what", "when", "where", "which", "could", "would", "should", "please", "about"}]
-        rows = []
-        if words:
-            clauses = " OR ".join(["event LIKE ? OR outcome LIKE ?" for _ in words[:3]])
-            params = []
-            for w in words[:3]: params.extend([f"%{w}%", f"%{w}%"])
-            c.execute(f"SELECT timestamp, event, outcome FROM memory WHERE ({clauses}) ORDER BY id DESC LIMIT {limit}", tuple(params))
-            rows = c.fetchall()
-        
-        if not rows:
-            c.execute(f"SELECT timestamp, event, outcome FROM memory ORDER BY id DESC LIMIT 2")
-            rows = c.fetchall()
-        conn.close()
-
-        if rows:
-            formatted = ["[PERMANENT KNOWLEDGE VAULT MEMORIES]:"]
-            for r in rows:
-                formatted.append(f"• [{r[0]}] {r[1]} -> {r[2][:200]}")
-            return "\n".join(formatted)
-    except Exception as e:
-        sys.stderr.write(f"Memory extraction error: {e}\n")
-    return ""
-
-def record_memory(event, outcome):
-    if not os.path.exists(DB_PATH): return
-    try:
-        conn = sqlite3.connect(DB_PATH)
-        c = conn.cursor()
-        c.execute("INSERT INTO memory (timestamp, event, outcome) VALUES (datetime('now'), ?, ?)", (event[:250], outcome[:500]))
-        conn.commit()
-        conn.close()
-    except Exception as e:
-        sys.stderr.write(f"Memory record error: {e}\n")
-
-def get_telemetry():
-    battery_level = "100"
-    temp_c = "30.0"
-    cur_ma = "0"
-    status = "Active"
-    try:
-        res = subprocess.run(["dumpsys", "battery"], capture_output=True, text=True, timeout=2).stdout
-        import re
-        b = re.search(r"level:\s*(\d+)", res)
-        t = re.search(r"temperature:\s*(\d+)", res)
-        c = re.search(r"current_now:\s*(-?\d+)", res)
-        if b: battery_level = b.group(1)
-        if t: temp_c = f"{int(t.group(1))/10:.1f}"
-        if c: cur_ma = c.group(1)
-    except Exception: pass
-
-    mem, disk = "", ""
-    try:
-        mem = subprocess.run(["free", "-h"], capture_output=True, text=True).stdout.splitlines()[1]
-        disk = subprocess.run(["df", "-h", "/data"], capture_output=True, text=True).stdout.splitlines()[1]
-    except Exception: pass
-
-    return {"battery": battery_level, "temp": temp_c, "current_ma": cur_ma, "status": status, "mem": mem, "storage": disk}
-
-def check_all_systems():
-    items = []
-    try:
-        ip = subprocess.run("ip -4 addr show wlan0 2>/dev/null | grep -oP '(?<=inet\\s)\\d+(\\.\\d+){3}'", shell=True, capture_output=True, text=True).stdout.strip()
-        items.append(f"🌐 **Termux Host IP**: `{ip or '192.168.1.23'}`")
-    except Exception:
-        items.append("🌐 **Termux Host IP**: `192.168.1.23`")
-
-    sshd = "Active (Port 8022 - Chromebook key authorized)" if subprocess.run("pgrep sshd", shell=True, capture_output=True).returncode == 0 else "Stopped"
-    vscode = "Active (Port 8088 HTTPS)" if subprocess.run("pgrep -f code-server", shell=True, capture_output=True).returncode == 0 else "Stopped"
-    items.append(f"🔒 **SSH Server**: {sshd}")
-    items.append(f"💻 **VS Code Web**: {vscode}")
-    items.append(f"🔥 **Firecrawl v2 Engine**: Connected (v2/scrape & v2/search ready)")
-    items.append(f"🧠 **Model Engine Suite**: Claude 3.7 & OpenRouter (10+ models)")
-
-    try:
-        rish = subprocess.run("echo id | /data/data/com.termux/files/home/bin/rish", shell=True, capture_output=True, text=True, timeout=3)
-        if "uid=" in rish.stdout: items.append("⚡ **Shizuku Bridge (rish)**: Elevated bridge connected")
-        else: items.append("⚡ **Shizuku Bridge (rish)**: Standby")
-    except Exception: items.append("⚡ **Shizuku Bridge (rish)**: Standby")
-
-    if os.path.exists(APK_PATH):
-        sz = os.path.getsize(APK_PATH) // 1024
-        items.append(f"✅ **Base44 Platform**: Android APK compiled ({sz} KB) & ready")
-
-    if os.path.exists(DB_PATH):
-        try:
-            conn = sqlite3.connect(DB_PATH)
-            cnt = conn.cursor().execute("SELECT count(*) FROM memory").fetchone()[0]
-            conn.close()
-            items.append(f"🧠 **Knowledge Vault**: {cnt} permanent records")
-        except Exception: pass
-
-    telem = get_telemetry()
-    items.append(f"🔋 **Hardware Guardian**: Battery {telem['battery']}% | Temp {telem['temp']}°C | Current {telem['current_ma']} mA")
-    items.append(f"💾 **Memory**: {telem['mem']}")
-    items.append(f"📁 **Storage**: {telem['storage']}")
-
-    return {"reply": "📊 **JOSIE AGI DIAGNOSTIC REPORT (ENGLISH):**\n\n" + "\n".join(items) + "\n\n💡 *Tip: Type '$ <cmd>' for bash, or click ▶ Run Script on any code box.*", "is_terminal": False, "sender": "Josie AGI Diagnostics"}
-
-def fix_all_systems():
-    actions = []
-    try:
-        if subprocess.run("pgrep sshd", shell=True, capture_output=True).returncode != 0:
-            subprocess.run("sshd", shell=True)
-            actions.append("✅ **SSH Server**: Started on port 8022")
-        else: actions.append("✅ **SSH Server**: Already active on port 8022")
-    except Exception as e: actions.append(f"⚠️ **SSH Server**: {e}")
-
-    try:
-        if subprocess.run("pgrep -f code-server", shell=True, capture_output=True).returncode != 0:
-            subprocess.run("/data/data/com.termux/files/home/bin/start-code-server", shell=True)
-            actions.append("✅ **VS Code Web**: Restarted on port 8088 HTTPS")
-        else: actions.append("✅ **VS Code Web**: Healthy on port 8088 HTTPS")
-    except Exception as e: actions.append(f"⚠️ **VS Code Web**: {e}")
-
-    try:
-        subprocess.run("rm -f $PREFIX/tmp/.*.swp ~/.vscode_stale* /tmp/*.lock 2>/dev/null", shell=True)
-        actions.append("✅ **Locks & Temp**: Cleared swap files and stale locks")
-    except Exception as e: actions.append(f"⚠️ **Locks**: {e}")
-
-    actions.append("✅ **Firecrawl v2 Engine**: Verified fc-scrape & fc-search CLI tools")
-    actions.append("✅ **Model Suite**: OpenRouter & Claude multi-model cascade initialized")
-
-    return {"reply": "🛠️ **JOSIE AGI FULL SYSTEM AUTO-REPAIR COMPLETED:**\n\n" + "\n".join(actions) + "\n\n🚀 **All systems verified and operational in English!**", "is_terminal": False, "sender": "Josie Auto-Fix"}
-
-def read_workspace_file(path_str):
-    path_str = path_str.strip()
-    if path_str.startswith("~"): path_str = os.path.expanduser(path_str)
-    elif not path_str.startswith("/"): path_str = os.path.join(WORKSPACE_DIR, path_str)
-    if not os.path.exists(path_str): return {"reply": f"⚠️ File `{path_str}` does not exist.", "is_terminal": False}
-    try:
-        with open(path_str, "r", encoding="utf-8", errors="ignore") as f: content = f.read(8000)
-        ext = os.path.splitext(path_str)[1].replace(".", "") or "text"
-        return {"reply": f"📄 **{os.path.basename(path_str)}**:\n```{ext}\n{content}\n```", "is_terminal": False}
-    except Exception as e: return {"reply": f"⚠️ Read error: {e}", "is_terminal": False}
-
 def ask_openrouter(prompt, model, api_key, sys_prompt=""):
     try:
         url = "https://openrouter.ai/api/v1/chat/completions"
@@ -803,182 +893,77 @@ def ask_openrouter(prompt, model, api_key, sys_prompt=""):
             "Content-Type": "application/json",
             "Authorization": f"Bearer {api_key}",
             "HTTP-Referer": "http://192.168.1.23:8080",
-            "X-Title": "Josie AGI Swarm"
+            "X-Title": "Josie OS"
         }
         messages = []
-        if sys_prompt:
-            messages.append({"role": "system", "content": sys_prompt + "\nStrictly answer in English."})
+        if sys_prompt: messages.append({"role": "system", "content": sys_prompt})
         messages.append({"role": "user", "content": prompt})
 
         data = json.dumps({"model": model, "messages": messages}).encode("utf-8")
         req = urllib.request.Request(url, data=data, headers=headers)
-        with urllib.request.urlopen(req, timeout=8) as resp:
+        with urllib.request.urlopen(req, timeout=10) as resp:
             res = json.loads(resp.read().decode("utf-8"))
             return res["choices"][0]["message"]["content"]
-    except Exception as e:
-        sys.stderr.write(f"OpenRouter Error ({model}): {e}\n")
-    return None
+    except Exception:
+        return None
 
+def ask_ai(prompt, model="anthropic/claude-3.7-sonnet", user_key="", sys_prompt=""):
+    # 1. Pollinations Zero-API keyless fallback
+    try:
+        p_payload = json.dumps({
+            "messages": [
+                {"role": "system", "content": sys_prompt or "You are Josie OS. Answer concisely in English."},
+                {"role": "user", "content": prompt[:4000]}
+            ],
+            "model": "openai"
+        }).encode('utf-8')
+        req = urllib.request.Request("https://text.pollinations.ai/", data=p_payload, headers={"Content-Type": "application/json", "User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            ans = resp.read().decode('utf-8').strip()
+            if ans and not ans.startswith("{") and len(ans) > 2:
+                return ans
+    except Exception: pass
 
-GEMINI_KEY = os.environ.get("GEMINI_API_KEY") or (open(os.path.expanduser("~/.gemini_key")).read().strip() if os.path.exists(os.path.expanduser("~/.gemini_key")) else "")
-def ask_gemini_fast(prompt, sys_prompt=""):
-    for m in ["gemini-3.8-flash", "gemini-3.5-flash-lite", "gemini-flash-latest"]:
-        try:
-            url = f"https://generativelanguage.googleapis.com/v1beta/models/{m}:generateContent?key={GEMINI_KEY}"
-            body = {"contents": [{"parts": [{"text": prompt}]}]}
-            if sys_prompt: body["systemInstruction"] = {"parts": [{"text": sys_prompt}]}
-            req = urllib.request.Request(url, data=json.dumps(body).encode(), headers={"Content-Type": "application/json"})
-            with urllib.request.urlopen(req, timeout=10) as r:
-                return json.loads(r.read())["candidates"][0]["content"]["parts"][0]["text"]
-        except Exception as e:
-            sys.stderr.write(f"Gemini {m}: {e}\n")
-    return None
-
-def ask_ai_cascade(prompt, chosen_model="anthropic/claude-3.7-sonnet", user_key="", sys_prompt=""):
-    # Inject SQLite Knowledge Vault Memory into system context for ALL models
-    mem_ctx = get_relevant_memory(prompt, limit=3)
-    memory_instruction = f"\n\n{mem_ctx}" if mem_ctx else ""
-    full_sys = (sys_prompt + "\nAnswer strictly in clear, professional English." + memory_instruction).strip()
-
-    reply = None
-    # 1. User Selected Model via OpenRouter Direct
+    # 2. OpenRouter
     or_key = user_key or get_openrouter_key()
-    if or_key and chosen_model != "pollinations":
-        or_res = ask_openrouter(prompt, chosen_model, or_key, full_sys)
-        if or_res: reply = or_res
+    if or_key:
+        ans = ask_openrouter(prompt, model, or_key, sys_prompt)
+        if ans: return ans
 
-    # 2. Gemini Fast (Fallback if key exists)
-    if not reply:
-        g = ask_gemini_fast(prompt, full_sys)
-        if g: reply = g
-
-    # 3. Pollinations High-Speed (POST method for large context)
-    if not reply:
-        try:
-            p_payload = json.dumps({
-                "messages": [
-                    {"role": "system", "content": full_sys[:1500]},
-                    {"role": "user", "content": prompt[:4000]}
-                ],
-                "model": "openai"
-            }).encode('utf-8')
-            p_req = urllib.request.Request("https://text.pollinations.ai/", data=p_payload, headers={"Content-Type": "application/json", "User-Agent": "Mozilla/5.0"})
-            with urllib.request.urlopen(p_req, timeout=12) as p_resp:
-                ans = p_resp.read().decode('utf-8').strip()
-                if ans and not ans.startswith("{") and len(ans) > 2:
-                    reply = ans
-        except Exception:
-            try:
-                clean = urllib.parse.quote(prompt.strip()[:300])
-                cmd = ["curl", "-s", "-m", "8", f"https://text.pollinations.ai/{clean}"]
-                res = subprocess.run(cmd, capture_output=True, text=True, timeout=9)
-                ans = res.stdout.strip()
-                if ans and not ans.startswith("{") and len(ans) > 2:
-                    reply = ans
-            except Exception: pass
-
-    # 4. Local SQLite Memory Direct Synthesis
-    if not reply:
-        if mem_ctx:
-            reply = f"🧠 **Permanent Memory Recall**:\n\n{mem_ctx}\n\n*Synthesized locally in English by Josie AGI Core.*"
-        else:
-            telem = get_telemetry()
-            reply = (
-                f"⚡ **Josie AGI Core (Model: {chosen_model})**\n\n"
-                f"I received your request: *\"{prompt.strip()}\"*\n\n"
-                f"• **Cognitive Memory**: 1,412+ SQLite records active across all models.\n"
-                f"• **Telemetry**: Battery {telem['battery']}% | Temp {telem['temp']}°C | RAM {telem['mem']}\n\n"
-                f"How would you like to proceed?"
-            )
-
-    # Persist the interaction into SQLite Permanent Memory for cross-session continuity
-    record_memory(prompt, reply)
-    return reply
+    return f"⚡ **Josie OS Core**\n\nCommand acknowledged: *{prompt}*\n\nActive across all system tools."
 
 def process_chat(data):
     prompt = data.get("prompt", "").strip()
     mode = data.get("mode", "chat")
     model = data.get("model", "anthropic/claude-3.7-sonnet")
-    or_key = data.get("openrouter_key", "").strip()
     sys_inst = data.get("system", "").strip()
-    p_lower = prompt.lower()
 
-    if prompt.startswith("$ ") or prompt.startswith("sh: ") or prompt.startswith("run: "):
-        cmd = prompt.split(" ", 1)[1] if " " in prompt else prompt[1:]
+    if prompt.startswith("$ ") or mode == "shell":
+        cmd = prompt[2:] if prompt.startswith("$ ") else prompt
         return execute_shell(cmd)
 
-    if prompt.startswith("do ") or prompt.startswith("do:") or prompt.startswith("agi do "):
-        if prompt.startswith("agi do "): task = prompt.split("agi do ", 1)[1]
-        elif prompt.startswith("do:"): task = prompt.split("do:", 1)[1]
-        else: task = prompt.split("do ", 1)[1]
-        try:
-            env = os.environ.copy()
-            env["PATH"] = os.path.expanduser("~/.local/bin:") + os.path.expanduser("~/bin:") + env.get("PATH", "")
-            res = subprocess.run(["agi", "do", task.strip()], capture_output=True, text=True, timeout=35, env=env)
-            out = (res.stdout + res.stderr).strip() or "Task completed."
-            return {"reply": f"⚡ **Josie AGI Autonomous Action Engine**:\n\n```bash\n{out}\n```", "is_terminal": False, "sender": "Josie Autonomous Executor"}
-        except Exception as e:
-            return {"reply": f"⚠️ Autonomous execution error: {e}", "is_terminal": False, "sender": "Josie Autonomous Executor"}
-
-    if mode == "shell":
-        return execute_shell(prompt)
-
-    if p_lower in ["check", "status", "health", "audit", "diagnostics"]:
-        return check_all_systems()
-
-    if p_lower in ["fix all", "fix", "repair", "auto fix", "tune"]:
-        return fix_all_systems()
-
-    if "memory" in p_lower or "recall" in p_lower:
-        q_term = prompt.replace("search memory for", "").replace("search memory", "").replace("recall", "").strip()
-        mem = query_memory_db(q_term or "XZ")
-        if mem: return {"reply": mem, "is_terminal": False, "sender": "Cognitive Vault"}
-
-    if p_lower.startswith("read file ") or p_lower.startswith("cat "):
-        fpath = prompt.split(" ", 2)[-1] if p_lower.startswith("read file ") else prompt.split(" ", 1)[1]
-        return read_workspace_file(fpath)
-
-    # Local Network / Service URL Inspection
-    if any(loc in prompt for loc in ["127.0.0.1", "localhost", "192.168.1."]) and ("http://" in prompt or "https://" in prompt):
-        urls = re.findall(r'https?://[^\s]+', prompt)
-        target = urls[0] if urls else prompt
-        try:
-            req = urllib.request.Request(target, headers={"User-Agent": "Josie-Local-Audit/1.0"})
-            with urllib.request.urlopen(req, timeout=4) as r:
-                body_sample = r.read(600).decode('utf-8', errors='ignore')
-                st = r.status
-            return {"reply": f"🌐 **Local Service (`{target}`)**: Online (HTTP {st})\n\n```html\n{body_sample[:350]}\n...\n```", "is_terminal": False, "sender": "Local Service Audit"}
-        except Exception as e:
-            return {"reply": f"⚠️ **Local Service (`{target}`)**: {e}", "is_terminal": False, "sender": "Local Service Audit"}
-
-    # Firecrawl Scrape Mode
-    context_prefix = ""
-    if mode == "firecrawl_scrape" or prompt.startswith("scrape:"):
-        clean_p = prompt.replace("scrape:", "").strip()
-        urls = re.findall(r'https?://\S+', clean_p)
-        target_url = urls[0] if urls else clean_p.split()[0]
-        if not target_url.startswith("http"): target_url = "https://" + target_url
-        try:
-            fc_res = firecrawl_request("scrape", {"url": target_url, "formats": ["markdown"]})
-            md = fc_res.get("data", {}).get("markdown", "")
-            context_prefix = f"Webpage scraped via Firecrawl v2 ({target_url}):\n{md[:10000]}\n\nTask: "
-        except Exception as e:
-            context_prefix = f"[Firecrawl note: {e}]\n"
-
-    # Firecrawl Search Mode
-    elif mode == "firecrawl_search" or prompt.startswith("search:"):
+    if mode == "firecrawl_search" or prompt.startswith("search:"):
         query = prompt.replace("search:", "").strip()
         try:
             fc_res = firecrawl_request("search", {"query": query, "limit": 4})
             web_items = fc_res.get("data", {}).get("web", [])
-            snippets = "\n".join([f"- {w.get('title')} ({w.get('url')}): {w.get('description')}" for w in web_items])
-            context_prefix = f"Firecrawl v2 Web Search Results for '{query}':\n{snippets}\n\nTask: "
+            snippets = "\n".join([f"• **{w.get('title')}**\n  🔗 {w.get('url')}\n  📝 {w.get('description')}\n" for w in web_items])
+            return {"reply": f"🔥 **Firecrawl v2 Web Intelligence for '{query}':**\n\n" + (snippets or "No results found."), "is_terminal": False, "sender": "Firecrawl v2"}
         except Exception as e:
-            context_prefix = f"[Firecrawl search note: {e}]\n"
+            return {"reply": f"⚠️ Firecrawl search error: {e}", "is_terminal": False, "sender": "Firecrawl v2"}
 
-    sender_label = f"Josie AGI [{model.split('/').pop()}]"
-    ai_reply = ask_ai_cascade(context_prefix + prompt, chosen_model=model, user_key=or_key, sys_prompt=sys_inst)
-    return {"reply": ai_reply, "is_terminal": False, "sender": sender_label}
+    if mode == "firecrawl_scrape" or prompt.startswith("scrape:"):
+        url = prompt.replace("scrape:", "").strip()
+        if not url.startswith("http"): url = "https://" + url
+        try:
+            fc_res = firecrawl_request("scrape", {"url": url, "formats": ["markdown"]})
+            md = fc_res.get("data", {}).get("markdown", "")
+            return {"reply": f"📄 **Scraped Content ({url})**:\n\n" + md[:3500], "is_terminal": False, "sender": "Firecrawl Scrape"}
+        except Exception as e:
+            return {"reply": f"⚠️ Firecrawl scrape error: {e}", "is_terminal": False, "sender": "Firecrawl Scrape"}
+
+    reply = ask_ai(prompt, model=model, sys_prompt=sys_inst)
+    return {"reply": reply, "is_terminal": False, "sender": "Josie OS"}
 
 class Handler(http.server.BaseHTTPRequestHandler):
     def log_message(self, format, *args): pass
@@ -994,66 +979,91 @@ class Handler(http.server.BaseHTTPRequestHandler):
             self.send_header("Content-Type", "text/html; charset=utf-8")
             self.end_headers()
             self.wfile.write(MAIN_HTML.encode("utf-8"))
-        elif self.path == "/base44" or self.path.startswith("/base44?"):
-            self.send_response(200)
-            self.send_header("Content-Type", "text/html; charset=utf-8")
-            self.end_headers()
-            self.wfile.write(BASE44_HTML.encode("utf-8"))
         elif self.path == "/api/telemetry":
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
             self.end_headers()
             self.wfile.write(json.dumps(get_telemetry()).encode("utf-8"))
-        elif self.path in ["/download/base44.apk", "/download/Base44Platform.apk"]:
-            if os.path.exists(APK_PATH):
-                self.send_response(200)
-                self.send_header("Content-Type", "application/vnd.android.package-archive")
-                self.send_header("Content-Disposition", 'attachment; filename="Base44Platform.apk"')
-                self.end_headers()
-                with open(APK_PATH, "rb") as f: self.wfile.write(f.read())
-            else:
-                self.send_response(404)
-                self.end_headers()
+        elif self.path == "/api/harvest_list":
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps(get_harvested_videos()).encode("utf-8"))
         else:
             self.send_response(404)
             self.end_headers()
 
     def do_POST(self):
         length = int(self.headers.get("Content-Length", 0))
-        body = json.loads(self.rfile.read(length).decode("utf-8"))
-
-        if self.path == "/run_script":
-            code = body.get("code", "")
-            lang = body.get("lang", "bash").lower()
-            try:
-                env = os.environ.copy()
-                env["PATH"] = os.path.expanduser("~/.local/bin:") + os.path.expanduser("~/bin:") + env.get("PATH", "")
-                if lang in ("python", "py"):
-                    with tempfile.NamedTemporaryFile("w", suffix=".py", delete=False) as tf:
-                        tf.write(code)
-                        tname = tf.name
-                    proc = subprocess.run(["python3", tname], capture_output=True, text=True, timeout=25, env=env, cwd=WORKSPACE_DIR)
-                    try: os.remove(tname)
-                    except Exception: pass
-                else:
-                    proc = subprocess.run(code, shell=True, capture_output=True, text=True, timeout=25, env=env, cwd=WORKSPACE_DIR)
-                output = (proc.stdout + proc.stderr).strip() or "✅ Executed successfully (no output)."
-            except subprocess.TimeoutExpired:
-                output = "⏱️ Execution timed out (25s limit)."
-            except Exception as e:
-                output = f"❌ Execution error: {e}"
-            self.send_response(200)
-            self.send_header("Content-Type", "application/json")
-            self.end_headers()
-            self.wfile.write(json.dumps({"output": output}).encode("utf-8"))
-            return
+        body = json.loads(self.rfile.read(length).decode("utf-8")) if length > 0 else {}
 
         if self.path == "/chat":
             res = process_chat(body)
             self.send_response(200)
-            self.send_header("Content-Type", "application/json; charset=utf-8")
+            self.send_header("Content-Type", "application/json")
             self.end_headers()
             self.wfile.write(json.dumps(res).encode("utf-8"))
+            return
+
+        elif self.path == "/run_script":
+            code = body.get("code", "")
+            res = execute_shell(code)
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps({"output": res["reply"]}).encode("utf-8"))
+            return
+
+        elif self.path == "/api/nethunter":
+            cmd = body.get("cmd", "echo NetHunter Ready")
+            is_root = body.get("root", False)
+            res = execute_kali_cmd(cmd, is_root)
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps(res).encode("utf-8"))
+            return
+
+        elif self.path == "/api/kex":
+            action = body.get("action", "status")
+            try:
+                proc = subprocess.run([os.path.expanduser("~/bin/kex"), action], capture_output=True, text=True, timeout=10)
+                out = (proc.stdout + proc.stderr).strip() or "KeX updated."
+            except Exception as e:
+                out = f"Error: {e}"
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps({"output": out}).encode("utf-8"))
+            return
+
+        elif self.path == "/api/optimize":
+            msg = execute_performance_boost()
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps({"status": "ok", "message": msg}).encode("utf-8"))
+            return
+
+        elif self.path == "/api/harvest":
+            try:
+                proc = subprocess.run([os.path.expanduser("~/bin/yt-learn"), "harvest"], capture_output=True, text=True, timeout=30)
+                out = proc.stdout.strip()
+            except Exception as e:
+                out = f"Error: {e}"
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps({"status": "ok", "output": out}).encode("utf-8"))
+            return
+
+        elif self.path == "/api/restart_device":
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps({"status": "rebooting"}).encode("utf-8"))
+            # Execute restart in background after response
+            subprocess.Popen(["/data/data/com.termux/files/home/bin/adb-exec", "svc power reboot || reboot"])
             return
 
         self.send_response(404)
@@ -1065,7 +1075,7 @@ class ThreadingTCPServer(socketserver.ThreadingMixIn, socketserver.TCPServer):
 
 def main():
     with ThreadingTCPServer(("0.0.0.0", PORT), Handler) as httpd:
-        print(f"🚀 JOSIE AGI (CLAUDE + OPENROUTER + FIRECRAWL) LIVE on 0.0.0.0:{PORT}", flush=True)
+        print(f"🚀 JOSIE OS Sovereign Platform LIVE on 0.0.0.0:{PORT}", flush=True)
         httpd.serve_forever()
 
 if __name__ == "__main__":

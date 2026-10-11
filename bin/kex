@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# ==============================================================================
+# JOSIE OS: NetHunter KeX Desktop Launcher & VNC Bridge (127.0.0.1:5901)
+# ==============================================================================
+
+ACTION="${1:-start}"
+
+case "$ACTION" in
+    start)
+        echo "⚡ Initializing NetHunter KeX VNC display on 127.0.0.1:5901..."
+        vncserver -kill :1 2>/dev/null || true
+        vncserver :1 -geometry 1920x1080 -depth 24 >/dev/null 2>&1
+        sleep 1
+        if [ "$2" = "--gui" ] || [ "$2" = "-g" ]; then
+            echo "⚡ Launching NetHunter KeX App..."
+            adb-exec "am start -a android.intent.action.VIEW -d 'vnc://127.0.0.1:5901' com.offsec.nethunter.kex" 2>/dev/null || true
+        fi
+        echo "✅ NetHunter KeX VNC server ACTIVE on 127.0.0.1:5901"
+        ;;
+    stop|kill)
+        echo "Stopping NetHunter KeX display..."
+        vncserver -kill :1 2>/dev/null || true
+        pkill -f "com.offsec.nethunter.kex" 2>/dev/null || true
+        ;;
+    status)
+        if pgrep -f "Xvnc :1" >/dev/null; then
+            echo "NetHunter KeX display (127.0.0.1:5901) is ACTIVE."
+        else
+            echo "NetHunter KeX display is STOPPED."
+        fi
+        ;;
+    *)
+        echo "Usage: kex {start|stop|status}"
+        ;;
+esac

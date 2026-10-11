@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+# ==============================================================================
+# JOSIE OS: NetHunter & Kali Execution Bridge (Zero-Friction CLI)
+# ==============================================================================
+
+export HOME="/data/data/com.termux/files/home"
+
+if [ $# -eq 0 ]; then
+    exec proot-distro login kali \
+        --bind /data/data/com.termux/files/usr/tmp/.X11-unix:/tmp/.X11-unix \
+        --bind /data/data/com.termux/files/home:/root/termux_home \
+        --env DISPLAY=:0 \
+        --env PULSE_SERVER=127.0.0.1
+fi
+
+if [ "$1" = "-r" ] || [ "$1" = "--root" ]; then
+    shift
+    if [ $# -eq 0 ]; then
+        exec proot-distro login --user root kali \
+            --bind /data/data/com.termux/files/usr/tmp/.X11-unix:/tmp/.X11-unix \
+            --bind /data/data/com.termux/files/home:/root/termux_home \
+            --env DISPLAY=:0 \
+            --env PULSE_SERVER=127.0.0.1
+    else
+        exec proot-distro login --user root kali \
+            --bind /data/data/com.termux/files/usr/tmp/.X11-unix:/tmp/.X11-unix \
+            --bind /data/data/com.termux/files/home:/root/termux_home \
+            --env DISPLAY=:0 \
+            --env PULSE_SERVER=127.0.0.1 \
+            -- "$@"
+    fi
+fi
+
+# Run command directly in Kali environment
+exec proot-distro login kali \
+    --bind /data/data/com.termux/files/usr/tmp/.X11-unix:/tmp/.X11-unix \
+    --bind /data/data/com.termux/files/home:/root/termux_home \
+    --env DISPLAY=:0 \
+    --env PULSE_SERVER=127.0.0.1 \
+    -- "$@"

@@ -1,0 +1,70 @@
+#!/usr/bin/env python3
+import socket
+import subprocess
+import time
+import sys
+
+def get_active_adb_port():
+    query = (
+        b'\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00'
+        b'\x10_adb-tls-connect\x04_tcp\x05local\x00\x00\x0c\x00\x01'
+    )
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
+    sock.settimeout(1.5)
+    try:
+        sock.sendto(query, ('224.0.0.251', 5353))
+        while True:
+            data, addr = sock.recvfrom(4096)
+            if b'_adb-tls-connect' in data:
+                for i in range(len(data) - 10):
+                    if data[i:i+2] == b'\x00\x21':
+                        p = int.from_bytes(data[i+14:i+16], 'big')
+                        if 1024 < p < 65535:
+                            # Verify port is open
+                            s2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                            s2.settimeout(0.5)
+                            try:
+                                s2.connect(('127.0.0.1', p))
+                                s2.close()
+                                return p
+                            except Exception:
+                                s2.close()
+    except Exception:
+        pass
+    finally:
+        sock.close()
+    return None
+
+def sync_adb():
+    port = get_active_adb_port()
+    if not port:
+        # Fallback to fast scan
+        for p in range(35000, 45000):
+            try:
+                s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                s.settimeout(0.05)
+                s.connect(('127.0.0.1', p))
+                s.close()
+                port = p
+                break
+            except Exception:
+                pass
+
+    if port:
+        subprocess.run(['adb', 'connect', f'127.0.0.1:{port}'], capture_output=True)
+        # Disconnect any other ports
+        res = subprocess.run(['adb', 'devices'], capture_output=True, text=True)
+        for line in res.stdout.strip().splitlines()[1:]:
+            parts = line.split()
+            if len(parts) >= 2:
+                dev, state = parts[0], parts[1]
+                if state == 'offline' or dev != f'127.0.0.1:{port}':
+                    subprocess.run(['adb', 'disconnect', dev], capture_output=True)
+        print(f"✅ ADB Active on 127.0.0.1:{port}")
+        return True
+    else:
+        print("⚠️ No Wireless Debugging port active.")
+        return False
+
+if __name__ == '__main__':
+    sync_adb()
