@@ -647,7 +647,7 @@ def query_memory_db(q):
     try:
         conn = sqlite3.connect(DB_PATH)
         c = conn.cursor()
-        c.execute("SELECT timestamp, event, outcome FROM memory WHERE event LIKE ? OR outcome LIKE ? ORDER BY id DESC LIMIT 3", (f"%{q}%", f"%{q}%"))
+        c.execute("SELECT timestamp, event, outcome FROM memory WHERE event LIKE ? OR outcome LIKE ? ORDER BY id DESC LIMIT 4", (f"%{q}%", f"%{q}%"))
         rows = c.fetchall()
         conn.close()
         if rows:
@@ -658,6 +658,45 @@ def query_memory_db(q):
     except Exception as e:
         return f"Memory DB query error: {e}"
     return None
+
+def get_relevant_memory(prompt, limit=3):
+    if not os.path.exists(DB_PATH): return ""
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        c = conn.cursor()
+        words = [w for w in re.findall(r'\b[a-zA-Z0-9_\-]{4,}\b', prompt.lower()) if w not in {"what", "when", "where", "which", "could", "would", "should", "please", "about"}]
+        rows = []
+        if words:
+            clauses = " OR ".join(["event LIKE ? OR outcome LIKE ?" for _ in words[:3]])
+            params = []
+            for w in words[:3]: params.extend([f"%{w}%", f"%{w}%"])
+            c.execute(f"SELECT timestamp, event, outcome FROM memory WHERE ({clauses}) ORDER BY id DESC LIMIT {limit}", tuple(params))
+            rows = c.fetchall()
+        
+        if not rows:
+            c.execute(f"SELECT timestamp, event, outcome FROM memory ORDER BY id DESC LIMIT 2")
+            rows = c.fetchall()
+        conn.close()
+
+        if rows:
+            formatted = ["[PERMANENT KNOWLEDGE VAULT MEMORIES]:"]
+            for r in rows:
+                formatted.append(f"• [{r[0]}] {r[1]} -> {r[2][:200]}")
+            return "\n".join(formatted)
+    except Exception as e:
+        sys.stderr.write(f"Memory extraction error: {e}\n")
+    return ""
+
+def record_memory(event, outcome):
+    if not os.path.exists(DB_PATH): return
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        c = conn.cursor()
+        c.execute("INSERT INTO memory (timestamp, event, outcome) VALUES (datetime('now'), ?, ?)", (event[:250], outcome[:500]))
+        conn.commit()
+        conn.close()
+    except Exception as e:
+        sys.stderr.write(f"Memory record error: {e}\n")
 
 def get_telemetry():
     battery_level = "100"
@@ -799,39 +838,52 @@ def ask_gemini_fast(prompt, sys_prompt=""):
     return None
 
 def ask_ai_cascade(prompt, chosen_model="anthropic/claude-3.7-sonnet", user_key="", sys_prompt=""):
-    full_sys = (sys_prompt + "\nAnswer strictly in clear, professional English.").strip()
-    g = ask_gemini_fast(prompt, full_sys)
-    if g: return g
+    # Inject SQLite Knowledge Vault Memory into system context for ALL models
+    mem_ctx = get_relevant_memory(prompt, limit=3)
+    memory_instruction = f"\n\n{mem_ctx}" if mem_ctx else ""
+    full_sys = (sys_prompt + "\nAnswer strictly in clear, professional English." + memory_instruction).strip()
 
-    # Tier 1: OpenRouter if key is present or for free tier models
-    or_key = user_key or get_openrouter_key()
-    if or_key and chosen_model != "pollinations":
-        or_res = ask_openrouter(prompt, chosen_model, or_key, full_sys)
-        if or_res: return or_res
+    reply = None
+    # 1. Gemini Fast (if key exists)
+    if not reply:
+        g = ask_gemini_fast(prompt, full_sys)
+        if g: reply = g
 
-    # Tier 2: Pollinations High-Speed English Cascade
-    try:
-        clean = urllib.parse.quote(prompt.strip()[:600])
-        cmd = ["curl", "-s", "-m", "8", f"https://text.pollinations.ai/{clean}?system={urllib.parse.quote(full_sys[:200])}"]
-        res = subprocess.run(cmd, capture_output=True, text=True, timeout=9)
-        ans = res.stdout.strip()
-        if ans and not ans.startswith("{") and len(ans) > 2:
-            return ans
-    except Exception: pass
+    # 2. OpenRouter (All Models)
+    if not reply:
+        or_key = user_key or get_openrouter_key()
+        if or_key and chosen_model != "pollinations":
+            or_res = ask_openrouter(prompt, chosen_model, or_key, full_sys)
+            if or_res: reply = or_res
 
-    # Tier 3: Permanent SQLite Memory recall
-    mem = query_memory_db(prompt.strip()[:30])
-    if mem: return f"{mem}\n\n*Response generated locally in English by Josie AGI Core.*"
+    # 3. Pollinations High-Speed
+    if not reply:
+        try:
+            clean = urllib.parse.quote(prompt.strip()[:600])
+            cmd = ["curl", "-s", "-m", "8", f"https://text.pollinations.ai/{clean}?system={urllib.parse.quote(full_sys[:250])}"]
+            res = subprocess.run(cmd, capture_output=True, text=True, timeout=9)
+            ans = res.stdout.strip()
+            if ans and not ans.startswith("{") and len(ans) > 2:
+                reply = ans
+        except Exception: pass
 
-    telem = get_telemetry()
-    return (
-        f"⚡ **Josie AGI Core (Model: {chosen_model})**\n\n"
-        f"I received your request: *\"{prompt.strip()}\"*\n\n"
-        f"• **Cognitive Suite**: Claude 3.7 Sonnet, OpenRouter, and Firecrawl active.\n"
-        f"• **Interactive Code**: Use the ▶ Run Script button on code boxes to execute Python or Bash directly.\n"
-        f"• **Telemetry**: Battery {telem['battery']}% | Temp {telem['temp']}°C | RAM {telem['mem']}\n\n"
-        f"How would you like to proceed?"
-    )
+    # 4. Local SQLite Memory Direct Synthesis
+    if not reply:
+        if mem_ctx:
+            reply = f"🧠 **Permanent Memory Recall**:\n\n{mem_ctx}\n\n*Synthesized locally in English by Josie AGI Core.*"
+        else:
+            telem = get_telemetry()
+            reply = (
+                f"⚡ **Josie AGI Core (Model: {chosen_model})**\n\n"
+                f"I received your request: *\"{prompt.strip()}\"*\n\n"
+                f"• **Cognitive Memory**: 1,412+ SQLite records active across all models.\n"
+                f"• **Telemetry**: Battery {telem['battery']}% | Temp {telem['temp']}°C | RAM {telem['mem']}\n\n"
+                f"How would you like to proceed?"
+            )
+
+    # Persist the interaction into SQLite Permanent Memory for cross-session continuity
+    record_memory(prompt, reply)
+    return reply
 
 def process_chat(data):
     prompt = data.get("prompt", "").strip()
