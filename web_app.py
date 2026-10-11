@@ -283,12 +283,7 @@ MAIN_HTML = """<!DOCTYPE html>
     </div>
 
     <div class="chat-panel mode-split" id="chatPanel">
-      <div id="chat">
-        <div class="msg bot">
-          <div class="msg-header"><span>Josie AGI Core</span></div>
-⚡ **Josie AGI Online** — Claude 3.7 & OpenRouter cascade active. Ready for instructions.
-        </div>
-      </div>
+      <div id="chat"></div>
 
       <div class="input-area">
         <div class="quick-chips">
