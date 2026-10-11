@@ -897,6 +897,19 @@ def process_chat(data):
         cmd = prompt.split(" ", 1)[1] if " " in prompt else prompt[1:]
         return execute_shell(cmd)
 
+    if prompt.startswith("do ") or prompt.startswith("do:") or prompt.startswith("agi do "):
+        if prompt.startswith("agi do "): task = prompt.split("agi do ", 1)[1]
+        elif prompt.startswith("do:"): task = prompt.split("do:", 1)[1]
+        else: task = prompt.split("do ", 1)[1]
+        try:
+            env = os.environ.copy()
+            env["PATH"] = os.path.expanduser("~/.local/bin:") + os.path.expanduser("~/bin:") + env.get("PATH", "")
+            res = subprocess.run(["agi", "do", task.strip()], capture_output=True, text=True, timeout=35, env=env)
+            out = (res.stdout + res.stderr).strip() or "Task completed."
+            return {"reply": f"⚡ **Josie AGI Autonomous Action Engine**:\n\n```bash\n{out}\n```", "is_terminal": False, "sender": "Josie Autonomous Executor"}
+        except Exception as e:
+            return {"reply": f"⚠️ Autonomous execution error: {e}", "is_terminal": False, "sender": "Josie Autonomous Executor"}
+
     if mode == "shell":
         return execute_shell(prompt)
 
