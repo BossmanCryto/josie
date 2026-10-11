@@ -130,12 +130,34 @@ def cmd_memory(query):
         print(f"\033[1;36m• [{r[0]}]\033[0m \033[1m{r[1]}\033[0m")
         print(f"  \033[0;37m↳ {r[2][:250]}\033[0m\n")
 
-def cmd_ask(prompt):
-    print("⚡ \033[1;33mJosie AGI Core:\033[0m Processing prompt...\n")
+MODELS_LIST = [
+    ("anthropic/claude-3.7-sonnet", "Claude 3.7 Sonnet (Anthropic - Primary)"),
+    ("anthropic/claude-3.5-sonnet", "Claude 3.5 Sonnet (Anthropic)"),
+    ("anthropic/claude-3.5-haiku", "Claude 3.5 Haiku (Anthropic)"),
+    ("deepseek/deepseek-chat:free", "DeepSeek V3 (Free Tier)"),
+    ("deepseek/deepseek-r1:free", "DeepSeek R1 Reasoning (Free Tier)"),
+    ("meta-llama/llama-3.3-70b-instruct:free", "Llama 3.3 70B Instruct (Free Tier)"),
+    ("google/gemini-2.0-flash-exp:free", "Gemini 2.0 Flash (Free Tier)"),
+    ("qwen/qwen-2.5-72b-instruct:free", "Qwen 2.5 72B Instruct (Free Tier)"),
+    ("mistralai/mistral-small-24b-instruct-2501:free", "Mistral Small 24B (Free Tier)"),
+    ("openai/gpt-4o", "GPT-4o (OpenAI)"),
+    ("openai/gpt-4o-mini", "GPT-4o Mini (OpenAI)"),
+    ("openai/o1", "OpenAI o1 Reasoning")
+]
+
+def cmd_models():
+    print_banner()
+    print("🧠 \033[1;33mAVAILABLE COGNITIVE MODELS (Claude, OpenRouter, Free Cascade):\033[0m\n")
+    for mid, mname in MODELS_LIST:
+        print(f"  • \033[1;32m{mid}\033[0m\n    ↳ {mname}")
+    print("\n💡 \033[1mUsage:\033[0m agi ask -m <model_id> \"<prompt>\"\n")
+
+def cmd_ask(prompt, model="anthropic/claude-3.7-sonnet"):
+    print(f"⚡ \033[1;33mJosie AGI Core\033[0m [\033[1;36m{model.split('/')[-1]}\033[0m]: Processing...\n")
     try:
-        data = json.dumps({"prompt": prompt, "model": "anthropic/claude-3.7-sonnet"}).encode()
+        data = json.dumps({"prompt": prompt, "model": model}).encode()
         req = urllib.request.Request("http://127.0.0.1:8080/chat", data=data, headers={"Content-Type": "application/json"})
-        with urllib.request.urlopen(req, timeout=20) as r:
+        with urllib.request.urlopen(req, timeout=25) as r:
             res = json.loads(r.read().decode())
             print(res.get("reply", "(No response)"))
     except Exception as e:
@@ -286,11 +308,21 @@ def main():
     elif subcmd in ("memory", "recall", "vault"):
         q = " ".join(args[1:]) if len(args) > 1 else ""
         cmd_memory(q)
+    elif subcmd in ("models", "model", "list-models"):
+        cmd_models()
     elif subcmd in ("ask", "q", "prompt"):
         if len(args) < 2:
-            print("Usage: agi ask <prompt>")
+            print("Usage: agi ask [-m <model>] <prompt>")
             return
-        cmd_ask(" ".join(args[1:]))
+        m_val = "anthropic/claude-3.7-sonnet"
+        remaining = args[1:]
+        if len(remaining) >= 2 and remaining[0] in ("-m", "--model"):
+            m_val = remaining[1]
+            remaining = remaining[2:]
+        if not remaining:
+            print("Usage: agi ask [-m <model>] <prompt>")
+            return
+        cmd_ask(" ".join(remaining), model=m_val)
     elif subcmd in ("scrape", "fc-scrape"):
         if len(args) < 2:
             print("Usage: agi scrape <url>")
@@ -302,8 +334,13 @@ def main():
             return
         subprocess.run(["fc-search"] + args[1:])
     else:
-        # Default to asking AGI
-        cmd_ask(" ".join(args))
+        # Default to asking AGI or checking -m flag
+        m_val = "anthropic/claude-3.7-sonnet"
+        remaining = args
+        if len(remaining) >= 2 and remaining[0] in ("-m", "--model"):
+            m_val = remaining[1]
+            remaining = remaining[2:]
+        cmd_ask(" ".join(remaining), model=m_val)
 
 if __name__ == "__main__":
     main()
