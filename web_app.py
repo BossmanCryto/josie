@@ -231,26 +231,33 @@ MAIN_HTML = """<!DOCTYPE html>
       <div>
         <label>Active Cognitive Model</label>
         <select id="modelSelect">
-          <optgroup label="Anthropic Claude">
-            <option value="anthropic/claude-3.7-sonnet" selected>🧠 Claude 3.7 Sonnet</option>
-            <option value="anthropic/claude-3.5-sonnet">⚡ Claude 3.5 Sonnet</option>
-            <option value="anthropic/claude-3.5-haiku">🚀 Claude 3.5 Haiku</option>
+          <optgroup label="Anthropic Frontier (Highest Reasoning)">
+            <option value="anthropic/claude-3.7-sonnet" selected>🧠 Claude 3.7 Sonnet (Hybrid Reasoning)</option>
+            <option value="anthropic/claude-3.7-sonnet:thinking">💭 Claude 3.7 Sonnet (Extended Thinking)</option>
+            <option value="anthropic/claude-3.5-sonnet">⚡ Claude 3.5 Sonnet (Coding Apex)</option>
+            <option value="anthropic/claude-3-opus">👑 Claude 3 Opus (Deep Synthesis)</option>
+            <option value="anthropic/claude-3.5-haiku">🚀 Claude 3.5 Haiku (Ultra Fast)</option>
           </optgroup>
-          <optgroup label="OpenRouter Free Tier (:free)">
-            <option value="deepseek/deepseek-chat:free">🐋 DeepSeek V3 (Free)</option>
-            <option value="deepseek/deepseek-r1:free">🧠 DeepSeek R1 Reasoning (Free)</option>
-            <option value="meta-llama/llama-3.3-70b-instruct:free">🦙 Llama 3.3 70B (Free)</option>
+          <optgroup label="OpenAI Frontier & Reasoning">
+            <option value="openai/o3-mini">🔬 OpenAI o3-mini (High Reasoning)</option>
+            <option value="openai/o1">🧠 OpenAI o1 (Max Cognitive)</option>
+            <option value="openai/gpt-4o">🤖 GPT-4o (Multimodal Omnipresent)</option>
+            <option value="openai/gpt-4o-mini">⚡ GPT-4o Mini (Efficiency)</option>
+          </optgroup>
+          <optgroup label="Google DeepMind Frontier">
+            <option value="google/gemini-2.5-pro-preview">💎 Gemini 2.5 Pro (Ultra Context)</option>
+            <option value="google/gemini-2.0-flash-thinking-exp:free">💭 Gemini 2.0 Flash Thinking (Free)</option>
             <option value="google/gemini-2.0-flash-exp:free">⚡ Gemini 2.0 Flash (Free)</option>
-            <option value="qwen/qwen-2.5-72b-instruct:free">🐉 Qwen 2.5 72B (Free)</option>
-            <option value="mistralai/mistral-small-24b-instruct-2501:free">🌪️ Mistral Small (Free)</option>
           </optgroup>
-          <optgroup label="OpenAI Frontier">
-            <option value="openai/gpt-4o">🤖 GPT-4o</option>
-            <option value="openai/gpt-4o-mini">⚡ GPT-4o Mini</option>
-            <option value="openai/o1">🧠 OpenAI o1</option>
+          <optgroup label="DeepSeek & Open Source Leaders">
+            <option value="deepseek/deepseek-r1:free">🧠 DeepSeek R1 Full Reasoning (Free)</option>
+            <option value="deepseek/deepseek-chat:free">🐋 DeepSeek V3 671B MoE (Free)</option>
+            <option value="meta-llama/llama-3.3-70b-instruct:free">🦙 Llama 3.3 70B Instruct (Free)</option>
+            <option value="qwen/qwen-2.5-72b-instruct:free">🐉 Qwen 2.5 72B Instruct (Free)</option>
+            <option value="mistralai/mistral-large-2411">🌪️ Mistral Large 2 (128k)</option>
           </optgroup>
           <optgroup label="High-Speed Free Fallback">
-            <option value="pollinations">🌐 Pollinations (Keyless)</option>
+            <option value="pollinations">🌐 Pollinations (Keyless Zero-Config)</option>
           </optgroup>
         </select>
       </div>
