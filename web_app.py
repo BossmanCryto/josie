@@ -398,8 +398,14 @@ Welcome Jose! All models, OpenRouter cascade, Claude Cognition, and Firecrawl v2
     function toggleSidebar() { sidebar.classList.toggle('open'); }
 
     function setFirecrawlMode() {
-      document.getElementById('actionMode').value = 'firecrawl_scrape';
-      input.placeholder = 'Paste URL to Firecrawl + task (e.g. https://openrouter.ai/docs summarize)...';
+      const modeEl = document.getElementById('actionMode');
+      if (modeEl.value === 'firecrawl_scrape') {
+        modeEl.value = 'chat';
+        input.placeholder = 'Ask Josie AGI, or type $ <command>...';
+      } else {
+        modeEl.value = 'firecrawl_scrape';
+        input.placeholder = 'Paste URL to scrape + task (e.g. https://docs.firecrawl.dev summarize)...';
+      }
       input.focus();
     }
 
@@ -441,7 +447,20 @@ Welcome Jose! All models, OpenRouter cascade, Claude Cognition, and Firecrawl v2
       msgDiv.className = 'msg ' + (type || 'bot');
       const headerDiv = document.createElement('div');
       headerDiv.className = 'msg-header';
-      headerDiv.innerHTML = `<span>${sender}</span><button class="mini-btn" onclick="navigator.clipboard.writeText(${JSON.stringify(text)})">Copy</button>`;
+      
+      const senderSpan = document.createElement('span');
+      senderSpan.textContent = sender;
+      headerDiv.appendChild(senderSpan);
+
+      const copyBtn = document.createElement('button');
+      copyBtn.className = 'mini-btn';
+      copyBtn.textContent = 'Copy';
+      copyBtn.onclick = function() {
+        navigator.clipboard.writeText(text);
+        copyBtn.textContent = 'Copied!';
+        setTimeout(() => copyBtn.textContent = 'Copy', 1500);
+      };
+      headerDiv.appendChild(copyBtn);
       msgDiv.appendChild(headerDiv);
 
       const contentDiv = document.createElement('div');
@@ -496,10 +515,17 @@ Welcome Jose! All models, OpenRouter cascade, Claude Cognition, and Firecrawl v2
     async function send() {
       const text = input.value.trim();
       if (!text) return;
-      const actionMode = document.getElementById('actionMode').value;
+      const actionModeEl = document.getElementById('actionMode');
+      const actionMode = actionModeEl.value;
       const model = document.getElementById('modelSelect').value;
       const system = document.getElementById('sysPrompt').value;
       const orKey = orKeyInput.value.trim();
+
+      // Reset action mode to standard chat after sending
+      if (actionMode !== 'chat' && actionMode !== 'shell') {
+        actionModeEl.value = 'chat';
+        input.placeholder = 'Ask Josie AGI, or type $ <command>...';
+      }
 
       input.value = '';
       appendMessage('You', text, 'user');
@@ -758,7 +784,7 @@ def ask_openrouter(prompt, model, api_key, sys_prompt=""):
     return None
 
 
-GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
+GEMINI_KEY = os.environ.get("GEMINI_API_KEY") or (open(os.path.expanduser("~/.gemini_key")).read().strip() if os.path.exists(os.path.expanduser("~/.gemini_key")) else "")
 def ask_gemini_fast(prompt, sys_prompt=""):
     for m in ["gemini-3.8-flash", "gemini-3.5-flash-lite", "gemini-flash-latest"]:
         try:
@@ -836,6 +862,19 @@ def process_chat(data):
     if p_lower.startswith("read file ") or p_lower.startswith("cat "):
         fpath = prompt.split(" ", 2)[-1] if p_lower.startswith("read file ") else prompt.split(" ", 1)[1]
         return read_workspace_file(fpath)
+
+    # Local Network / Service URL Inspection
+    if any(loc in prompt for loc in ["127.0.0.1", "localhost", "192.168.1."]) and ("http://" in prompt or "https://" in prompt):
+        urls = re.findall(r'https?://[^\s]+', prompt)
+        target = urls[0] if urls else prompt
+        try:
+            req = urllib.request.Request(target, headers={"User-Agent": "Josie-Local-Audit/1.0"})
+            with urllib.request.urlopen(req, timeout=4) as r:
+                body_sample = r.read(600).decode('utf-8', errors='ignore')
+                st = r.status
+            return {"reply": f"🌐 **Local Service (`{target}`)**: Online (HTTP {st})\n\n```html\n{body_sample[:350]}\n...\n```", "is_terminal": False, "sender": "Local Service Audit"}
+        except Exception as e:
+            return {"reply": f"⚠️ **Local Service (`{target}`)**: {e}", "is_terminal": False, "sender": "Local Service Audit"}
 
     # Firecrawl Scrape Mode
     context_prefix = ""
