@@ -31,7 +31,6 @@
    - Diagnostics: `ssh-info`.
    - Keys: `~/.ssh/authorized_keys` enabled. Password authentication: enabled.
 
-6. **Bare-Metal Linux Distribution Runtimes (Zero QEMU/VM)**:
-   - **Kali Linux Rolling**: Security & penetration suite (`kali`).
-   - **Ubuntu 24.04 LTS**: Modern development suite (`ubuntu`).
-   - **Debian**: Base subsystem with Wine 10.0 + Box64 (`debian`).
+6. **Bare-Metal Linux Distribution Runtime (Zero QEMU/VM)**:
+   - **Kali Linux Rolling**: Dedicated primary security & development suite (`kali`, `linux`).
+
