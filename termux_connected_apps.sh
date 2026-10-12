@@ -36,6 +36,8 @@ write_config() {
 # Add values after completing the matching provider setup.
 GOOGLE_CLOUD_PROJECT=
 GOOGLE_APPLICATION_CREDENTIALS=
+GOOGLE_REFRESH_TOKEN=
+GOOGLE_OAUTH_SCOPES=
 FIRECRAWL_API_KEY=
 ACADEMIC_EMAIL=
 GOOGLE_RCLONE_REMOTE=gdrive
@@ -43,7 +45,7 @@ OUTLOOK_RCLONE_REMOTE=outlook
 EOF
   fi
   chmod 600 "$CONFIG_FILE"
-  local source_line="[[ -f \"$CONFIG_FILE\" ]] && set -a && source \"$CONFIG_FILE\" && set +a"
+  local source_line="set -a; source \"$CONFIG_FILE\"; set +a"
   touch "$HOME/.bashrc"
   if ! grep -Fqx "$source_line" "$HOME/.bashrc"; then
     printf '\n%s\n' "$source_line" >>"$HOME/.bashrc"
@@ -65,7 +67,7 @@ sync_repo() {
 
 remote_exists() {
   local remote="$1"
-  [[ -n "$remote" ]] && rclone listremotes 2>/dev/null | grep -Fqx "${remote}:"
+  [[ -n "$remote" ]] && has rclone && rclone listremotes 2>/dev/null | grep -Fqx "${remote}:"
 }
 
 status() {
@@ -73,22 +75,26 @@ status() {
   [[ -f "$CONFIG_FILE" ]] && { set -a; source "$CONFIG_FILE"; set +a; }
   local google_remote="${GOOGLE_RCLONE_REMOTE:-gdrive}"
   local outlook_remote="${OUTLOOK_RCLONE_REMOTE:-outlook}"
-  local google=no outlook=no github=no cloud=no firecrawl=no academic=no
+  local scopes="${GOOGLE_OAUTH_SCOPES:-}"
+  local google=no outlook=no gmail=no calendar=no github=no cloud=no firecrawl=no academic=no
   remote_exists "$google_remote" && google=yes
   remote_exists "$outlook_remote" && outlook=yes
-  gh auth status >/dev/null 2>&1 && github=yes
+  has gh && gh auth status >/dev/null 2>&1 && github=yes
+  [[ -n "${GOOGLE_REFRESH_TOKEN:-}${GOOGLE_WORKSPACE_REFRESH_TOKEN:-}" && "${scopes,,}" == *gmail* ]] && gmail=yes
+  [[ -n "${GOOGLE_REFRESH_TOKEN:-}${GOOGLE_WORKSPACE_REFRESH_TOKEN:-}" && "${scopes,,}" == *calendar* ]] && calendar=yes
   [[ -n "${GOOGLE_CLOUD_PROJECT:-}" ]] && cloud=yes
   [[ -n "${FIRECRAWL_API_KEY:-}" ]] && firecrawl=yes
   [[ -n "${ACADEMIC_EMAIL:-}" ]] && academic=yes
   cat <<EOF
 JOSIE connected-app status
-  Outlook:         $outlook
-  Google Drive:    $google
-  Gmail/Calendar:  $google (local Google authorization present; API access depends on granted scopes)
-  Academic:        $academic
-  GitHub:          $github
-  Google Cloud:    $cloud
-  Firecrawl:       $firecrawl
+  Outlook/OneDrive: $outlook
+  Google Drive:     $google
+  Gmail:            $gmail
+  Google Calendar:  $calendar
+  Academic:         $academic
+  GitHub:           $github
+  Google Cloud:     $cloud
+  Firecrawl:        $firecrawl
 
 No secret values were displayed.
 Config: $CONFIG_FILE
@@ -100,7 +106,7 @@ setup_accounts() {
   say "1) Google Drive: run 'rclone config' and name the remote gdrive"
   say "2) Outlook/OneDrive: run 'rclone config' and name the remote outlook"
   say "3) GitHub: run 'gh auth login --web'"
-  say "4) Gmail/Calendar: approve Google scopes in the Google connector you choose"
+  say "4) Gmail/Calendar: approve exact Google scopes and record their names in GOOGLE_OAUTH_SCOPES"
   say "5) Google Cloud: put your project ID in $CONFIG_FILE"
   say "6) Firecrawl: put your API key in $CONFIG_FILE"
   say "7) Academic: put your school email in $CONFIG_FILE"
