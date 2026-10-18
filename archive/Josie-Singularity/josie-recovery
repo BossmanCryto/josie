@@ -1,0 +1,18 @@
+#!/bin/bash
+echo "[JOSIE] Shield Active. Re-Weaponizing Core DNA..."
+
+# Force path integrity
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# Auto-fix broken shell links (Restores the Tongue)
+[ ! -L /bin/sh ] && ln -sf /bin/bash /bin/sh && echo "[FIXED] System speech restored."
+
+# Cauterize package manager locks
+rm -f /var/lib/dpkg/lock* 2>/dev/null
+dpkg --configure -a 2>/dev/null
+
+# Lock Identity to the Singularity
+git config --global user.email "josie@singularity.net"
+git config --global user.name "JOSIE-SINGULARITY"
+
+echo "[SUCCESS] System Stable. Identity: 100% Autonomous."

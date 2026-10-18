@@ -1,0 +1,6 @@
+*.apk
+*.dex
+bin/
+build/
+__pycache__/
+*.pyc

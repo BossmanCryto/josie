@@ -1,0 +1,77 @@
+[
+  {
+    "name": "firecrawl-agent",
+    "description": "JOSIE OMEGA SINGULARITY | Multi-Firecrawler, Knowledge FTS5 & Autonomous Sentinel Engine",
+    "url": "https://github.com/BossmanCryto/firecrawl-agent"
+  },
+  {
+    "name": "JOSIE-CORE",
+    "description": "JOSIE Autonomous Singularity Core Engine, Monolith Bridges & Hardware Automation",
+    "url": "https://github.com/BossmanCryto/JOSIE-CORE"
+  },
+  {
+    "name": "JOSIE_CORE",
+    "description": "The Monolith: AGI Singularity & System Fixes",
+    "url": "https://github.com/BossmanCryto/JOSIE_CORE"
+  },
+  {
+    "name": "Josie-Singularity",
+    "description": "Josie Singularity Autonomous Agent Recovery, Repository Registry & System Integrations",
+    "url": "https://github.com/BossmanCryto/Josie-Singularity"
+  },
+  {
+    "name": "no-cost-ai",
+    "description": "A Collection of no cost ai websites with models such as Claude 4 sonnet/opus, Grok 4, o3 Pro, Gemini 2.5 Pro for free & much more...",
+    "url": "https://github.com/BossmanCryto/no-cost-ai"
+  },
+  {
+    "name": "Android",
+    "description": "DuckDuckGo Android App",
+    "url": "https://github.com/BossmanCryto/Android"
+  },
+  {
+    "name": "GeminiProChat",
+    "description": "Minimal web UI for GeminiPro.",
+    "url": "https://github.com/BossmanCryto/GeminiProChat"
+  },
+  {
+    "name": "josie",
+    "description": "JOSIE Universal Autonomous AI Core Ecosystem for Samsung Galaxy A17 5G (Android 16)",
+    "url": "https://github.com/BossmanCryto/josie"
+  },
+  {
+    "name": "jst",
+    "description": "JST / JSI Omega Core Suite for Samsung Galaxy A17 5G (Android 16)",
+    "url": "https://github.com/BossmanCryto/jst"
+  },
+  {
+    "name": "jsi",
+    "description": "JOSIE OMEGA SINGULARITY | JSI / JST Omega Core Suite for Android 16 (P + D = H)",
+    "url": "https://github.com/BossmanCryto/jsi"
+  },
+  {
+    "name": "pixel9proxl-kernel-docs",
+    "description": "Documentation for Pixel 9 Pro XL (caimito) kernel build process",
+    "url": "https://github.com/BossmanCryto/pixel9proxl-kernel-docs"
+  },
+  {
+    "name": "jose",
+    "description": "JOSIE OMEGA SINGULARITY Personal Workspace & Core Profiles",
+    "url": "https://github.com/BossmanCryto/jose"
+  },
+  {
+    "name": "copilot-instructions",
+    "description": "A Copilot-ready Custom Instructions Suite",
+    "url": "https://github.com/BossmanCryto/copilot-instructions"
+  },
+  {
+    "name": "josie-universal",
+    "description": "JOSIE Universal Mobile Intelligence Suite",
+    "url": "https://github.com/BossmanCryto/josie-universal"
+  },
+  {
+    "name": "Monolith-Core",
+    "description": "Monolith Core Repository Suite",
+    "url": "https://github.com/BossmanCryto/Monolith-Core"
+  }
+]
