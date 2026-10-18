@@ -1,5 +1,8 @@
 {
   "architecture": "Physical + Digital = Human (P+D=H)",
-  "epoch": 1785693760,
-  "root_status": "Standard User / Root Restricted (Bootloader Locked Context)"
+  "epoch": 1792269863,
+  "root_status": "Root / Elevated Shell Active (Entering shell...)",
+  "device": "Samsung Galaxy A17 5G [SM-A176U]",
+  "shizuku_privileged": true,
+  "uid": 2000
 }

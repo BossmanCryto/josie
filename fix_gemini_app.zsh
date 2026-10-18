@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/data/data/com.termux/files/usr/bin/bash
 set -e
 
 GEMINI_PKG="com.google.android.apps.bard"
